@@ -1,0 +1,272 @@
+{
+  "id": "noe",
+  "souvenir": true,
+  "environment": {
+    "sky": [
+      "#3fa9f5",
+      "#c8ecff"
+    ],
+    "ground": "#74c454",
+    "radius": 21
+  },
+  "player": {
+    "pos": [
+      0,
+      10
+    ],
+    "rot": 180,
+    "look": {
+      "tunic": "#ff7a1a",
+      "accent": "#1e3a8a",
+      "hair": "#2b1a10",
+      "skin": "#8d5524",
+      "height": 0.8
+    }
+  },
+  "props": [
+    {
+      "model": "ark",
+      "pos": [
+        0,
+        -8
+      ]
+    },
+    {
+      "model": "tent",
+      "pos": [
+        -9,
+        -11
+      ],
+      "color": "#d84315"
+    },
+    {
+      "model": "tent",
+      "pos": [
+        -12.5,
+        -6
+      ],
+      "color": "#2340ff"
+    },
+    {
+      "model": "water",
+      "pos": [
+        -11,
+        12
+      ],
+      "size": [
+        4,
+        3
+      ]
+    },
+    {
+      "model": "olive",
+      "pos": [
+        9,
+        -10
+      ]
+    },
+    {
+      "model": "olive",
+      "pos": [
+        12,
+        -2
+      ]
+    },
+    {
+      "model": "tree",
+      "pos": [
+        -17,
+        -2
+      ]
+    },
+    {
+      "model": "tree",
+      "pos": [
+        17,
+        10
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        -5,
+        16.5
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        7,
+        -14
+      ]
+    },
+    {
+      "model": "rock",
+      "pos": [
+        8,
+        14
+      ]
+    },
+    {
+      "model": "rock",
+      "pos": [
+        -16,
+        8
+      ],
+      "scale": 0.8
+    },
+    {
+      "model": "bush",
+      "pos": [
+        4,
+        4
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        -6,
+        3
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        14,
+        -8
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        -2,
+        6
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        7,
+        7
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        -13,
+        15
+      ]
+    },
+    {
+      "model": "barrel",
+      "pos": [
+        3.6,
+        -3.5
+      ]
+    },
+    {
+      "model": "crate",
+      "pos": [
+        4.3,
+        -2.8
+      ]
+    },
+    {
+      "model": "bag",
+      "pos": [
+        -7.5,
+        -9
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "noe",
+      "model": "person",
+      "pos": [
+        3,
+        1
+      ],
+      "rot": 200,
+      "look": {
+        "tunic": "#2a5bd7",
+        "accent": "#ffd23f",
+        "beard": "#f0f0f0",
+        "hair": "#e8e8e8",
+        "skin": "#a8693a",
+        "staff": true
+      }
+    },
+    {
+      "id": "cerf",
+      "model": "stag",
+      "pos": [
+        -14,
+        -1
+      ],
+      "rot": 60,
+      "wander": 1.5
+    },
+    {
+      "id": "biche",
+      "model": "deer",
+      "pos": [
+        -15.5,
+        3.5
+      ],
+      "rot": 100,
+      "wander": 1.5
+    },
+    {
+      "id": "cheval1",
+      "model": "horse",
+      "pos": [
+        13,
+        8
+      ],
+      "rot": -120,
+      "wander": 1.5
+    },
+    {
+      "id": "cheval2",
+      "model": "horse",
+      "pos": [
+        16,
+        3
+      ],
+      "rot": -90,
+      "wander": 1.5
+    },
+    {
+      "id": "zebre1",
+      "model": "zebra",
+      "pos": [
+        -4,
+        14
+      ],
+      "rot": 10,
+      "wander": 1.2
+    },
+    {
+      "id": "zebre2",
+      "model": "zebra",
+      "pos": [
+        -1,
+        15
+      ],
+      "rot": 40,
+      "wander": 1.2
+    }
+  ],
+  "zones": [
+    {
+      "id": "arche",
+      "pos": [
+        5.6,
+        -8
+      ],
+      "radius": 2,
+      "absorb": true
+    }
+  ]
+}

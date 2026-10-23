@@ -1,0 +1,40 @@
+{
+  "name": "Zion, City of the Watchers",
+  "names": {
+    "player": "You",
+    "gardien": "Ezra, the Keeper",
+    "soigneuse": "Tabitha, the healer",
+    "marchande": "Rebecca, the merchant",
+    "passant": "Yohan, a passer-by",
+    "soins": "the house of care",
+    "enclos": "Grandma Ruth's pen",
+    "scene": "the festival stage",
+    "place": "the fountain square"
+  },
+  "idle": {
+    "gardien": [
+      {
+        "who": "gardien",
+        "text": "A watcher keeps their eyes open… and their heart too. Go on, I'm counting on you!"
+      }
+    ],
+    "soigneuse": [
+      {
+        "who": "soigneuse",
+        "text": "Here we care for everyone, no exceptions. That's what Jesus did."
+      }
+    ],
+    "marchande": [
+      {
+        "who": "marchande",
+        "text": "Dates, figs, warm bread! Have a fig, little watcher, it's on me."
+      }
+    ],
+    "passant": [
+      {
+        "who": "passant",
+        "text": "Lovely day in Zion! Have you seen the Keeper's lantern? It never goes out."
+      }
+    ]
+  }
+}

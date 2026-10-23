@@ -1,0 +1,14 @@
+{
+  "name": "L'histoire de Noé",
+  "names": {
+    "player": "Toi",
+    "noe": "Noé",
+    "arche": "la rampe de l'arche",
+    "cerf": "le cerf",
+    "biche": "la biche",
+    "cheval1": "le cheval",
+    "cheval2": "la jument",
+    "zebre1": "le zèbre",
+    "zebre2": "la femelle zèbre"
+  }
+}

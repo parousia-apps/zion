@@ -1,0 +1,32 @@
+{
+  "name": "zion",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Zion — des histoires de la Bible à vivre en 3D, accessibles à tous.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "npm run check:content && tsc --noEmit && vite build",
+    "preview": "vite preview --host",
+    "test": "vitest run",
+    "check:content": "node scripts/check-content.mjs",
+    "models:fetch": "node scripts/fetch-models.mjs",
+    "models:build": "node scripts/optimize-models.mjs"
+  },
+  "dependencies": {
+    "@fontsource/atkinson-hyperlegible": "^5.3.0",
+    "@fontsource/fraunces": "^5.3.0",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@gltf-transform/core": "^4.5.1",
+    "@gltf-transform/extensions": "^4.5.1",
+    "@gltf-transform/functions": "^4.5.1",
+    "@types/three": "^0.186.0",
+    "meshoptimizer": "^1.3.0",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

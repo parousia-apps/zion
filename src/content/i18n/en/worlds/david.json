@@ -1,0 +1,16 @@
+{
+  "name": "The story of David, in Bethlehem",
+  "names": {
+    "player": "David",
+    "harpe": "the harp",
+    "mouton1": "a sheep",
+    "mouton2": "a sheep",
+    "mouton3": "a sheep",
+    "serviteur": "Joab, the servant",
+    "samuel": "Samuel, the prophet",
+    "jesse": "Jesse, David's father",
+    "eliab": "Eliab, the big brother",
+    "bergerie": "the sheepfold",
+    "maison": "Jesse's house"
+  }
+}

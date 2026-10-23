@@ -1,0 +1,6 @@
+node_modules
+dist
+# Modèles 3D sources (retéléchargeables avec npm run models:fetch)
+assets-src
+.vercel
+.DS_Store

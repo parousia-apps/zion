@@ -1,0 +1,248 @@
+{
+  "$comment": "Registre des modèles 3D : source, auteur, licence. Utilisé par scripts/fetch-models.mjs puis scripts/optimize-models.mjs.",
+  "models": [
+    {
+      "name": "man",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/5EGWBMpuXq",
+      "url": "https://static.poly.pizza/bbe369ee-a686-42c7-adad-14356f5f2f15.glb",
+      "animations": "^CharacterArmature\\|(Idle|Walk|Wave|Interact)$",
+      "note": "Homme barbu (base des hommes adultes)"
+    },
+    {
+      "name": "woman",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/qJ2gsTUBHL",
+      "url": "https://static.poly.pizza/ba7a1955-ea51-4cb9-a561-188bdef0a6c7.glb",
+      "animations": "^CharacterArmature\\|(Idle|Walk|Wave|Interact)$",
+      "note": "Femme (base des femmes et des filles)"
+    },
+    {
+      "name": "man2",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/Yg2bQZO6Hj",
+      "url": "https://static.poly.pizza/3a5f3056-ffe6-42eb-bd52-122afcbd22b2.glb",
+      "animations": "^CharacterArmature\\|(Idle|Walk|Wave|Interact)$",
+      "note": "Homme moustachu (base des garçons)"
+    },
+    {
+      "name": "sheep",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/C39AUXUUes",
+      "url": "https://static.poly.pizza/a4bd2c4e-fe71-4dbd-9881-cf3ac8a00bbf.glb",
+      "animations": ".*"
+    },
+    {
+      "name": "donkey",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/qmX6nhnvp7",
+      "url": "https://static.poly.pizza/ca29f94e-0874-41b6-8334-66642af56a61.glb",
+      "animations": "\\|(Idle|Walk|Eating)$"
+    },
+    {
+      "name": "horse",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/qvTrSG9pZF",
+      "url": "https://static.poly.pizza/d37dbc87-ca61-4b2c-a2da-d2f0c4240bef.glb",
+      "animations": "\\|(Idle|Walk|Eating)$"
+    },
+    {
+      "name": "deer",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/T6Cs7tmMHJ",
+      "url": "https://static.poly.pizza/4b6c2a41-43c7-404c-ae37-e8c4645ff93b.glb",
+      "animations": "\\|(Idle|Walk|Eating)$"
+    },
+    {
+      "name": "stag",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/tQdzbZ1Cmw",
+      "url": "https://static.poly.pizza/a9c69fbc-bf7c-4585-9a49-a82e0be1ac6b.glb",
+      "animations": "\\|(Idle|Walk|Eating)$"
+    },
+    {
+      "name": "zebra",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/iclPBR6SBZ",
+      "url": "https://static.poly.pizza/ff99ce31-85dd-4863-b145-24a6646a2b20.glb",
+      "animations": ".*"
+    },
+    {
+      "name": "palm1",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/A6cKJYFsIb",
+      "url": "https://static.poly.pizza/4c17decd-3087-4afe-9611-cfd92cca47cd.glb"
+    },
+    {
+      "name": "palm2",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/DsrrAYmucG",
+      "url": "https://static.poly.pizza/21d44b5b-efef-4abd-96ad-fc59e4ad373b.glb"
+    },
+    {
+      "name": "palm3",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/P0tgwyXBgr",
+      "url": "https://static.poly.pizza/66cd7d94-abba-471e-8d8b-c8ad30aa5c70.glb"
+    },
+    {
+      "name": "tree",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/qZtx0AHhcy",
+      "url": "https://static.poly.pizza/24cf9df9-435f-408e-971b-640d670ce973.glb"
+    },
+    {
+      "name": "tree2",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/2paAm1ja4w",
+      "url": "https://static.poly.pizza/18bfa206-01b3-4368-a391-513f21078bb1.glb"
+    },
+    {
+      "name": "bush",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/ooG6CkLyE8",
+      "url": "https://static.poly.pizza/6bbb833e-26cb-4bf9-ae67-a31b98e30bd9.glb"
+    },
+    {
+      "name": "bushflowers",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/U1ymDy8tbY",
+      "url": "https://static.poly.pizza/af83abca-9b41-4229-9652-e336a5f5eaba.glb"
+    },
+    {
+      "name": "rocks",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/OQvi8PIZ40",
+      "url": "https://static.poly.pizza/c6f65def-08c5-4c81-b17f-f37b171ad911.glb"
+    },
+    {
+      "name": "rocklarge",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/54jZKTAt5p",
+      "url": "https://static.poly.pizza/c14651f6-9ef8-41e8-8aca-cafed61d9ca2.glb"
+    },
+    {
+      "name": "flowers",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/NBUxHir6FJ",
+      "url": "https://static.poly.pizza/c25cb5dc-3cd3-470c-a08c-045af0c0fe3d.glb"
+    },
+    {
+      "name": "grass",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/UGTOzcO3P2",
+      "url": "https://static.poly.pizza/99357ca2-6364-4990-8d4c-9bc5a1a5e859.glb"
+    },
+    {
+      "name": "tallgrass",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/JSIYtscPmP",
+      "url": "https://static.poly.pizza/83f8e6d6-fa7e-4cd8-a0ef-8c51d0ff4e88.glb"
+    },
+    {
+      "name": "barrel",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/ONdghDBByN",
+      "url": "https://static.poly.pizza/6d3e8847-bda4-4d6c-8004-7b03cf848b13.glb"
+    },
+    {
+      "name": "crate",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/3VGWnZPXmG",
+      "url": "https://static.poly.pizza/720097e2-63ed-4e5f-9b66-eb416942eea0.glb"
+    },
+    {
+      "name": "marketstand",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/DGIM5HGISb",
+      "url": "https://static.poly.pizza/e2633001-4cf5-46fa-ac68-575c9954f4ba.glb"
+    },
+    {
+      "name": "marketstalls",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/PUZZ5F91OE",
+      "url": "https://static.poly.pizza/336fbda1-a644-4deb-b980-7b27a368bdeb.glb"
+    },
+    {
+      "name": "well",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/QlqncKYxXb",
+      "url": "https://static.poly.pizza/0e044203-f62e-4dad-ad3e-c3cb6cb393ac.glb"
+    },
+    {
+      "name": "fence",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/e02PFKKhbr",
+      "url": "https://static.poly.pizza/ee42b0f4-fbcd-425f-804e-02d791bc35f6.glb"
+    },
+    {
+      "name": "cart",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/l7bDe7ak6j",
+      "url": "https://static.poly.pizza/94b32c91-4d46-4172-aadd-10176a4eb543.glb"
+    },
+    {
+      "name": "torch",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/Gq38E7hFZw",
+      "url": "https://static.poly.pizza/0dcdbabb-629d-4eee-af16-7c49f6ba6e5e.glb"
+    },
+    {
+      "name": "bench",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/jLxjFxFRpw",
+      "url": "https://static.poly.pizza/1361c268-20f7-4e73-a931-ce434c6b503e.glb"
+    },
+    {
+      "name": "bag",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/rJuZexcuhU",
+      "url": "https://static.poly.pizza/d80aaa87-23d8-4e45-83a2-5ffd22c36356.glb"
+    },
+    {
+      "name": "bucket",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/83obI9bNun",
+      "url": "https://static.poly.pizza/ab9720c1-bfc4-4afc-a4d5-349fc725f6ae.glb"
+    },
+    {
+      "name": "archdoor",
+      "author": "Quaternius",
+      "license": "CC0 1.0",
+      "page": "https://poly.pizza/m/MVVMLXOfg1",
+      "url": "https://static.poly.pizza/3076f55a-92d2-4ba7-a286-3e062e3dcea8.glb"
+    }
+  ]
+}

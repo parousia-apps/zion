@@ -1,0 +1,161 @@
+{
+  "title": "Le bon Samaritain",
+  "summary": "Le Gardien te raconte l'histoire d'un voyageur blessé au bord de la route. Puis, au marché de Zion, quelqu'un a besoin d'aide…",
+  "reference": "Luc 10, versets 25 à 37",
+  "trait": {
+    "name": "La compassion",
+    "description": "Avoir de la compassion, c'est voir la peine de quelqu'un, la sentir dans son cœur, et s'arrêter pour l'aider.",
+    "jesus": "Quand Jésus voyait des personnes malades, seules ou tristes, il était ému de compassion. Il s'arrêtait, les touchait, les guérissait. Personne n'était trop petit ou trop différent pour lui.",
+    "jesusRef": "Matthieu 9.36 · Marc 1.40-41"
+  },
+  "names": {
+    "naomi_sol": "Naomi",
+    "naomi": "Naomi",
+    "presse1": "Jacob, un homme pressé",
+    "presse2": "Simon, un marchand pressé"
+  },
+  "verbs": {
+    "naomi_sol": "Aider Naomi"
+  },
+  "objectives": {
+    "welcome": "Va parler au Gardien, au pied de la grande tour.",
+    "help": "Quelqu'un appelle à l'aide près du marché : va voir !",
+    "escort": "Accompagne Naomi jusqu'à la maison de soins.",
+    "care": "Parle à Tabitha, la soigneuse.",
+    "debrief": "Retourne voir le Gardien."
+  },
+  "dialogs": {
+    "welcome": [
+      {
+        "who": "gardien",
+        "text": "Bienvenue à Zion, la cité des veilleurs ! Je suis Ezra, le Gardien de la tour."
+      },
+      {
+        "who": "gardien",
+        "text": "Ici, un veilleur ne surveille pas seulement les murs : il veille sur les gens. Il remarque celui qui a besoin d'aide."
+      },
+      {
+        "who": "gardien",
+        "text": "Tu veux devenir apprenti veilleur ? Alors écoute d'abord une histoire que Jésus a racontée."
+      }
+    ],
+    "alert": [
+      {
+        "who": "narrator",
+        "text": "Soudain, on entend un cri du côté du marché.",
+        "snd": "cry"
+      },
+      {
+        "who": "gardien",
+        "text": "Tu as entendu ? Quelqu'un a besoin d'aide. Les gens passent à côté… Et toi, que vas-tu faire ?"
+      }
+    ],
+    "help": [
+      {
+        "who": "narrator",
+        "text": "C'est Naomi. Elle a glissé et s'est fait mal à la cheville. Ses fruits ont roulé partout."
+      },
+      {
+        "who": "naomi_sol",
+        "text": "Aïe… Les gens passent à côté de moi sans s'arrêter…"
+      },
+      {
+        "who": "player",
+        "text": "Moi, je m'arrête. Donne-moi la main, je vais t'aider à te relever.",
+        "fx": "heal"
+      },
+      {
+        "who": "naomi_sol",
+        "text": "Merci, c'est tellement gentil. Peux-tu m'accompagner jusqu'à la maison de soins ?"
+      }
+    ],
+    "arrive": [
+      {
+        "who": "narrator",
+        "text": "Tu as marché doucement, au rythme de Naomi. La voici devant la maison de soins."
+      }
+    ],
+    "care": [
+      {
+        "who": "soigneuse",
+        "text": "Naomi ! Viens t'asseoir, je vais bander ta cheville."
+      },
+      {
+        "who": "soigneuse",
+        "text": "Merci de l'avoir accompagnée. Beaucoup sont passés à côté d'elle. Toi, tu as pris le temps de t'arrêter."
+      },
+      {
+        "who": "naomi",
+        "text": "Je ne t'oublierai pas. Que Dieu te bénisse !"
+      }
+    ],
+    "debrief": [
+      {
+        "who": "gardien",
+        "text": "Je t'ai vu faire. Tu as été le prochain de Naomi, comme le Samaritain de l'histoire."
+      },
+      {
+        "who": "gardien",
+        "text": "Jésus ne nous demande pas : « Qui mérite mon aide ? » Il nous demande : « De qui puis-je être le prochain aujourd'hui ? »"
+      },
+      {
+        "who": "gardien",
+        "text": "Ton cœur a vu, et tes mains ont aidé. C'est ça, la compassion."
+      }
+    ]
+  },
+  "scrolls": {
+    "story": {
+      "title": "Le bon Samaritain",
+      "reference": "Luc 10, versets 25 à 37",
+      "panels": [
+        {
+          "icon": "🤔",
+          "text": "Un jour, un homme demande à Jésus : « Qui est mon prochain ? Qui dois-je aimer ? » Pour lui répondre, Jésus raconte une histoire."
+        },
+        {
+          "icon": "🛣️",
+          "text": "Un homme voyage sur la route qui descend de Jérusalem à Jéricho. Des brigands l'attaquent, prennent ses affaires et le laissent blessé au bord du chemin."
+        },
+        {
+          "icon": "🚶",
+          "text": "Un prêtre passe par là. Il voit l'homme… mais il change de côté et continue sa route. Un peu plus tard, un lévite, qui sert au Temple, fait pareil."
+        },
+        {
+          "icon": "🫏",
+          "text": "Puis arrive un Samaritain. À cette époque, les Juifs et les Samaritains ne s'aimaient pas du tout. Pourtant, quand il voit le blessé, son cœur est touché."
+        },
+        {
+          "icon": "🩹",
+          "text": "Il s'approche, soigne ses blessures avec de l'huile et du vin, et les bande. Puis il l'installe sur son âne et l'emmène dans une auberge."
+        },
+        {
+          "icon": "🪙",
+          "text": "Le lendemain, il donne deux pièces d'argent à l'aubergiste : « Prends soin de lui. Si tu dépenses plus, je te rembourserai à mon retour. »"
+        },
+        {
+          "icon": "❤️",
+          "text": "Jésus demande : « Lequel des trois a été le prochain du blessé ? » On lui répond : « Celui qui a eu pitié de lui. » Et Jésus dit : « Va, et toi aussi, fais de même. »"
+        }
+      ]
+    }
+  },
+  "idle": {
+    "presse1": [
+      {
+        "who": "presse1",
+        "text": "Désolé, je suis très en retard ! Quelqu'un d'autre va bien s'en occuper."
+      }
+    ],
+    "presse2": [
+      {
+        "who": "presse2",
+        "text": "Je n'ai pas le temps, j'ai mes affaires à faire !"
+      }
+    ]
+  },
+  "ending": {
+    "message": "Être le prochain de quelqu'un, c'est s'arrêter pour l'aider, même s'il est différent de nous, même quand on est pressé. C'est ce que Jésus fait pour nous.",
+    "reflection": "Le prêtre et le lévite avaient sûrement de « bonnes raisons » de ne pas s'arrêter. Qu'est-ce qui nous empêche, nous, de nous arrêter ? Qui est « au bord de la route » dans notre quartier, notre école ou notre église ?"
+  }
+}

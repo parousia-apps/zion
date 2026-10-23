@@ -1,0 +1,531 @@
+{
+  "id": "zion",
+  "environment": {
+    "sky": [
+      "#2f6bff",
+      "#bfe3ff"
+    ],
+    "ground": "#7fc95a",
+    "radius": 25,
+    "walls": {
+      "radius": 29,
+      "gate": 0
+    }
+  },
+  "player": {
+    "pos": [
+      0,
+      13
+    ],
+    "rot": 180,
+    "look": {
+      "tunic": "#00a86b",
+      "accent": "#ffc21a",
+      "hair": "#2b1a10",
+      "skin": "#8d5524",
+      "height": 0.85
+    }
+  },
+  "props": [
+    {
+      "model": "plaza",
+      "pos": [
+        0,
+        4.5
+      ],
+      "size": [
+        12,
+        12
+      ]
+    },
+    {
+      "model": "plaza",
+      "pos": [
+        0,
+        19
+      ],
+      "size": [
+        4,
+        19
+      ]
+    },
+    {
+      "model": "road",
+      "pos": [
+        -8,
+        4
+      ],
+      "size": [
+        6,
+        3.4
+      ]
+    },
+    {
+      "model": "road",
+      "pos": [
+        9,
+        1
+      ],
+      "size": [
+        8,
+        3
+      ]
+    },
+    {
+      "model": "tower",
+      "pos": [
+        0,
+        -8
+      ]
+    },
+    {
+      "model": "fountain",
+      "pos": [
+        0,
+        4
+      ]
+    },
+    {
+      "model": "lamp",
+      "pos": [
+        -5.2,
+        -0.8
+      ]
+    },
+    {
+      "model": "lamp",
+      "pos": [
+        5.2,
+        -0.8
+      ]
+    },
+    {
+      "model": "lamp",
+      "pos": [
+        -5.2,
+        10
+      ]
+    },
+    {
+      "model": "lamp",
+      "pos": [
+        5.2,
+        10
+      ]
+    },
+    {
+      "model": "bench",
+      "pos": [
+        -3.4,
+        4
+      ],
+      "rot": 90
+    },
+    {
+      "model": "bench",
+      "pos": [
+        3.4,
+        4
+      ],
+      "rot": -90
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        -2.6,
+        0.4
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        2.6,
+        0.4
+      ]
+    },
+    {
+      "model": "market",
+      "pos": [
+        -13,
+        4
+      ],
+      "rot": 90
+    },
+    {
+      "model": "stall",
+      "pos": [
+        -12.5,
+        -2
+      ],
+      "rot": 90,
+      "color": "#ff4f2e"
+    },
+    {
+      "model": "barrel",
+      "pos": [
+        -10.6,
+        -3.4
+      ]
+    },
+    {
+      "model": "barrel",
+      "pos": [
+        -10.2,
+        -2.6
+      ]
+    },
+    {
+      "model": "crate",
+      "pos": [
+        -10.4,
+        7.6
+      ],
+      "rot": 20
+    },
+    {
+      "model": "crate",
+      "pos": [
+        -10.8,
+        8.4
+      ],
+      "rot": -10
+    },
+    {
+      "model": "bag",
+      "pos": [
+        -10,
+        0.4
+      ]
+    },
+    {
+      "model": "bag",
+      "pos": [
+        -9.8,
+        1.1
+      ],
+      "rot": 40
+    },
+    {
+      "model": "cart",
+      "pos": [
+        5,
+        21
+      ],
+      "rot": -30
+    },
+    {
+      "model": "house",
+      "pos": [
+        -15,
+        -14
+      ],
+      "rot": 0,
+      "color": "#00a39b",
+      "size": [
+        4.4,
+        3.6
+      ]
+    },
+    {
+      "model": "house",
+      "pos": [
+        -21.5,
+        -1
+      ],
+      "rot": 90,
+      "color": "#d6336c"
+    },
+    {
+      "model": "house",
+      "pos": [
+        -8,
+        19.5
+      ],
+      "rot": 160,
+      "color": "#2340ff"
+    },
+    {
+      "model": "house",
+      "pos": [
+        10,
+        19
+      ],
+      "rot": -155,
+      "color": "#e8590c"
+    },
+    {
+      "model": "house",
+      "pos": [
+        21.5,
+        -7
+      ],
+      "rot": -90,
+      "color": "#7c4dff"
+    },
+    {
+      "model": "house",
+      "pos": [
+        -7,
+        -20.5
+      ],
+      "rot": 18,
+      "color": "#1971c2"
+    },
+    {
+      "model": "house",
+      "pos": [
+        6,
+        -21
+      ],
+      "rot": -15,
+      "color": "#c92a2a"
+    },
+    {
+      "model": "house",
+      "pos": [
+        -19,
+        12.5
+      ],
+      "rot": 125,
+      "color": "#0b7285"
+    },
+    {
+      "model": "pen",
+      "pos": [
+        18,
+        4
+      ],
+      "rot": -90
+    },
+    {
+      "model": "stage",
+      "pos": [
+        11,
+        -18
+      ],
+      "rot": 0,
+      "color": "#7c4dff"
+    },
+    {
+      "model": "olive",
+      "pos": [
+        -5,
+        12.5
+      ]
+    },
+    {
+      "model": "olive",
+      "pos": [
+        6,
+        12
+      ]
+    },
+    {
+      "model": "olive",
+      "pos": [
+        13,
+        -6
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        -3.8,
+        -14
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        4.2,
+        -14.5
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        19,
+        -14
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        -23,
+        6
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        15,
+        14
+      ]
+    },
+    {
+      "model": "tree",
+      "pos": [
+        -22,
+        -9
+      ]
+    },
+    {
+      "model": "tree",
+      "pos": [
+        22,
+        11
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        -17,
+        16
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        12.5,
+        -4
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        -6,
+        -10
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        8.5,
+        -11
+      ]
+    },
+    {
+      "model": "rock",
+      "pos": [
+        -24,
+        -3
+      ]
+    },
+    {
+      "model": "rock",
+      "pos": [
+        23,
+        2
+      ]
+    },
+    {
+      "model": "well",
+      "pos": [
+        7,
+        -4
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "gardien",
+      "model": "person",
+      "pos": [
+        0,
+        -4.3
+      ],
+      "rot": 0,
+      "look": {
+        "tunic": "#1a237e",
+        "accent": "#ffc21a",
+        "beard": "#f5f5f5",
+        "hair": "#e0e0e0",
+        "skin": "#7a4a2a",
+        "staff": true,
+        "lantern": true,
+        "base": "man"
+      }
+    },
+    {
+      "id": "soigneuse",
+      "model": "person",
+      "pos": [
+        -13,
+        -9.5
+      ],
+      "rot": 20,
+      "look": {
+        "tunic": "#00c2a8",
+        "accent": "#ffffff",
+        "scarf": "#ffffff",
+        "skin": "#c68642"
+      }
+    },
+    {
+      "id": "marchande",
+      "model": "person",
+      "pos": [
+        -13.4,
+        3.5
+      ],
+      "rot": 90,
+      "reach": 3.2,
+      "look": {
+        "tunic": "#ff7a1a",
+        "accent": "#2340ff",
+        "scarf": "#ff4f7b",
+        "skin": "#8d5524"
+      }
+    },
+    {
+      "id": "passant",
+      "model": "person",
+      "pos": [
+        -6,
+        8
+      ],
+      "rot": 30,
+      "wander": 3,
+      "look": {
+        "tunic": "#7c4dff",
+        "accent": "#ffd23f",
+        "hair": "#1b1b1b",
+        "skin": "#a8693a"
+      }
+    }
+  ],
+  "zones": [
+    {
+      "id": "soins",
+      "pos": [
+        -15,
+        -9
+      ],
+      "radius": 2
+    },
+    {
+      "id": "enclos",
+      "pos": [
+        18,
+        4
+      ],
+      "radius": 2.4
+    },
+    {
+      "id": "scene",
+      "pos": [
+        11,
+        -13.5
+      ],
+      "radius": 2.4
+    },
+    {
+      "id": "place",
+      "pos": [
+        0,
+        8.5
+      ],
+      "radius": 2.6
+    }
+  ]
+}

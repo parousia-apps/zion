@@ -1,0 +1,217 @@
+{
+  "id": "fidelite",
+  "order": 2,
+  "icon": "🌈",
+  "traitIcon": "🤝",
+  "color": "#2340ff",
+  "chapters": [
+    {
+      "world": "zion",
+      "steps": [
+        {
+          "id": "intro",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "intro"
+        }
+      ]
+    },
+    {
+      "world": "noe",
+      "steps": [
+        {
+          "id": "story",
+          "type": "scene",
+          "dialog": "story"
+        },
+        {
+          "id": "askHelp",
+          "type": "talk",
+          "target": "noe",
+          "dialog": "askHelp"
+        },
+        {
+          "id": "animals",
+          "type": "gather",
+          "targets": [
+            "cerf",
+            "biche",
+            "cheval1",
+            "cheval2",
+            "zebre1",
+            "zebre2"
+          ],
+          "zone": "arche",
+          "dialog": "allIn"
+        },
+        {
+          "id": "board",
+          "type": "reach",
+          "zone": "arche",
+          "moves": [
+            {
+              "id": "noe",
+              "to": [
+                5.6,
+                -8
+              ],
+              "hide": true
+            }
+          ],
+          "dialog": "flood"
+        }
+      ]
+    },
+    {
+      "world": "zion",
+      "player": {
+        "pos": [
+          0,
+          0
+        ],
+        "rot": 180
+      },
+      "entities": [
+        {
+          "id": "ruth",
+          "model": "person",
+          "pos": [
+            14,
+            9
+          ],
+          "rot": -60,
+          "look": {
+            "tunic": "#ff7a1a",
+            "accent": "#00a86b",
+            "scarf": "#ffffff",
+            "skin": "#7a4a2a",
+            "staff": true
+          }
+        },
+        {
+          "id": "chevre1",
+          "model": "sheep",
+          "pos": [
+            7,
+            21
+          ],
+          "rot": 30,
+          "wander": 1
+        },
+        {
+          "id": "chevre2",
+          "model": "sheep",
+          "pos": [
+            -17,
+            13
+          ],
+          "rot": 120,
+          "wander": 1
+        },
+        {
+          "id": "chevre3",
+          "model": "sheep",
+          "pos": [
+            17,
+            15
+          ],
+          "rot": -60,
+          "wander": 1
+        },
+        {
+          "id": "moqueur1",
+          "model": "person",
+          "pos": [
+            8,
+            7
+          ],
+          "rot": -90,
+          "wander": 1.5,
+          "look": {
+            "tunic": "#ffc21a",
+            "accent": "#ff4f2e",
+            "hair": "#1b1b1b",
+            "skin": "#c68642",
+            "height": 0.8
+          }
+        },
+        {
+          "id": "moqueur2",
+          "model": "person",
+          "pos": [
+            9.5,
+            9
+          ],
+          "rot": -120,
+          "wander": 1.5,
+          "look": {
+            "tunic": "#00c2a8",
+            "accent": "#7c4dff",
+            "hair": "#3e2410",
+            "skin": "#8d5524",
+            "height": 0.75,
+            "base": "woman"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "id": "trait",
+          "type": "trait"
+        },
+        {
+          "id": "promise",
+          "type": "talk",
+          "target": "ruth",
+          "dialog": "promise"
+        },
+        {
+          "id": "goats",
+          "type": "gather",
+          "targets": [
+            "chevre1",
+            "chevre2",
+            "chevre3"
+          ],
+          "zone": "enclos",
+          "moves": [
+            {
+              "id": "ruth",
+              "to": [
+                0,
+                27
+              ],
+              "hide": true
+            }
+          ],
+          "pickupDialog": "tease",
+          "dialog": "storm"
+        },
+        {
+          "id": "thanks",
+          "type": "talk",
+          "target": "ruth",
+          "show": [
+            "ruth"
+          ],
+          "moves": [
+            {
+              "id": "ruth",
+              "to": [
+                14,
+                8
+              ]
+            }
+          ],
+          "dialog": "thanks"
+        },
+        {
+          "id": "debrief",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "debrief"
+        }
+      ]
+    }
+  ]
+}

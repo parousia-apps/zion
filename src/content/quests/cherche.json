@@ -1,0 +1,124 @@
+{
+  "id": "cherche",
+  "order": 3,
+  "icon": "🐑",
+  "traitIcon": "🔦",
+  "color": "#00a86b",
+  "chapters": [
+    {
+      "world": "zion",
+      "entities": [
+        {
+          "id": "lea",
+          "model": "person",
+          "pos": [
+            2.6,
+            8
+          ],
+          "rot": -90,
+          "look": {
+            "tunic": "#ff4f7b",
+            "accent": "#ffc21a",
+            "hair": "#1b1b1b",
+            "skin": "#8d5524",
+            "height": 0.8,
+            "base": "woman"
+          }
+        },
+        {
+          "id": "samy",
+          "model": "person",
+          "pos": [
+            -2.6,
+            8
+          ],
+          "rot": 90,
+          "look": {
+            "tunic": "#2340ff",
+            "accent": "#ffffff",
+            "hair": "#3e2410",
+            "skin": "#c68642",
+            "height": 0.78
+          }
+        },
+        {
+          "id": "ana",
+          "model": "person",
+          "pos": [
+            0,
+            10.5
+          ],
+          "rot": 180,
+          "look": {
+            "tunic": "#ffc21a",
+            "accent": "#00a86b",
+            "scarf": "#ff7a1a",
+            "skin": "#7a4a2a",
+            "height": 0.75
+          }
+        },
+        {
+          "id": "timothee",
+          "model": "person",
+          "pos": [
+            -22,
+            -12
+          ],
+          "rot": 120,
+          "look": {
+            "tunic": "#7c4dff",
+            "accent": "#ffd23f",
+            "hair": "#1b1b1b",
+            "skin": "#7a4a2a",
+            "height": 0.78
+          }
+        }
+      ],
+      "steps": [
+        {
+          "id": "intro",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "intro"
+        },
+        {
+          "id": "story",
+          "type": "scroll",
+          "scroll": "story"
+        },
+        {
+          "id": "trait",
+          "type": "trait"
+        },
+        {
+          "id": "missing",
+          "type": "talk",
+          "target": "lea",
+          "dialog": "missing"
+        },
+        {
+          "id": "search",
+          "type": "gather",
+          "targets": [
+            "timothee"
+          ],
+          "zone": "place",
+          "pickupDialog": "found",
+          "dialog": "back"
+        },
+        {
+          "id": "party",
+          "type": "talk",
+          "target": "lea",
+          "dialog": "party"
+        },
+        {
+          "id": "debrief",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "debrief"
+        }
+      ]
+    }
+  ]
+}

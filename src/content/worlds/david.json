@@ -1,0 +1,312 @@
+{
+  "id": "david",
+  "souvenir": true,
+  "environment": {
+    "sky": [
+      "#3d7bff",
+      "#ffe08a"
+    ],
+    "ground": "#8bc34a",
+    "radius": 21
+  },
+  "player": {
+    "pos": [
+      0,
+      8
+    ],
+    "rot": 180,
+    "look": {
+      "tunic": "#e53935",
+      "accent": "#ffd23f",
+      "hair": "#3e2410",
+      "skin": "#a8693a",
+      "staff": true,
+      "height": 0.85
+    }
+  },
+  "props": [
+    {
+      "model": "pen",
+      "pos": [
+        -3,
+        -3
+      ]
+    },
+    {
+      "model": "house",
+      "pos": [
+        6,
+        -15
+      ],
+      "rot": 0,
+      "color": "#2340ff",
+      "size": [
+        4.6,
+        3.6
+      ]
+    },
+    {
+      "model": "house",
+      "pos": [
+        12.5,
+        -12.5
+      ],
+      "rot": -30,
+      "color": "#e8590c"
+    },
+    {
+      "model": "olive",
+      "pos": [
+        -12,
+        -10
+      ]
+    },
+    {
+      "model": "olive",
+      "pos": [
+        -15,
+        0
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        15,
+        3
+      ]
+    },
+    {
+      "model": "tree",
+      "pos": [
+        -8,
+        14
+      ]
+    },
+    {
+      "model": "rock",
+      "pos": [
+        10,
+        9
+      ]
+    },
+    {
+      "model": "rock",
+      "pos": [
+        -17,
+        9
+      ],
+      "scale": 1.3
+    },
+    {
+      "model": "rock",
+      "pos": [
+        16,
+        -5
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        -6,
+        8
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        5,
+        12
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        2,
+        4
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        -10,
+        4
+      ]
+    },
+    {
+      "model": "water",
+      "pos": [
+        12,
+        15
+      ],
+      "size": [
+        3,
+        2
+      ]
+    },
+    {
+      "model": "well",
+      "pos": [
+        1,
+        -12
+      ]
+    },
+    {
+      "model": "barrel",
+      "pos": [
+        3.5,
+        -12.6
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "harpe",
+      "model": "harp",
+      "pos": [
+        3,
+        -1
+      ],
+      "rot": -20
+    },
+    {
+      "id": "mouton1",
+      "model": "sheep",
+      "pos": [
+        13,
+        -8
+      ],
+      "rot": 40,
+      "wander": 1
+    },
+    {
+      "id": "mouton2",
+      "model": "sheep",
+      "pos": [
+        -14,
+        6
+      ],
+      "rot": 90,
+      "wander": 1
+    },
+    {
+      "id": "mouton3",
+      "model": "sheep",
+      "pos": [
+        7,
+        14
+      ],
+      "rot": 200,
+      "wander": 1
+    },
+    {
+      "id": "troupeau1",
+      "model": "sheep",
+      "pos": [
+        -4,
+        -4
+      ],
+      "rot": 30
+    },
+    {
+      "id": "troupeau2",
+      "model": "sheep",
+      "pos": [
+        -2,
+        -2
+      ],
+      "rot": 160
+    },
+    {
+      "id": "troupeau3",
+      "model": "sheep",
+      "pos": [
+        -4.5,
+        -1.5
+      ],
+      "rot": 260
+    },
+    {
+      "id": "serviteur",
+      "model": "person",
+      "pos": [
+        0,
+        19
+      ],
+      "hidden": true,
+      "look": {
+        "tunic": "#7c4dff",
+        "accent": "#ffffff",
+        "hair": "#1b1b1b",
+        "skin": "#8d5524"
+      }
+    },
+    {
+      "id": "samuel",
+      "model": "person",
+      "pos": [
+        4.4,
+        -11
+      ],
+      "rot": 10,
+      "look": {
+        "tunic": "#ffffff",
+        "accent": "#2340ff",
+        "beard": "#e0e0e0",
+        "scarf": "#2340ff",
+        "skin": "#a8693a",
+        "staff": true
+      }
+    },
+    {
+      "id": "jesse",
+      "model": "person",
+      "pos": [
+        7.8,
+        -11
+      ],
+      "rot": -10,
+      "look": {
+        "tunic": "#8d6e63",
+        "accent": "#ffc21a",
+        "beard": "#9e9e9e",
+        "hair": "#9e9e9e",
+        "skin": "#a8693a"
+      }
+    },
+    {
+      "id": "eliab",
+      "model": "person",
+      "pos": [
+        9.6,
+        -12.5
+      ],
+      "rot": -40,
+      "look": {
+        "tunic": "#00838f",
+        "accent": "#ffd23f",
+        "beard": "#3e2410",
+        "hair": "#3e2410",
+        "skin": "#a8693a",
+        "height": 1.1
+      }
+    }
+  ],
+  "zones": [
+    {
+      "id": "bergerie",
+      "pos": [
+        -3,
+        -3
+      ],
+      "radius": 2.6
+    },
+    {
+      "id": "maison",
+      "pos": [
+        6,
+        -10.8
+      ],
+      "radius": 1.8
+    }
+  ]
+}

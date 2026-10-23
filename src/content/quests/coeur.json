@@ -1,0 +1,206 @@
+{
+  "id": "coeur",
+  "order": 4,
+  "icon": "🎵",
+  "traitIcon": "👁️",
+  "color": "#7c4dff",
+  "chapters": [
+    {
+      "world": "zion",
+      "steps": [
+        {
+          "id": "intro",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "intro"
+        }
+      ]
+    },
+    {
+      "world": "david",
+      "steps": [
+        {
+          "id": "story",
+          "type": "scene",
+          "dialog": "story"
+        },
+        {
+          "id": "sheep",
+          "type": "gather",
+          "targets": [
+            "mouton1",
+            "mouton2",
+            "mouton3"
+          ],
+          "zone": "bergerie",
+          "beacon": "bleat",
+          "dialog": "safe"
+        },
+        {
+          "id": "psalm",
+          "type": "interact",
+          "target": "harpe",
+          "dialog": "psalm"
+        },
+        {
+          "id": "call",
+          "type": "talk",
+          "target": "serviteur",
+          "show": [
+            "serviteur"
+          ],
+          "moves": [
+            {
+              "id": "serviteur",
+              "to": [
+                2,
+                6
+              ],
+              "speed": 3
+            }
+          ],
+          "dialog": "call"
+        },
+        {
+          "id": "home",
+          "type": "reach",
+          "zone": "maison"
+        },
+        {
+          "id": "anoint",
+          "type": "talk",
+          "target": "samuel",
+          "dialog": "anoint"
+        }
+      ]
+    },
+    {
+      "world": "zion",
+      "player": {
+        "pos": [
+          0,
+          0
+        ],
+        "rot": 180
+      },
+      "entities": [
+        {
+          "id": "myriam",
+          "model": "person",
+          "pos": [
+            8,
+            -12.5
+          ],
+          "rot": 30,
+          "look": {
+            "tunic": "#ff4f7b",
+            "accent": "#ffc21a",
+            "scarf": "#7c4dff",
+            "skin": "#8d5524"
+          }
+        },
+        {
+          "id": "ben",
+          "model": "person",
+          "pos": [
+            -9,
+            6
+          ],
+          "rot": 60,
+          "look": {
+            "tunic": "#ff7a1a",
+            "accent": "#2340ff",
+            "hair": "#1b1b1b",
+            "skin": "#7a4a2a",
+            "height": 0.85
+          }
+        },
+        {
+          "id": "sarah",
+          "model": "person",
+          "pos": [
+            13,
+            12
+          ],
+          "rot": -120,
+          "look": {
+            "tunic": "#00c2a8",
+            "accent": "#ffffff",
+            "hair": "#3e2410",
+            "skin": "#c68642",
+            "height": 0.82,
+            "base": "woman"
+          }
+        },
+        {
+          "id": "elie",
+          "model": "person",
+          "pos": [
+            -17.5,
+            -6
+          ],
+          "rot": 60,
+          "look": {
+            "tunic": "#2340ff",
+            "accent": "#ffc21a",
+            "hair": "#1b1b1b",
+            "skin": "#8d5524",
+            "wheelchair": true,
+            "height": 0.85
+          }
+        },
+        {
+          "id": "rampe",
+          "model": "ramp",
+          "pos": [
+            13.8,
+            -15.6
+          ],
+          "hidden": true
+        }
+      ],
+      "steps": [
+        {
+          "id": "trait",
+          "type": "trait"
+        },
+        {
+          "id": "festival",
+          "type": "talk",
+          "target": "myriam",
+          "dialog": "festival"
+        },
+        {
+          "id": "musicians",
+          "type": "gather",
+          "targets": [
+            "ben",
+            "sarah",
+            "elie"
+          ],
+          "zone": "scene",
+          "pickupDialogs": {
+            "ben": "ben",
+            "sarah": "sarah",
+            "elie": "elie"
+          },
+          "dialog": "ready"
+        },
+        {
+          "id": "concert",
+          "type": "scene",
+          "show": [
+            "rampe"
+          ],
+          "dialog": "concert"
+        },
+        {
+          "id": "debrief",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "debrief"
+        }
+      ]
+    }
+  ]
+}

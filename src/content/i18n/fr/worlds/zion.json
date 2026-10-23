@@ -1,0 +1,40 @@
+{
+  "name": "Zion, la cité des veilleurs",
+  "names": {
+    "player": "Toi",
+    "gardien": "Ezra, le Gardien",
+    "soigneuse": "Tabitha, la soigneuse",
+    "marchande": "Rebecca, la marchande",
+    "passant": "Yohan, un passant",
+    "soins": "la maison de soins",
+    "enclos": "l'enclos de Mamie Ruth",
+    "scene": "la scène de la fête",
+    "place": "la place de la fontaine"
+  },
+  "idle": {
+    "gardien": [
+      {
+        "who": "gardien",
+        "text": "Un veilleur garde les yeux ouverts… et le cœur aussi. Va, je compte sur toi !"
+      }
+    ],
+    "soigneuse": [
+      {
+        "who": "soigneuse",
+        "text": "Ici, on soigne tout le monde, sans exception. C'est ce que Jésus faisait."
+      }
+    ],
+    "marchande": [
+      {
+        "who": "marchande",
+        "text": "Des dattes, des figues, du pain chaud ! Prends une figue, c'est offert, petit veilleur."
+      }
+    ],
+    "passant": [
+      {
+        "who": "passant",
+        "text": "Belle journée à Zion ! Tu as vu la lanterne du Gardien ? Elle ne s'éteint jamais."
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "The lost sheep",
+  "summary": "The shepherd leaves everything to look for one single sheep. In Zion, a child has left the game, sad and alone: go and find him!",
+  "reference": "Luke 15:3-7",
+  "trait": {
+    "name": "Love that seeks",
+    "description": "Loving like God means leaving no one out: we go and find the one who is alone, lost or forgotten.",
+    "jesus": "Jesus went to the people everyone avoided, like Zacchaeus, whom nobody liked. He said: \"I came to seek and to save the lost.\"",
+    "jesusRef": "Luke 19:1-10"
+  },
+  "names": { "lea": "Lea", "samy": "Samy", "ana": "Ana", "timothee": "Timothy" },
+  "objectives": {
+    "intro": "Go and see the Keeper, at the foot of the tower.",
+    "missing": "Some children are playing by the fountain: go and talk to Lea.",
+    "search": "Find Timothy and bring him back to the fountain square.",
+    "party": "Go back to Lea and the children.",
+    "debrief": "Go back to the Keeper."
+  },
+  "dialogs": {
+    "intro": [
+      { "who": "gardien", "text": "Do you know how many people live in Zion? Lots! And yet God knows each one by name." },
+      { "who": "gardien", "text": "Listen to this story Jesus told." }
+    ],
+    "missing": [
+      { "who": "lea", "text": "Hi! We're playing ring-a-roses, but there are only three of us…" },
+      { "who": "samy", "text": "Timothy used to play with us. But we laughed at him because he runs slowly… So he left." },
+      { "who": "ana", "text": "Maybe he's hiding somewhere near the city walls. Nobody went to look for him." },
+      { "who": "player", "text": "I'll go. Everyone matters!" }
+    ],
+    "found": [
+      { "who": "timothee", "text": "What are you doing here? Nobody wants me…" },
+      { "who": "player", "text": "That's not true. I came here just for you. Without you, someone is missing!" },
+      { "who": "timothee", "text": "Really? Well… OK, I'll come with you." }
+    ],
+    "back": [{ "who": "narrator", "text": "Timothy is back at the fountain square." }],
+    "party": [
+      { "who": "lea", "text": "Timothy! You're back! We're sorry we laughed at you.", "fx": "celebrate" },
+      { "who": "samy", "text": "Come and join the circle! Let's play a game where everyone can win." },
+      { "who": "timothee", "text": "Thank you for looking for me… I feel like I belong again." }
+    ],
+    "debrief": [
+      { "who": "gardien", "text": "There is joy in Zion today, just as there is joy in heaven when someone comes back to God." },
+      { "who": "gardien", "text": "The shepherd didn't say: \"Never mind, I still have ninety-nine.\" To him, every sheep mattered." },
+      { "who": "gardien", "text": "Jesus is like that shepherd. He never forgets us. And he teaches us to go and find those who are alone." }
+    ]
+  },
+  "scrolls": {
+    "story": {
+      "title": "The lost sheep",
+      "reference": "Luke 15:3-7",
+      "panels": [
+        { "icon": "🐑", "text": "Jesus says: \"Imagine a shepherd who has a hundred sheep. He knows them all, and he loves them all.\"" },
+        { "icon": "🌄", "text": "\"One evening, he counts them: ninety-seven, ninety-eight, ninety-nine… One is missing!\"" },
+        { "icon": "⛰️", "text": "\"The shepherd leaves the ninety-nine others safe. He goes off into the hills to look for the lost one, until he finds it.\"" },
+        { "icon": "🤗", "text": "\"When he finds it, he is filled with joy! He puts it on his shoulders and carries it home.\"" },
+        { "icon": "🎉", "text": "\"He calls his friends: Rejoice with me, I have found my lost sheep!\"" },
+        { "icon": "✨", "text": "Jesus explains: \"There is great joy in heaven over one single person who comes back to God.\" To God, everyone is precious." }
+      ]
+    }
+  },
+  "idle": {
+    "lea": [{ "who": "lea", "text": "Good luck! Look carefully behind the houses, near the walls." }],
+    "samy": [{ "who": "samy", "text": "We're waiting for Timothy to start again." }],
+    "ana": [{ "who": "ana", "text": "Do you think he'll want to come back?" }]
+  },
+  "ending": {
+    "message": "To God, nobody is one too many and nobody is forgotten. Like Jesus, we can go and find the one who is alone and tell them: you matter!",
+    "reflection": "The shepherd could have settled for his ninety-nine sheep. Who around us risks being forgotten or left out, perhaps because of a difference or a disability? What could we do, concretely, to reach out to them?"
+  }
+}

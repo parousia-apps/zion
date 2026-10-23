@@ -1,0 +1,605 @@
+/* ==========================================================================
+   Zion — styles « livre d'images »
+   - Couleurs : tokens sur :root, redéfinis pour le contraste élevé (.hc)
+   - Titres en Fraunces (esprit livre illustré), textes en Atkinson Hyperlegible
+     (police conçue pour les personnes malvoyantes)
+   - Pages blanches à double filet bleu nuit + or, ornements aux coins
+   - Taille du texte : html[data-text="m|l|xl"] change la taille de base (rem)
+   - Animations : coupées par .rm (option du jeu) et prefers-reduced-motion
+   ========================================================================== */
+
+:root {
+  --ink: #14123a;
+  --night: #161a52;
+  --night-2: #0c0e33;
+  --royal: #2b3dd8;
+  --crimson: #c8102e;
+  --gold: #f2b705;
+  --gold-2: #ffd54a;
+  --gold-deep: #b8860b;
+  --emerald: #0f9d58;
+  --page: #ffffff;
+  --text: #14123a;
+  --text-on-dark: #ffffff;
+  --muted: #4a4870;
+  --focus: #ff5a1f;
+  --radius: 14px;
+  --font-body: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-title: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  /* Cadre de page : filet or intérieur + bord bleu nuit + ombre douce */
+  --frame: inset 0 0 0 3px var(--page), inset 0 0 0 5px var(--gold), 0 2px 0 rgba(0, 0, 0, 0.08), 0 14px 34px rgba(8, 10, 40, 0.35);
+  /* Ornement doré (fleuron) utilisé aux coins des pages */
+  --corner: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M4 36 C4 18 18 4 36 4' fill='none' stroke='%23d4a017' stroke-width='2.5'/%3E%3Cpath d='M10 36 C10 22 22 10 36 10' fill='none' stroke='%23d4a017' stroke-width='1.2'/%3E%3Ccircle cx='8' cy='8' r='3.5' fill='%23d4a017'/%3E%3C/svg%3E");
+}
+
+html { font-size: 100%; }
+html[data-text='l'] { font-size: 125%; }
+html[data-text='xl'] { font-size: 150%; }
+
+/* Contraste élevé : noir / blanc / jaune, bordures franches, pas d'ornements. */
+html.hc {
+  --night: #000;
+  --night-2: #000;
+  --royal: #000;
+  --page: #000;
+  --text: #fff;
+  --muted: #fff;
+  --gold: #ffe600;
+  --gold-2: #ffe600;
+  --crimson: #000;
+  --focus: #00e5ff;
+  --frame: 0 0 0 3px #fff;
+  --corner: none;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: var(--night);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.55;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3 { font-family: var(--font-title); font-weight: 600; line-height: 1.15; margin: 0 0 0.5em; }
+
+:focus-visible { outline: 4px solid var(--focus); outline-offset: 3px; }
+/* Titres et conteneurs qui reçoivent le focus par code (pour les lecteurs d'écran) : pas de cadre. */
+[tabindex='-1']:focus { outline: none; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+[hidden] { display: none !important; }
+
+#scene { position: fixed; inset: 0; width: 100vw; height: 100dvh; display: block; touch-action: none; }
+
+.screen { position: fixed; inset: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+
+/* Page de livre : blanche, double filet, fleurons dorés aux quatre coins. */
+.page {
+  background-color: var(--page);
+  color: var(--text);
+  border-radius: var(--radius);
+  border: 2px solid var(--ink);
+  box-shadow: var(--frame);
+  background-image: var(--corner), var(--corner), var(--corner), var(--corner);
+  background-repeat: no-repeat;
+  background-size: 26px 26px;
+  background-position: top 7px left 7px, top 7px right 7px, bottom 7px left 7px, bottom 7px right 7px;
+}
+html.hc .page { border-color: #fff; }
+
+/* Fond de nuit étoilée, commun aux écrans de menu */
+.screen-title, .screen-setup, .screen-stories, .screen-end, .scroll-overlay, .trait-overlay {
+  background:
+    radial-gradient(ellipse at 50% 0%, #2a2f86 0%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 72% 12%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 35% 40%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 32%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 52% 26%, #ffe9a8 50%, transparent 51%),
+    radial-gradient(1px 1px at 22% 62%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 66% 54%, #fff 50%, transparent 51%),
+    var(--night);
+  color: var(--text-on-dark);
+}
+html.hc .screen-title, html.hc .screen-setup, html.hc .screen-stories, html.hc .screen-end, html.hc .scroll-overlay, html.hc .trait-overlay { background: #000; }
+
+/* ------------------------------------------------------------------ boutons */
+
+.btn {
+  font: inherit;
+  font-weight: 700;
+  min-height: 48px; /* cible tactile confortable */
+  padding: 0.55em 1.3em;
+  border-radius: 999px;
+  border: 2px solid var(--ink);
+  background: var(--page);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 3.5px rgba(212, 160, 23, 0.6), 0 4px 12px rgba(8, 10, 40, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 3.5px var(--gold), 0 8px 18px rgba(8, 10, 40, 0.3); }
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: linear-gradient(180deg, var(--gold-2), var(--gold));
+  color: var(--ink);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7), 0 4px 14px rgba(242, 183, 5, 0.35), 0 2px 0 var(--gold-deep);
+}
+.btn-light { background: var(--page); color: var(--ink); }
+.btn-danger { background: var(--crimson); color: #fff; }
+.btn-xl { font-size: 1.3rem; padding: 0.7em 1.9em; font-family: var(--font-title); font-weight: 600; letter-spacing: 0.01em; }
+.btn-small { font-size: 0.95rem; min-height: 44px; padding: 0.4em 1em; }
+html.hc .btn { background: #000; color: #fff; border-color: #fff; box-shadow: none; }
+html.hc .btn-primary { background: var(--gold); color: #000; }
+
+/* ------------------------------------------------------------ écran titre */
+
+.screen-title { display: grid; place-items: center; text-align: center; overflow: hidden; }
+.title-bg { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.stars {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 80% 20%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 60% 45%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 40% 15%, #ffe9a8 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 90% 50%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 8% 48%, #fff 50%, transparent 51%);
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+.moon {
+  position: absolute; right: 7%; top: 3%;
+  width: 11vmin; height: 11vmin; border-radius: 50%;
+  box-shadow: inset -2.4vmin -1vmin 0 0 #fff3c4;
+  filter: drop-shadow(0 0 18px rgba(255, 233, 168, 0.6));
+}
+.skyline { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 40vh; }
+@media (max-aspect-ratio: 3/4) { .skyline { height: 26vh; } }
+.skyline .hill-back { fill: #1c2170; }
+.skyline .city { fill: #0b0d2e; }
+.skyline .windows rect { fill: #ffc94a; animation: flicker 3s ease-in-out infinite; }
+.skyline .windows rect:nth-child(2) { animation-delay: 0.7s; }
+.skyline .windows rect:nth-child(4) { animation-delay: 1.4s; }
+.skyline .beacon { fill: #ffd54a; filter: drop-shadow(0 0 14px #ffb300); animation: beacon 2.6s ease-in-out infinite; transform-origin: 600px 44px; }
+.skyline .hill-front { fill: #0f1240; }
+.flying-dove {
+  position: absolute; left: 0; top: 0;
+  width: 72px; height: 50px;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.45));
+  offset-path: path('M-60,380 C200,180 380,420 560,260 S860,90 1120,200');
+  offset-rotate: 0deg;
+  animation: fly 16s linear infinite;
+}
+
+.title-content { position: relative; z-index: 2; padding: 1rem 1rem 24vh; }
+.logo {
+  font-family: var(--font-title);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(4.5rem, 21vw, 10rem);
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: var(--gold-2);
+  /* Or plein + relief : un liseré foncé et un halo lumineux, comme une enluminure. */
+  text-shadow: 0 3px 0 var(--gold-deep), 0 6px 0 rgba(0, 0, 0, 0.35), 0 0 30px rgba(255, 200, 60, 0.45);
+}
+.logo span { display: inline-block; padding: 0 0.03em; animation: drop 0.9s cubic-bezier(0.2, 1.3, 0.4, 1) both; }
+html.hc .logo { color: var(--gold); text-shadow: none; }
+.logo span:nth-child(2) { animation-delay: 0.12s; }
+.logo span:nth-child(3) { animation-delay: 0.24s; }
+.logo span:nth-child(4) { animation-delay: 0.36s; }
+.ornament { display: block; width: min(320px, 70vw); margin: 0.2rem auto 0; }
+.ornament path { fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 360; stroke-dashoffset: 360; animation: draw 1.6s 0.5s ease forwards; }
+.ornament .ornament-gem { fill: var(--gold); stroke: none; animation: pop 0.5s 1.6s both; }
+.logo-sub {
+  font-family: var(--font-title);
+  font-style: italic;
+  font-size: clamp(1.35rem, 5.5vw, 2.1rem);
+  margin: 0.3em 0 0.4em;
+  color: #fff;
+  animation: rise 0.7s 0.9s both;
+}
+.tagline { max-width: 32rem; margin: 0.4em auto 1.4em; font-size: 1.15rem; color: #e7e8ff; animation: rise 0.6s 1.1s both; }
+.title-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; animation: rise 0.6s 1.3s both; }
+.lang-switch { margin-top: 1.2rem; display: flex; gap: 0.5rem; justify-content: center; animation: rise 0.6s 1.5s both; }
+.lang-switch .btn[aria-pressed='true'] { background: linear-gradient(180deg, var(--gold-2), var(--gold)); }
+
+/* ------------------------------------------------------- écran préférences */
+
+.panel { max-width: 46rem; margin: 0 auto; padding: 2.4rem 1rem 3rem; text-align: center; }
+.panel h2 { font-size: 2.3rem; color: var(--gold-2); }
+html.hc .panel h2 { color: var(--gold); }
+.setup-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 1rem; margin: 1.5rem 0 2rem; }
+.toggle-card {
+  font: inherit; font-weight: 700;
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  padding: 1.3rem 0.8rem;
+  border-radius: var(--radius);
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  cursor: pointer;
+  animation: rise 0.5s both;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.toggle-card:hover { transform: translateY(-2px); }
+.toggle-card:nth-child(2) { animation-delay: 0.08s; }
+.toggle-card:nth-child(3) { animation-delay: 0.16s; }
+.toggle-card:nth-child(4) { animation-delay: 0.24s; }
+.toggle-card[aria-pressed='true'] { background: var(--page); color: var(--ink); border-color: var(--gold); box-shadow: var(--frame); }
+.toggle-card[aria-pressed='true']::after { content: '✓'; font-size: 1.4rem; color: var(--emerald); }
+html.hc .toggle-card[aria-pressed='true'] { background: var(--gold); color: #000; }
+.toggle-icon { font-size: 2.2rem; }
+
+/* ---------------------------------------------------------- écran missions */
+
+.screen-stories { padding: 1rem 1rem calc(3rem + var(--safe-bottom)); }
+.stories-header { display: flex; justify-content: space-between; max-width: 70rem; margin: 0 auto 1rem; }
+.screen-stories > h2, .stories-intro, .stories-progress, .traits-heading { max-width: 70rem; margin-left: auto; margin-right: auto; text-align: center; }
+.screen-stories > h2 { font-size: clamp(2rem, 7vw, 3.2rem); font-style: italic; color: var(--gold-2); }
+.stories-intro { max-width: 40rem; color: #e7e8ff; }
+.stories-progress { font-weight: 700; }
+.counter { display: inline-block; font-family: var(--font-title); font-size: 2rem; color: var(--gold-2); min-width: 1.2em; }
+
+.story-list {
+  list-style: none; padding: 0; margin: 1.5rem auto;
+  max-width: 70rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem;
+}
+.story-card {
+  height: 100%;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  animation: card-in 0.7s cubic-bezier(0.2, 1.2, 0.4, 1) both;
+}
+.story-card.page { background-position: bottom 7px left 7px, bottom 7px right 7px, bottom 7px left 7px, bottom 7px right 7px; }
+/* Bandeau illustré : couleur de la mission + motif de losanges */
+.story-band {
+  position: relative;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.1rem;
+  font-size: 2.6rem;
+  color: #fff;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.14) 50%, rgba(255, 255, 255, 0.14) 75%, transparent 75%);
+  background-size: 22px 22px;
+  border-bottom: 3px solid var(--gold);
+}
+.story-num {
+  font-family: var(--font-title); font-style: italic; font-size: 1rem;
+  background: rgba(10, 10, 40, 0.45); padding: 0.15em 0.75em; border-radius: 999px;
+}
+.story-body { padding: 1rem 1.2rem 1.3rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
+.story-body h3 { font-size: 1.55rem; margin: 0; }
+.story-trait { font-weight: 700; color: var(--royal); margin: 0; }
+html.hc .story-trait { color: var(--gold); }
+.story-meta { font-size: 0.95rem; color: var(--muted); margin: 0; }
+.story-summary { margin: 0.2rem 0 0.8rem; flex: 1; }
+.story-status { align-self: flex-start; font-size: 0.9rem; font-weight: 700; padding: 0.15em 0.75em; border-radius: 999px; background: var(--emerald); color: #fff; }
+.story-card .btn { align-self: stretch; }
+
+.traits-heading { margin-top: 2rem; color: var(--gold-2); font-size: 1.7rem; font-style: italic; }
+.trait-list { list-style: none; padding: 0; margin: 1rem auto 0; max-width: 60rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+.trait-chip {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 1.1rem; border-radius: 999px;
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+.trait-chip.earned { border: 2px solid var(--gold); background: var(--page); color: var(--ink); box-shadow: 0 0 0 3px rgba(242, 183, 5, 0.35); animation: pop 0.5s both; }
+.trait-chip span[aria-hidden] { font-size: 1.5rem; }
+
+/* ------------------------------------------------------------------- HUD */
+
+.screen-game { pointer-events: none; overflow: hidden; }
+.screen-game > * { pointer-events: auto; }
+.screen-game .toast { pointer-events: none; }
+
+.hud-top {
+  position: absolute; top: 0; left: 0; right: 0;
+  display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: space-between; align-items: flex-start;
+  padding: max(0.6rem, env(safe-area-inset-top)) 0.6rem 0;
+  pointer-events: none;
+}
+.hud-top > * { pointer-events: auto; }
+.objective {
+  flex: 1 1 18rem; max-width: 34rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.6rem;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+}
+.objective.changed { animation: bump 0.5s ease; }
+.objective.page { background-image: none; }
+.objective-label {
+  font-family: var(--font-title); font-style: italic; font-size: 0.9rem;
+  background: var(--royal); color: #fff; padding: 0.05em 0.7em; border-radius: 999px;
+}
+html.hc .objective-label { background: var(--gold); color: #000; }
+.souvenir-label {
+  order: -1;
+  font-family: var(--font-title); font-style: italic; font-size: 0.85rem;
+  background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: var(--ink);
+  padding: 0.05em 0.75em; border-radius: 999px;
+}
+.counter-pill { background: var(--gold-2); color: var(--ink); padding: 0 0.7em; border-radius: 999px; font-family: var(--font-title); }
+.counter-pill.bump { animation: bump 0.4s ease; }
+.hud-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: flex-end; }
+.btn-hud { font-size: 0.95rem; padding: 0.4em 1em; }
+.btn-hud[aria-pressed='true'] { background: linear-gradient(180deg, #4ddbb0, #13b38a); color: var(--ink); }
+.btn-icon { width: 48px; padding: 0; font-size: 1.4rem; }
+
+.souvenir-frame {
+  position: fixed; inset: 0; pointer-events: none; z-index: 1;
+  box-shadow: inset 0 0 0 6px var(--gold), inset 0 0 0 9px rgba(20, 18, 58, 0.6), inset 0 0 26px 6px rgba(255, 200, 60, 0.35);
+}
+
+.captions { flex-basis: 100%; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; pointer-events: none; }
+.caption { background: #000; color: #fff; font-weight: 700; padding: 0.3em 0.9em; border-radius: 8px; animation: rise 0.25s both; }
+
+.toast {
+  position: absolute; left: 50%; bottom: calc(9.5rem + var(--safe-bottom)); translate: -50% 0;
+  max-width: min(32rem, 90vw);
+  background: var(--ink); color: #fff; text-align: center; font-weight: 700;
+  padding: 0.6em 1.3em; border-radius: var(--radius);
+  box-shadow: inset 0 0 0 2px var(--gold), 0 10px 26px rgba(0, 0, 0, 0.35);
+  opacity: 0; transition: opacity 0.3s;
+}
+.toast.show { opacity: 1; }
+
+.action-btn {
+  position: absolute; right: 1rem; bottom: calc(1.2rem + var(--safe-bottom));
+  min-width: 6.5rem; min-height: 6.5rem; max-width: 14rem;
+  border-radius: 999px;
+  border: 2px solid var(--ink);
+  background: radial-gradient(circle at 50% 30%, var(--gold-2), var(--gold) 70%);
+  color: var(--ink);
+  font: inherit; font-weight: 700; font-size: 1.05rem; line-height: 1.2;
+  padding: 0.6rem 1.2rem;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.7), 0 6px 18px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  animation: pop 0.35s cubic-bezier(0.2, 1.6, 0.4, 1) both;
+}
+.action-btn::before { content: '✋'; display: block; font-size: 1.8rem; }
+.action-key { display: block; font-size: 0.75rem; opacity: 0.8; }
+
+.joystick {
+  position: absolute; left: 1.2rem; bottom: calc(1.2rem + var(--safe-bottom));
+  width: 8.5rem; height: 8.5rem; border-radius: 50%;
+  background: rgba(20, 18, 58, 0.35);
+  border: 3px solid #fff;
+  box-shadow: inset 0 0 0 3px rgba(242, 183, 5, 0.6);
+  touch-action: none;
+  display: none;
+}
+.joystick .knob {
+  position: absolute; left: 50%; top: 50%; width: 3.6rem; height: 3.6rem; margin: -1.8rem;
+  border-radius: 50%; background: radial-gradient(circle at 50% 35%, #fff, #e3e5ff); border: 2px solid var(--ink);
+}
+@media (pointer: coarse) { .joystick { display: block; } }
+
+/* --------------------------------------------------------------- dialogue */
+
+.dialogbox {
+  position: absolute; left: 50%; bottom: calc(0.8rem + var(--safe-bottom)); translate: -50% 0;
+  width: min(48rem, calc(100vw - 1.2rem));
+  padding: 1.4rem 1.3rem 0.9rem;
+  animation: slide-up 0.4s cubic-bezier(0.2, 1.1, 0.4, 1) both;
+  z-index: 3;
+}
+.dialog-speaker { display: flex; align-items: center; gap: 0.5rem; margin-top: -2.5rem; margin-bottom: 0.4rem; }
+/* Le nom du personnage sur un ruban, comme dans un livre de contes */
+.dialog-speaker #dialog-name {
+  position: relative;
+  font-family: var(--font-title); font-style: italic; font-size: 1.2rem;
+  background: var(--crimson); color: #fff;
+  padding: 0.2em 1.4em;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%, 12px 50%);
+}
+html.hc .dialog-speaker #dialog-name { background: #fff; color: #000; clip-path: none; }
+.dialog-badge { width: 2.4rem; height: 2.4rem; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px var(--gold); display: inline-block; }
+.dialog-text { font-size: 1.3rem; margin: 0 0 0.8rem; min-height: 3em; }
+.dialog-actions { display: flex; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap; }
+
+/* -------------------------------------------------------- overlays récits */
+
+.overlay { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; padding: 1rem; overflow-y: auto; }
+/* Le parchemin : une page blanche entre deux rouleaux de bois */
+.scroll-paper {
+  position: relative;
+  width: min(42rem, 100%);
+  padding: 1.8rem 1.6rem 1.3rem;
+  margin: 1.4rem 0;
+  text-align: center;
+  animation: unroll 0.8s cubic-bezier(0.2, 1, 0.3, 1) both;
+}
+.scroll-paper::before, .scroll-paper::after {
+  content: ''; position: absolute; left: -16px; right: -16px; height: 22px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #a86b34, #6b3d17 60%, #4a2a10);
+  box-shadow: 0 0 0 2px var(--ink), 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.scroll-paper::before { top: -14px; }
+.scroll-paper::after { bottom: -14px; }
+.scroll-ref { font-family: var(--font-title); font-style: italic; color: var(--crimson); margin: 0.2rem 0 0; }
+html.hc .scroll-ref { color: var(--gold); }
+.scroll-paper h2 { font-size: 2rem; }
+.scroll-stage { min-height: 13rem; display: grid; place-items: center; gap: 0.6rem; }
+.scroll-icon { font-size: 4.6rem; line-height: 1; filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.15)); }
+.scroll-icon.enter { animation: icon-in 0.7s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+.scroll-text { font-size: 1.35rem; margin: 0; text-align: left; }
+/* Lettrine enluminée : la première lettre du récit, en or */
+.scroll-text::first-letter {
+  float: left;
+  font-family: var(--font-title); font-weight: 900; font-style: italic;
+  font-size: 3.4em; line-height: 0.85;
+  margin: 0.08em 0.12em 0 0;
+  color: var(--gold-deep);
+  text-shadow: 1px 1px 0 var(--gold-2);
+}
+.scroll-text .w { display: inline-block; animation: word-in 0.45s both; }
+.scroll-text .w:first-child { display: inline; }
+html.hc .scroll-text::first-letter { color: var(--gold); text-shadow: none; }
+.scroll-count { font-size: 0.9rem; font-weight: 700; color: var(--muted); }
+.scroll-actions { display: flex; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap; }
+
+/* Carte du trait : un médaillon doré */
+.trait-card {
+  width: min(36rem, 100%);
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  animation: card-in 0.8s cubic-bezier(0.2, 1.2, 0.4, 1) both;
+}
+.trait-kicker { font-family: var(--font-title); font-style: italic; font-size: 1.1rem; color: var(--crimson); margin: 0; }
+html.hc .trait-kicker { color: var(--gold); }
+.trait-icon {
+  width: 7.5rem; height: 7.5rem; margin: 0.8rem auto;
+  display: grid; place-items: center;
+  font-size: 3.8rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #fff9e0, #ffe08a);
+  box-shadow: 0 0 0 4px var(--gold), 0 0 0 8px #fff, 0 0 0 10px var(--gold-deep), 0 0 40px rgba(242, 183, 5, 0.5);
+  animation: spin-in 1s 0.2s cubic-bezier(0.2, 1.3, 0.4, 1) both;
+}
+.trait-card h2 { font-size: 2.6rem; font-style: italic; color: var(--royal); }
+html.hc .trait-card h2 { color: var(--gold); }
+.trait-desc { font-size: 1.2rem; }
+.trait-jesus { border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); padding: 0.8rem 0.4rem; margin: 1rem 0 1.4rem; }
+.trait-jesus h3 { font-style: italic; color: var(--crimson); margin-bottom: 0.3em; }
+html.hc .trait-jesus h3 { color: var(--gold); }
+.trait-ref { font-weight: 700; color: var(--muted); margin: 0; }
+
+/* ------------------------------------------------------------ fin mission */
+
+.screen-end { display: grid; place-items: center; padding: 1rem; }
+.end-card { width: min(40rem, 100%); padding: 1.6rem 1.5rem 1.8rem; text-align: center; margin: 2rem 0; }
+.end-star { width: 6.5rem; height: 6.5rem; }
+.end-star path {
+  fill: var(--gold-2); stroke: var(--gold-deep); stroke-width: 3; stroke-linejoin: round;
+  stroke-dasharray: 420; stroke-dashoffset: 420;
+  animation: draw 1.2s ease forwards, fill-in 0.4s 1s both;
+}
+.end-card h2 { font-size: 3rem; font-style: italic; color: var(--crimson); }
+.end-card h3 { font-size: 1.2rem; font-style: italic; margin-top: 1.2rem; color: var(--royal); }
+html.hc .end-card h3, html.hc .end-card h2 { color: var(--gold); }
+.end-mission { font-weight: 700; font-size: 1.2rem; }
+.end-trait {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: var(--ink);
+  padding: 0.35em 1.1em; border-radius: 999px;
+  font-family: var(--font-title); font-style: italic; font-size: 1.3rem;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7);
+  animation: pop 0.5s 0.9s both;
+}
+.end-reference { font-weight: 700; }
+.reflection { border: 2px solid var(--emerald); border-radius: var(--radius); padding: 0.8rem 1rem; margin-top: 1rem; box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 4px rgba(15, 157, 88, 0.4); }
+.reflection h3 { color: var(--emerald) !important; margin-top: 0.2rem !important; }
+html.hc .reflection { border-color: #fff; box-shadow: none; }
+.end-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 1.4rem; }
+
+/* ------------------------------------------------------------------ modals */
+
+.modal {
+  width: min(28rem, calc(100vw - 1.5rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 1.4rem;
+}
+.modal-wide { width: min(42rem, calc(100vw - 1.5rem)); }
+.modal::backdrop { background: rgba(12, 14, 51, 0.85); }
+.modal[open] { animation: pop 0.3s cubic-bezier(0.2, 1.3, 0.4, 1) both; }
+.modal h2 { font-style: italic; color: var(--royal); }
+html.hc .modal h2 { color: var(--gold); }
+.modal-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 0.6rem; }
+.modal-head h2 { margin: 0; }
+.menu-list { display: flex; flex-direction: column; gap: 0.7rem; }
+fieldset { border: 2px solid rgba(43, 61, 216, 0.25); border-radius: 12px; margin: 0 0 1rem; padding: 0.6rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.7rem; }
+html.hc fieldset { border-color: #fff; }
+legend { font-family: var(--font-title); font-style: italic; font-size: 1.2rem; padding: 0 0.4rem; color: var(--crimson); }
+html.hc legend { color: var(--gold); }
+.field { display: flex; flex-direction: column; gap: 0.3rem; font-weight: 700; }
+select { font: inherit; min-height: 48px; padding: 0 0.8rem; border: 2px solid var(--ink); border-radius: 12px; background: var(--page); color: var(--text); }
+.switch { display: flex; align-items: center; gap: 0.8rem; cursor: pointer; font-weight: 700; }
+.switch input {
+  appearance: none; flex: none;
+  width: 3.4rem; height: 2rem; border-radius: 999px;
+  background: #c9cbe6; border: 2px solid var(--ink); position: relative; cursor: pointer;
+  transition: background 0.2s;
+}
+.switch input::after {
+  content: ''; position: absolute; top: 2px; left: 2px; width: 1.45rem; height: 1.45rem; border-radius: 50%;
+  background: #fff; border: 2px solid var(--ink); transition: translate 0.2s;
+}
+.switch input:checked { background: var(--emerald); }
+.switch input:checked::after { translate: 1.35rem 0; }
+html.hc .switch input { border-color: #fff; background: #333; }
+html.hc .switch input:checked { background: var(--gold); }
+.radio-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; font-weight: 700; }
+.radio-row > span { flex-basis: 100%; }
+.radio-row label { display: flex; align-items: center; gap: 0.35rem; min-height: 44px; cursor: pointer; }
+.radio-row input { width: 1.4rem; height: 1.4rem; accent-color: var(--royal); }
+.note { font-size: 0.95rem; color: var(--muted); margin: 0; }
+.help-table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+.help-table th, .help-table td { text-align: left; padding: 0.5rem; border-bottom: 1px solid rgba(212, 160, 23, 0.5); vertical-align: top; }
+html.hc .help-table th, html.hc .help-table td { border-color: #fff; }
+
+/* -------------------------------------------------------- transition fondu */
+
+.fade { position: fixed; inset: 0; background: var(--night-2); z-index: 20; opacity: 0; pointer-events: none; transition: opacity 0.45s ease; }
+.fade.on { opacity: 1; pointer-events: auto; }
+
+.loading { position: fixed; left: 50%; top: 50%; translate: -50% -50%; z-index: 21; width: min(22rem, 80vw); text-align: center; color: #fff; font-weight: 700; }
+.loading-text { font-family: var(--font-title); font-style: italic; font-size: 1.3rem; }
+.loading-bar { height: 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.2); overflow: hidden; box-shadow: 0 0 0 2px rgba(242, 183, 5, 0.6); }
+.loading-bar span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--gold), var(--gold-2)); transition: width 0.2s; }
+
+/* --------------------------------------------------------------- keyframes */
+
+@keyframes twinkle { from { opacity: 0.55; } to { opacity: 1; } }
+@keyframes flicker { 50% { opacity: 0.6; } }
+@keyframes beacon { 50% { transform: scale(1.25); } }
+/* Battement d'ailes : chaque aile pivote autour de l'épaule (sa base). */
+.flying-dove .wing { transform-box: fill-box; transform-origin: 90% 95%; animation: flap 0.42s ease-in-out infinite alternate; }
+.flying-dove .wing-back { animation-delay: -0.12s; }
+@keyframes flap { from { transform: rotate(0deg) scaleY(1); } to { transform: rotate(6deg) scaleY(-0.45); } }
+@keyframes fly { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+@keyframes drop {
+  from { opacity: 0; transform: translateY(-80%) rotate(-12deg) scale(0.7); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pop { from { opacity: 0; scale: 0.6; } to { opacity: 1; scale: 1; } }
+@keyframes rise { from { opacity: 0; translate: 0 20px; } to { opacity: 1; translate: 0 0; } }
+@keyframes slide-up { from { opacity: 0; translate: -50% 40px; } to { opacity: 1; translate: -50% 0; } }
+@keyframes card-in { from { opacity: 0; transform: translateY(40px) rotate(-2deg) scale(0.92); } to { opacity: 1; transform: none; } }
+@keyframes bump { 40% { scale: 1.06; } }
+@keyframes unroll { from { clip-path: inset(48% -20px 48% -20px); } to { clip-path: inset(-40px -40px -40px -40px); } }
+@keyframes icon-in { from { opacity: 0; transform: scale(0.3) rotate(-20deg); } to { opacity: 1; transform: none; } }
+@keyframes word-in { from { opacity: 0; transform: translateY(0.4em); } to { opacity: 1; transform: none; } }
+@keyframes spin-in { from { opacity: 0; transform: rotate(-200deg) scale(0.2); } to { opacity: 1; transform: none; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+
+/* Réduire les animations : option du jeu OU préférence du système. */
+html.rm *, html.rm *::before, html.rm *::after { animation: none !important; transition: none !important; }
+html.rm .end-star path, html.rm .ornament path { stroke-dashoffset: 0; }
+html.rm .flying-dove { offset-distance: 45%; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .end-star path, .ornament path { stroke-dashoffset: 0; }
+  .flying-dove { offset-distance: 45%; }
+}
+
+/* Petits écrans */
+@media (max-width: 540px) {
+  .dialog-text { font-size: 1.15rem; }
+  .action-btn { min-width: 5.8rem; min-height: 5.8rem; font-size: 0.95rem; }
+  .scroll-text { font-size: 1.2rem; }
+}
