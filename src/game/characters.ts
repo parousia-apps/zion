@@ -37,6 +37,49 @@ const HIDE = /Backpack|Worker_Head_1/;
 const CHILD_HIDE = /Moustache|Worker_Head_5/;
 
 const SKIN_DEFAULT = '#a8693a';
+
+/**
+ * Ombrage lissé. Les modèles d'origine ont des facettes visibles (une normale
+ * par face). On recalcule les normales en faisant la moyenne des faces qui se
+ * touchent : les arêtes s'arrondissent à la lumière, comme un flou sur les angles.
+ * Fait une seule fois par géométrie (les copies partagent la même géométrie).
+ */
+const smoothed = new WeakSet<THREE.BufferGeometry>();
+function smoothNormals(geo: THREE.BufferGeometry) {
+  if (smoothed.has(geo)) return;
+  smoothed.add(geo);
+  const pos = geo.getAttribute('position');
+  const index = geo.getIndex();
+  const count = pos.count;
+  const key = (i: number) => `${pos.getX(i).toFixed(4)},${pos.getY(i).toFixed(4)},${pos.getZ(i).toFixed(4)}`;
+  const keys: string[] = new Array(count);
+  for (let i = 0; i < count; i++) keys[i] = key(i);
+  const acc = new Map<string, THREE.Vector3>();
+  const a = new THREE.Vector3(), b = new THREE.Vector3(), c = new THREE.Vector3();
+  const faces = index ? index.count / 3 : count / 3;
+  for (let f = 0; f < faces; f++) {
+    const i0 = index ? index.getX(f * 3) : f * 3;
+    const i1 = index ? index.getX(f * 3 + 1) : f * 3 + 1;
+    const i2 = index ? index.getX(f * 3 + 2) : f * 3 + 2;
+    a.fromBufferAttribute(pos, i0);
+    b.fromBufferAttribute(pos, i1);
+    c.fromBufferAttribute(pos, i2);
+    // Normale de la face, pondérée par sa surface (les grandes faces comptent plus).
+    const n = new THREE.Vector3().subVectors(c, b).cross(new THREE.Vector3().subVectors(a, b));
+    for (const i of [i0, i1, i2]) {
+      const k = keys[i];
+      const v = acc.get(k);
+      if (v) v.add(n);
+      else acc.set(k, n.clone());
+    }
+  }
+  const normals = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    const n = acc.get(keys[i])!.clone().normalize();
+    normals.set([n.x, n.y, n.z], i * 3);
+  }
+  geo.setAttribute('normal', new THREE.BufferAttribute(normals, 3));
+}
 const SANDALS = '#6b4226';
 
 function darker(hex: string, k = 0.75): THREE.Color {
@@ -82,6 +125,7 @@ export function createCharacter(look: PersonLook): Character | null {
     }
     // Les maillages animés peuvent sortir de leur boîte de départ : on évite qu'ils disparaissent.
     mesh.frustumCulled = false;
+    smoothNormals(mesh.geometry);
     const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
     const next = mats.map((m) => {
       let c = cloned.get(m);
@@ -91,8 +135,9 @@ export function createCharacter(look: PersonLook): Character | null {
         const role = roles[m.name];
         if (m.name === 'Skin') std.color.set(look.skin ?? SKIN_DEFAULT);
         else if (role && role !== 'keep') std.color.copy(colors[role]);
-        std.roughness = 0.85;
+        std.roughness = m.name === 'Skin' ? 0.6 : 0.85;
         std.metalness = 0;
+        std.flatShading = false;
         cloned.set(m, c);
       }
       return c;
@@ -185,23 +230,42 @@ function attach(bone: THREE.Bone, root: THREE.Object3D, child: THREE.Object3D, w
   bone.add(child);
 }
 
+/**
+ * Tunique en forme de cloche, avec des plis : le rayon ondule autour de la
+ * taille, et les plis se creusent vers le bas, comme un tissu qui tombe.
+ */
+function robeGeometry(): THREE.LatheGeometry {
+  const profile = [
+    new THREE.Vector2(0.34, -0.93),
+    new THREE.Vector2(0.33, -0.86),
+    new THREE.Vector2(0.3, -0.6),
+    new THREE.Vector2(0.26, -0.3),
+    new THREE.Vector2(0.21, -0.05),
+    new THREE.Vector2(0.18, 0.12),
+  ];
+  const geo = new THREE.LatheGeometry(profile, 40);
+  const p = geo.getAttribute('position');
+  for (let i = 0; i < p.count; i++) {
+    const x = p.getX(i);
+    const z = p.getZ(i);
+    const y = p.getY(i);
+    const angle = Math.atan2(z, x);
+    const depth = Math.min(1, Math.max(0, -y / 0.9)); // 0 à la taille, 1 en bas
+    const fold = 1 + Math.sin(angle * 9) * 0.045 * depth;
+    p.setXYZ(i, x * fold, y, z * fold);
+  }
+  geo.computeVertexNormals();
+  return geo;
+}
+
 /** Tunique longue jusqu'aux chevilles + ceinture. */
 function dress(root: THREE.Object3D, hips: THREE.Bone, look: PersonLook) {
   const hipY = hips.getWorldPosition(new THREE.Vector3()).y - root.getWorldPosition(new THREE.Vector3()).y;
   // Profil de la tunique : de la taille (en haut) vers les chevilles (en bas), en mètres.
-  robeGeo ??= new THREE.LatheGeometry(
-    [
-      new THREE.Vector2(0.33, -0.92),
-      new THREE.Vector2(0.3, -0.6),
-      new THREE.Vector2(0.26, -0.3),
-      new THREE.Vector2(0.21, -0.05),
-      new THREE.Vector2(0.18, 0.12),
-    ],
-    14,
-  );
+  robeGeo ??= robeGeometry();
   const robe = new THREE.Mesh(
     robeGeo,
-    new THREE.MeshStandardMaterial({ color: look.tunic, roughness: 0.9, side: THREE.DoubleSide, flatShading: true }),
+    new THREE.MeshStandardMaterial({ color: look.tunic, roughness: 0.9, side: THREE.DoubleSide }),
   );
   robe.castShadow = true;
   robe.scale.set(1, (hipY + 0.02) / 0.94, 0.95);
@@ -225,14 +289,14 @@ function dress(root: THREE.Object3D, hips: THREE.Bone, look: PersonLook) {
 function veil(root: THREE.Object3D, head: THREE.Bone, color: string) {
   const headPos = head.getWorldPosition(new THREE.Vector3());
   const g = new THREE.Group();
-  const mat = new THREE.MeshStandardMaterial({ color, roughness: 0.95, side: THREE.DoubleSide, flatShading: true });
+  const mat = new THREE.MeshStandardMaterial({ color, roughness: 0.95, side: THREE.DoubleSide });
   // Calotte : une demi-sphère inclinée vers l'arrière, qui laisse le front et le visage libres.
-  const cap = new THREE.Mesh(new THREE.SphereGeometry(0.14, 14, 10, 0, Math.PI * 2, 0, Math.PI * 0.55), mat);
+  const cap = new THREE.Mesh(new THREE.SphereGeometry(0.14, 24, 14, 0, Math.PI * 2, 0, Math.PI * 0.55), mat);
   cap.position.set(0, 0.1, -0.03);
   cap.rotation.x = -0.45;
   cap.scale.set(1.08, 1.05, 1.15);
   // Pan de tissu dans le dos uniquement (demi-cylindre côté nuque).
-  const drape = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.2, 0.34, 12, 1, true, Math.PI * 0.5, Math.PI), mat);
+  const drape = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.22, 0.36, 24, 1, true, Math.PI * 0.5, Math.PI), mat);
   drape.position.set(0, -0.02, -0.05);
   g.add(cap, drape);
   g.traverse((o) => ((o as THREE.Mesh).castShadow = true));

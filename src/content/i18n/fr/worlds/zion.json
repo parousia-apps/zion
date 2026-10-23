@@ -9,7 +9,12 @@
     "soins": "la maison de soins",
     "enclos": "l'enclos de Mamie Ruth",
     "scene": "la scène de la fête",
-    "place": "la place de la fontaine"
+    "place": "la place de la fontaine",
+    "stele_lumiere": "Pierre de la lumière",
+    "stele_eau": "Pierre de l'eau vive",
+    "stele_berger": "Pierre du bon berger",
+    "stele_cep": "Pierre de la vigne",
+    "stele_graine": "Pierre de la graine"
   },
   "idle": {
     "gardien": [
@@ -35,6 +40,51 @@
         "who": "passant",
         "text": "Belle journée à Zion ! Tu as vu la lanterne du Gardien ? Elle ne s'éteint jamais."
       }
+    ],
+    "stele_lumiere": [
+      {
+        "who": "narrator",
+        "text": "Gravé dans la pierre : Jésus a dit : « Je suis la lumière du monde. Celui qui me suit ne marchera jamais dans le noir. » (Jean 8.12)"
+      },
+      {
+        "who": "narrator",
+        "text": "La flamme de la tour ne s'éteint jamais, pour rappeler à tous les veilleurs que la lumière de Jésus brille pour eux."
+      }
+    ],
+    "stele_eau": [
+      {
+        "who": "narrator",
+        "text": "Gravé dans la pierre : Jésus a dit : « Celui qui boit l'eau que je donne n'aura plus jamais soif. Elle deviendra en lui une source qui donne la vie. » (Jean 4.14)"
+      }
+    ],
+    "stele_berger": [
+      {
+        "who": "narrator",
+        "text": "Gravé dans la pierre : Jésus a dit : « Je suis le bon berger. Je connais mes brebis, mes brebis me connaissent, et je donne ma vie pour elles. » (Jean 10.11-14)"
+      }
+    ],
+    "stele_cep": [
+      {
+        "who": "narrator",
+        "text": "Gravé dans la pierre : Jésus a dit : « Je suis la vigne, vous êtes les branches. Restez unis à moi, et vous porterez beaucoup de bons fruits. » (Jean 15.5)"
+      }
+    ],
+    "stele_graine": [
+      {
+        "who": "narrator",
+        "text": "Gravé dans la pierre : Jésus a dit : « Le Royaume de Dieu ressemble à une toute petite graine. On la sème, et elle devient un grand arbre où les oiseaux viennent faire leur nid. » (Matthieu 13.31-32)"
+      },
+      {
+        "who": "narrator",
+        "text": "Regarde l'arbre à côté de toi : il grandit chaque fois que tu vis une mission. Le Royaume de Dieu grandit aussi dans ton cœur."
+      }
     ]
+  },
+  "verbs": {
+    "stele_lumiere": "Lire la pierre",
+    "stele_eau": "Lire la pierre",
+    "stele_berger": "Lire la pierre",
+    "stele_cep": "Lire la pierre",
+    "stele_graine": "Lire la pierre"
   }
 }

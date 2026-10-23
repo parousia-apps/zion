@@ -137,13 +137,6 @@
       ]
     },
     {
-      "model": "flowers",
-      "pos": [
-        2.6,
-        0.4
-      ]
-    },
-    {
       "model": "market",
       "pos": [
         -13,
@@ -424,6 +417,32 @@
         7,
         -4
       ]
+    },
+    {
+      "model": "mustard",
+      "pos": [
+        4.2,
+        7.6
+      ]
+    },
+    {
+      "model": "vine",
+      "pos": [
+        -12.5,
+        12
+      ],
+      "rot": 20
+    },
+    {
+      "model": "wheat",
+      "pos": [
+        10.5,
+        13.6
+      ],
+      "size": [
+        3.6,
+        2.4
+      ]
     }
   ],
   "entities": [
@@ -491,6 +510,71 @@
         "accent": "#ffd23f",
         "hair": "#1b1b1b",
         "skin": "#a8693a"
+      }
+    },
+    {
+      "id": "stele_lumiere",
+      "model": "stele",
+      "pos": [
+        3.1,
+        -4.6
+      ],
+      "rot": -15,
+      "stele": {
+        "symbol": "light",
+        "label": "Jean 8.12"
+      }
+    },
+    {
+      "id": "stele_eau",
+      "model": "stele",
+      "pos": [
+        2.4,
+        -0.4
+      ],
+      "rot": -20,
+      "stele": {
+        "symbol": "water",
+        "label": "Jean 4.14"
+      }
+    },
+    {
+      "id": "stele_berger",
+      "model": "stele",
+      "pos": [
+        14.4,
+        2.2
+      ],
+      "rot": -70,
+      "stele": {
+        "symbol": "shepherd",
+        "label": "Jean 10.11"
+      }
+    },
+    {
+      "id": "stele_cep",
+      "model": "stele",
+      "pos": [
+        -10.6,
+        13.6
+      ],
+      "rot": 30,
+      "stele": {
+        "symbol": "vine",
+        "label": "Jean 15.5"
+      }
+    },
+    {
+      "id": "stele_graine",
+      "model": "stele",
+      "pos": [
+        5.4,
+        9.4
+      ],
+      "rot": -25,
+      "stele": {
+        "symbol": "seed",
+        "label": "Matthieu 13.31"
       }
     }
   ],

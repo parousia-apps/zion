@@ -110,31 +110,31 @@
       "reference": "Luc 10, versets 25 à 37",
       "panels": [
         {
-          "icon": "🤔",
+          "icon": "ill:samaritain-question",
           "text": "Un jour, un homme demande à Jésus : « Qui est mon prochain ? Qui dois-je aimer ? » Pour lui répondre, Jésus raconte une histoire."
         },
         {
-          "icon": "🛣️",
+          "icon": "ill:samaritain-route",
           "text": "Un homme voyage sur la route qui descend de Jérusalem à Jéricho. Des brigands l'attaquent, prennent ses affaires et le laissent blessé au bord du chemin."
         },
         {
-          "icon": "🚶",
+          "icon": "ill:samaritain-passent",
           "text": "Un prêtre passe par là. Il voit l'homme… mais il change de côté et continue sa route. Un peu plus tard, un lévite, qui sert au Temple, fait pareil."
         },
         {
-          "icon": "🫏",
+          "icon": "ill:samaritain-arrive",
           "text": "Puis arrive un Samaritain. À cette époque, les Juifs et les Samaritains ne s'aimaient pas du tout. Pourtant, quand il voit le blessé, son cœur est touché."
         },
         {
-          "icon": "🩹",
+          "icon": "ill:samaritain-soins",
           "text": "Il s'approche, soigne ses blessures avec de l'huile et du vin, et les bande. Puis il l'installe sur son âne et l'emmène dans une auberge."
         },
         {
-          "icon": "🪙",
+          "icon": "ill:samaritain-auberge",
           "text": "Le lendemain, il donne deux pièces d'argent à l'aubergiste : « Prends soin de lui. Si tu dépenses plus, je te rembourserai à mon retour. »"
         },
         {
-          "icon": "❤️",
+          "icon": "ill:samaritain-aimer",
           "text": "Jésus demande : « Lequel des trois a été le prochain du blessé ? » On lui répond : « Celui qui a eu pitié de lui. » Et Jésus dit : « Va, et toi aussi, fais de même. »"
         }
       ]
@@ -157,5 +157,22 @@
   "ending": {
     "message": "Être le prochain de quelqu'un, c'est s'arrêter pour l'aider, même s'il est différent de nous, même quand on est pressé. C'est ce que Jésus fait pour nous.",
     "reflection": "Le prêtre et le lévite avaient sûrement de « bonnes raisons » de ne pas s'arrêter. Qu'est-ce qui nous empêche, nous, de nous arrêter ? Qui est « au bord de la route » dans notre quartier, notre école ou notre église ?"
+  },
+  "life": {
+    "bibleRef": "Luc 10, versets 25 à 37",
+    "bibleQuery": "Luc 10:25-37",
+    "bibleWhere": "Luc est dans le Nouveau Testament. C'est le troisième livre, juste après Matthieu et Marc. Cherche le grand chiffre 10 (le chapitre), puis les petits chiffres 25 à 37 (les versets).",
+    "bibleQuestion": "Dans le texte, compte tout ce que le Samaritain fait pour le blessé. Combien d'actions as-tu trouvées ? Laquelle te touche le plus ?",
+    "prayer": "Seigneur Jésus, merci parce que tu t'arrêtes toujours pour moi. Ouvre mes yeux pour voir ceux qui ont besoin d'aide, et donne-moi un cœur plein de compassion, comme le tien. Amen.",
+    "challenge": "Cette semaine, aide quelqu'un sans qu'on te le demande : porter un sac, consoler un ami, rendre un service à la maison.",
+    "followup": "Alors, as-tu pu aider quelqu'un sans qu'on te le demande ?",
+    "verse": "Va, et toi, fais de même.",
+    "verseRef": "Luc 10.37",
+    "family": [
+      "Pour les petits : qui s'est arrêté pour aider le blessé ?",
+      "Pour les grands : pourquoi le prêtre et le lévite ne se sont-ils pas arrêtés, d'après vous ?",
+      "Pour tous : à qui pourrions-nous être « le prochain » cette semaine, en famille ?"
+    ],
+    "activity": "Préparez ensemble un petit « kit du bon Samaritain » (pansements, un mot gentil, un biscuit) à offrir à quelqu'un qui en a besoin."
   }
 }

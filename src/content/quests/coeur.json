@@ -1,8 +1,8 @@
 {
   "id": "coeur",
   "order": 4,
-  "icon": "🎵",
-  "traitIcon": "👁️",
+  "icon": "ill:mission-coeur",
+  "traitIcon": "ill:trait-coeur",
   "color": "#7c4dff",
   "chapters": [
     {

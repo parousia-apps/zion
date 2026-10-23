@@ -108,6 +108,76 @@ class AudioEngine {
 
   stopAll(): void {
     this.rain(false);
+    this.ambience(false);
+  }
+
+  private birdTimer = 0;
+  private water: { src: AudioBufferSourceNode; gain: GainNode } | null = null;
+
+  /**
+   * Ambiance de la cité : chants d'oiseaux de temps en temps (à gauche ou à
+   * droite) et murmure de l'eau de la fontaine (volume réglé par setWater).
+   */
+  ambience(on: boolean): void {
+    const ctx = this.ready();
+    window.clearTimeout(this.birdTimer);
+    if (!on || !ctx) {
+      if (this.water && this.ctx) {
+        this.water.gain.gain.setTargetAtTime(0, this.ctx.currentTime, 0.4);
+        this.water.src.stop(this.ctx.currentTime + 2);
+        this.water = null;
+      }
+      return;
+    }
+    const chirpLater = () => {
+      this.birdTimer = window.setTimeout(() => {
+        this.bird((Math.random() - 0.5) * 1.6);
+        chirpLater();
+      }, 2500 + Math.random() * 5000);
+    };
+    chirpLater();
+    if (!this.water) {
+      const src = ctx.createBufferSource();
+      src.buffer = this.noise(ctx, 3);
+      src.loop = true;
+      const band = ctx.createBiquadFilter();
+      band.type = 'bandpass';
+      band.frequency.value = 2400;
+      band.Q.value = 0.8;
+      const gain = ctx.createGain();
+      gain.gain.value = 0;
+      src.connect(band).connect(gain).connect(this.master!);
+      src.start();
+      this.water = { src, gain };
+    }
+  }
+
+  /** Volume de l'eau (0 = loin de la fontaine, 1 = tout près). */
+  setWater(level: number): void {
+    if (this.water && this.ctx) this.water.gain.gain.setTargetAtTime(0.09 * level, this.ctx.currentTime, 0.3);
+  }
+
+  /** Un petit chant d'oiseau : deux ou trois notes aiguës qui glissent. */
+  private bird(pan: number): void {
+    const ctx = this.ready();
+    if (!ctx) return;
+    const dest = this.out(pan);
+    const notes = 2 + Math.floor(Math.random() * 3);
+    const base = 2600 + Math.random() * 1400;
+    for (let i = 0; i < notes; i++) {
+      const t0 = ctx.currentTime + i * 0.13;
+      const osc = ctx.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(base, t0);
+      osc.frequency.exponentialRampToValueAtTime(base * (1.25 + Math.random() * 0.3), t0 + 0.08);
+      const g = ctx.createGain();
+      g.gain.setValueAtTime(0, t0);
+      g.gain.linearRampToValueAtTime(0.06, t0 + 0.01);
+      g.gain.exponentialRampToValueAtTime(0.001, t0 + 0.1);
+      osc.connect(g).connect(dest);
+      osc.start(t0);
+      osc.stop(t0 + 0.12);
+    }
   }
 
   /* ---------------------------------------------------------------- */

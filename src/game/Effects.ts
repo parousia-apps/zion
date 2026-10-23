@@ -19,34 +19,59 @@ interface Running {
 
 export class Effects {
   private running: Running[] = [];
-  private rain: THREE.Points | null = null;
+  private rain: THREE.Object3D & { geometry: THREE.BufferGeometry; material: THREE.Material } | null = null;
+  /** Pluie qui dure tout le chapitre (météo) : elle ne s'arrête pas à la fin d'un dialogue. */
+  private weather: 'rain' | 'storm' | null = null;
+  private lightningTimer = 3;
+  private readonly baseHemi: number;
+  private readonly baseSun: number;
 
   constructor(
     private readonly world: World,
     private readonly anchor: () => THREE.Vector3,
     private readonly calm: boolean,
     private readonly lowQuality: boolean,
-  ) {}
+    /** Pour afficher un sous-titre (« [Tonnerre] ») sans dépendre de l'interface. */
+    private readonly caption: (key: string) => void = () => {},
+  ) {
+    this.baseHemi = world.hemi.intensity;
+    this.baseSun = world.sun.intensity;
+  }
+
+  /** Météo du chapitre : pluie ou orage qui durent jusqu'à un arc-en-ciel ou un « calme ». */
+  setWeather(w: 'rain' | 'storm' | null): void {
+    this.weather = w;
+    if (w) this.startRain();
+    else this.stopRain();
+  }
 
   play(name: EffectName): void {
     switch (name) {
       case 'rain': return this.startRain();
-      case 'dove': this.stopRain(); return this.dove();
-      case 'rainbow': this.stopRain(); return this.rainbow();
+      case 'dove': this.weather = null; this.stopRain(); return this.dove();
+      case 'rainbow': this.weather = null; this.stopRain(); return this.rainbow();
       case 'harp': audio.harp(); return this.notes();
       case 'celebrate': audio.celebrate(); return this.confetti();
       case 'glow': audio.play('bell'); return this.glow();
       case 'heal': audio.play('chime'); return this.sparkles('#b9f6ca');
       case 'sunset': return this.sunset();
+      case 'storm': return this.setWeather('storm');
+      case 'calm': this.weather = null; return this.stopRain();
     }
   }
 
-  /** Coupe les effets « d'ambiance » (pluie) à la fin d'un dialogue. */
+  /** Coupe les effets « d'ambiance » (pluie) à la fin d'un dialogue, sauf la météo du chapitre. */
   settle(): void {
-    this.stopRain();
+    if (!this.weather) this.stopRain();
   }
 
   update(dt: number): void {
+    // La pluie suit le joueur : il reste toujours sous l'averse.
+    if (this.rain) {
+      const c = this.anchor();
+      this.rain.position.set(c.x, 0, c.z);
+    }
+    if (this.weather === 'storm') this.lightning(dt);
     this.running = this.running.filter((r) => {
       const alive = r.update(dt);
       if (!alive) r.dispose?.();
@@ -64,30 +89,32 @@ export class Effects {
 
   private startRain() {
     audio.rain(true);
-    this.world.hemi.intensity = 0.8;
-    this.world.sun.intensity = 0.4;
+    this.world.hemi.intensity = this.baseHemi * 0.6;
+    this.world.sun.intensity = this.baseSun * 0.15;
     if (this.calm || this.rain) return;
+    // Des traits de pluie (segments de 45 cm) plutôt que des points : on voit l'averse tomber.
     const count = this.lowQuality ? 250 : 700;
-    const pos = new Float32Array(count * 3);
-    const c = this.anchor();
+    const pos = new Float32Array(count * 6);
     for (let i = 0; i < count; i++) {
-      pos[i * 3] = c.x + (Math.random() - 0.5) * 30;
-      pos[i * 3 + 1] = Math.random() * 14;
-      pos[i * 3 + 2] = c.z + (Math.random() - 0.5) * 30;
+      const x = (Math.random() - 0.5) * 30;
+      const y = Math.random() * 14;
+      const z = (Math.random() - 0.5) * 30;
+      pos.set([x, y, z, x - 0.06, y + 0.45, z], i * 6);
     }
     const geo = new THREE.BufferGeometry();
     geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-    this.rain = new THREE.Points(geo, new THREE.PointsMaterial({ color: '#bbdefb', size: 0.12 }));
+    this.rain = new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color: '#cfe3ff', transparent: true, opacity: 0.55 }));
     this.world.root.add(this.rain);
     const rain = this.rain;
     this.running.push({
       update: (dt) => {
         if (this.rain !== rain) return false;
         const a = rain.geometry.attributes.position as THREE.BufferAttribute;
-        for (let i = 0; i < count; i++) {
-          let y = a.getY(i) - dt * 14;
+        for (let i = 0; i < count * 2; i += 2) {
+          let y = a.getY(i) - dt * 16;
           if (y < 0) y += 14;
           a.setY(i, y);
+          a.setY(i + 1, y + 0.45);
         }
         a.needsUpdate = true;
         return true;
@@ -95,10 +122,37 @@ export class Effects {
     });
   }
 
+  /**
+   * Éclair : une lueur douce qui monte puis redescend, puis le tonnerre.
+   * Jamais de clignotement rapide (protection des personnes photosensibles) :
+   * au plus un éclair toutes les 5 secondes, sur près d'une demi-seconde.
+   */
+  private lightning(dt: number) {
+    this.lightningTimer -= dt;
+    if (this.lightningTimer > 0) return;
+    this.lightningTimer = 5 + Math.random() * 5;
+    window.setTimeout(() => {
+      audio.play('thunder');
+      this.caption('captions.thunder');
+    }, 700);
+    if (this.calm) return;
+    let t = 0;
+    const base = this.world.hemi.intensity;
+    this.running.push({
+      update: (d) => {
+        t += d;
+        const k = Math.sin(Math.min(1, t / 0.45) * Math.PI);
+        this.world.hemi.intensity = base + k * 1.1;
+        return t < 0.45;
+      },
+      dispose: () => (this.world.hemi.intensity = base),
+    });
+  }
+
   private stopRain() {
     audio.rain(false);
-    this.world.hemi.intensity = 1.8;
-    this.world.sun.intensity = 1.6;
+    this.world.hemi.intensity = this.baseHemi;
+    this.world.sun.intensity = this.baseSun;
     if (this.rain) {
       this.rain.geometry.dispose();
       (this.rain.material as THREE.Material).dispose();

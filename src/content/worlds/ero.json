@@ -1,0 +1,291 @@
+{
+  "id": "ero",
+  "souvenir": true,
+  "environment": {
+    "sky": [
+      "#4f9be8",
+      "#ffe2b0"
+    ],
+    "ground": "#79b84e",
+    "radius": 20
+  },
+  "player": {
+    "pos": [
+      -5,
+      13
+    ],
+    "rot": 180,
+    "look": {
+      "base": "woman",
+      "tunic": "#ff8a1f",
+      "accent": "#ffd23f",
+      "hair": "#2b1a10",
+      "skin": "#8d5524",
+      "height": 0.75
+    }
+  },
+  "props": [
+    {
+      "model": "road",
+      "pos": [
+        0,
+        1
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "color": "#c9925a"
+    },
+    {
+      "model": "road",
+      "pos": [
+        -3,
+        9
+      ],
+      "size": [
+        3,
+        8
+      ],
+      "color": "#c9925a"
+    },
+    {
+      "model": "hut",
+      "pos": [
+        -6,
+        6.5
+      ],
+      "rot": 200,
+      "color": "#7a3e1a"
+    },
+    {
+      "model": "hut",
+      "pos": [
+        -10,
+        0
+      ],
+      "rot": 95
+    },
+    {
+      "model": "hut",
+      "pos": [
+        -8,
+        -8
+      ],
+      "rot": 40,
+      "color": "#2d5f8a"
+    },
+    {
+      "model": "hut",
+      "pos": [
+        0,
+        -11
+      ],
+      "rot": 0
+    },
+    {
+      "model": "hut",
+      "pos": [
+        9,
+        -7
+      ],
+      "rot": -40,
+      "color": "#8a2d4f"
+    },
+    {
+      "model": "hut",
+      "pos": [
+        11,
+        2
+      ],
+      "rot": -95
+    },
+    {
+      "model": "hut",
+      "pos": [
+        7,
+        10
+      ],
+      "rot": -150,
+      "color": "#2d8a5f"
+    },
+    {
+      "model": "statue",
+      "pos": [
+        4.5,
+        -4.5
+      ],
+      "rot": -20
+    },
+    {
+      "model": "water",
+      "pos": [
+        15,
+        12
+      ],
+      "size": [
+        3,
+        6
+      ],
+      "color": "#3c8fd6"
+    },
+    {
+      "model": "palm",
+      "pos": [
+        -14,
+        8
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        14,
+        -12
+      ]
+    },
+    {
+      "model": "palm",
+      "pos": [
+        -2,
+        16
+      ]
+    },
+    {
+      "model": "tree",
+      "pos": [
+        -15,
+        -6
+      ]
+    },
+    {
+      "model": "tree",
+      "pos": [
+        16,
+        -2
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        -4,
+        -4
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        5,
+        5
+      ]
+    },
+    {
+      "model": "bush",
+      "pos": [
+        -12,
+        12
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        2,
+        -6.5
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        6.5,
+        -3
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        -3,
+        4
+      ]
+    },
+    {
+      "model": "flowers",
+      "pos": [
+        3,
+        13
+      ]
+    },
+    {
+      "model": "barrel",
+      "pos": [
+        -4.6,
+        4.4
+      ]
+    },
+    {
+      "model": "barrel",
+      "pos": [
+        8.8,
+        0.2
+      ]
+    },
+    {
+      "model": "crate",
+      "pos": [
+        -8.5,
+        2.2
+      ]
+    },
+    {
+      "model": "rock",
+      "pos": [
+        -17,
+        2
+      ]
+    },
+    {
+      "model": "rock",
+      "pos": [
+        12,
+        15
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "mote",
+      "model": "person",
+      "pos": [
+        2.6,
+        -3
+      ],
+      "rot": 10,
+      "look": {
+        "base": "man",
+        "tunic": "#3f7a4a",
+        "accent": "#d9a441",
+        "beard": "#f2f2f2",
+        "hair": "#e8e8e8",
+        "skin": "#7a4a2a",
+        "scarf": "#f2efe6",
+        "staff": true
+      }
+    }
+  ],
+  "zones": [
+    {
+      "id": "maison",
+      "pos": [
+        -5.3,
+        8.8
+      ],
+      "radius": 1.5
+    },
+    {
+      "id": "place",
+      "pos": [
+        0,
+        1.5
+      ],
+      "radius": 2.8
+    }
+  ]
+}

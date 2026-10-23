@@ -34,7 +34,7 @@ export function announce(message: string): void {
   window.setTimeout(() => (el.textContent = message), 50);
 }
 
-const SCREENS = ['screen-title', 'screen-setup', 'screen-stories', 'screen-game', 'screen-end'];
+const SCREENS = ['screen-title', 'screen-setup', 'screen-stories', 'screen-journal', 'screen-game', 'screen-end'];
 
 /** Affiche un écran et met le focus sur son titre (ou l'élément donné). */
 export function showScreen(id: string, focus?: HTMLElement): void {

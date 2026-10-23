@@ -21,10 +21,14 @@ export type ModelKind =
   | 'tree' | 'palm' | 'olive' | 'rock' | 'bush' | 'flowers' | 'water' | 'road' | 'plaza'
   // constructions et objets
   | 'house' | 'tower' | 'stall' | 'market' | 'ark' | 'pen' | 'well' | 'fountain' | 'tent'
-  | 'harp' | 'stage' | 'ramp' | 'lamp' | 'cart' | 'barrel' | 'crate' | 'bench' | 'bag';
+  | 'harp' | 'stage' | 'ramp' | 'lamp' | 'cart' | 'barrel' | 'crate' | 'bench' | 'bag'
+  // signes du Royaume
+  | 'mustard' | 'vine' | 'wheat' | 'stele'
+  // conte d'Amani : cases rondes, statue de Môté, étoile, voix du ciel, nuages du rêve
+  | 'hut' | 'statue' | 'star' | 'orb' | 'cloudpuff';
 
 /** Effets visuels + sonores déclenchés par une réplique de dialogue (champ "fx"). */
-export type EffectName = 'rain' | 'rainbow' | 'dove' | 'harp' | 'celebrate' | 'glow' | 'heal' | 'sunset';
+export type EffectName = 'rain' | 'rainbow' | 'dove' | 'harp' | 'celebrate' | 'glow' | 'heal' | 'sunset' | 'storm' | 'calm';
 
 /** Sons ponctuels (champ "snd" d'une réplique, ou balise sonore d'une étape). */
 export type SoundName = 'bleat' | 'cry' | 'chime' | 'thunder' | 'drum' | 'bell' | 'ping';
@@ -63,6 +67,8 @@ export interface EntityDef {
   reach?: number;
   /** Rayon de promenade au repos (animaux, passants). 0 ou absent = immobile. */
   wander?: number;
+  /** Pierre gravée (model "stele") : symbole et référence. */
+  stele?: SteleInfo;
 }
 
 /** Décor non interactif (arbres, maisons...). */
@@ -74,6 +80,12 @@ export interface PropDef {
   color?: string;
   /** Pour les routes et plans d'eau : [largeur, longueur]. */
   size?: Vec2;
+}
+
+/** Pour une pierre gravée : le symbole doré et la référence écrite dessus. */
+export interface SteleInfo {
+  symbol: 'light' | 'water' | 'shepherd' | 'vine' | 'seed';
+  label: string;
 }
 
 /** Zone circulaire au sol (destination d'une étape "reach" ou "gather"). */
@@ -134,6 +146,8 @@ export type StepDef =
 export interface Environment {
   /** Dégradé du ciel : [haut, horizon]. */
   sky: [string, string];
+  /** Monde de rêve : des nuages à la place des collines. */
+  dream?: boolean;
   ground: string;
   /** Rayon de la zone où le joueur peut marcher. */
   radius: number;
@@ -154,6 +168,10 @@ export interface WorldDef {
 
 export interface ChapterDef {
   world: string;
+  /** Ciel, sol… propres à ce chapitre (ex. la même ville sous l'orage puis au matin). */
+  env?: Partial<Environment>;
+  /** Météo qui dure tout le chapitre. */
+  weather?: 'rain' | 'storm';
   /** Position de départ du joueur dans ce chapitre (sinon celle du monde). */
   player?: { pos: Vec2; rot?: number };
   /** Entités propres à cette quête, ajoutées au monde. */
@@ -212,10 +230,35 @@ export interface QuestText {
   /** Répliques quand on parle à quelqu'un qui n'est pas l'objectif. */
   idle?: Record<string, DialogLine[]>;
   ending: { message: string; reflection: string };
+  /** Prolonger la mission dans la vraie vie (voir ui/Life.ts). */
+  life?: QuestLife;
+}
+
+export interface QuestLife {
+  /** Passage à lire dans sa Bible, et comment le trouver. */
+  bibleRef: string;
+  /** Référence pour le lien de lecture en ligne (ex. « Luc 10:25-37 »). */
+  bibleQuery: string;
+  bibleWhere: string;
+  /** Question du Gardien après la lecture. */
+  bibleQuestion: string;
+  prayer: string;
+  /** Le défi du veilleur pour la semaine. */
+  challenge: string;
+  /** Ce que le Gardien demande au retour du joueur. */
+  followup: string;
+  /** Verset à mémoriser (Louis Segond 1910 / World English Bible, domaine public). */
+  verse: string;
+  verseRef: string;
+  /** Questions de discussion pour la veillée en famille (des plus petits aux adultes). */
+  family: string[];
+  /** Activité à faire ensemble. */
+  activity: string;
 }
 
 export interface WorldText {
   name: string;
   names: Record<string, string>;
+  verbs?: Record<string, string>;
   idle?: Record<string, DialogLine[]>;
 }

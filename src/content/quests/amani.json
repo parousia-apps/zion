@@ -1,0 +1,356 @@
+{
+  "id": "amani",
+  "order": 5,
+  "icon": "img:/books/amani/page-01.webp",
+  "traitIcon": "ill:trait-paix",
+  "color": "#f2a33a",
+  "chapters": [
+    {
+      "world": "zion",
+      "steps": [
+        {
+          "id": "intro",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "intro"
+        }
+      ]
+    },
+    {
+      "world": "ero",
+      "env": {
+        "sky": [
+          "#454d63",
+          "#8d95a8"
+        ],
+        "ground": "#5d8a46"
+      },
+      "weather": "rain",
+      "entities": [
+        {
+          "id": "enfant1",
+          "model": "person",
+          "pos": [
+            -1.5,
+            1
+          ],
+          "wander": 2.5,
+          "look": {
+            "base": "man2",
+            "tunic": "#e53935",
+            "accent": "#ffd23f",
+            "hair": "#1b1b1b",
+            "skin": "#5c3a21",
+            "height": 0.75
+          }
+        },
+        {
+          "id": "enfant2",
+          "model": "person",
+          "pos": [
+            1.5,
+            3
+          ],
+          "wander": 2.5,
+          "look": {
+            "base": "woman",
+            "tunic": "#1e88e5",
+            "accent": "#ffd23f",
+            "hair": "#8d5524",
+            "skin": "#f1c27d",
+            "height": 0.72
+          }
+        },
+        {
+          "id": "enfant3",
+          "model": "person",
+          "pos": [
+            0,
+            -1.5
+          ],
+          "wander": 2.5,
+          "look": {
+            "base": "man2",
+            "tunic": "#43a047",
+            "accent": "#ffd23f",
+            "hair": "#3e2410",
+            "skin": "#c68642",
+            "height": 0.75
+          }
+        },
+        {
+          "id": "enfant4",
+          "model": "person",
+          "pos": [
+            3,
+            0
+          ],
+          "wander": 2.5,
+          "look": {
+            "base": "woman",
+            "tunic": "#fdd835",
+            "accent": "#ffd23f",
+            "hair": "#1b1b1b",
+            "skin": "#7a4a2a",
+            "height": 0.7
+          }
+        },
+        {
+          "id": "voix",
+          "model": "orb",
+          "pos": [
+            0,
+            -2
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "rain",
+          "type": "scene",
+          "dialog": "rain"
+        },
+        {
+          "id": "thunder",
+          "type": "scene",
+          "dialog": "thunder",
+          "moves": [
+            {
+              "id": "enfant1",
+              "to": [
+                -10,
+                2.2
+              ],
+              "hide": true,
+              "speed": 3.2
+            },
+            {
+              "id": "enfant2",
+              "to": [
+                11,
+                4.3
+              ],
+              "hide": true,
+              "speed": 3.2
+            },
+            {
+              "id": "enfant3",
+              "to": [
+                0,
+                -8.6
+              ],
+              "hide": true,
+              "speed": 3.2
+            },
+            {
+              "id": "enfant4",
+              "to": [
+                9,
+                -4.8
+              ],
+              "hide": true,
+              "speed": 3.2
+            },
+            {
+              "id": "mote",
+              "to": [
+                2.6,
+                -3
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ask",
+          "type": "interact",
+          "target": "voix",
+          "dialog": "ask"
+        },
+        {
+          "id": "bed",
+          "type": "reach",
+          "zone": "maison",
+          "dialog": "bed"
+        }
+      ]
+    },
+    {
+      "world": "reve",
+      "steps": [
+        {
+          "id": "dream",
+          "type": "scene",
+          "dialog": "dream"
+        },
+        {
+          "id": "star",
+          "type": "talk",
+          "target": "amani",
+          "dialog": "star"
+        }
+      ]
+    },
+    {
+      "world": "ero",
+      "player": {
+        "pos": [
+          -5.3,
+          9.5
+        ],
+        "rot": 180
+      },
+      "entities": [
+        {
+          "id": "hab1",
+          "model": "person",
+          "pos": [
+            -9,
+            3
+          ],
+          "rot": 60,
+          "look": {
+            "base": "woman",
+            "tunic": "#8e44ad",
+            "accent": "#ffd23f",
+            "scarf": "#f39c12",
+            "skin": "#f1c27d"
+          }
+        },
+        {
+          "id": "hab2",
+          "model": "person",
+          "pos": [
+            9.5,
+            -4
+          ],
+          "rot": -60,
+          "look": {
+            "base": "man",
+            "tunic": "#2874a6",
+            "accent": "#ffffff",
+            "beard": "#3e2410",
+            "hair": "#3e2410",
+            "skin": "#c68642"
+          }
+        },
+        {
+          "id": "hab3",
+          "model": "person",
+          "pos": [
+            6,
+            7.5
+          ],
+          "rot": -150,
+          "look": {
+            "base": "woman",
+            "tunic": "#c0392b",
+            "accent": "#f4d03f",
+            "scarf": "#ffffff",
+            "skin": "#5c3a21"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "id": "wake",
+          "type": "scene",
+          "dialog": "wake"
+        },
+        {
+          "id": "mote",
+          "type": "talk",
+          "target": "mote",
+          "dialog": "mote"
+        },
+        {
+          "id": "village",
+          "type": "gather",
+          "targets": [
+            "hab1",
+            "hab2",
+            "hab3"
+          ],
+          "zone": "place",
+          "pickupDialogs": {
+            "hab1": "hab1",
+            "hab2": "hab2",
+            "hab3": "hab3"
+          },
+          "dialog": "together"
+        }
+      ]
+    },
+    {
+      "world": "zion",
+      "weather": "storm",
+      "player": {
+        "pos": [
+          0,
+          10
+        ],
+        "rot": 180
+      },
+      "entities": [
+        {
+          "id": "mila",
+          "model": "person",
+          "pos": [
+            -10.3,
+            -4.6
+          ],
+          "rot": 60,
+          "look": {
+            "base": "woman",
+            "tunic": "#ff4f7b",
+            "accent": "#ffffff",
+            "hair": "#1b1b1b",
+            "skin": "#7a4a2a",
+            "height": 0.7
+          }
+        }
+      ],
+      "zones": [
+        {
+          "id": "abri",
+          "pos": [
+            0,
+            -3.2
+          ],
+          "radius": 1.8
+        }
+      ],
+      "steps": [
+        {
+          "id": "trait",
+          "type": "trait"
+        },
+        {
+          "id": "storm",
+          "type": "scene",
+          "dialog": "storm"
+        },
+        {
+          "id": "comfort",
+          "type": "talk",
+          "target": "mila",
+          "dialog": "mila"
+        },
+        {
+          "id": "shelter",
+          "type": "gather",
+          "targets": [
+            "mila"
+          ],
+          "zone": "abri",
+          "dialog": "shelter"
+        },
+        {
+          "id": "debrief",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "debrief"
+        }
+      ]
+    }
+  ]
+}

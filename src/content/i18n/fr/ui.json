@@ -31,7 +31,8 @@
     "traitLocked": "À découvrir",
     "back": "Retour",
     "story3d": "Scène 3D",
-    "storyScroll": "Parchemin"
+    "storyScroll": "Parchemin",
+    "readBook": "Lire le livre illustré"
   },
   "hud": {
     "objective": "Objectif",
@@ -187,7 +188,8 @@
     "fromLeft": "à gauche",
     "fromRight": "à droite",
     "music": "[Musique douce et joyeuse]",
-    "musicSouvenir": "[Musique douce, comme un souvenir]"
+    "musicSouvenir": "[Musique douce, comme un souvenir]",
+    "ambience": "[Chants d'oiseaux, eau qui coule]"
   },
   "announce": {
     "objective": "Objectif : {text}",
@@ -200,5 +202,75 @@
   },
   "loading": {
     "text": "Chargement du décor…"
+  },
+  "songs": {
+    "button": "Chants",
+    "open": "Ouvrir le lecteur de chants",
+    "heading": "Chants",
+    "close": "Fermer",
+    "play": "Écouter",
+    "pause": "Pause",
+    "prev": "Chant précédent",
+    "next": "Chant suivant",
+    "back": "Reculer de 10 secondes",
+    "forward": "Avancer de 10 secondes",
+    "seek": "Position dans le chant",
+    "position": "{current} sur {total}",
+    "volume": "Volume",
+    "list": "Liste des chants",
+    "nowPlaying": "Chant : {title}",
+    "empty": "Aucun chant pour l'instant. Ajoute des fichiers audio dans le dossier sounds/ du projet.",
+    "error": "Ce fichier ne peut pas être lu (fichier vide ou format non pris en charge)."
+  },
+  "life": {
+    "heading": "Prolonger la mission",
+    "bible": "Ouvre ta Bible",
+    "read": "Je l'ai lu",
+    "readOnline": "Lire en ligne (Louis Segond)",
+    "keeperAsks": "Le Gardien te demande :",
+    "prayer": "Une prière",
+    "listenPrayer": "Écouter la prière",
+    "challenge": "Le défi du veilleur, pour cette semaine",
+    "accept": "J'accepte le défi",
+    "accepted": "Défi accepté ✓",
+    "acceptedLong": "Défi accepté. Il est noté dans ton carnet du veilleur.",
+    "verse": "Le verset à retenir",
+    "learn": "Apprendre le verset",
+    "verseGame": "Apprendre le verset",
+    "verseHelp": "Touche les mots dans le bon ordre.",
+    "verseTry": "Presque ! Essaie un autre mot.",
+    "verseDone": "Bravo, tu connais le verset ! Il est rangé dans ton carnet.",
+    "listenVerse": "Écouter le verset",
+    "goLive": "Maintenant, ferme le jeu et va vivre ta mission !"
+  },
+  "journal": {
+    "button": "Mon carnet",
+    "heading": "Mon carnet du veilleur",
+    "intro": "Tes défis et tes souvenirs. Ce carnet reste sur ton appareil : personne d'autre ne le lit. Ici, on ne compte pas de points : Jésus regarde le cœur.",
+    "empty": "Ton carnet est encore vide. À la fin d'une mission, accepte le défi du veilleur : il apparaîtra ici.",
+    "since": "Défi accepté le {date}",
+    "lived": "Je l'ai vécu",
+    "tell": "Raconte ce qui s'est passé (si tu veux)",
+    "placeholder": "Par exemple : j'ai aidé ma voisine à porter ses courses…",
+    "verses": "Versets appris",
+    "noVerse": "Pas encore de verset appris.",
+    "keeper": "Ezra, le Gardien",
+    "yesTell": "Oui, je raconte",
+    "notYet": "Pas encore",
+    "encourage": "Ce n'est pas grave. Chaque jour est une nouvelle occasion. Je prie pour toi !"
+  },
+  "guide": {
+    "button": "Guide parents & moniteurs",
+    "heading": "Veillée en famille",
+    "intro": "Pour vivre la mission ensemble : à la maison, à l'école du dimanche ou en groupe. Jouez sur un seul écran, puis prenez ces questions.",
+    "trait": "Trait du Christ :",
+    "jesus": "Comme Jésus :",
+    "read": "À lire ensemble :",
+    "questions": "Questions pour en parler",
+    "activity": "Activité à faire ensemble",
+    "verse": "Verset à apprendre",
+    "prayer": "Prière",
+    "challenge": "Défi pour la semaine",
+    "print": "Imprimer"
   }
 }

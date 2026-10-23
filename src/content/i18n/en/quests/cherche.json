@@ -8,7 +8,12 @@
     "jesus": "Jesus went to the people everyone avoided, like Zacchaeus, whom nobody liked. He said: \"I came to seek and to save the lost.\"",
     "jesusRef": "Luke 19:1-10"
   },
-  "names": { "lea": "Lea", "samy": "Samy", "ana": "Ana", "timothee": "Timothy" },
+  "names": {
+    "lea": "Lea",
+    "samy": "Samy",
+    "ana": "Ana",
+    "timothee": "Timothy"
+  },
   "objectives": {
     "intro": "Go and see the Keeper, at the foot of the tower.",
     "missing": "Some children are playing by the fountain: go and talk to Lea.",
@@ -18,30 +23,81 @@
   },
   "dialogs": {
     "intro": [
-      { "who": "gardien", "text": "Do you know how many people live in Zion? Lots! And yet God knows each one by name." },
-      { "who": "gardien", "text": "Listen to this story Jesus told." }
+      {
+        "who": "gardien",
+        "text": "Do you know how many people live in Zion? Lots! And yet God knows each one by name."
+      },
+      {
+        "who": "gardien",
+        "text": "Listen to this story Jesus told."
+      }
     ],
     "missing": [
-      { "who": "lea", "text": "Hi! We're playing ring-a-roses, but there are only three of us…" },
-      { "who": "samy", "text": "Timothy used to play with us. But we laughed at him because he runs slowly… So he left." },
-      { "who": "ana", "text": "Maybe he's hiding somewhere near the city walls. Nobody went to look for him." },
-      { "who": "player", "text": "I'll go. Everyone matters!" }
+      {
+        "who": "lea",
+        "text": "Hi! We're playing ring-a-roses, but there are only three of us…"
+      },
+      {
+        "who": "samy",
+        "text": "Timothy used to play with us. But we laughed at him because he runs slowly… So he left."
+      },
+      {
+        "who": "ana",
+        "text": "Maybe he's hiding somewhere near the city walls. Nobody went to look for him."
+      },
+      {
+        "who": "player",
+        "text": "I'll go. Everyone matters!"
+      }
     ],
     "found": [
-      { "who": "timothee", "text": "What are you doing here? Nobody wants me…" },
-      { "who": "player", "text": "That's not true. I came here just for you. Without you, someone is missing!" },
-      { "who": "timothee", "text": "Really? Well… OK, I'll come with you." }
+      {
+        "who": "timothee",
+        "text": "What are you doing here? Nobody wants me…"
+      },
+      {
+        "who": "player",
+        "text": "That's not true. I came here just for you. Without you, someone is missing!"
+      },
+      {
+        "who": "timothee",
+        "text": "Really? Well… OK, I'll come with you."
+      }
     ],
-    "back": [{ "who": "narrator", "text": "Timothy is back at the fountain square." }],
+    "back": [
+      {
+        "who": "narrator",
+        "text": "Timothy is back at the fountain square."
+      }
+    ],
     "party": [
-      { "who": "lea", "text": "Timothy! You're back! We're sorry we laughed at you.", "fx": "celebrate" },
-      { "who": "samy", "text": "Come and join the circle! Let's play a game where everyone can win." },
-      { "who": "timothee", "text": "Thank you for looking for me… I feel like I belong again." }
+      {
+        "who": "lea",
+        "text": "Timothy! You're back! We're sorry we laughed at you.",
+        "fx": "celebrate"
+      },
+      {
+        "who": "samy",
+        "text": "Come and join the circle! Let's play a game where everyone can win."
+      },
+      {
+        "who": "timothee",
+        "text": "Thank you for looking for me… I feel like I belong again."
+      }
     ],
     "debrief": [
-      { "who": "gardien", "text": "There is joy in Zion today, just as there is joy in heaven when someone comes back to God." },
-      { "who": "gardien", "text": "The shepherd didn't say: \"Never mind, I still have ninety-nine.\" To him, every sheep mattered." },
-      { "who": "gardien", "text": "Jesus is like that shepherd. He never forgets us. And he teaches us to go and find those who are alone." }
+      {
+        "who": "gardien",
+        "text": "There is joy in Zion today, just as there is joy in heaven when someone comes back to God."
+      },
+      {
+        "who": "gardien",
+        "text": "The shepherd didn't say: \"Never mind, I still have ninety-nine.\" To him, every sheep mattered."
+      },
+      {
+        "who": "gardien",
+        "text": "Jesus is like that shepherd. He never forgets us. And he teaches us to go and find those who are alone."
+      }
     ]
   },
   "scrolls": {
@@ -49,22 +105,72 @@
       "title": "The lost sheep",
       "reference": "Luke 15:3-7",
       "panels": [
-        { "icon": "🐑", "text": "Jesus says: \"Imagine a shepherd who has a hundred sheep. He knows them all, and he loves them all.\"" },
-        { "icon": "🌄", "text": "\"One evening, he counts them: ninety-seven, ninety-eight, ninety-nine… One is missing!\"" },
-        { "icon": "⛰️", "text": "\"The shepherd leaves the ninety-nine others safe. He goes off into the hills to look for the lost one, until he finds it.\"" },
-        { "icon": "🤗", "text": "\"When he finds it, he is filled with joy! He puts it on his shoulders and carries it home.\"" },
-        { "icon": "🎉", "text": "\"He calls his friends: Rejoice with me, I have found my lost sheep!\"" },
-        { "icon": "✨", "text": "Jesus explains: \"There is great joy in heaven over one single person who comes back to God.\" To God, everyone is precious." }
+        {
+          "icon": "ill:brebis-cent",
+          "text": "Jesus says: \"Imagine a shepherd who has a hundred sheep. He knows them all, and he loves them all.\""
+        },
+        {
+          "icon": "ill:brebis-compte",
+          "text": "\"One evening, he counts them: ninety-seven, ninety-eight, ninety-nine… One is missing!\""
+        },
+        {
+          "icon": "ill:brebis-cherche",
+          "text": "\"The shepherd leaves the ninety-nine others safe. He goes off into the hills to look for the lost one, until he finds it.\""
+        },
+        {
+          "icon": "ill:brebis-trouvee",
+          "text": "\"When he finds it, he is filled with joy! He puts it on his shoulders and carries it home.\""
+        },
+        {
+          "icon": "ill:brebis-fete",
+          "text": "\"He calls his friends: Rejoice with me, I have found my lost sheep!\""
+        },
+        {
+          "icon": "ill:brebis-ciel",
+          "text": "Jesus explains: \"There is great joy in heaven over one single person who comes back to God.\" To God, everyone is precious."
+        }
       ]
     }
   },
   "idle": {
-    "lea": [{ "who": "lea", "text": "Good luck! Look carefully behind the houses, near the walls." }],
-    "samy": [{ "who": "samy", "text": "We're waiting for Timothy to start again." }],
-    "ana": [{ "who": "ana", "text": "Do you think he'll want to come back?" }]
+    "lea": [
+      {
+        "who": "lea",
+        "text": "Good luck! Look carefully behind the houses, near the walls."
+      }
+    ],
+    "samy": [
+      {
+        "who": "samy",
+        "text": "We're waiting for Timothy to start again."
+      }
+    ],
+    "ana": [
+      {
+        "who": "ana",
+        "text": "Do you think he'll want to come back?"
+      }
+    ]
   },
   "ending": {
     "message": "To God, nobody is one too many and nobody is forgotten. Like Jesus, we can go and find the one who is alone and tell them: you matter!",
     "reflection": "The shepherd could have settled for his ninety-nine sheep. Who around us risks being forgotten or left out, perhaps because of a difference or a disability? What could we do, concretely, to reach out to them?"
+  },
+  "life": {
+    "bibleRef": "Luke 15:3-7",
+    "bibleQuery": "Luke 15:3-7",
+    "bibleWhere": "Luke is in the New Testament, after Matthew and Mark. Find chapter 15. Right after, Jesus also tells of the lost coin and the lost son: three stories of what is found!",
+    "bibleQuestion": "What does the shepherd do when he finds his sheep? And what does he do when he gets home?",
+    "prayer": "Jesus, thank you for coming to look for me and never forgetting me. Show me who is alone around me, and give me the courage to go to them. Amen.",
+    "challenge": "This week, go to someone who is alone (at school, at church, in your neighbourhood) and invite them to play or talk with you.",
+    "followup": "So, did you go to someone who was alone? How did it go?",
+    "verse": "For the Son of Man came to seek and to save that which was lost.",
+    "verseRef": "Luke 19:10",
+    "family": [
+      "For little ones: how many sheep did the shepherd have? How many were missing?",
+      "For older ones: why does just one sheep matter so much to the shepherd?",
+      "For everyone: how could we welcome someone who feels alone or different?"
+    ],
+    "activity": "Hide a little sheep (paper or soft toy) in the house. Whoever finds it tells someone why they matter to God."
   }
 }

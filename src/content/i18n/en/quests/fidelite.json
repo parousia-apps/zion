@@ -28,66 +28,204 @@
   },
   "dialogs": {
     "intro": [
-      { "who": "gardien", "text": "Today I won't just tell you a story. I'll let you live it!" },
-      { "who": "gardien", "text": "Close your eyes… Imagine… We are very, very long ago." }
+      {
+        "who": "gardien",
+        "text": "Today I won't just tell you a story. I'll let you live it!"
+      },
+      {
+        "who": "gardien",
+        "text": "Close your eyes… Imagine… We are very, very long ago."
+      }
     ],
     "story": [
-      { "who": "narrator", "text": "A very long time ago, people on earth were doing a lot of harm. They had forgotten God." },
-      { "who": "narrator", "text": "But one man, Noah, loved God and listened to him. God said to him: \"Build a great ark, a huge wooden boat.\"" },
-      { "who": "narrator", "text": "\"A flood is coming. I want to protect you, your family and the animals.\"" },
-      { "who": "narrator", "text": "Noah obeyed. He built the ark for years, when there wasn't a single cloud in the sky! Go and talk to Noah." }
+      {
+        "who": "narrator",
+        "text": "A very long time ago, people on earth were doing a lot of harm. They had forgotten God."
+      },
+      {
+        "who": "narrator",
+        "text": "But one man, Noah, loved God and listened to him. God said to him: \"Build a great ark, a huge wooden boat.\""
+      },
+      {
+        "who": "narrator",
+        "text": "\"A flood is coming. I want to protect you, your family and the animals.\""
+      },
+      {
+        "who": "narrator",
+        "text": "Noah obeyed. He built the ark for years, when there wasn't a single cloud in the sky! Go and talk to Noah."
+      }
     ],
     "askHelp": [
-      { "who": "noe", "text": "Hello! You've come just in time, I need help." },
-      { "who": "noe", "text": "People laughed at me: \"A boat, here, so far from the sea?\" But God asked me to, and I trust him." },
-      { "who": "noe", "text": "God told me to bring the animals in two by two. Go near the stag and the doe, the horses and the zebras: they will follow you to the ark's ramp." }
+      {
+        "who": "noe",
+        "text": "Hello! You've come just in time, I need help."
+      },
+      {
+        "who": "noe",
+        "text": "People laughed at me: \"A boat, here, so far from the sea?\" But God asked me to, and I trust him."
+      },
+      {
+        "who": "noe",
+        "text": "God told me to bring the animals in two by two. Go near the stag and the doe, the horses and the zebras: they will follow you to the ark's ramp."
+      }
     ],
     "allIn": [
-      { "who": "noe", "text": "Well done! All the animals are safe." },
-      { "who": "noe", "text": "I'm going into the ark. Come quickly, the first drops are falling!" }
+      {
+        "who": "noe",
+        "text": "Well done! All the animals are safe."
+      },
+      {
+        "who": "noe",
+        "text": "I'm going into the ark. Come quickly, the first drops are falling!"
+      }
     ],
     "flood": [
-      { "who": "narrator", "text": "God himself closes the door of the ark. Then the rain begins to fall…", "fx": "rain" },
-      { "who": "narrator", "text": "It rains for forty days and forty nights. Water covers the whole earth.", "snd": "thunder" },
-      { "who": "narrator", "text": "But inside the ark, Noah, his family and the animals are safe. God has not forgotten them." },
-      { "who": "narrator", "text": "One day, the rain stops. Noah sends out a dove. It comes back with an olive leaf in its beak: dry land has returned!", "fx": "dove" },
-      { "who": "narrator", "text": "Everyone comes out of the ark. And a rainbow appears in the sky.", "fx": "rainbow" },
-      { "who": "narrator", "text": "God says: \"This is the sign of my promise: never again will a flood destroy the earth.\" God always keeps his promises." }
+      {
+        "who": "narrator",
+        "text": "God himself closes the door of the ark. Then the rain begins to fall…",
+        "fx": "rain"
+      },
+      {
+        "who": "narrator",
+        "text": "It rains for forty days and forty nights. Water covers the whole earth.",
+        "snd": "thunder"
+      },
+      {
+        "who": "narrator",
+        "text": "But inside the ark, Noah, his family and the animals are safe. God has not forgotten them."
+      },
+      {
+        "who": "narrator",
+        "text": "One day, the rain stops. Noah sends out a dove. It comes back with an olive leaf in its beak: dry land has returned!",
+        "fx": "dove"
+      },
+      {
+        "who": "narrator",
+        "text": "Everyone comes out of the ark. And a rainbow appears in the sky.",
+        "fx": "rainbow"
+      },
+      {
+        "who": "narrator",
+        "text": "God says: \"This is the sign of my promise: never again will a flood destroy the earth.\" God always keeps his promises."
+      }
     ],
     "promise": [
-      { "who": "ruth", "text": "Ah, there you are! I have to go and visit my sister, on the other side of the hill." },
-      { "who": "ruth", "text": "The sky is turning grey… My three sheep are wandering around the city. Can you promise to bring them back into the pen before the storm?" },
-      { "who": "player", "text": "I promise, Grandma Ruth!" },
-      { "who": "ruth", "text": "Thank you. I know I can count on you." }
+      {
+        "who": "ruth",
+        "text": "Ah, there you are! I have to go and visit my sister, on the other side of the hill."
+      },
+      {
+        "who": "ruth",
+        "text": "The sky is turning grey… My three sheep are wandering around the city. Can you promise to bring them back into the pen before the storm?"
+      },
+      {
+        "who": "player",
+        "text": "I promise, Grandma Ruth!"
+      },
+      {
+        "who": "ruth",
+        "text": "Thank you. I know I can count on you."
+      }
     ],
     "tease": [
-      { "who": "moqueur1", "text": "Hey! Forget those sheep and come and play with us!" },
-      { "who": "moqueur2", "text": "It's never going to rain, look at the sky! You're tiring yourself out for nothing!" },
-      { "who": "player", "text": "I promised Grandma Ruth. A promise is a promise… even when others laugh." }
+      {
+        "who": "moqueur1",
+        "text": "Hey! Forget those sheep and come and play with us!"
+      },
+      {
+        "who": "moqueur2",
+        "text": "It's never going to rain, look at the sky! You're tiring yourself out for nothing!"
+      },
+      {
+        "who": "player",
+        "text": "I promised Grandma Ruth. A promise is a promise… even when others laugh."
+      }
     ],
     "storm": [
-      { "who": "narrator", "text": "The last sheep is barely inside when the rain starts pouring down!", "fx": "rain" },
-      { "who": "narrator", "text": "The sheep are nice and dry. The children run for shelter.", "snd": "thunder" },
-      { "who": "moqueur1", "text": "You were right… You kept your promise. Well done!" },
-      { "who": "narrator", "text": "Then the sun comes back, and a rainbow stretches over Zion, like a promise.", "fx": "rainbow" }
+      {
+        "who": "narrator",
+        "text": "The last sheep is barely inside when the rain starts pouring down!",
+        "fx": "rain"
+      },
+      {
+        "who": "narrator",
+        "text": "The sheep are nice and dry. The children run for shelter.",
+        "snd": "thunder"
+      },
+      {
+        "who": "moqueur1",
+        "text": "You were right… You kept your promise. Well done!"
+      },
+      {
+        "who": "narrator",
+        "text": "Then the sun comes back, and a rainbow stretches over Zion, like a promise.",
+        "fx": "rainbow"
+      }
     ],
     "thanks": [
-      { "who": "ruth", "text": "My sheep are all here, safe and sound! You kept your word." },
-      { "who": "ruth", "text": "When someone keeps their promises, you can trust them. You're like Jesus, you know." }
+      {
+        "who": "ruth",
+        "text": "My sheep are all here, safe and sound! You kept your word."
+      },
+      {
+        "who": "ruth",
+        "text": "When someone keeps their promises, you can trust them. You're like Jesus, you know."
+      }
     ],
     "debrief": [
-      { "who": "gardien", "text": "Noah trusted God before he saw a single drop of rain. And you kept your promise even when others laughed." },
-      { "who": "gardien", "text": "God is faithful: he never forgets what he has promised. Jesus told us: \"I am with you always.\"" },
-      { "who": "gardien", "text": "A faithful watcher is someone others can count on. Thank you for being one!" }
+      {
+        "who": "gardien",
+        "text": "Noah trusted God before he saw a single drop of rain. And you kept your promise even when others laughed."
+      },
+      {
+        "who": "gardien",
+        "text": "God is faithful: he never forgets what he has promised. Jesus told us: \"I am with you always.\""
+      },
+      {
+        "who": "gardien",
+        "text": "A faithful watcher is someone others can count on. Thank you for being one!"
+      }
     ]
   },
   "idle": {
-    "noe": [{ "who": "noe", "text": "Keep going! The stag and the doe, two horses, two zebras. They're waiting for your help!" }],
-    "moqueur1": [{ "who": "moqueur1", "text": "We're playing tag! Want to join?" }],
-    "moqueur2": [{ "who": "moqueur2", "text": "Look at that lovely sky… well, almost blue." }]
+    "noe": [
+      {
+        "who": "noe",
+        "text": "Keep going! The stag and the doe, two horses, two zebras. They're waiting for your help!"
+      }
+    ],
+    "moqueur1": [
+      {
+        "who": "moqueur1",
+        "text": "We're playing tag! Want to join?"
+      }
+    ],
+    "moqueur2": [
+      {
+        "who": "moqueur2",
+        "text": "Look at that lovely sky… well, almost blue."
+      }
+    ]
   },
   "ending": {
     "message": "God always keeps his promises. Being faithful like Jesus means keeping your word and trusting God, even when it's hard.",
     "reflection": "Noah obeyed before he saw any rain, probably while being mocked. Have you ever kept a promise when it was hard? Which promise of God gives you confidence today?"
+  },
+  "life": {
+    "bibleRef": "Genesis, chapters 6 to 9",
+    "bibleQuery": "Genesis 6-9",
+    "bibleWhere": "Genesis is the very first book of the Bible, at the start of the Old Testament. Noah's story begins in chapter 6. You can read chapter 9, verses 8 to 17: the rainbow promise.",
+    "bibleQuestion": "In chapter 9, God makes a promise with the rainbow. What is the promise? Who does God make it to?",
+    "prayer": "Lord, thank you for always keeping your promises. Help me to trust you, even when it's hard, and to keep my word like you. Amen.",
+    "challenge": "This week, make a simple promise and keep it to the end: tidy your room, help at home, call a grandparent.",
+    "followup": "So, did you keep your promise this week?",
+    "verse": "Behold, I am with you always, even to the end of the age.",
+    "verseRef": "Matthew 28:20",
+    "family": [
+      "For little ones: what did God put in the sky to show he keeps his promise?",
+      "For older ones: Noah built the ark before he saw the rain. What does it mean to trust?",
+      "For everyone: which promise of God reassures our family?"
+    ],
+    "activity": "Draw a big rainbow. On each colour, write a promise of God or a promise you want to keep as a family."
   }
 }

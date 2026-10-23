@@ -114,11 +114,19 @@
       <!-- ============ Choix des missions ============ -->
       <section id="screen-stories" class="screen screen-stories" hidden aria-labelledby="stories-heading">
         <header class="stories-header">
-          <button id="btn-stories-back" class="btn btn-light btn-small" data-i18n="stories.back"></button>
-          <button id="btn-stories-settings" class="btn btn-light btn-small" data-i18n="title.settings"></button>
+          <span class="header-actions">
+            <button id="btn-stories-back" class="btn btn-light btn-small" data-i18n="stories.back"></button>
+            <button id="btn-journal" class="btn btn-light btn-small"><span aria-hidden="true">📔</span> <span data-i18n="journal.button"></span></button>
+          </span>
+          <span class="header-actions">
+            <button id="btn-songs" class="btn btn-light btn-small" aria-pressed="false"><span aria-hidden="true">♪</span> <span data-i18n="songs.button"></span></button>
+            <button id="btn-stories-settings" class="btn btn-light btn-small" data-i18n="title.settings"></button>
+          </span>
         </header>
         <h2 id="stories-heading" tabindex="-1" class="kinetic" data-i18n="stories.heading"></h2>
         <p class="stories-intro" data-i18n="stories.intro"></p>
+        <!-- Le Gardien demande des nouvelles du défi de la semaine -->
+        <div id="followup" class="followup page" hidden role="region" aria-live="polite"></div>
         <p class="stories-progress" aria-live="polite"><span id="stories-count" class="counter">0</span> <span id="stories-progress-text"></span></p>
         <ul id="story-list" class="story-list"></ul>
         <h3 class="traits-heading" data-i18n="stories.traits"></h3>
@@ -137,6 +145,7 @@
           <div class="hud-buttons">
             <button id="btn-where" class="btn btn-hud"><span aria-hidden="true">🧭</span> <span data-i18n="hud.where"></span></button>
             <button id="btn-guide" class="btn btn-hud" aria-pressed="false"><span aria-hidden="true">👣</span> <span id="guide-label" data-i18n="hud.guide"></span></button>
+            <button id="btn-songs-hud" class="btn btn-hud btn-icon" data-i18n-aria="songs.open"><span aria-hidden="true">♪</span></button>
             <button id="btn-pause" class="btn btn-hud btn-icon" data-i18n-aria="hud.menu"><span aria-hidden="true">☰</span></button>
           </div>
           <!-- Sous-titres des sons : dans le flux du HUD, ils se placent toujours juste en dessous. -->
@@ -157,6 +166,18 @@
         </div>
       </section>
 
+      <!-- ============ Carnet du veilleur ============ -->
+      <section id="screen-journal" class="screen screen-stories" hidden aria-labelledby="journal-heading">
+        <header class="stories-header">
+          <button id="btn-journal-back" class="btn btn-light btn-small" data-i18n="stories.back"></button>
+        </header>
+        <h2 id="journal-heading" tabindex="-1" data-i18n="journal.heading"></h2>
+        <p class="stories-intro" data-i18n="journal.intro"></p>
+        <ul id="journal-list" class="journal-list"></ul>
+        <h3 class="traits-heading" data-i18n="journal.verses"></h3>
+        <ul id="journal-verses" class="journal-verses"></ul>
+      </section>
+
       <!-- ============ Fin de mission ============ -->
       <section id="screen-end" class="screen screen-end" hidden aria-labelledby="end-heading">
         <div class="end-card page">
@@ -174,6 +195,8 @@
             <h3 data-i18n="end.reflection"></h3>
             <p id="end-reflection"></p>
           </div>
+          <!-- Prolonger la mission dans la vraie vie (rempli par ui/Life.ts) -->
+          <div id="end-life" class="life" hidden></div>
           <div class="end-actions">
             <button id="btn-end-back" class="btn btn-primary btn-xl" data-i18n="end.back"></button>
             <button id="btn-end-replay" class="btn btn-light" data-i18n="end.replay"></button>
@@ -318,6 +341,53 @@
       <h3 data-i18n="help.credits"></h3>
       <p class="note" data-i18n="help.creditsText"></p>
     </dialog>
+
+    <!-- ============ Jeu du verset ============ -->
+    <dialog id="dlg-verse" class="modal modal-wide page" aria-labelledby="verse-heading">
+      <div class="modal-head">
+        <h2 id="verse-heading" data-i18n="life.verseGame"></h2>
+        <button id="verse-close" class="btn btn-light btn-small" data-i18n="settings.close"></button>
+      </div>
+      <p id="verse-ref" class="life-ref"></p>
+      <p id="verse-built" class="verse-built" aria-live="polite"></p>
+      <div id="verse-pool" class="verse-pool"></div>
+      <p id="verse-status" class="note" aria-live="polite"></p>
+      <button id="verse-listen" class="btn btn-light btn-small"><span aria-hidden="true">🔊</span> <span data-i18n="life.listenVerse"></span></button>
+    </dialog>
+
+    <!-- ============ Guide parents & moniteurs ============ -->
+    <dialog id="dlg-guide" class="modal modal-wide page" aria-labelledby="guide-title">
+      <div class="modal-head">
+        <h2 id="guide-title"></h2>
+        <span class="header-actions">
+          <button id="guide-print" class="btn btn-light btn-small" data-i18n="guide.print"></button>
+          <button id="guide-close" class="btn btn-light btn-small" data-i18n="settings.close"></button>
+        </span>
+      </div>
+      <p class="note" data-i18n="guide.intro"></p>
+      <div id="guide-body" class="guide-body"></div>
+    </dialog>
+
+    <!-- ============ Lecteur de chants (dossier sounds/) ============ -->
+    <section id="music-player" class="music-player page" hidden aria-labelledby="mp-heading">
+      <div class="modal-head">
+        <h2 id="mp-heading" data-i18n="songs.heading"></h2>
+        <button id="mp-close" class="btn btn-light btn-small" data-i18n="songs.close"></button>
+      </div>
+      <p id="mp-title" class="mp-title" aria-live="polite"></p>
+      <p id="mp-status" class="note"></p>
+      <input id="mp-seek" class="mp-seek" type="range" min="0" max="1000" value="0" data-i18n-aria="songs.seek" />
+      <p id="mp-time" class="mp-time">0:00 / 0:00</p>
+      <div class="mp-controls">
+        <button id="mp-prev" class="btn btn-light btn-icon" data-i18n-aria="songs.prev"><span aria-hidden="true">⏮</span></button>
+        <button id="mp-back" class="btn btn-light btn-icon" data-i18n-aria="songs.back"><span aria-hidden="true">↺10</span></button>
+        <button id="mp-play" class="btn btn-primary btn-icon mp-play">▶</button>
+        <button id="mp-fwd" class="btn btn-light btn-icon" data-i18n-aria="songs.forward"><span aria-hidden="true">10↻</span></button>
+        <button id="mp-next" class="btn btn-light btn-icon" data-i18n-aria="songs.next"><span aria-hidden="true">⏭</span></button>
+      </div>
+      <label class="field mp-volume"><span data-i18n="songs.volume"></span><input id="mp-volume" type="range" min="0" max="1" step="0.05" value="0.8" /></label>
+      <ul id="mp-list" class="mp-list" data-i18n-aria="songs.list"></ul>
+    </section>
 
     <div id="live" class="sr-only" aria-live="polite"></div>
     <noscript><p style="padding:2rem;font-size:1.4rem">Zion a besoin de JavaScript pour fonctionner.</p></noscript>

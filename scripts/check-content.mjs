@@ -19,7 +19,7 @@ const warnings = [];
 const err = (m) => errors.push(m);
 const warn = (m) => warnings.push(m);
 
-const EFFECTS = ['rain', 'rainbow', 'dove', 'harp', 'celebrate', 'glow', 'heal', 'sunset'];
+const EFFECTS = ['rain', 'rainbow', 'dove', 'harp', 'celebrate', 'glow', 'heal', 'sunset', 'storm', 'calm'];
 const SOUNDS = ['bleat', 'cry', 'chime', 'thunder', 'drum', 'bell', 'ping'];
 
 const worlds = Object.fromEntries(list(join(root, 'worlds')).map((f) => [f.replace('.json', ''), read(join(root, 'worlds', f))]));

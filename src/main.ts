@@ -17,6 +17,9 @@ import { DialogBox } from './ui/DialogBox';
 import { Hud } from './ui/Hud';
 import { ScrollView, TraitCard } from './ui/Overlays';
 import { $, announce, countUp, esc, showScreen, translateDom } from './ui/dom';
+import { renderIcon } from './ui/illustrations';
+import { MusicPlayer } from './ui/MusicPlayer';
+import { renderFollowup, renderJournal, renderLife } from './ui/Life';
 
 /**
  * Point d'entrée : démarrage, navigation entre écrans, réglages.
@@ -194,16 +197,17 @@ function renderStories(): void {
     li.innerHTML = `
       <article class="story-card page" style="animation-delay:${i * 110}ms" aria-labelledby="q-${q.id}">
         <div class="story-band" style="background:${q.color}">
-          <span aria-hidden="true">${q.icon}</span>
+          ${renderIcon(q.icon)}
           <span class="story-num">${esc(t('stories.mission', { n: i + 1 }))}</span>
         </div>
         <div class="story-body">
           <h3 id="q-${q.id}">${esc(text.title)}</h3>
-          <p class="story-trait"><span aria-hidden="true">${q.traitIcon}</span> ${esc(text.trait.name)}</p>
+          <p class="story-trait"><span class="mini-ill">${renderIcon(q.traitIcon)}</span> ${esc(text.trait.name)}</p>
           <p class="story-meta">📖 ${esc(text.reference)} · ${esc(storyKind)}</p>
           <p class="story-summary">${esc(text.summary)}</p>
           ${progress?.done ? `<span class="story-status">✓ ${esc(t('stories.done'))}</span>` : ''}
           <button class="btn btn-primary" data-quest="${q.id}" aria-describedby="q-${q.id}">${esc(label)}</button>
+          ${text.scrolls?.livre ? `<button class="btn btn-light btn-small" data-book="${q.id}" aria-describedby="q-${q.id}"><span aria-hidden="true">📖</span> ${esc(t('stories.readBook'))}</button>` : ''}
         </div>
       </article>`;
     list.append(li);
@@ -211,15 +215,30 @@ function renderStories(): void {
   list.querySelectorAll<HTMLButtonElement>('button[data-quest]').forEach((b) => {
     b.addEventListener('click', () => startQuest(b.dataset.quest!));
   });
+  list.querySelectorAll<HTMLButtonElement>('button[data-book]').forEach((b) => {
+    b.addEventListener('click', async () => {
+      const book = questText(b.dataset.book!).scrolls?.livre;
+      if (!book) return;
+      ui.scroll.calm = settings.reduceMotion;
+      await ui.scroll.play(book);
+      b.focus();
+    });
+  });
+  renderFollowup(goJournal);
 
   $('trait-list').innerHTML = QUESTS.map((q) => {
     const earned = save.quests[q.id]?.done;
     const name = earned ? questText(q.id).trait.name : t('stories.traitLocked');
-    return `<li class="trait-chip ${earned ? 'earned' : ''}"><span aria-hidden="true">${earned ? q.traitIcon : '❔'}</span>${esc(name)}</li>`;
+    return `<li class="trait-chip ${earned ? 'earned' : ''}"><span class="mini-ill">${earned ? renderIcon(q.traitIcon) : '<span aria-hidden="true">❔</span>'}</span>${esc(name)}</li>`;
   }).join('');
 
   countUp($('stories-count'), done, settings.reduceMotion);
   $('stories-progress-text').textContent = t('stories.progress', { total: QUESTS.length });
+}
+
+function goJournal(): void {
+  renderJournal();
+  showScreen('screen-journal');
 }
 
 function goStories(): void {
@@ -283,10 +302,11 @@ function showEnd(id: string): void {
   game = null;
   engine?.stop();
   $('end-mission').textContent = typo(`${t('end.missionDone')} : ${text.title}`);
-  $('end-trait').innerHTML = `<span aria-hidden="true">${quest.traitIcon}</span> ${esc(text.trait.name)}`;
+  $('end-trait').innerHTML = `<span class="mini-ill">${renderIcon(quest.traitIcon)}</span> ${esc(text.trait.name)}`;
   $('end-message').textContent = typo(text.ending.message);
   $('end-reference').textContent = `📖 ${text.reference} · ${text.trait.jesusRef}`;
   $('end-reflection').textContent = typo(text.ending.reflection);
+  renderLife(id, settings.reduceMotion);
   showScreen('screen-end');
   music.play('joy');
   audio.celebrate();
@@ -302,13 +322,25 @@ async function boot(): Promise<void> {
   renderLangSwitch();
   $('screen-game').tabIndex = -1;
   bindSettings();
-  // La musique baisse quand une voix parle.
-  speech.onActivity = (speaking) => music.duck(speaking);
+  // Lecteur de chants du dossier sounds/.
+  const songs = new MusicPlayer();
+  $('btn-songs').addEventListener('click', () => songs.show());
+  $('btn-songs-hud').addEventListener('click', () => songs.show());
+  // La musique (et le chant en cours) baissent quand une voix parle.
+  speech.onActivity = (speaking) => {
+    music.duck(speaking);
+    songs.duck(speaking);
+  };
   // Les navigateurs interdisent le son avant un premier geste : on démarre au premier clic ou touche.
   const firstGesture = () => {
     audio.unlock();
-    music.resume();
+    // La musique de fond = les chants du dossier sounds/ (sinon la musique générée).
+    if (songs.hasTracks) songs.setBackground(settings.music);
+    else music.resume();
   };
+  $('settings-form').addEventListener('change', (e) => {
+    if ((e.target as HTMLInputElement).name === 'music' && songs.hasTracks) songs.setBackground(settings.music);
+  });
   window.addEventListener('pointerdown', firstGesture, { once: true });
   window.addEventListener('keydown', firstGesture, { once: true });
 
@@ -325,6 +357,9 @@ async function boot(): Promise<void> {
   $('btn-title-settings').addEventListener('click', () => openModal('dlg-settings'));
   $('btn-title-help').addEventListener('click', () => openModal('dlg-help'));
   $('btn-stories-back').addEventListener('click', goTitle);
+  $('btn-journal').addEventListener('click', goJournal);
+  $('btn-journal-back').addEventListener('click', goStories);
+
   $('btn-stories-settings').addEventListener('click', () => openModal('dlg-settings'));
 
   $('btn-action').addEventListener('click', () => game?.onAction());

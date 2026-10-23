@@ -31,77 +31,232 @@
   },
   "dialogs": {
     "intro": [
-      { "who": "gardien", "text": "Dans la Bible, il y a un garçon que personne ne remarquait. Même pas sa propre famille !" },
-      { "who": "gardien", "text": "Viens… Allons à Bethléem, il y a environ trois mille ans." }
+      {
+        "who": "gardien",
+        "text": "Dans la Bible, il y a un garçon que personne ne remarquait. Même pas sa propre famille !"
+      },
+      {
+        "who": "gardien",
+        "text": "Viens… Allons à Bethléem, il y a environ trois mille ans."
+      }
     ],
     "story": [
-      { "who": "narrator", "text": "À Bethléem vit un jeune garçon nommé David. C'est le plus jeune des huit fils de Jessé." },
-      { "who": "narrator", "text": "Ses grands frères sont grands et forts. Lui, on l'envoie garder les moutons. Et ce berger, c'est toi !" },
-      { "who": "player", "text": "Oh non ! Trois moutons se sont éloignés. Je dois les ramener à la bergerie.", "snd": "bleat" }
+      {
+        "who": "narrator",
+        "text": "À Bethléem vit un jeune garçon nommé David. C'est le plus jeune des huit fils de Jessé."
+      },
+      {
+        "who": "narrator",
+        "text": "Ses grands frères sont grands et forts. Lui, on l'envoie garder les moutons. Et ce berger, c'est toi !"
+      },
+      {
+        "who": "player",
+        "text": "Oh non ! Trois moutons se sont éloignés. Je dois les ramener à la bergerie.",
+        "snd": "bleat"
+      }
     ],
     "safe": [
-      { "who": "player", "text": "Voilà, tout le troupeau est à l'abri. Un bon berger veille sur chacun de ses moutons.", "fx": "sunset" },
-      { "who": "narrator", "text": "Le soir tombe. David aime prendre sa harpe pour chanter Dieu." }
+      {
+        "who": "player",
+        "text": "Voilà, tout le troupeau est à l'abri. Un bon berger veille sur chacun de ses moutons.",
+        "fx": "sunset"
+      },
+      {
+        "who": "narrator",
+        "text": "Le soir tombe. David aime prendre sa harpe pour chanter Dieu."
+      }
     ],
     "psalm": [
-      { "who": "narrator", "text": "David joue de la harpe et chante. Son chant deviendra le Psaume 23.", "fx": "harp" },
-      { "who": "player", "text": "Le Seigneur est mon berger, je ne manque de rien." },
-      { "who": "player", "text": "Il me conduit dans l'herbe verte, près de l'eau calme. Il prend soin de moi." },
-      { "who": "player", "text": "Même quand j'ai peur, je ne suis pas seul : le Seigneur est avec moi." }
+      {
+        "who": "narrator",
+        "text": "David joue de la harpe et chante. Son chant deviendra le Psaume 23.",
+        "fx": "harp"
+      },
+      {
+        "who": "player",
+        "text": "Le Seigneur est mon berger, je ne manque de rien."
+      },
+      {
+        "who": "player",
+        "text": "Il me conduit dans l'herbe verte, près de l'eau calme. Il prend soin de moi."
+      },
+      {
+        "who": "player",
+        "text": "Même quand j'ai peur, je ne suis pas seul : le Seigneur est avec moi."
+      }
     ],
     "call": [
-      { "who": "serviteur", "text": "David ! David ! Ton père te demande. Le prophète Samuel est à la maison !" },
-      { "who": "serviteur", "text": "Il a vu tous tes frères, et il a dit : « Ce n'est aucun d'eux. N'y a-t-il pas un autre fils ? »" },
-      { "who": "player", "text": "Moi ? Mais je suis le plus petit… J'arrive !" }
+      {
+        "who": "serviteur",
+        "text": "David ! David ! Ton père te demande. Le prophète Samuel est à la maison !"
+      },
+      {
+        "who": "serviteur",
+        "text": "Il a vu tous tes frères, et il a dit : « Ce n'est aucun d'eux. N'y a-t-il pas un autre fils ? »"
+      },
+      {
+        "who": "player",
+        "text": "Moi ? Mais je suis le plus petit… J'arrive !"
+      }
     ],
     "anoint": [
-      { "who": "narrator", "text": "Quand Samuel avait vu Éliab, le grand frère, il avait pensé : « Celui-là, si grand et si fort, c'est sûrement lui ! »" },
-      { "who": "narrator", "text": "Mais Dieu lui avait dit : « Ne regarde pas son apparence ni sa taille. Les hommes regardent ce qui se voit, mais moi, je regarde le cœur. »" },
-      { "who": "samuel", "text": "C'est lui. C'est David que Dieu a choisi !" },
-      { "who": "narrator", "text": "Samuel verse de l'huile sur la tête de David : c'est le signe que Dieu l'a choisi pour devenir un jour roi d'Israël. Et l'Esprit du Seigneur est avec lui.", "fx": "glow" },
-      { "who": "jesse", "text": "Mon plus jeune fils… choisi par Dieu !" }
+      {
+        "who": "narrator",
+        "text": "Quand Samuel avait vu Éliab, le grand frère, il avait pensé : « Celui-là, si grand et si fort, c'est sûrement lui ! »"
+      },
+      {
+        "who": "narrator",
+        "text": "Mais Dieu lui avait dit : « Ne regarde pas son apparence ni sa taille. Les hommes regardent ce qui se voit, mais moi, je regarde le cœur. »"
+      },
+      {
+        "who": "samuel",
+        "text": "C'est lui. C'est David que Dieu a choisi !"
+      },
+      {
+        "who": "narrator",
+        "text": "Samuel verse de l'huile sur la tête de David : c'est le signe que Dieu l'a choisi pour devenir un jour roi d'Israël. Et l'Esprit du Seigneur est avec lui.",
+        "fx": "glow"
+      },
+      {
+        "who": "jesse",
+        "text": "Mon plus jeune fils… choisi par Dieu !"
+      }
     ],
     "festival": [
-      { "who": "myriam", "text": "Ah, notre apprenti veilleur ! Ce soir, c'est la Fête des lumières, et il me manque des musiciens." },
-      { "who": "myriam", "text": "Ben joue du tambour au marché. Sarah joue de la flûte près des maisons, à l'est. Ramène-les-moi sur la scène !" },
-      { "who": "player", "text": "Et Élie ? Il joue de la harpe magnifiquement." },
-      { "who": "myriam", "text": "Élie ? Euh… Il est en fauteuil roulant, et la scène a des marches. Je n'y avais pas pensé…" },
-      { "who": "player", "text": "Dieu regarde le cœur. Je vais le chercher aussi !" }
+      {
+        "who": "myriam",
+        "text": "Ah, notre apprenti veilleur ! Ce soir, c'est la Fête des lumières, et il me manque des musiciens."
+      },
+      {
+        "who": "myriam",
+        "text": "Ben joue du tambour au marché. Sarah joue de la flûte près des maisons, à l'est. Ramène-les-moi sur la scène !"
+      },
+      {
+        "who": "player",
+        "text": "Et Élie ? Il joue de la harpe magnifiquement."
+      },
+      {
+        "who": "myriam",
+        "text": "Élie ? Euh… Il est en fauteuil roulant, et la scène a des marches. Je n'y avais pas pensé…"
+      },
+      {
+        "who": "player",
+        "text": "Dieu regarde le cœur. Je vais le chercher aussi !"
+      }
     ],
     "ben": [
-      { "who": "ben", "text": "La fête ? Avec plaisir, j'apporte mon tambour !", "snd": "drum" }
+      {
+        "who": "ben",
+        "text": "La fête ? Avec plaisir, j'apporte mon tambour !",
+        "snd": "drum"
+      }
     ],
     "sarah": [
-      { "who": "sarah", "text": "Ma flûte est prête. Allons-y !" }
+      {
+        "who": "sarah",
+        "text": "Ma flûte est prête. Allons-y !"
+      }
     ],
     "elie": [
-      { "who": "elie", "text": "Moi ? D'habitude, personne ne pense à moi pour ce genre de chose…" },
-      { "who": "player", "text": "Moi, je pense à toi. Tu joues de la harpe comme le roi David !" },
-      { "who": "elie", "text": "Alors je viens. Merci de m'avoir choisi." }
+      {
+        "who": "elie",
+        "text": "Moi ? D'habitude, personne ne pense à moi pour ce genre de chose…"
+      },
+      {
+        "who": "player",
+        "text": "Moi, je pense à toi. Tu joues de la harpe comme le roi David !"
+      },
+      {
+        "who": "elie",
+        "text": "Alors je viens. Merci de m'avoir choisi."
+      }
     ],
     "ready": [
-      { "who": "myriam", "text": "Vous êtes tous là ! Mais attendez… Élie ne peut pas monter les marches." },
-      { "who": "myriam", "text": "J'ai une idée : installons une rampe. Une fête où quelqu'un reste en bas, ce n'est pas une vraie fête !" }
+      {
+        "who": "myriam",
+        "text": "Vous êtes tous là ! Mais attendez… Élie ne peut pas monter les marches."
+      },
+      {
+        "who": "myriam",
+        "text": "J'ai une idée : installons une rampe. Une fête où quelqu'un reste en bas, ce n'est pas une vraie fête !"
+      }
     ],
     "concert": [
-      { "who": "narrator", "text": "On installe une rampe. Élie monte sur la scène avec sa harpe." },
-      { "who": "narrator", "text": "Le concert commence : le tambour de Ben, la flûte de Sarah… et la harpe d'Élie, plus belle que tout.", "fx": "harp" },
-      { "who": "myriam", "text": "Bravo ! Quelle musique ! Sans Élie, il aurait manqué le plus beau.", "fx": "celebrate" }
+      {
+        "who": "narrator",
+        "text": "On installe une rampe. Élie monte sur la scène avec sa harpe."
+      },
+      {
+        "who": "narrator",
+        "text": "Le concert commence : le tambour de Ben, la flûte de Sarah… et la harpe d'Élie, plus belle que tout.",
+        "fx": "harp"
+      },
+      {
+        "who": "myriam",
+        "text": "Bravo ! Quelle musique ! Sans Élie, il aurait manqué le plus beau.",
+        "fx": "celebrate"
+      }
     ],
     "debrief": [
-      { "who": "gardien", "text": "Samuel a failli choisir le plus grand et le plus fort. Mais Dieu regarde le cœur." },
-      { "who": "gardien", "text": "Aujourd'hui, tu as vu ce que d'autres ne voyaient pas : le talent et le cœur d'Élie." },
-      { "who": "gardien", "text": "Jésus faisait pareil : il accueillait les enfants, les malades, ceux qu'on laissait de côté. Te voilà vrai veilleur de Zion !" }
+      {
+        "who": "gardien",
+        "text": "Samuel a failli choisir le plus grand et le plus fort. Mais Dieu regarde le cœur."
+      },
+      {
+        "who": "gardien",
+        "text": "Aujourd'hui, tu as vu ce que d'autres ne voyaient pas : le talent et le cœur d'Élie."
+      },
+      {
+        "who": "gardien",
+        "text": "Jésus faisait pareil : il accueillait les enfants, les malades, ceux qu'on laissait de côté. Te voilà vrai veilleur de Zion !"
+      }
     ]
   },
   "idle": {
-    "myriam": [{ "who": "myriam", "text": "Ben est au marché, Sarah près des maisons à l'est, et Élie… vers la maison rose, à l'ouest, je crois." }],
-    "samuel": [{ "who": "samuel", "text": "Nous ne nous mettrons pas à table avant que le plus jeune soit arrivé." }],
-    "jesse": [{ "who": "jesse", "text": "Samuel nous attend tous. Ramène vite les moutons !" }],
-    "eliab": [{ "who": "eliab", "text": "Le prophète est venu ! Il va sûrement me choisir, moi, l'aîné." }]
+    "myriam": [
+      {
+        "who": "myriam",
+        "text": "Ben est au marché, Sarah près des maisons à l'est, et Élie… vers la maison rose, à l'ouest, je crois."
+      }
+    ],
+    "samuel": [
+      {
+        "who": "samuel",
+        "text": "Nous ne nous mettrons pas à table avant que le plus jeune soit arrivé."
+      }
+    ],
+    "jesse": [
+      {
+        "who": "jesse",
+        "text": "Samuel nous attend tous. Ramène vite les moutons !"
+      }
+    ],
+    "eliab": [
+      {
+        "who": "eliab",
+        "text": "Le prophète est venu ! Il va sûrement me choisir, moi, l'aîné."
+      }
+    ]
   },
   "ending": {
     "message": "Dieu ne regarde pas l'apparence : il regarde le cœur. Comme Jésus, apprenons à voir la valeur de chacun, et à ne laisser personne en bas des marches.",
     "reflection": "Même son père avait oublié David, resté avec les moutons. Sur quoi jugeons-nous les autres ? Qu'est-ce qui, dans notre famille, notre église ou notre école, empêche certaines personnes (handicap, âge, timidité…) de « monter sur la scène » ? Quelle rampe pourrions-nous construire ?"
+  },
+  "life": {
+    "bibleRef": "1 Samuel, chapitre 16, versets 1 à 13",
+    "bibleQuery": "1 Samuel 16:1-13",
+    "bibleWhere": "1 Samuel est dans l'Ancien Testament, après Josué, Juges et Ruth. Cherche le chapitre 16. Tu peux aussi lire le Psaume 23, au milieu de la Bible.",
+    "bibleQuestion": "Au verset 7, Dieu dit à Samuel ce qu'il regarde. Que regarde l'homme ? Et que regarde Dieu ?",
+    "prayer": "Seigneur, merci parce que tu regardes mon cœur et que tu m'aimes tel que je suis. Apprends-moi à regarder les autres comme toi, sans juger sur l'apparence. Amen.",
+    "challenge": "Cette semaine, dis à quelqu'un une qualité de son cœur que tu as remarquée (sa gentillesse, son courage, sa patience…).",
+    "followup": "Alors, as-tu dit à quelqu'un la belle qualité de son cœur ?",
+    "verse": "L'homme regarde à ce qui frappe les yeux, mais l'Éternel regarde au cœur.",
+    "verseRef": "1 Samuel 16.7",
+    "family": [
+      "Pour les petits : qui Dieu a-t-il choisi : le plus grand frère ou le plus petit ?",
+      "Pour les grands : sur quoi jugeons-nous les gens trop vite ?",
+      "Pour tous : qui, autour de nous, est parfois mis de côté ? Quelle « rampe » pourrions-nous construire pour lui ?"
+    ],
+    "activity": "Chacun écrit sur un cœur en papier une qualité du cœur d'un autre membre de la famille, puis le lui offre."
   }
 }

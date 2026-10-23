@@ -458,3 +458,271 @@ export function groundPatch(kind: 'plaza' | 'road' | 'water', size: [number, num
   if (kind === 'water') g.userData.solids = [[0, 0, Math.min(size[0], size[1])]] as Solids;
   return g;
 }
+
+/* ------------------------------------------------------------------ */
+/* Signes du Royaume                                                    */
+/* ------------------------------------------------------------------ */
+
+/**
+ * L'arbre du grain de sénevé (Matthieu 13.31-32). `growth` va de 0 (une pousse)
+ * à 4 (un grand arbre fleuri avec des nids) : il grandit avec les missions vécues.
+ */
+export function mustardTree(growth: number): THREE.Group {
+  const g = new THREE.Group();
+  const k = Math.min(4, Math.max(0, growth));
+  const scale = 0.35 + k * 0.28;
+  const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.16, 1.4, 8), lambert('#7b5233'));
+  trunk.position.y = 0.7;
+  trunk.castShadow = true;
+  const tree = new THREE.Group();
+  tree.add(trunk);
+  const leaf = new THREE.MeshLambertMaterial({ color: '#5aa64a' });
+  const blossom = new THREE.MeshBasicMaterial({ color: '#ffe066' });
+  const crowns: [number, number, number, number][] = [[0, 1.75, 0, 0.75], [0.45, 1.5, 0.2, 0.5], [-0.45, 1.55, -0.1, 0.55], [0.1, 2.2, -0.2, 0.5]];
+  crowns.forEach(([x, y, z, r], i) => {
+    if (k === 0 && i > 0) return;
+    const c = new THREE.Mesh(new THREE.IcosahedronGeometry(r, 1), leaf);
+    c.position.set(x, y, z);
+    c.castShadow = true;
+    tree.add(c);
+  });
+  // Fleurs jaunes : de plus en plus nombreuses à mesure que l'arbre grandit.
+  const rand = seeded(7);
+  for (let i = 0; i < k * 10; i++) {
+    const a = rand() * Math.PI * 2;
+    const r = 0.5 + rand() * 0.35;
+    const f = new THREE.Mesh(new THREE.SphereGeometry(0.06, 6, 4), blossom);
+    f.position.set(Math.cos(a) * r, 1.4 + rand() * 1, Math.sin(a) * r);
+    tree.add(f);
+  }
+  // À partir de 3 missions : des nids où les oiseaux viennent se poser.
+  if (k >= 3) {
+    const nest = new THREE.Mesh(new THREE.TorusGeometry(0.16, 0.06, 6, 12), lambert('#8b5a2b'));
+    nest.rotation.x = Math.PI / 2;
+    nest.position.set(0.35, 1.95, 0.45);
+    tree.add(nest);
+  }
+  tree.scale.setScalar(scale);
+  g.add(tree);
+  // Bordure de pierre autour de l'arbre
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(0.75, 0.12, 6, 20), texturedMaterial(stone('#d3c6b0'), 2, 0.3));
+  ring.rotation.x = Math.PI / 2;
+  ring.position.y = 0.1;
+  g.add(ring);
+  g.userData.solids = [[0, 0, 0.8]] as Solids;
+  return g;
+}
+
+/** Treille de vigne avec des grappes (Jean 15 : « Je suis le cep »). */
+export function vineArbor(): THREE.Group {
+  const g = new THREE.Group();
+  const woodMat = texturedMaterial(wood('#7a4a22'), 0.3, 1);
+  for (const [x, z] of [[-1.3, -0.9], [1.3, -0.9], [-1.3, 0.9], [1.3, 0.9]]) {
+    const post = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.08, 2.4, 6), woodMat);
+    post.position.set(x, 1.2, z);
+    post.castShadow = true;
+    g.add(post);
+  }
+  for (const z of [-0.9, 0, 0.9]) g.add(boxMesh(2.9, 0.08, 0.08, woodMat, 0, 2.4, z));
+  const leaf = new THREE.MeshLambertMaterial({ color: '#4c9a3f', side: THREE.DoubleSide });
+  const rand = seeded(11);
+  for (let i = 0; i < 26; i++) {
+    const l = new THREE.Mesh(new THREE.IcosahedronGeometry(0.28, 0), leaf);
+    l.position.set(-1.3 + rand() * 2.6, 2.45 + rand() * 0.15, -0.95 + rand() * 1.9);
+    l.scale.y = 0.45;
+    l.castShadow = true;
+    g.add(l);
+  }
+  const grape = new THREE.MeshLambertMaterial({ color: '#5b2a86' });
+  for (let i = 0; i < 6; i++) {
+    const cluster = new THREE.Group();
+    for (let j = 0; j < 9; j++) {
+      const b = new THREE.Mesh(new THREE.SphereGeometry(0.055, 6, 5), grape);
+      b.position.set((rand() - 0.5) * 0.14, -j * 0.035, (rand() - 0.5) * 0.14);
+      b.scale.setScalar(1 - j * 0.06);
+      cluster.add(b);
+    }
+    cluster.position.set(-1.1 + rand() * 2.2, 2.3, -0.8 + rand() * 1.6);
+    g.add(cluster);
+  }
+  // Le cep : un tronc tordu qui monte le long d'un poteau
+  const vine = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.09, 2.4, 6), lambert('#5d3a1a'));
+  vine.position.set(-1.15, 1.2, 0.9);
+  vine.rotation.z = 0.1;
+  g.add(vine);
+  g.userData.solids = [[-1.3, -0.9, 0.2], [1.3, -0.9, 0.2], [-1.3, 0.9, 0.2], [1.3, 0.9, 0.2]] as Solids;
+  return g;
+}
+
+/** Petit champ de blé doré, qui ondule au vent (Jean 12.24). */
+export function wheatField(size: [number, number]): THREE.Group {
+  const g = new THREE.Group();
+  g.add(groundPatch('road', size, '#b98a4e'));
+  const stalk = new THREE.CylinderGeometry(0.012, 0.015, 0.9, 3);
+  stalk.translate(0, 0.45, 0);
+  const ear = new THREE.CapsuleGeometry(0.035, 0.12, 2, 4);
+  ear.translate(0, 0.95, 0);
+  const stalkMat = new THREE.MeshLambertMaterial({ color: '#d9a93a' });
+  const earMat = new THREE.MeshLambertMaterial({ color: '#f0c04a' });
+  const count = Math.floor(size[0] * size[1] * 22);
+  const stalks = new THREE.InstancedMesh(stalk, stalkMat, count);
+  const ears = new THREE.InstancedMesh(ear, earMat, count);
+  const rand = seeded(size[0] * 13);
+  const m = new THREE.Matrix4();
+  for (let i = 0; i < count; i++) {
+    const q = new THREE.Quaternion().setFromEuler(new THREE.Euler((rand() - 0.5) * 0.25, rand() * 6, (rand() - 0.5) * 0.25));
+    m.compose(new THREE.Vector3((rand() - 0.5) * size[0], 0, (rand() - 0.5) * size[1]), q, new THREE.Vector3(1, 0.8 + rand() * 0.4, 1));
+    stalks.setMatrixAt(i, m);
+    ears.setMatrixAt(i, m);
+  }
+  stalks.castShadow = ears.castShadow = true;
+  g.add(stalks, ears);
+  g.name = 'wheat';
+  return g;
+}
+
+/** Symbole doré gravé sur une pierre, dessiné sur un canvas. */
+function steleTexture(symbol: string, label: string): THREE.CanvasTexture {
+  const c = document.createElement('canvas');
+  c.width = 256;
+  c.height = 320;
+  const ctx = c.getContext('2d')!;
+  ctx.fillStyle = '#d8ccb8';
+  ctx.fillRect(0, 0, 256, 320);
+  ctx.strokeStyle = '#b8860b';
+  ctx.fillStyle = '#c9971c';
+  ctx.lineWidth = 8;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  ctx.save();
+  ctx.translate(128, 130);
+  switch (symbol) {
+    case 'light': // lampe à huile et sa flamme
+      ctx.beginPath(); ctx.ellipse(0, 30, 62, 24, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(55, 22); ctx.lineTo(90, 10); ctx.stroke();
+      ctx.fillStyle = '#e8a300';
+      ctx.beginPath(); ctx.moveTo(92, -50); ctx.quadraticCurveTo(112, -10, 92, 4); ctx.quadraticCurveTo(72, -10, 92, -50); ctx.fill();
+      break;
+    case 'water': // goutte d'eau vive et vaguelettes
+      ctx.beginPath(); ctx.moveTo(0, -80); ctx.quadraticCurveTo(55, 0, 0, 40); ctx.quadraticCurveTo(-55, 0, 0, -80); ctx.fill();
+      for (const y of [65, 88]) { ctx.beginPath(); ctx.moveTo(-70, y); ctx.quadraticCurveTo(-35, y - 14, 0, y); ctx.quadraticCurveTo(35, y + 14, 70, y); ctx.stroke(); }
+      break;
+    case 'shepherd': // bâton de berger
+      ctx.beginPath(); ctx.moveTo(10, 95); ctx.lineTo(10, -40); ctx.arc(-25, -40, 35, 0, Math.PI, true); ctx.lineTo(-60, -20); ctx.stroke();
+      break;
+    case 'vine': // grappe de raisin et feuille
+      for (const [x, y] of [[-20, -20], [20, -20], [-30, 15], [0, 15], [30, 15], [-15, 48], [15, 48], [0, 78]]) { ctx.beginPath(); ctx.arc(x, y, 18, 0, Math.PI * 2); ctx.fill(); }
+      ctx.beginPath(); ctx.moveTo(0, -40); ctx.lineTo(0, -80); ctx.stroke();
+      ctx.beginPath(); ctx.ellipse(40, -70, 34, 18, -0.5, 0, Math.PI * 2); ctx.fill();
+      break;
+    case 'seed': // pousse qui sort de la terre
+      ctx.beginPath(); ctx.moveTo(0, 90); ctx.lineTo(0, -40); ctx.stroke();
+      ctx.beginPath(); ctx.ellipse(-35, -20, 38, 16, 0.5, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(35, -55, 38, 16, -0.5, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(-80, 90); ctx.lineTo(80, 90); ctx.stroke();
+      break;
+  }
+  ctx.restore();
+  ctx.fillStyle = '#7a5a10';
+  ctx.font = 'bold 34px Georgia, serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(label, 128, 290);
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+}
+
+/** Pierre gravée d'une parole de Jésus : on s'en approche pour la lire et l'écouter. */
+export function stele(symbol: string, label: string): THREE.Group {
+  const g = new THREE.Group();
+  const stoneMat = texturedMaterial(stone('#cfc3ae'), 0.6, 0.8);
+  const body = boxMesh(0.9, 1.1, 0.25, stoneMat, 0, 0.55, 0);
+  const top = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.45, 0.25, 16, 1, false, 0, Math.PI), stoneMat);
+  top.rotation.set(Math.PI / 2, Math.PI / 2, 0);
+  top.position.y = 1.1;
+  top.castShadow = true;
+  g.add(body, top);
+  const face = new THREE.Mesh(new THREE.PlaneGeometry(0.72, 0.9), new THREE.MeshLambertMaterial({ map: steleTexture(symbol, label) }));
+  face.position.set(0, 0.68, 0.13);
+  g.add(face);
+  g.add(boxMesh(1.1, 0.16, 0.45, texturedMaterial(stone('#bfb299'), 0.6, 0.2), 0, 0.08, 0));
+  g.userData.solids = [[0, 0, 0.5]] as Solids;
+  return g;
+}
+
+/* ------------------------------------------------------------------ */
+/* Le conte d'Amani : la ville d'ERO et le rêve                         */
+/* ------------------------------------------------------------------ */
+
+/** Texture de chaume : brins dorés serrés. */
+function thatch(): THREE.CanvasTexture {
+  const c = document.createElement('canvas');
+  c.width = c.height = 128;
+  const ctx = c.getContext('2d')!;
+  ctx.fillStyle = '#c99a4a';
+  ctx.fillRect(0, 0, 128, 128);
+  const rand = seeded(5);
+  for (let i = 0; i < 500; i++) {
+    const x = rand() * 128;
+    const y = rand() * 128;
+    ctx.strokeStyle = ['#a8792f', '#e0b866', '#b98a3a', '#d6a955'][i % 4];
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x + (rand() - 0.5) * 3, y + 10 + rand() * 8);
+    ctx.stroke();
+  }
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+  return tex;
+}
+
+/** Case ronde aux murs de terre et au toit de chaume (la ville d'ERO). */
+export function hut(seed = 1, door = '#6b3c1c'): THREE.Group {
+  const rand = seeded(seed);
+  const g = new THREE.Group();
+  const r = 1.7 + rand() * 0.5;
+  const wallH = 1.9 + rand() * 0.3;
+  const wall = new THREE.Mesh(new THREE.CylinderGeometry(r, r * 1.05, wallH, 20), texturedMaterial(stone('#c98c5a'), 3, 1));
+  wall.position.y = wallH / 2;
+  wall.castShadow = wall.receiveShadow = true;
+  g.add(wall);
+  const roofTex = thatch();
+  roofTex.repeat.set(4, 1.5);
+  const roof = new THREE.Mesh(new THREE.ConeGeometry(r * 1.45, 2.2 + rand() * 0.4, 20, 1, true), new THREE.MeshLambertMaterial({ map: roofTex, side: THREE.DoubleSide }));
+  roof.position.y = wallH + 1;
+  roof.castShadow = true;
+  g.add(roof);
+  // Porte arrondie et fenêtre
+  const doorMesh = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 0.1, 12, 1, false, 0, Math.PI), lambert(door));
+  doorMesh.rotation.set(Math.PI / 2, 0, Math.PI / 2);
+  doorMesh.position.set(0, 1.25, r * 1.02);
+  g.add(doorMesh);
+  g.add(boxMesh(0.84, 1.25, 0.1, lambert(door), 0, 0.62, r * 1.02));
+  const win = boxMesh(0.4, 0.4, 0.1, lambert('#2b211b'), r * 0.72, 1.25, r * 0.72);
+  win.rotation.y = Math.PI / 4;
+  g.add(win);
+  // Une jarre et un tonneau près de la porte
+  const jar = new THREE.Mesh(new THREE.SphereGeometry(0.28, 10, 8), lambert('#b5562a'));
+  jar.scale.y = 1.2;
+  jar.position.set(0.9, 0.3, r + 0.3);
+  jar.castShadow = true;
+  g.add(jar);
+  g.userData.solids = [[0, 0, r + 0.15]] as Solids;
+  return g;
+}
+
+/** Nuage du monde du rêve : des boules douces et lumineuses. */
+export function cloudPuff(seed = 1): THREE.Group {
+  const rand = seeded(seed);
+  const g = new THREE.Group();
+  const mat = new THREE.MeshLambertMaterial({ color: '#fff4fb', emissive: '#3a2a55', emissiveIntensity: 0.25 });
+  for (let i = 0; i < 6; i++) {
+    const s = new THREE.Mesh(new THREE.SphereGeometry(0.8 + rand() * 0.9, 14, 10), mat);
+    s.position.set((rand() - 0.5) * 3.4, 0.4 + rand() * 0.6, (rand() - 0.5) * 2);
+    g.add(s);
+  }
+  g.userData.solids = [[0, 0, 1.4]] as Solids;
+  return g;
+}

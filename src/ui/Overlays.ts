@@ -3,6 +3,7 @@ import { t, typo } from '../core/i18n';
 import { speech } from '../core/speech';
 import { audio } from '../core/audio';
 import { $, kineticWords } from './dom';
+import { renderIcon } from './illustrations';
 
 /**
  * Les deux écrans plein cadre de la quête :
@@ -72,7 +73,7 @@ export class ScrollView {
 
   private render() {
     const p = this.panels[this.index];
-    this.icon.textContent = p.icon;
+    this.icon.innerHTML = renderIcon(p.icon);
     this.icon.classList.remove('enter');
     void this.icon.offsetWidth;
     if (!this.calm) this.icon.classList.add('enter');
@@ -106,7 +107,7 @@ export class TraitCard {
   }
 
   play(text: QuestText, icon: string): Promise<void> {
-    $('trait-icon').textContent = icon;
+    $('trait-icon').innerHTML = renderIcon(icon);
     $('trait-name').textContent = text.trait.name;
     $('trait-desc').textContent = typo(text.trait.description);
     $('trait-jesus').textContent = typo(text.trait.jesus);

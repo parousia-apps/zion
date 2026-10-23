@@ -4,6 +4,7 @@ import { instance } from './assets';
 import * as B from './buildings';
 import { baseFor, createCharacter, type Character } from './characters';
 import { buildProcedural, glow, mat, wheelchair } from './procedural';
+import { halo } from './atmosphere';
 
 export { glow, mat };
 
@@ -25,6 +26,9 @@ export interface BuildOptions {
   scale?: number;
   /** Graine de variation (choix du palmier, forme de la maison...). */
   seed?: number;
+  /** Croissance de l'arbre du Royaume (nombre de missions vécues). */
+  growth?: number;
+  stele?: { symbol: string; label: string };
 }
 
 export interface Animated {
@@ -100,6 +104,7 @@ export function assetsFor(kind: ModelKind, o: BuildOptions = {}): string[] {
   if (kind === 'house' || kind === 'tower') return ['archdoor', 'barrel', 'torch'];
   if (kind === 'pen') return ['fence'];
   if (kind === 'harp') return ['rocks'];
+  if (kind === 'statue') return ['man'];
   return ASSETS[kind] ?? [];
 }
 
@@ -174,6 +179,29 @@ export function buildModel(kind: ModelKind, o: BuildOptions = {}): Built {
     case 'tent': return solidsFrom(B.tent(o.color));
     case 'pen': return { obj: B.pen(3 * (o.scale ?? 1)) };
     case 'ramp': return { obj: B.ramp() };
+    case 'mustard': return solidsFrom(B.mustardTree(o.growth ?? 0));
+    case 'vine': return solidsFrom(B.vineArbor());
+    case 'wheat': return { obj: B.wheatField(o.size ?? [4, 3]) };
+    case 'stele': return solidsFrom(B.stele(o.stele?.symbol ?? 'light', o.stele?.label ?? ''));
+    case 'hut': return solidsFrom(B.hut(seed, o.color));
+    case 'cloudpuff': return solidsFrom(B.cloudPuff(seed));
+    case 'star': return { obj: amaniStar() };
+    case 'orb': return { obj: skyOrb() };
+    case 'statue': {
+      // La statue de Môté : un personnage figé, tout en pierre, trois fois plus grand.
+      const stone = { base: 'man' as const, tunic: '#9a8f80', accent: '#857a6b', skin: '#a69b8b', hair: '#8a7f70', beard: '#8a7f70', staff: true };
+      const c = createCharacter(stone);
+      const g = new THREE.Group();
+      if (c) {
+        c.mixer.update(0.5); // fige la pose de repos (sinon : bras en croix)
+        g.add(c.obj);
+      } else {
+        g.add(buildProcedural('person', { look: stone }));
+      }
+      g.scale.setScalar(2.6);
+      g.add(B.groundPatch('plaza', [1.4, 1.4], '#b8ab96'));
+      return { obj: g, solids: [[0, 0, 1.1]] };
+    }
     case 'water': return solidsFrom(B.groundPatch('water', o.size ?? [3, 3], o.color));
     case 'road': return { obj: B.groundPatch('road', o.size ?? [3, 10], o.color) };
     case 'plaza': return { obj: B.groundPatch('plaza', o.size ?? [8, 8], o.color) };
@@ -205,6 +233,72 @@ export function buildModel(kind: ModelKind, o: BuildOptions = {}): Built {
   return { obj: buildProcedural(kind, o), solids: SOLIDS[kind] };
 }
 
+let starTex: THREE.CanvasTexture | null = null;
+/** Amani, l'étoile souriante du rêve de Nala (dessinée comme dans le livre). */
+function amaniStar(): THREE.Group {
+  if (!starTex) {
+    const c = document.createElement('canvas');
+    c.width = c.height = 256;
+    const ctx = c.getContext('2d')!;
+    ctx.translate(128, 132);
+    ctx.beginPath();
+    for (let i = 0; i < 10; i++) {
+      const r = i % 2 ? 46 : 112;
+      const a = (i / 10) * Math.PI * 2 - Math.PI / 2;
+      ctx.lineTo(Math.cos(a) * r, Math.sin(a) * r);
+    }
+    ctx.closePath();
+    const grad = ctx.createRadialGradient(0, 0, 10, 0, 0, 112);
+    grad.addColorStop(0, '#fffbe0');
+    grad.addColorStop(1, '#ffd54a');
+    ctx.fillStyle = grad;
+    ctx.shadowColor = '#ffc400';
+    ctx.shadowBlur = 24;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    // Yeux fermés souriants et sourire, comme dans les illustrations du livre.
+    ctx.strokeStyle = '#7a4b12';
+    ctx.lineWidth = 6;
+    ctx.lineCap = 'round';
+    for (const x of [-22, 22]) {
+      ctx.beginPath();
+      ctx.arc(x, -6, 9, Math.PI * 1.1, Math.PI * 1.9);
+      ctx.stroke();
+    }
+    ctx.beginPath();
+    ctx.arc(0, 10, 18, Math.PI * 0.15, Math.PI * 0.85);
+    ctx.stroke();
+    ctx.fillStyle = 'rgba(255,120,120,0.45)';
+    for (const x of [-36, 36]) {
+      ctx.beginPath();
+      ctx.arc(x, 12, 8, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    starTex = new THREE.CanvasTexture(c);
+    starTex.colorSpace = THREE.SRGBColorSpace;
+  }
+  const g = new THREE.Group();
+  const star = new THREE.Sprite(new THREE.SpriteMaterial({ map: starTex, transparent: true, depthWrite: false, fog: false }));
+  star.scale.setScalar(3.2);
+  star.position.y = 3.2;
+  star.name = 'star';
+  const light = halo('#ffd54a', 9, 0.8);
+  light.position.y = 3.2;
+  g.add(light, star);
+  return g;
+}
+
+/** La « voix » dans le ciel d'ERO : une lueur douce au-dessus de la place. */
+function skyOrb(): THREE.Group {
+  const g = new THREE.Group();
+  const core = halo('#fff3c4', 2.2, 0.9);
+  core.position.y = 5;
+  const aura = halo('#ffd54a', 6, 0.45);
+  aura.position.y = 5;
+  g.add(aura, core);
+  return g;
+}
+
 /** Distance à laquelle on peut interagir, selon la taille du modèle. */
 export function defaultReach(kind: ModelKind): number {
   switch (kind) {
@@ -218,6 +312,8 @@ export function defaultReach(kind: ModelKind): number {
     case 'pen': return 4.2;
     case 'stage': return 3.5;
     case 'harp': return 1.9;
+    case 'star': return 4.5;
+    case 'orb': return 5;
     default: return 1.8;
   }
 }
@@ -241,6 +337,8 @@ export function markerHeight(kind: ModelKind, look?: PersonLook): number {
     case 'deer': return 2.4;
     case 'person': return look?.lying ? 1.2 : 2.4 * (look?.height ?? 1);
     case 'harp': return 2;
+    case 'star': return 5.4;
+    case 'orb': return 6.6;
     default: return 1.8;
   }
 }

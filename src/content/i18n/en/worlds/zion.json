@@ -9,7 +9,12 @@
     "soins": "the house of care",
     "enclos": "Grandma Ruth's pen",
     "scene": "the festival stage",
-    "place": "the fountain square"
+    "place": "the fountain square",
+    "stele_lumiere": "Stone of light",
+    "stele_eau": "Stone of living water",
+    "stele_berger": "Stone of the good shepherd",
+    "stele_cep": "Stone of the vine",
+    "stele_graine": "Stone of the seed"
   },
   "idle": {
     "gardien": [
@@ -35,6 +40,51 @@
         "who": "passant",
         "text": "Lovely day in Zion! Have you seen the Keeper's lantern? It never goes out."
       }
+    ],
+    "stele_lumiere": [
+      {
+        "who": "narrator",
+        "text": "Carved in the stone: Jesus said: \"I am the light of the world. Whoever follows me will never walk in the dark.\" (John 8:12)"
+      },
+      {
+        "who": "narrator",
+        "text": "The flame of the tower never goes out, to remind every watcher that the light of Jesus shines for them."
+      }
+    ],
+    "stele_eau": [
+      {
+        "who": "narrator",
+        "text": "Carved in the stone: Jesus said: \"Whoever drinks the water I give will never be thirsty again. It will become a spring of life inside them.\" (John 4:14)"
+      }
+    ],
+    "stele_berger": [
+      {
+        "who": "narrator",
+        "text": "Carved in the stone: Jesus said: \"I am the good shepherd. I know my sheep, my sheep know me, and I give my life for them.\" (John 10:11-14)"
+      }
+    ],
+    "stele_cep": [
+      {
+        "who": "narrator",
+        "text": "Carved in the stone: Jesus said: \"I am the vine, you are the branches. Stay joined to me, and you will bear lots of good fruit.\" (John 15:5)"
+      }
+    ],
+    "stele_graine": [
+      {
+        "who": "narrator",
+        "text": "Carved in the stone: Jesus said: \"The Kingdom of God is like a tiny seed. It is planted, and it grows into a big tree where the birds come to make their nests.\" (Matthew 13:31-32)"
+      },
+      {
+        "who": "narrator",
+        "text": "Look at the tree beside you: it grows each time you live a mission. God's Kingdom grows in your heart too."
+      }
     ]
+  },
+  "verbs": {
+    "stele_lumiere": "Read the stone",
+    "stele_eau": "Read the stone",
+    "stele_berger": "Read the stone",
+    "stele_cep": "Read the stone",
+    "stele_graine": "Read the stone"
   }
 }

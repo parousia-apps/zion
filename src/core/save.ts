@@ -17,14 +17,28 @@ export interface QuestProgress {
   done: boolean;
 }
 
+/** Une page du carnet du veilleur : un défi accepté, et ce que l'enfant en raconte. */
+export interface JournalEntry {
+  questId: string;
+  acceptedAt: number;
+  /** « Je l'ai vécu » (aucun point, juste un souvenir). */
+  lived?: boolean;
+  note?: string;
+  /** Le Gardien a déjà demandé des nouvelles. */
+  asked?: boolean;
+}
+
 export interface SaveData {
   version: number;
   settings: Settings;
   quests: Record<string, QuestProgress>;
+  journal: JournalEntry[];
+  /** Versets appris (références). */
+  verses: string[];
 }
 
 function fresh(): SaveData {
-  return { version: VERSION, settings: defaultSettings(), quests: {} };
+  return { version: VERSION, settings: defaultSettings(), quests: {}, journal: [], verses: [] };
 }
 
 function load(): SaveData {
@@ -38,6 +52,8 @@ function load(): SaveData {
       version: VERSION,
       settings: { ...defaultSettings(), ...data.settings },
       quests: data.quests ?? {},
+      journal: data.journal ?? [],
+      verses: data.verses ?? [],
     };
   } catch {
     // Navigation privée, stockage plein ou JSON abîmé : on repart de zéro sans planter.
@@ -57,5 +73,7 @@ export function persist(): void {
 
 export function resetProgress(): void {
   save.quests = {};
+  save.journal = [];
+  save.verses = [];
   persist();
 }

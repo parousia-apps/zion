@@ -79,10 +79,11 @@ export class Game {
   /** Marche automatique : vers un point touché, ou vers l'objectif (guide). */
   private walkTo: Target | null = null;
   private guiding = false;
-  private stuck = { best: Infinity, timer: 0, detour: 0, side: 1, obstacle: '' };
+  private stuck = { best: Infinity, timer: 0, detour: 0, side: 1, sideUntil: 0 };
   private nearest: EntityState | null = null;
   private beaconTimer = 1.5;
   private objectivePending = false;
+  private fountainAt: THREE.Vector3 | null = null;
   private readonly raycaster = new THREE.Raycaster();
   private readonly groundPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
 
@@ -338,7 +339,12 @@ export class Game {
       this.effects?.dispose();
       this.world?.dispose();
       this.worldId = chapter.world;
-      this.world = new World(wdef, chapter, { reduceMotion: this.calm, shadows: this.shadows, lowQuality: this.settings.lowQuality });
+      this.world = new World(wdef, chapter, {
+        reduceMotion: this.calm,
+        shadows: this.shadows,
+        lowQuality: this.settings.lowQuality,
+        growth: Object.values(save.quests).filter((q) => q.done).length,
+      });
       this.engine.scene.add(this.world.root);
       this.engine.scene.fog = this.world.fog;
       this.player = new Player(wdef.player.look, this.calm, this.shadows);
@@ -346,7 +352,8 @@ export class Game {
       const start = chapter.player ?? wdef.player;
       this.player.place(start.pos[0], start.pos[1], start.rot ?? 180);
       const player = this.player;
-      this.effects = new Effects(this.world, () => player.position, this.calm, this.settings.lowQuality);
+      this.effects = new Effects(this.world, () => player.position, this.calm, this.settings.lowQuality, (key) => this.ui.hud.caption(t(key)));
+      if (chapter.weather) this.effects.setWeather(chapter.weather);
       this.world.applyHistory(this.runner.historyInChapter());
       this.names = {
         narrator: t('dialog.narrator'),
@@ -361,6 +368,11 @@ export class Game {
     }, this.calm);
     announce(t('announce.worldEnter', { place: wtext.name }));
     music.play(wdef.souvenir ? 'souvenir' : 'zion');
+    // Ambiance sonore : oiseaux partout, eau si le lieu a une fontaine.
+    audio.ambience(true);
+    const fountain = wdef.props.find((p) => p.model === 'fountain');
+    this.fountainAt = fountain ? new THREE.Vector3(fountain.pos[0], 0, fountain.pos[1]) : null;
+    if (this.settings.captions) this.ui.hud.caption(t('captions.ambience'));
     if (this.settings.music) this.ui.hud.caption(t(wdef.souvenir ? 'captions.musicSouvenir' : 'captions.music'));
   }
 
@@ -383,6 +395,8 @@ export class Game {
     }
     player.update(dt, dir, world);
     world.followSun(player.position);
+    // L'eau de la fontaine s'entend plus fort quand on s'en approche.
+    audio.setWater(this.fountainAt ? Math.max(0, 1 - this.fountainAt.distanceTo(player.position) / 14) : 0);
     world.update(dt, time, player.obj);
     this.effects?.update(dt);
     this.followCamera(dt);
@@ -461,7 +475,7 @@ export class Game {
     }
     const id = best.def.id;
     const name = this.names[id] ?? id;
-    const verb = this.text.verbs?.[id];
+    const verb = this.text.verbs?.[id] ?? worldText(this.worldId).verbs?.[id];
     const isUse = step.type === 'interact' && id === target;
     this.ui.hud.setAction(verb ?? (isUse ? t('hud.use', { name }) : t('hud.talk', { name })));
     // Arrivé près de la cible avec le guide : on s'arrête et on explique quoi faire.
@@ -541,21 +555,27 @@ export class Game {
     if (obstacle) {
       const ox = obstacle.x - p.x;
       const oz = obstacle.z - p.z;
-      // Côté choisi une fois pour toutes tant que le même obstacle gêne (évite les hésitations).
-      const key = `${obstacle.x.toFixed(1)},${obstacle.z.toFixed(1)}`;
-      if (this.stuck.obstacle !== key) {
-        this.stuck.obstacle = key;
-        this.stuck.side = (dx / d) * oz - (dz / d) * ox > 0 ? -1 : 1;
-      }
+      // Le côté choisi est gardé 2,5 s : un gros obstacle fait de plusieurs cercles
+      // (l'arche, une maison) est contourné d'une traite, sans hésiter.
       const od = Math.hypot(ox, oz) || 1;
-      // Direction tangente au cercle, légèrement écartée de son centre.
-      const tx = (-oz / od) * this.stuck.side - (ox / od) * 0.35;
-      const tz = (ox / od) * this.stuck.side - (oz / od) * 0.35;
+      // Direction tangente au cercle (d'un côté ou de l'autre), légèrement écartée de son centre.
+      const tangent = (side: number) => ({ x: (-oz / od) * side - (ox / od) * 0.5, z: (ox / od) * side - (oz / od) * 0.5 });
+      const now = performance.now();
+      if (now > this.stuck.sideUntil) {
+        // On note les deux côtés : se rapprocher du but, sans foncer vers le bord du monde.
+        const score = (side: number) => {
+          const tg = tangent(side);
+          const ahead = Math.hypot(p.x + tg.x * 3, p.z + tg.z * 3);
+          const edgePenalty = Math.max(0, ahead - (this.world!.radius - 2)) * 2;
+          return (tg.x * dx + tg.z * dz) / d - edgePenalty;
+        };
+        this.stuck.side = score(1) >= score(-1) ? 1 : -1;
+      }
+      this.stuck.sideUntil = now + 2500;
+      const { x: tx, z: tz } = tangent(this.stuck.side);
       const tl = Math.hypot(tx, tz) || 1;
       x = tx / tl;
       y = -tz / tl;
-    } else {
-      this.stuck.obstacle = '';
     }
     if (this.stuck.detour > 0) {
       this.stuck.detour -= dt;
@@ -574,7 +594,7 @@ export class Game {
   }
 
   private resetStuck(): void {
-    this.stuck = { best: Infinity, timer: 0, detour: 0, side: 1, obstacle: '' };
+    this.stuck = { best: Infinity, timer: 0, detour: 0, side: 1, sideUntil: 0 };
   }
 
   private onTap(clientX: number, clientY: number): void {

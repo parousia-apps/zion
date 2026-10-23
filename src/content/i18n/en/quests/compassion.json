@@ -14,7 +14,9 @@
     "presse1": "Jacob, a man in a hurry",
     "presse2": "Simon, a busy merchant"
   },
-  "verbs": { "naomi_sol": "Help Naomi" },
+  "verbs": {
+    "naomi_sol": "Help Naomi"
+  },
   "objectives": {
     "welcome": "Go and talk to the Keeper, at the foot of the great tower.",
     "help": "Someone is calling for help near the market: go and see!",
@@ -24,32 +26,82 @@
   },
   "dialogs": {
     "welcome": [
-      { "who": "gardien", "text": "Welcome to Zion, the City of the Watchers! I am Ezra, Keeper of the tower." },
-      { "who": "gardien", "text": "Here, a watcher doesn't only watch the walls: they watch over people. They notice who needs help." },
-      { "who": "gardien", "text": "Would you like to become an apprentice watcher? Then first, listen to a story Jesus told." }
+      {
+        "who": "gardien",
+        "text": "Welcome to Zion, the City of the Watchers! I am Ezra, Keeper of the tower."
+      },
+      {
+        "who": "gardien",
+        "text": "Here, a watcher doesn't only watch the walls: they watch over people. They notice who needs help."
+      },
+      {
+        "who": "gardien",
+        "text": "Would you like to become an apprentice watcher? Then first, listen to a story Jesus told."
+      }
     ],
     "alert": [
-      { "who": "narrator", "text": "Suddenly, a cry comes from the market.", "snd": "cry" },
-      { "who": "gardien", "text": "Did you hear that? Someone needs help. People are walking past… What will you do?" }
+      {
+        "who": "narrator",
+        "text": "Suddenly, a cry comes from the market.",
+        "snd": "cry"
+      },
+      {
+        "who": "gardien",
+        "text": "Did you hear that? Someone needs help. People are walking past… What will you do?"
+      }
     ],
     "help": [
-      { "who": "narrator", "text": "It's Naomi. She slipped and hurt her ankle. Her fruit has rolled everywhere." },
-      { "who": "naomi_sol", "text": "Ouch… People just walk past without stopping…" },
-      { "who": "player", "text": "I'm stopping. Take my hand, I'll help you up.", "fx": "heal" },
-      { "who": "naomi_sol", "text": "Thank you, that's so kind. Could you walk with me to the house of care?" }
+      {
+        "who": "narrator",
+        "text": "It's Naomi. She slipped and hurt her ankle. Her fruit has rolled everywhere."
+      },
+      {
+        "who": "naomi_sol",
+        "text": "Ouch… People just walk past without stopping…"
+      },
+      {
+        "who": "player",
+        "text": "I'm stopping. Take my hand, I'll help you up.",
+        "fx": "heal"
+      },
+      {
+        "who": "naomi_sol",
+        "text": "Thank you, that's so kind. Could you walk with me to the house of care?"
+      }
     ],
     "arrive": [
-      { "who": "narrator", "text": "You walked slowly, at Naomi's pace. Here she is at the house of care." }
+      {
+        "who": "narrator",
+        "text": "You walked slowly, at Naomi's pace. Here she is at the house of care."
+      }
     ],
     "care": [
-      { "who": "soigneuse", "text": "Naomi! Come and sit down, I'll bandage your ankle." },
-      { "who": "soigneuse", "text": "Thank you for bringing her. Many people walked past her. You took the time to stop." },
-      { "who": "naomi", "text": "I won't forget you. God bless you!" }
+      {
+        "who": "soigneuse",
+        "text": "Naomi! Come and sit down, I'll bandage your ankle."
+      },
+      {
+        "who": "soigneuse",
+        "text": "Thank you for bringing her. Many people walked past her. You took the time to stop."
+      },
+      {
+        "who": "naomi",
+        "text": "I won't forget you. God bless you!"
+      }
     ],
     "debrief": [
-      { "who": "gardien", "text": "I saw what you did. You were Naomi's neighbour, just like the Samaritan in the story." },
-      { "who": "gardien", "text": "Jesus doesn't ask us: \"Who deserves my help?\" He asks: \"Who can I be a neighbour to today?\"" },
-      { "who": "gardien", "text": "Your heart saw, and your hands helped. That is compassion." }
+      {
+        "who": "gardien",
+        "text": "I saw what you did. You were Naomi's neighbour, just like the Samaritan in the story."
+      },
+      {
+        "who": "gardien",
+        "text": "Jesus doesn't ask us: \"Who deserves my help?\" He asks: \"Who can I be a neighbour to today?\""
+      },
+      {
+        "who": "gardien",
+        "text": "Your heart saw, and your hands helped. That is compassion."
+      }
     ]
   },
   "scrolls": {
@@ -57,22 +109,70 @@
       "title": "The Good Samaritan",
       "reference": "Luke 10:25-37",
       "panels": [
-        { "icon": "🤔", "text": "One day, a man asks Jesus: \"Who is my neighbour? Who should I love?\" To answer him, Jesus tells a story." },
-        { "icon": "🛣️", "text": "A man is travelling down the road from Jerusalem to Jericho. Robbers attack him, take his things and leave him hurt by the roadside." },
-        { "icon": "🚶", "text": "A priest comes along. He sees the man… but crosses to the other side and keeps going. A little later, a Levite who serves in the Temple does the same." },
-        { "icon": "🫏", "text": "Then a Samaritan arrives. In those days, Jews and Samaritans did not get along at all. Yet when he sees the wounded man, his heart is moved." },
-        { "icon": "🩹", "text": "He goes to him, cleans his wounds with oil and wine and bandages them. Then he puts him on his own donkey and takes him to an inn." },
-        { "icon": "🪙", "text": "The next day, he gives the innkeeper two silver coins: \"Look after him. If you spend more, I will pay you back when I return.\"" },
-        { "icon": "❤️", "text": "Jesus asks: \"Which of the three was a neighbour to the hurt man?\" The answer: \"The one who showed him mercy.\" And Jesus says: \"Go, and do the same.\"" }
+        {
+          "icon": "ill:samaritain-question",
+          "text": "One day, a man asks Jesus: \"Who is my neighbour? Who should I love?\" To answer him, Jesus tells a story."
+        },
+        {
+          "icon": "ill:samaritain-route",
+          "text": "A man is travelling down the road from Jerusalem to Jericho. Robbers attack him, take his things and leave him hurt by the roadside."
+        },
+        {
+          "icon": "ill:samaritain-passent",
+          "text": "A priest comes along. He sees the man… but crosses to the other side and keeps going. A little later, a Levite who serves in the Temple does the same."
+        },
+        {
+          "icon": "ill:samaritain-arrive",
+          "text": "Then a Samaritan arrives. In those days, Jews and Samaritans did not get along at all. Yet when he sees the wounded man, his heart is moved."
+        },
+        {
+          "icon": "ill:samaritain-soins",
+          "text": "He goes to him, cleans his wounds with oil and wine and bandages them. Then he puts him on his own donkey and takes him to an inn."
+        },
+        {
+          "icon": "ill:samaritain-auberge",
+          "text": "The next day, he gives the innkeeper two silver coins: \"Look after him. If you spend more, I will pay you back when I return.\""
+        },
+        {
+          "icon": "ill:samaritain-aimer",
+          "text": "Jesus asks: \"Which of the three was a neighbour to the hurt man?\" The answer: \"The one who showed him mercy.\" And Jesus says: \"Go, and do the same.\""
+        }
       ]
     }
   },
   "idle": {
-    "presse1": [{ "who": "presse1", "text": "Sorry, I'm very late! Someone else will take care of it." }],
-    "presse2": [{ "who": "presse2", "text": "I haven't got time, I have business to do!" }]
+    "presse1": [
+      {
+        "who": "presse1",
+        "text": "Sorry, I'm very late! Someone else will take care of it."
+      }
+    ],
+    "presse2": [
+      {
+        "who": "presse2",
+        "text": "I haven't got time, I have business to do!"
+      }
+    ]
   },
   "ending": {
     "message": "Being someone's neighbour means stopping to help, even when they are different from us, even when we're in a hurry. That's what Jesus does for us.",
     "reflection": "The priest and the Levite probably had \"good reasons\" not to stop. What stops us from stopping? Who is \"by the roadside\" in our neighbourhood, school or church?"
+  },
+  "life": {
+    "bibleRef": "Luke 10:25-37",
+    "bibleQuery": "Luke 10:25-37",
+    "bibleWhere": "Luke is in the New Testament. It's the third book, right after Matthew and Mark. Find the big number 10 (the chapter), then the small numbers 25 to 37 (the verses).",
+    "bibleQuestion": "In the text, count everything the Samaritan does for the wounded man. How many actions did you find? Which one touches you most?",
+    "prayer": "Lord Jesus, thank you for always stopping for me. Open my eyes to see those who need help, and give me a heart full of compassion, like yours. Amen.",
+    "challenge": "This week, help someone without being asked: carry a bag, comfort a friend, do a job at home.",
+    "followup": "So, were you able to help someone without being asked?",
+    "verse": "Go and do likewise.",
+    "verseRef": "Luke 10:37",
+    "family": [
+      "For little ones: who stopped to help the wounded man?",
+      "For older ones: why do you think the priest and the Levite didn't stop?",
+      "For everyone: who could we be a neighbour to this week, as a family?"
+    ],
+    "activity": "Together, prepare a small \"Good Samaritan kit\" (plasters, a kind note, a biscuit) to give to someone who needs it."
   }
 }

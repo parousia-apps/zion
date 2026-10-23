@@ -1,0 +1,76 @@
+{
+  "id": "reve",
+  "souvenir": true,
+  "environment": {
+    "sky": [
+      "#5b3f96",
+      "#f7c98b"
+    ],
+    "ground": "#f1e3ff",
+    "radius": 11,
+    "dream": true
+  },
+  "player": {
+    "pos": [
+      0,
+      6
+    ],
+    "rot": 180,
+    "look": {
+      "base": "woman",
+      "tunic": "#ff8a1f",
+      "accent": "#ffd23f",
+      "hair": "#2b1a10",
+      "skin": "#8d5524",
+      "height": 0.75
+    }
+  },
+  "props": [
+    {
+      "model": "cloudpuff",
+      "pos": [
+        -6,
+        -2
+      ]
+    },
+    {
+      "model": "cloudpuff",
+      "pos": [
+        6,
+        -1
+      ]
+    },
+    {
+      "model": "cloudpuff",
+      "pos": [
+        -4,
+        7
+      ]
+    },
+    {
+      "model": "cloudpuff",
+      "pos": [
+        5,
+        8
+      ]
+    },
+    {
+      "model": "cloudpuff",
+      "pos": [
+        0,
+        -9
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "amani",
+      "model": "star",
+      "pos": [
+        0,
+        -3.5
+      ]
+    }
+  ],
+  "zones": []
+}

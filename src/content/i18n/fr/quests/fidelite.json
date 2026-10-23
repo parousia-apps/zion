@@ -28,66 +28,204 @@
   },
   "dialogs": {
     "intro": [
-      { "who": "gardien", "text": "Aujourd'hui, je ne vais pas seulement te raconter une histoire. Je vais te la faire vivre !" },
-      { "who": "gardien", "text": "Ferme les yeux… Imagine… Nous sommes il y a très, très longtemps." }
+      {
+        "who": "gardien",
+        "text": "Aujourd'hui, je ne vais pas seulement te raconter une histoire. Je vais te la faire vivre !"
+      },
+      {
+        "who": "gardien",
+        "text": "Ferme les yeux… Imagine… Nous sommes il y a très, très longtemps."
+      }
     ],
     "story": [
-      { "who": "narrator", "text": "Il y a très longtemps, les gens sur la terre faisaient beaucoup de mal. Ils avaient oublié Dieu." },
-      { "who": "narrator", "text": "Mais un homme, Noé, aimait Dieu et l'écoutait. Dieu lui dit : « Construis une grande arche, un énorme bateau en bois. »" },
-      { "who": "narrator", "text": "« Un déluge va venir. Je veux te protéger, toi, ta famille et les animaux. »" },
-      { "who": "narrator", "text": "Noé a obéi. Il a construit l'arche pendant des années, alors qu'il n'y avait pas un nuage dans le ciel ! Va parler à Noé." }
+      {
+        "who": "narrator",
+        "text": "Il y a très longtemps, les gens sur la terre faisaient beaucoup de mal. Ils avaient oublié Dieu."
+      },
+      {
+        "who": "narrator",
+        "text": "Mais un homme, Noé, aimait Dieu et l'écoutait. Dieu lui dit : « Construis une grande arche, un énorme bateau en bois. »"
+      },
+      {
+        "who": "narrator",
+        "text": "« Un déluge va venir. Je veux te protéger, toi, ta famille et les animaux. »"
+      },
+      {
+        "who": "narrator",
+        "text": "Noé a obéi. Il a construit l'arche pendant des années, alors qu'il n'y avait pas un nuage dans le ciel ! Va parler à Noé."
+      }
     ],
     "askHelp": [
-      { "who": "noe", "text": "Bonjour ! Tu tombes bien, j'ai besoin d'aide." },
-      { "who": "noe", "text": "Les gens se moquaient de moi : « Un bateau, ici, si loin de la mer ? » Mais Dieu me l'a demandé, et je lui fais confiance." },
-      { "who": "noe", "text": "Dieu a dit de faire entrer les animaux deux par deux. Approche-toi du cerf et de la biche, des chevaux et des zèbres : ils te suivront jusqu'à la rampe de l'arche." }
+      {
+        "who": "noe",
+        "text": "Bonjour ! Tu tombes bien, j'ai besoin d'aide."
+      },
+      {
+        "who": "noe",
+        "text": "Les gens se moquaient de moi : « Un bateau, ici, si loin de la mer ? » Mais Dieu me l'a demandé, et je lui fais confiance."
+      },
+      {
+        "who": "noe",
+        "text": "Dieu a dit de faire entrer les animaux deux par deux. Approche-toi du cerf et de la biche, des chevaux et des zèbres : ils te suivront jusqu'à la rampe de l'arche."
+      }
     ],
     "allIn": [
-      { "who": "noe", "text": "Bravo ! Tous les animaux sont à l'abri." },
-      { "who": "noe", "text": "J'entre dans l'arche. Viens vite toi aussi, les premières gouttes arrivent !" }
+      {
+        "who": "noe",
+        "text": "Bravo ! Tous les animaux sont à l'abri."
+      },
+      {
+        "who": "noe",
+        "text": "J'entre dans l'arche. Viens vite toi aussi, les premières gouttes arrivent !"
+      }
     ],
     "flood": [
-      { "who": "narrator", "text": "Dieu ferme lui-même la porte de l'arche. Alors la pluie se met à tomber…", "fx": "rain" },
-      { "who": "narrator", "text": "Il pleut pendant quarante jours et quarante nuits. L'eau recouvre toute la terre.", "snd": "thunder" },
-      { "who": "narrator", "text": "Mais dans l'arche, Noé, sa famille et les animaux sont en sécurité. Dieu ne les a pas oubliés." },
-      { "who": "narrator", "text": "Un jour, la pluie s'arrête. Noé envoie une colombe. Elle revient avec une feuille d'olivier dans le bec : la terre sèche est revenue !", "fx": "dove" },
-      { "who": "narrator", "text": "Tout le monde sort de l'arche. Et dans le ciel apparaît un arc-en-ciel.", "fx": "rainbow" },
-      { "who": "narrator", "text": "Dieu dit : « C'est le signe de ma promesse : plus jamais un déluge ne détruira la terre. » Dieu tient toujours ses promesses." }
+      {
+        "who": "narrator",
+        "text": "Dieu ferme lui-même la porte de l'arche. Alors la pluie se met à tomber…",
+        "fx": "rain"
+      },
+      {
+        "who": "narrator",
+        "text": "Il pleut pendant quarante jours et quarante nuits. L'eau recouvre toute la terre.",
+        "snd": "thunder"
+      },
+      {
+        "who": "narrator",
+        "text": "Mais dans l'arche, Noé, sa famille et les animaux sont en sécurité. Dieu ne les a pas oubliés."
+      },
+      {
+        "who": "narrator",
+        "text": "Un jour, la pluie s'arrête. Noé envoie une colombe. Elle revient avec une feuille d'olivier dans le bec : la terre sèche est revenue !",
+        "fx": "dove"
+      },
+      {
+        "who": "narrator",
+        "text": "Tout le monde sort de l'arche. Et dans le ciel apparaît un arc-en-ciel.",
+        "fx": "rainbow"
+      },
+      {
+        "who": "narrator",
+        "text": "Dieu dit : « C'est le signe de ma promesse : plus jamais un déluge ne détruira la terre. » Dieu tient toujours ses promesses."
+      }
     ],
     "promise": [
-      { "who": "ruth", "text": "Ah, te voilà ! Je dois partir voir ma sœur, de l'autre côté de la colline." },
-      { "who": "ruth", "text": "Le ciel devient gris… Mes trois brebis se promènent dans la cité. Peux-tu me promettre de les ramener dans l'enclos avant l'orage ?" },
-      { "who": "player", "text": "Je te le promets, Mamie Ruth !" },
-      { "who": "ruth", "text": "Merci. Je sais que je peux compter sur toi." }
+      {
+        "who": "ruth",
+        "text": "Ah, te voilà ! Je dois partir voir ma sœur, de l'autre côté de la colline."
+      },
+      {
+        "who": "ruth",
+        "text": "Le ciel devient gris… Mes trois brebis se promènent dans la cité. Peux-tu me promettre de les ramener dans l'enclos avant l'orage ?"
+      },
+      {
+        "who": "player",
+        "text": "Je te le promets, Mamie Ruth !"
+      },
+      {
+        "who": "ruth",
+        "text": "Merci. Je sais que je peux compter sur toi."
+      }
     ],
     "tease": [
-      { "who": "moqueur1", "text": "Hé ! Laisse ces brebis et viens jouer avec nous !" },
-      { "who": "moqueur2", "text": "Il ne va jamais pleuvoir, regarde le ciel ! Tu te fatigues pour rien !" },
-      { "who": "player", "text": "J'ai promis à Mamie Ruth. Une promesse, ça se tient… même quand les autres se moquent." }
+      {
+        "who": "moqueur1",
+        "text": "Hé ! Laisse ces brebis et viens jouer avec nous !"
+      },
+      {
+        "who": "moqueur2",
+        "text": "Il ne va jamais pleuvoir, regarde le ciel ! Tu te fatigues pour rien !"
+      },
+      {
+        "who": "player",
+        "text": "J'ai promis à Mamie Ruth. Une promesse, ça se tient… même quand les autres se moquent."
+      }
     ],
     "storm": [
-      { "who": "narrator", "text": "À peine la dernière brebis est-elle rentrée que la pluie se met à tomber très fort !", "fx": "rain" },
-      { "who": "narrator", "text": "Les brebis sont bien au sec. Les enfants courent se mettre à l'abri.", "snd": "thunder" },
-      { "who": "moqueur1", "text": "Tu avais raison… Tu as tenu ta promesse. Bravo !" },
-      { "who": "narrator", "text": "Puis le soleil revient, et un arc-en-ciel s'étend au-dessus de Zion, comme une promesse.", "fx": "rainbow" }
+      {
+        "who": "narrator",
+        "text": "À peine la dernière brebis est-elle rentrée que la pluie se met à tomber très fort !",
+        "fx": "rain"
+      },
+      {
+        "who": "narrator",
+        "text": "Les brebis sont bien au sec. Les enfants courent se mettre à l'abri.",
+        "snd": "thunder"
+      },
+      {
+        "who": "moqueur1",
+        "text": "Tu avais raison… Tu as tenu ta promesse. Bravo !"
+      },
+      {
+        "who": "narrator",
+        "text": "Puis le soleil revient, et un arc-en-ciel s'étend au-dessus de Zion, comme une promesse.",
+        "fx": "rainbow"
+      }
     ],
     "thanks": [
-      { "who": "ruth", "text": "Mes brebis sont toutes là, bien à l'abri ! Tu as tenu parole." },
-      { "who": "ruth", "text": "Quand quelqu'un tient ses promesses, on peut lui faire confiance. Tu ressembles à Jésus, tu sais." }
+      {
+        "who": "ruth",
+        "text": "Mes brebis sont toutes là, bien à l'abri ! Tu as tenu parole."
+      },
+      {
+        "who": "ruth",
+        "text": "Quand quelqu'un tient ses promesses, on peut lui faire confiance. Tu ressembles à Jésus, tu sais."
+      }
     ],
     "debrief": [
-      { "who": "gardien", "text": "Noé a fait confiance à Dieu avant de voir la moindre goutte de pluie. Et toi, tu as tenu ta promesse malgré les moqueries." },
-      { "who": "gardien", "text": "Dieu est fidèle : il n'oublie jamais ce qu'il a promis. Jésus nous a dit : « Je suis avec vous tous les jours. »" },
-      { "who": "gardien", "text": "Un veilleur fidèle, c'est quelqu'un sur qui on peut compter. Merci d'en être un !" }
+      {
+        "who": "gardien",
+        "text": "Noé a fait confiance à Dieu avant de voir la moindre goutte de pluie. Et toi, tu as tenu ta promesse malgré les moqueries."
+      },
+      {
+        "who": "gardien",
+        "text": "Dieu est fidèle : il n'oublie jamais ce qu'il a promis. Jésus nous a dit : « Je suis avec vous tous les jours. »"
+      },
+      {
+        "who": "gardien",
+        "text": "Un veilleur fidèle, c'est quelqu'un sur qui on peut compter. Merci d'en être un !"
+      }
     ]
   },
   "idle": {
-    "noe": [{ "who": "noe", "text": "Courage ! Le cerf et la biche, deux chevaux, deux zèbres. Ils attendent ton aide !" }],
-    "moqueur1": [{ "who": "moqueur1", "text": "On joue à chat ! Tu viens ?" }],
-    "moqueur2": [{ "who": "moqueur2", "text": "Regarde ce beau ciel… Enfin, presque bleu." }]
+    "noe": [
+      {
+        "who": "noe",
+        "text": "Courage ! Le cerf et la biche, deux chevaux, deux zèbres. Ils attendent ton aide !"
+      }
+    ],
+    "moqueur1": [
+      {
+        "who": "moqueur1",
+        "text": "On joue à chat ! Tu viens ?"
+      }
+    ],
+    "moqueur2": [
+      {
+        "who": "moqueur2",
+        "text": "Regarde ce beau ciel… Enfin, presque bleu."
+      }
+    ]
   },
   "ending": {
     "message": "Dieu tient toujours ses promesses. Être fidèle comme Jésus, c'est tenir parole et faire confiance à Dieu, même quand c'est difficile.",
     "reflection": "Noé a obéi avant de voir la pluie, sans doute sous les moqueries. Avez-vous déjà tenu une promesse alors que c'était difficile ? Quelle promesse de Dieu vous donne confiance aujourd'hui ?"
+  },
+  "life": {
+    "bibleRef": "Genèse, chapitres 6 à 9",
+    "bibleQuery": "Genèse 6-9",
+    "bibleWhere": "La Genèse est le tout premier livre de la Bible, au début de l'Ancien Testament. L'histoire de Noé commence au chapitre 6. Tu peux lire le chapitre 9, versets 8 à 17 : la promesse de l'arc-en-ciel.",
+    "bibleQuestion": "Au chapitre 9, Dieu fait une promesse avec l'arc-en-ciel. Quelle est cette promesse ? À qui Dieu la fait-il ?",
+    "prayer": "Seigneur, merci parce que tu tiens toujours tes promesses. Aide-moi à te faire confiance, même quand c'est difficile, et à tenir parole comme toi. Amen.",
+    "challenge": "Cette semaine, fais une promesse simple et tiens-la jusqu'au bout : ranger ta chambre, aider à la maison, appeler un grand-parent.",
+    "followup": "Alors, as-tu tenu ta promesse cette semaine ?",
+    "verse": "Et voici, je suis avec vous tous les jours, jusqu'à la fin du monde.",
+    "verseRef": "Matthieu 28.20",
+    "family": [
+      "Pour les petits : qu'est-ce que Dieu a mis dans le ciel pour dire qu'il tient sa promesse ?",
+      "Pour les grands : Noé a construit l'arche avant de voir la pluie. Qu'est-ce que ça veut dire, faire confiance ?",
+      "Pour tous : quelle promesse de Dieu nous rassure dans notre famille ?"
+    ],
+    "activity": "Dessinez un grand arc-en-ciel. Sur chaque couleur, écrivez une promesse de Dieu ou une promesse que vous voulez tenir en famille."
   }
 }

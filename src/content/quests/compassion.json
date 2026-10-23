@@ -1,8 +1,8 @@
 {
   "id": "compassion",
   "order": 1,
-  "icon": "🩹",
-  "traitIcon": "❤️",
+  "icon": "ill:mission-compassion",
+  "traitIcon": "ill:trait-compassion",
   "color": "#ff4f2e",
   "chapters": [
     {
@@ -11,57 +11,138 @@
         {
           "id": "naomi_sol",
           "model": "person",
-          "pos": [-7.5, -3],
+          "pos": [
+            -7.5,
+            -3
+          ],
           "rot": 90,
-          "look": { "tunic": "#ff4f7b", "accent": "#ffffff", "scarf": "#9c27b0", "skin": "#8d5524", "lying": true }
+          "look": {
+            "tunic": "#ff4f7b",
+            "accent": "#ffffff",
+            "scarf": "#9c27b0",
+            "skin": "#8d5524",
+            "lying": true
+          }
         },
         {
           "id": "naomi",
           "model": "person",
-          "pos": [-7.5, -3],
+          "pos": [
+            -7.5,
+            -3
+          ],
           "hidden": true,
-          "look": { "tunic": "#ff4f7b", "accent": "#ffffff", "scarf": "#9c27b0", "skin": "#8d5524" }
+          "look": {
+            "tunic": "#ff4f7b",
+            "accent": "#ffffff",
+            "scarf": "#9c27b0",
+            "skin": "#8d5524"
+          }
         },
         {
           "id": "presse1",
           "model": "person",
-          "pos": [-9.5, -5.5],
+          "pos": [
+            -9.5,
+            -5.5
+          ],
           "rot": 140,
-          "look": { "tunic": "#455a64", "accent": "#ffc21a", "hair": "#1b1b1b", "skin": "#c68642" }
+          "look": {
+            "tunic": "#455a64",
+            "accent": "#ffc21a",
+            "hair": "#1b1b1b",
+            "skin": "#c68642"
+          }
         },
         {
           "id": "presse2",
           "model": "person",
-          "pos": [-5, -6],
+          "pos": [
+            -5,
+            -6
+          ],
           "rot": -150,
-          "look": { "tunic": "#6d4c41", "accent": "#00c2a8", "hair": "#3e2410", "beard": "#3e2410", "skin": "#a8693a" }
+          "look": {
+            "tunic": "#6d4c41",
+            "accent": "#00c2a8",
+            "hair": "#3e2410",
+            "beard": "#3e2410",
+            "skin": "#a8693a"
+          }
         }
       ],
       "steps": [
-        { "id": "welcome", "type": "talk", "target": "gardien", "dialog": "welcome" },
-        { "id": "story", "type": "scroll", "scroll": "story" },
-        { "id": "trait", "type": "trait" },
+        {
+          "id": "welcome",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "welcome"
+        },
+        {
+          "id": "story",
+          "type": "scroll",
+          "scroll": "story"
+        },
+        {
+          "id": "trait",
+          "type": "trait"
+        },
         {
           "id": "alert",
           "type": "scene",
           "dialog": "alert",
           "moves": [
-            { "id": "presse1", "to": [6, 16], "speed": 1.8 },
-            { "id": "presse2", "to": [12, -3], "speed": 1.6 }
+            {
+              "id": "presse1",
+              "to": [
+                6,
+                16
+              ],
+              "speed": 1.8
+            },
+            {
+              "id": "presse2",
+              "to": [
+                12,
+                -3
+              ],
+              "speed": 1.6
+            }
           ]
         },
-        { "id": "help", "type": "interact", "target": "naomi_sol", "dialog": "help" },
+        {
+          "id": "help",
+          "type": "interact",
+          "target": "naomi_sol",
+          "dialog": "help"
+        },
         {
           "id": "escort",
           "type": "gather",
-          "targets": ["naomi"],
+          "targets": [
+            "naomi"
+          ],
           "zone": "soins",
-          "hide": ["naomi_sol"],
-          "show": ["naomi"],
+          "hide": [
+            "naomi_sol"
+          ],
+          "show": [
+            "naomi"
+          ],
           "dialog": "arrive"
         },
-        { "id": "care", "type": "talk", "target": "soigneuse", "dialog": "care" },
-        { "id": "debrief", "type": "talk", "target": "gardien", "dialog": "debrief" }
+        {
+          "id": "care",
+          "type": "talk",
+          "target": "soigneuse",
+          "dialog": "care"
+        },
+        {
+          "id": "debrief",
+          "type": "talk",
+          "target": "gardien",
+          "dialog": "debrief"
+        }
       ]
     }
   ]

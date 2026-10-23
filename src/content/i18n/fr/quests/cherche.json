@@ -23,32 +23,81 @@
   },
   "dialogs": {
     "intro": [
-      { "who": "gardien", "text": "Sais-tu combien il y a d'habitants à Zion ? Beaucoup ! Et pourtant, Dieu connaît chacun par son nom." },
-      { "who": "gardien", "text": "Écoute cette histoire que Jésus a racontée." }
+      {
+        "who": "gardien",
+        "text": "Sais-tu combien il y a d'habitants à Zion ? Beaucoup ! Et pourtant, Dieu connaît chacun par son nom."
+      },
+      {
+        "who": "gardien",
+        "text": "Écoute cette histoire que Jésus a racontée."
+      }
     ],
     "missing": [
-      { "who": "lea", "text": "Salut ! On joue à la ronde, mais on n'est que trois…" },
-      { "who": "samy", "text": "Timothée jouait avec nous avant. Mais on s'est moqués de lui parce qu'il court lentement… Alors il est parti." },
-      { "who": "ana", "text": "Il est peut-être caché quelque part près des remparts. Personne n'est allé le chercher." },
-      { "who": "player", "text": "Moi, j'y vais. Tout le monde compte !" }
+      {
+        "who": "lea",
+        "text": "Salut ! On joue à la ronde, mais on n'est que trois…"
+      },
+      {
+        "who": "samy",
+        "text": "Timothée jouait avec nous avant. Mais on s'est moqués de lui parce qu'il court lentement… Alors il est parti."
+      },
+      {
+        "who": "ana",
+        "text": "Il est peut-être caché quelque part près des remparts. Personne n'est allé le chercher."
+      },
+      {
+        "who": "player",
+        "text": "Moi, j'y vais. Tout le monde compte !"
+      }
     ],
     "found": [
-      { "who": "timothee", "text": "Qu'est-ce que tu fais là ? Personne ne veut de moi…" },
-      { "who": "player", "text": "Ce n'est pas vrai. Je suis là exprès pour toi. Sans toi, il manque quelqu'un !" },
-      { "who": "timothee", "text": "C'est vrai ? Bon… d'accord, je viens avec toi." }
+      {
+        "who": "timothee",
+        "text": "Qu'est-ce que tu fais là ? Personne ne veut de moi…"
+      },
+      {
+        "who": "player",
+        "text": "Ce n'est pas vrai. Je suis là exprès pour toi. Sans toi, il manque quelqu'un !"
+      },
+      {
+        "who": "timothee",
+        "text": "C'est vrai ? Bon… d'accord, je viens avec toi."
+      }
     ],
     "back": [
-      { "who": "narrator", "text": "Timothée est de retour sur la place de la fontaine." }
+      {
+        "who": "narrator",
+        "text": "Timothée est de retour sur la place de la fontaine."
+      }
     ],
     "party": [
-      { "who": "lea", "text": "Timothée ! Tu es revenu ! Pardon de nous être moqués de toi.", "fx": "celebrate" },
-      { "who": "samy", "text": "Viens dans la ronde ! On va jouer à un jeu où tout le monde peut gagner." },
-      { "who": "timothee", "text": "Merci de m'avoir cherché… Je me sens à nouveau à ma place." }
+      {
+        "who": "lea",
+        "text": "Timothée ! Tu es revenu ! Pardon de nous être moqués de toi.",
+        "fx": "celebrate"
+      },
+      {
+        "who": "samy",
+        "text": "Viens dans la ronde ! On va jouer à un jeu où tout le monde peut gagner."
+      },
+      {
+        "who": "timothee",
+        "text": "Merci de m'avoir cherché… Je me sens à nouveau à ma place."
+      }
     ],
     "debrief": [
-      { "who": "gardien", "text": "Il y a de la joie à Zion aujourd'hui, comme il y a de la joie dans le ciel quand quelqu'un revient vers Dieu." },
-      { "who": "gardien", "text": "Le berger n'a pas dit : « Tant pis, il m'en reste quatre-vingt-dix-neuf. » Pour lui, chaque brebis comptait." },
-      { "who": "gardien", "text": "Jésus est comme ce berger. Il ne nous oublie jamais. Et il nous apprend à aller chercher ceux qui sont seuls." }
+      {
+        "who": "gardien",
+        "text": "Il y a de la joie à Zion aujourd'hui, comme il y a de la joie dans le ciel quand quelqu'un revient vers Dieu."
+      },
+      {
+        "who": "gardien",
+        "text": "Le berger n'a pas dit : « Tant pis, il m'en reste quatre-vingt-dix-neuf. » Pour lui, chaque brebis comptait."
+      },
+      {
+        "who": "gardien",
+        "text": "Jésus est comme ce berger. Il ne nous oublie jamais. Et il nous apprend à aller chercher ceux qui sont seuls."
+      }
     ]
   },
   "scrolls": {
@@ -56,22 +105,72 @@
       "title": "La brebis perdue",
       "reference": "Luc 15, versets 3 à 7",
       "panels": [
-        { "icon": "🐑", "text": "Jésus raconte : « Imaginez un berger qui a cent brebis. Il les connaît toutes, et il les aime toutes. »" },
-        { "icon": "🌄", "text": "« Un soir, il les compte : quatre-vingt-dix-sept, quatre-vingt-dix-huit, quatre-vingt-dix-neuf… Il en manque une ! »" },
-        { "icon": "⛰️", "text": "« Le berger laisse les quatre-vingt-dix-neuf autres en sécurité. Il part chercher celle qui est perdue, dans les collines, jusqu'à ce qu'il la retrouve. »" },
-        { "icon": "🤗", "text": "« Quand il la trouve, il est rempli de joie ! Il la met sur ses épaules et la ramène à la maison. »" },
-        { "icon": "🎉", "text": "« Il appelle ses amis : Réjouissez-vous avec moi, j'ai retrouvé ma brebis qui était perdue ! »" },
-        { "icon": "✨", "text": "Jésus explique : « Il y a une grande joie dans le ciel pour une seule personne qui revient vers Dieu. » Pour Dieu, chacun est précieux." }
+        {
+          "icon": "ill:brebis-cent",
+          "text": "Jésus raconte : « Imaginez un berger qui a cent brebis. Il les connaît toutes, et il les aime toutes. »"
+        },
+        {
+          "icon": "ill:brebis-compte",
+          "text": "« Un soir, il les compte : quatre-vingt-dix-sept, quatre-vingt-dix-huit, quatre-vingt-dix-neuf… Il en manque une ! »"
+        },
+        {
+          "icon": "ill:brebis-cherche",
+          "text": "« Le berger laisse les quatre-vingt-dix-neuf autres en sécurité. Il part chercher celle qui est perdue, dans les collines, jusqu'à ce qu'il la retrouve. »"
+        },
+        {
+          "icon": "ill:brebis-trouvee",
+          "text": "« Quand il la trouve, il est rempli de joie ! Il la met sur ses épaules et la ramène à la maison. »"
+        },
+        {
+          "icon": "ill:brebis-fete",
+          "text": "« Il appelle ses amis : Réjouissez-vous avec moi, j'ai retrouvé ma brebis qui était perdue ! »"
+        },
+        {
+          "icon": "ill:brebis-ciel",
+          "text": "Jésus explique : « Il y a une grande joie dans le ciel pour une seule personne qui revient vers Dieu. » Pour Dieu, chacun est précieux."
+        }
       ]
     }
   },
   "idle": {
-    "lea": [{ "who": "lea", "text": "Bonne chance ! Regarde bien derrière les maisons, près des remparts." }],
-    "samy": [{ "who": "samy", "text": "On attend Timothée pour recommencer la ronde." }],
-    "ana": [{ "who": "ana", "text": "Tu crois qu'il voudra bien revenir ?" }]
+    "lea": [
+      {
+        "who": "lea",
+        "text": "Bonne chance ! Regarde bien derrière les maisons, près des remparts."
+      }
+    ],
+    "samy": [
+      {
+        "who": "samy",
+        "text": "On attend Timothée pour recommencer la ronde."
+      }
+    ],
+    "ana": [
+      {
+        "who": "ana",
+        "text": "Tu crois qu'il voudra bien revenir ?"
+      }
+    ]
   },
   "ending": {
     "message": "Pour Dieu, personne n'est de trop et personne n'est oublié. Comme Jésus, nous pouvons aller chercher celui qui est seul et lui dire : tu comptes !",
     "reflection": "Le berger aurait pu se contenter de ses quatre-vingt-dix-neuf brebis. Qui, autour de nous, risque d'être oublié ou mis à l'écart, peut-être à cause d'une différence ou d'un handicap ? Que pourrions-nous faire, concrètement, pour aller vers lui ?"
+  },
+  "life": {
+    "bibleRef": "Luc 15, versets 3 à 7",
+    "bibleQuery": "Luc 15:3-7",
+    "bibleWhere": "Luc est dans le Nouveau Testament, après Matthieu et Marc. Cherche le chapitre 15. Juste après, Jésus raconte aussi la pièce perdue et le fils perdu : trois histoires de ce qui est retrouvé !",
+    "bibleQuestion": "Que fait le berger quand il retrouve sa brebis ? Et que fait-il en rentrant à la maison ?",
+    "prayer": "Jésus, merci parce que tu es venu me chercher et que tu ne m'oublies jamais. Montre-moi qui est seul autour de moi, et donne-moi le courage d'aller vers lui. Amen.",
+    "challenge": "Cette semaine, va vers quelqu'un qui est seul (à l'école, à l'église, dans ton quartier) et invite-le à jouer ou à parler avec toi.",
+    "followup": "Alors, es-tu allé vers quelqu'un qui était seul ? Comment ça s'est passé ?",
+    "verse": "Car le Fils de l'homme est venu chercher et sauver ce qui était perdu.",
+    "verseRef": "Luc 19.10",
+    "family": [
+      "Pour les petits : combien de brebis avait le berger ? Combien en manquait-il ?",
+      "Pour les grands : pourquoi une seule brebis compte-t-elle autant pour le berger ?",
+      "Pour tous : comment pourrions-nous accueillir quelqu'un qui se sent seul ou différent ?"
+    ],
+    "activity": "Cachez une petite brebis (en papier ou en peluche) dans la maison. Celui qui la trouve raconte à quelqu'un pourquoi il compte pour Dieu."
   }
 }

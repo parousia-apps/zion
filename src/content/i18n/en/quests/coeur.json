@@ -15,7 +15,9 @@
     "elie": "Eli",
     "rampe": "the ramp"
   },
-  "verbs": { "harpe": "Play the harp" },
+  "verbs": {
+    "harpe": "Play the harp"
+  },
   "objectives": {
     "intro": "Go and see the Keeper: he has a story to show you.",
     "sheep": "Three sheep have wandered off: bring them back to the sheepfold.",
@@ -29,73 +31,232 @@
   },
   "dialogs": {
     "intro": [
-      { "who": "gardien", "text": "In the Bible, there's a boy nobody noticed. Not even his own family!" },
-      { "who": "gardien", "text": "Come… Let's go to Bethlehem, about three thousand years ago." }
+      {
+        "who": "gardien",
+        "text": "In the Bible, there's a boy nobody noticed. Not even his own family!"
+      },
+      {
+        "who": "gardien",
+        "text": "Come… Let's go to Bethlehem, about three thousand years ago."
+      }
     ],
     "story": [
-      { "who": "narrator", "text": "In Bethlehem lives a young boy called David. He is the youngest of Jesse's eight sons." },
-      { "who": "narrator", "text": "His big brothers are tall and strong. He is sent to look after the sheep. And that shepherd is you!" },
-      { "who": "player", "text": "Oh no! Three sheep have wandered off. I must bring them back to the sheepfold.", "snd": "bleat" }
+      {
+        "who": "narrator",
+        "text": "In Bethlehem lives a young boy called David. He is the youngest of Jesse's eight sons."
+      },
+      {
+        "who": "narrator",
+        "text": "His big brothers are tall and strong. He is sent to look after the sheep. And that shepherd is you!"
+      },
+      {
+        "who": "player",
+        "text": "Oh no! Three sheep have wandered off. I must bring them back to the sheepfold.",
+        "snd": "bleat"
+      }
     ],
     "safe": [
-      { "who": "player", "text": "There, the whole flock is safe. A good shepherd watches over every one of his sheep.", "fx": "sunset" },
-      { "who": "narrator", "text": "Evening falls. David loves to take his harp and sing to God." }
+      {
+        "who": "player",
+        "text": "There, the whole flock is safe. A good shepherd watches over every one of his sheep.",
+        "fx": "sunset"
+      },
+      {
+        "who": "narrator",
+        "text": "Evening falls. David loves to take his harp and sing to God."
+      }
     ],
     "psalm": [
-      { "who": "narrator", "text": "David plays the harp and sings. His song will become Psalm 23.", "fx": "harp" },
-      { "who": "player", "text": "The Lord is my shepherd, I have everything I need." },
-      { "who": "player", "text": "He leads me to green grass and calm water. He takes care of me." },
-      { "who": "player", "text": "Even when I'm afraid, I'm not alone: the Lord is with me." }
+      {
+        "who": "narrator",
+        "text": "David plays the harp and sings. His song will become Psalm 23.",
+        "fx": "harp"
+      },
+      {
+        "who": "player",
+        "text": "The Lord is my shepherd, I have everything I need."
+      },
+      {
+        "who": "player",
+        "text": "He leads me to green grass and calm water. He takes care of me."
+      },
+      {
+        "who": "player",
+        "text": "Even when I'm afraid, I'm not alone: the Lord is with me."
+      }
     ],
     "call": [
-      { "who": "serviteur", "text": "David! David! Your father is calling you. The prophet Samuel is at the house!" },
-      { "who": "serviteur", "text": "He has seen all your brothers, and he said: \"It's none of them. Don't you have another son?\"" },
-      { "who": "player", "text": "Me? But I'm the youngest… I'm coming!" }
+      {
+        "who": "serviteur",
+        "text": "David! David! Your father is calling you. The prophet Samuel is at the house!"
+      },
+      {
+        "who": "serviteur",
+        "text": "He has seen all your brothers, and he said: \"It's none of them. Don't you have another son?\""
+      },
+      {
+        "who": "player",
+        "text": "Me? But I'm the youngest… I'm coming!"
+      }
     ],
     "anoint": [
-      { "who": "narrator", "text": "When Samuel saw Eliab, the eldest brother, he thought: \"So tall and strong, surely he is the one!\"" },
-      { "who": "narrator", "text": "But God had told him: \"Don't look at his appearance or his height. People look at what can be seen, but I look at the heart.\"" },
-      { "who": "samuel", "text": "He is the one. God has chosen David!" },
-      { "who": "narrator", "text": "Samuel pours oil on David's head: it's the sign that God has chosen him to become king of Israel one day. And the Spirit of the Lord is with him.", "fx": "glow" },
-      { "who": "jesse", "text": "My youngest son… chosen by God!" }
+      {
+        "who": "narrator",
+        "text": "When Samuel saw Eliab, the eldest brother, he thought: \"So tall and strong, surely he is the one!\""
+      },
+      {
+        "who": "narrator",
+        "text": "But God had told him: \"Don't look at his appearance or his height. People look at what can be seen, but I look at the heart.\""
+      },
+      {
+        "who": "samuel",
+        "text": "He is the one. God has chosen David!"
+      },
+      {
+        "who": "narrator",
+        "text": "Samuel pours oil on David's head: it's the sign that God has chosen him to become king of Israel one day. And the Spirit of the Lord is with him.",
+        "fx": "glow"
+      },
+      {
+        "who": "jesse",
+        "text": "My youngest son… chosen by God!"
+      }
     ],
     "festival": [
-      { "who": "myriam", "text": "Ah, our apprentice watcher! Tonight is the Festival of Lights, and I'm short of musicians." },
-      { "who": "myriam", "text": "Ben plays the drum at the market. Sarah plays the flute near the houses to the east. Bring them to the stage!" },
-      { "who": "player", "text": "And Eli? He plays the harp beautifully." },
-      { "who": "myriam", "text": "Eli? Erm… He uses a wheelchair, and the stage has steps. I hadn't thought of him…" },
-      { "who": "player", "text": "God looks at the heart. I'll go and get him too!" }
+      {
+        "who": "myriam",
+        "text": "Ah, our apprentice watcher! Tonight is the Festival of Lights, and I'm short of musicians."
+      },
+      {
+        "who": "myriam",
+        "text": "Ben plays the drum at the market. Sarah plays the flute near the houses to the east. Bring them to the stage!"
+      },
+      {
+        "who": "player",
+        "text": "And Eli? He plays the harp beautifully."
+      },
+      {
+        "who": "myriam",
+        "text": "Eli? Erm… He uses a wheelchair, and the stage has steps. I hadn't thought of him…"
+      },
+      {
+        "who": "player",
+        "text": "God looks at the heart. I'll go and get him too!"
+      }
     ],
-    "ben": [{ "who": "ben", "text": "The festival? With pleasure, I'll bring my drum!", "snd": "drum" }],
-    "sarah": [{ "who": "sarah", "text": "My flute is ready. Let's go!" }],
+    "ben": [
+      {
+        "who": "ben",
+        "text": "The festival? With pleasure, I'll bring my drum!",
+        "snd": "drum"
+      }
+    ],
+    "sarah": [
+      {
+        "who": "sarah",
+        "text": "My flute is ready. Let's go!"
+      }
+    ],
     "elie": [
-      { "who": "elie", "text": "Me? Usually nobody thinks of me for this kind of thing…" },
-      { "who": "player", "text": "I'm thinking of you. You play the harp like King David!" },
-      { "who": "elie", "text": "Then I'll come. Thank you for choosing me." }
+      {
+        "who": "elie",
+        "text": "Me? Usually nobody thinks of me for this kind of thing…"
+      },
+      {
+        "who": "player",
+        "text": "I'm thinking of you. You play the harp like King David!"
+      },
+      {
+        "who": "elie",
+        "text": "Then I'll come. Thank you for choosing me."
+      }
     ],
     "ready": [
-      { "who": "myriam", "text": "You're all here! But wait… Eli can't climb the steps." },
-      { "who": "myriam", "text": "I have an idea: let's put in a ramp. A party where someone is left at the bottom isn't a real party!" }
+      {
+        "who": "myriam",
+        "text": "You're all here! But wait… Eli can't climb the steps."
+      },
+      {
+        "who": "myriam",
+        "text": "I have an idea: let's put in a ramp. A party where someone is left at the bottom isn't a real party!"
+      }
     ],
     "concert": [
-      { "who": "narrator", "text": "A ramp is put in place. Eli rolls up onto the stage with his harp." },
-      { "who": "narrator", "text": "The concert begins: Ben's drum, Sarah's flute… and Eli's harp, the most beautiful of all.", "fx": "harp" },
-      { "who": "myriam", "text": "Bravo! What music! Without Eli, the best part would have been missing.", "fx": "celebrate" }
+      {
+        "who": "narrator",
+        "text": "A ramp is put in place. Eli rolls up onto the stage with his harp."
+      },
+      {
+        "who": "narrator",
+        "text": "The concert begins: Ben's drum, Sarah's flute… and Eli's harp, the most beautiful of all.",
+        "fx": "harp"
+      },
+      {
+        "who": "myriam",
+        "text": "Bravo! What music! Without Eli, the best part would have been missing.",
+        "fx": "celebrate"
+      }
     ],
     "debrief": [
-      { "who": "gardien", "text": "Samuel nearly chose the tallest and strongest. But God looks at the heart." },
-      { "who": "gardien", "text": "Today you saw what others didn't: Eli's talent and Eli's heart." },
-      { "who": "gardien", "text": "Jesus did the same: he welcomed children, the sick, those who were left out. You are now a true watcher of Zion!" }
+      {
+        "who": "gardien",
+        "text": "Samuel nearly chose the tallest and strongest. But God looks at the heart."
+      },
+      {
+        "who": "gardien",
+        "text": "Today you saw what others didn't: Eli's talent and Eli's heart."
+      },
+      {
+        "who": "gardien",
+        "text": "Jesus did the same: he welcomed children, the sick, those who were left out. You are now a true watcher of Zion!"
+      }
     ]
   },
   "idle": {
-    "myriam": [{ "who": "myriam", "text": "Ben is at the market, Sarah near the houses to the east, and Eli… near the pink house to the west, I think." }],
-    "samuel": [{ "who": "samuel", "text": "We won't sit down to eat until the youngest has arrived." }],
-    "jesse": [{ "who": "jesse", "text": "Samuel is waiting for all of us. Bring the sheep back quickly!" }],
-    "eliab": [{ "who": "eliab", "text": "The prophet has come! He's bound to choose me, the eldest." }]
+    "myriam": [
+      {
+        "who": "myriam",
+        "text": "Ben is at the market, Sarah near the houses to the east, and Eli… near the pink house to the west, I think."
+      }
+    ],
+    "samuel": [
+      {
+        "who": "samuel",
+        "text": "We won't sit down to eat until the youngest has arrived."
+      }
+    ],
+    "jesse": [
+      {
+        "who": "jesse",
+        "text": "Samuel is waiting for all of us. Bring the sheep back quickly!"
+      }
+    ],
+    "eliab": [
+      {
+        "who": "eliab",
+        "text": "The prophet has come! He's bound to choose me, the eldest."
+      }
+    ]
   },
   "ending": {
     "message": "God doesn't look at appearances: he looks at the heart. Like Jesus, let's learn to see everyone's worth, and leave no one at the bottom of the steps.",
     "reflection": "Even his father had forgotten David, left out with the sheep. What do we judge others by? What, in our family, church or school, keeps some people (disability, age, shyness…) from \"getting on stage\"? What ramp could we build?"
+  },
+  "life": {
+    "bibleRef": "1 Samuel 16:1-13",
+    "bibleQuery": "1 Samuel 16:1-13",
+    "bibleWhere": "1 Samuel is in the Old Testament, after Joshua, Judges and Ruth. Find chapter 16. You can also read Psalm 23, in the middle of the Bible.",
+    "bibleQuestion": "In verse 7, God tells Samuel what he looks at. What does man look at? And what does God look at?",
+    "prayer": "Lord, thank you for looking at my heart and loving me as I am. Teach me to see others as you do, without judging by appearances. Amen.",
+    "challenge": "This week, tell someone a quality of their heart that you have noticed (their kindness, courage, patience…).",
+    "followup": "So, did you tell someone about the beautiful quality of their heart?",
+    "verse": "Man looks at the outward appearance, but Yahweh looks at the heart.",
+    "verseRef": "1 Samuel 16:7",
+    "family": [
+      "For little ones: who did God choose: the biggest brother or the smallest?",
+      "For older ones: what do we judge people on too quickly?",
+      "For everyone: who around us is sometimes left out? What \"ramp\" could we build for them?"
+    ],
+    "activity": "Each person writes a quality of another family member's heart on a paper heart, then gives it to them."
   }
 }

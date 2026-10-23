@@ -5,6 +5,7 @@ import { ramparts, seeded } from './buildings';
 import { poseSeated } from './characters';
 import { assetsFor, buildModel, defaultReach, followGap, glow, type Animated, type Solids } from './models';
 import { grass, texturedMaterial } from './textures';
+import { Atmosphere } from './atmosphere';
 
 /**
  * Le monde 3D d'un chapitre : sol, ciel, lumière, décor, entités et zones.
@@ -41,6 +42,8 @@ export interface WorldOptions {
   /** Ombres portées réelles (désactivées en mode économie). */
   shadows: boolean;
   lowQuality: boolean;
+  /** Nombre de missions vécues : fait grandir l'arbre du Royaume. */
+  growth: number;
 }
 
 const PLAYER_RADIUS = 0.35;
@@ -66,6 +69,10 @@ export class World {
   private readonly owned: THREE.BufferGeometry[] = [];
   private readonly flats: { x: number; z: number; w: number; d: number }[] = [];
   private readonly reduceMotion: boolean;
+  private atmosphere: Atmosphere | null = null;
+  /** Direction du soleil (bas sur l'horizon : lumière dorée et ombres longues). */
+  private readonly sunOffset = new THREE.Vector3(11, 10, 5);
+  private readonly villagers: EntityState[] = [];
 
   /** Liste des modèles .glb à précharger avant de construire ce monde. */
   static assetsNeeded(def: WorldDef, chapter: ChapterDef): string[] {
@@ -78,7 +85,8 @@ export class World {
 
   constructor(readonly def: WorldDef, chapter: ChapterDef, private readonly opts: WorldOptions) {
     this.reduceMotion = opts.reduceMotion;
-    const env = def.environment;
+    // Le chapitre peut changer le ciel et le sol (la même ville sous l'orage, puis au matin).
+    const env = { ...def.environment, ...chapter.env };
     this.radius = env.radius;
 
     // Ciel : une grande sphère vue de l'intérieur, avec un dégradé par sommet.
@@ -108,9 +116,10 @@ export class World {
 
     // Lumière : ciel + soleil chaud. Le soleil suit le joueur (voir followSun) pour des ombres nettes.
     this.fog = new THREE.Fog(env.sky[1], env.radius * 1.5, env.radius * 4.5);
-    this.hemi = new THREE.HemisphereLight(env.sky[1], env.ground, 1.5);
-    this.sun = new THREE.DirectionalLight('#fff1d6', 2.6);
-    this.sun.position.set(8, 14, 6);
+    // Lumière de fin d'après-midi : soleil doré assez bas, ciel un peu plus doux.
+    this.hemi = new THREE.HemisphereLight(env.sky[1], env.ground, 1.35);
+    this.sun = new THREE.DirectionalLight('#ffdcaa', 2.9);
+    this.sun.position.copy(this.sunOffset);
     if (opts.shadows) {
       this.sun.castShadow = true;
       const size = opts.lowQuality ? 512 : 1024;
@@ -126,10 +135,11 @@ export class World {
     this.root.add(this.hemi, this.sun, this.sun.target);
 
     if (env.walls) this.root.add(ramparts(env.walls.radius, env.walls.gate));
+    else if (env.dream) this.buildCloudRing(env.radius + 6);
     else this.buildHills(env.radius + 10);
 
     for (const p of def.props) {
-      const built = buildModel(p.model, { color: p.color, size: p.size, scale: p.scale, seed: seedOf(p.pos) });
+      const built = buildModel(p.model, { color: p.color, size: p.size, scale: p.scale, seed: seedOf(p.pos), growth: opts.growth });
       this.place(built.obj, p.pos, p.rot, p.model === 'pen' ? 1 : p.scale);
       this.root.add(built.obj);
       this.addSolids(built.solids, p.pos, p.rot, p.scale);
@@ -152,7 +162,9 @@ export class World {
       this.zones.set(z.id, { ...z, ring });
     }
 
-    this.scatterVegetation();
+    if (!env.dream) this.scatterVegetation();
+    this.buildAtmosphere();
+    if (!def.souvenir && this.flats.length) this.spawnVillagers(opts.lowQuality ? 3 : 6);
 
     // Marqueur d'objectif : un losange doré qui flotte au-dessus de la cible.
     this.marker = new THREE.Mesh(new THREE.OctahedronGeometry(0.32, 0), glow('#ffc21a'));
@@ -181,7 +193,7 @@ export class World {
   }
 
   private addEntity(e: EntityDef) {
-    const built = buildModel(e.model, { look: e.look, color: e.color, seed: seedOf(e.pos) });
+    const built = buildModel(e.model, { look: e.look, color: e.color, seed: seedOf(e.pos), stele: e.stele });
     const obj = built.obj;
     this.place(obj, e.pos, e.rot, e.scale);
     if (!this.opts.shadows) {
@@ -212,7 +224,7 @@ export class World {
   private buildHills(r: number) {
     const geoHill = new THREE.SphereGeometry(1, 14, 8);
     this.owned.push(geoHill);
-    const hillMat = texturedMaterial(grass('#5fae45'), 6, 6);
+    const hillMat = texturedMaterial(grass(this.def.environment.ground === '#7fc95a' ? '#5fae45' : this.def.environment.ground), 6, 6);
     for (let i = 0; i < 18; i++) {
       const a = (i / 18) * Math.PI * 2;
       const hill = new THREE.Mesh(geoHill, hillMat);
@@ -221,6 +233,17 @@ export class World {
       hill.position.set(Math.sin(a) * (r + s * 0.4), -1, Math.cos(a) * (r + s * 0.4));
       hill.receiveShadow = true;
       this.root.add(hill);
+    }
+  }
+
+  /** Monde du rêve : une couronne de grands nuages à la place des collines. */
+  private buildCloudRing(r: number) {
+    for (let i = 0; i < 14; i++) {
+      const a = (i / 14) * Math.PI * 2;
+      const built = buildModel('cloudpuff', { seed: i + 3 });
+      built.obj.scale.setScalar(2.4 + (i % 3) * 0.6);
+      built.obj.position.set(Math.sin(a) * r, -1, Math.cos(a) * r);
+      this.root.add(built.obj);
     }
   }
 
@@ -269,6 +292,62 @@ export class World {
         this.root.add(inst);
       }
     }
+  }
+
+  /** Ciel, halos lumineux, poussière dorée, colombes, papillons (voir atmosphere.ts). */
+  private buildAtmosphere() {
+    const tower = this.def.props.find((p) => p.model === 'tower');
+    const flowerSpots = this.def.props
+      .filter((p) => p.model === 'flowers' || p.model === 'bush')
+      .map((p) => new THREE.Vector3(p.pos[0], 0, p.pos[1]));
+    this.atmosphere = new Atmosphere(
+      {
+        calm: this.reduceMotion,
+        low: this.opts.lowQuality,
+        doveCenter: tower ? new THREE.Vector3(tower.pos[0], 0, tower.pos[1]) : undefined,
+        flowerSpots,
+        sunColor: '#ffdcaa',
+      },
+      this.sunOffset,
+    );
+    // Halos autour des sources de lumière : la présence de la lumière dans la cité.
+    for (const p of this.def.props) {
+      const at = new THREE.Vector3(p.pos[0], 0, p.pos[1]);
+      if (p.model === 'lamp') this.atmosphere.addLight(at.setY(2.15), '#ffb347', 1.6);
+      if (p.model === 'tower') this.atmosphere.addLight(at.setY(9.9), '#ffc04d', 7);
+      if (p.model === 'stage') this.atmosphere.addLight(at.add(new THREE.Vector3(0, 3.3, -1.8)), '#ffd6f0', 6);
+    }
+    this.root.add(this.atmosphere.root);
+  }
+
+  /**
+   * Des habitants qui vont et viennent sur la place et dans les rues :
+   * la cité vit même quand on ne leur parle pas.
+   */
+  private spawnVillagers(count: number) {
+    const rand = seeded(count * 97 + this.radius);
+    const pick = <T,>(list: T[]) => list[Math.floor(rand() * list.length)];
+    const tunics = ['#8d6e63', '#c0392b', '#2e86c1', '#d4a017', '#6c3483', '#1e8449', '#e67e22', '#5d6d7e', '#a04000', '#1a5276'];
+    const skins = ['#5c3a21', '#7a4a2a', '#8d5524', '#a8693a', '#c68642'];
+    const scarves = ['#f2efe6', '#7d3c98', '#2874a6', '#b03a2e', '#117a65'];
+    for (let i = 0; i < count; i++) {
+      const woman = rand() > 0.5;
+      const elder = rand() > 0.7;
+      const look: EntityDef['look'] = woman
+        ? { base: 'woman', tunic: pick(tunics), accent: pick(tunics), scarf: pick(scarves), skin: pick(skins) }
+        : { base: rand() > 0.5 ? 'man' : 'man2', tunic: pick(tunics), accent: pick(tunics), skin: pick(skins), hair: elder ? '#cfcfcf' : '#1b1b1b', beard: elder ? '#e0e0e0' : undefined };
+      const start = this.randomStreetPoint(rand);
+      const id = `~habitant${i}`;
+      this.addEntity({ id, model: 'person', pos: [start.x, start.z], rot: rand() * 360, look });
+      const e = this.entities.get(id)!;
+      e.speed = 1 + rand() * 0.5;
+      this.villagers.push(e);
+    }
+  }
+
+  private randomStreetPoint(rand: () => number): THREE.Vector3 {
+    const f = this.flats[Math.floor(rand() * this.flats.length)];
+    return new THREE.Vector3(f.x + (rand() - 0.5) * (f.w - 1), 0, f.z + (rand() - 0.5) * (f.d - 1));
   }
 
   /* ------------------------------ API ---------------------------- */
@@ -376,7 +455,7 @@ export class World {
 
   /** Le soleil (et sa zone d'ombre) suit le joueur. */
   followSun(p: THREE.Vector3) {
-    this.sun.position.set(p.x + 8, 14, p.z + 6);
+    this.sun.position.set(p.x + this.sunOffset.x, this.sunOffset.y, p.z + this.sunOffset.z);
     this.sun.target.position.set(p.x, 0, p.z);
   }
 
@@ -392,6 +471,8 @@ export class World {
     let best: Solid | null = null;
     let bestT = Infinity;
     for (const s of this.solids) {
+      // Un obstacle posé sur la destination elle-même (la harpe sur son rocher) n'est pas à contourner.
+      if (Math.hypot(s.x - to.x, s.z - to.z) < s.r + 0.5) continue;
       const r = s.r + PLAYER_RADIUS + 0.15;
       // Projection du centre de l'obstacle sur le segment.
       const t = ((s.x - from.x) * dx + (s.z - from.z) * dz) / len2;
@@ -448,12 +529,32 @@ export class World {
       leaderGap = followGap(e.def.model) * 0.8;
     }
 
+    this.atmosphere?.update(dt, t, player.position);
+    // Les habitants repartent vers un autre point de la ville une fois arrivés.
+    if (!calm) {
+      for (const v of this.villagers) {
+        if (v.mode === 'idle' && t > v.wanderAt) {
+          v.wanderAt = t + 4 + Math.random() * 6;
+          // On choisit une destination dont le chemin ne traverse pas d'obstacle (fontaine, étal…).
+          for (let tries = 0; tries < 8; tries++) {
+            const dest = this.randomStreetPoint(Math.random);
+            if (!this.firstObstacle(v.obj.position, dest)) {
+              v.dest = dest;
+              v.mode = 'move';
+              break;
+            }
+          }
+        }
+      }
+    }
+
     for (const e of this.entities.values()) {
       if (e.mode === 'move' && e.dest) {
         const arrived = this.chase(e, e.dest, 0.05, e.speed, dt);
         if (arrived) {
           e.home.copy(e.dest);
           e.mode = 'idle';
+          if (this.villagers.includes(e)) e.wanderAt = t + 2 + Math.random() * 5;
           if (e.hideOnArrive) this.hide([e.def.id]);
         }
       } else if (e.mode === 'idle') {
@@ -517,6 +618,7 @@ export class World {
   }
 
   dispose() {
+    this.atmosphere?.dispose();
     this.root.removeFromParent();
     // Les géométries partagées (modèles .glb) restent en cache pour le monde suivant.
     for (const g of this.owned) g.dispose();

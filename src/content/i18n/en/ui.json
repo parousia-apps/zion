@@ -31,7 +31,8 @@
     "traitLocked": "To discover",
     "back": "Back",
     "story3d": "3D scene",
-    "storyScroll": "Scroll"
+    "storyScroll": "Scroll",
+    "readBook": "Read the picture book"
   },
   "hud": {
     "objective": "Goal",
@@ -187,7 +188,8 @@
     "music": "[Gentle, cheerful music]",
     "musicSouvenir": "[Soft music, like a memory]",
     "fromLeft": "on the left",
-    "fromRight": "on the right"
+    "fromRight": "on the right",
+    "ambience": "[Birdsong, running water]"
   },
   "announce": {
     "objective": "Goal: {text}",
@@ -200,5 +202,75 @@
   },
   "loading": {
     "text": "Loading the scenery…"
+  },
+  "songs": {
+    "button": "Songs",
+    "open": "Open the song player",
+    "heading": "Songs",
+    "close": "Close",
+    "play": "Play",
+    "pause": "Pause",
+    "prev": "Previous song",
+    "next": "Next song",
+    "back": "Back 10 seconds",
+    "forward": "Forward 10 seconds",
+    "seek": "Position in the song",
+    "position": "{current} of {total}",
+    "volume": "Volume",
+    "list": "Song list",
+    "nowPlaying": "Song: {title}",
+    "empty": "No songs yet. Add audio files to the project's sounds/ folder.",
+    "error": "This file can't be played (empty file or unsupported format)."
+  },
+  "life": {
+    "heading": "Live the mission",
+    "bible": "Open your Bible",
+    "read": "I've read it",
+    "readOnline": "Read online",
+    "keeperAsks": "The Keeper asks you:",
+    "prayer": "A prayer",
+    "listenPrayer": "Listen to the prayer",
+    "challenge": "The watcher's challenge, for this week",
+    "accept": "I accept the challenge",
+    "accepted": "Challenge accepted ✓",
+    "acceptedLong": "Challenge accepted. It's written in your watcher's notebook.",
+    "verse": "The verse to remember",
+    "learn": "Learn the verse",
+    "verseGame": "Learn the verse",
+    "verseHelp": "Tap the words in the right order.",
+    "verseTry": "Almost! Try another word.",
+    "verseDone": "Well done, you know the verse! It's saved in your notebook.",
+    "listenVerse": "Listen to the verse",
+    "goLive": "Now close the game and go live your mission!"
+  },
+  "journal": {
+    "button": "My notebook",
+    "heading": "My watcher's notebook",
+    "intro": "Your challenges and memories. This notebook stays on your device: nobody else reads it. Here we don't count points: Jesus looks at the heart.",
+    "empty": "Your notebook is still empty. At the end of a mission, accept the watcher's challenge: it will appear here.",
+    "since": "Challenge accepted on {date}",
+    "lived": "I lived it",
+    "tell": "Tell what happened (if you like)",
+    "placeholder": "For example: I helped my neighbour carry her shopping…",
+    "verses": "Verses learned",
+    "noVerse": "No verse learned yet.",
+    "keeper": "Ezra, the Keeper",
+    "yesTell": "Yes, I'll tell",
+    "notYet": "Not yet",
+    "encourage": "That's alright. Every day is a new chance. I'm praying for you!"
+  },
+  "guide": {
+    "button": "Parents & leaders guide",
+    "heading": "Family time",
+    "intro": "To live the mission together: at home, at Sunday school or in a group. Play on one screen, then use these questions.",
+    "trait": "Trait of Christ:",
+    "jesus": "Like Jesus:",
+    "read": "Read together:",
+    "questions": "Questions to talk about",
+    "activity": "Activity to do together",
+    "verse": "Verse to learn",
+    "prayer": "Prayer",
+    "challenge": "Challenge for the week",
+    "print": "Print"
   }
 }

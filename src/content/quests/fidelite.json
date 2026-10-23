@@ -1,8 +1,8 @@
 {
   "id": "fidelite",
   "order": 2,
-  "icon": "🌈",
-  "traitIcon": "🤝",
+  "icon": "ill:mission-fidelite",
+  "traitIcon": "ill:trait-fidelite",
   "color": "#2340ff",
   "chapters": [
     {

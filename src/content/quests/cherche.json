@@ -1,8 +1,8 @@
 {
   "id": "cherche",
   "order": 3,
-  "icon": "🐑",
-  "traitIcon": "🔦",
+  "icon": "ill:mission-cherche",
+  "traitIcon": "ill:trait-cherche",
   "color": "#00a86b",
   "chapters": [
     {
