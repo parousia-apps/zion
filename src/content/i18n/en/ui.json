@@ -257,20 +257,32 @@
     "keeper": "Ezra, the Keeper",
     "yesTell": "Yes, I'll tell",
     "notYet": "Not yet",
-    "encourage": "That's alright. Every day is a new chance. I'm praying for you!"
+    "encourage": "That's alright. Every day is a new chance. I'm praying for you!",
+    "family": "Family challenge"
   },
-  "guide": {
-    "button": "Parents & leaders guide",
-    "heading": "Family time",
-    "intro": "To live the mission together: at home, at Sunday school or in a group. Play on one screen, then use these questions.",
-    "trait": "Trait of Christ:",
-    "jesus": "Like Jesus:",
-    "read": "Read together:",
-    "questions": "Questions to talk about",
-    "activity": "Activity to do together",
-    "verse": "Verse to learn",
-    "prayer": "Prayer",
-    "challenge": "Challenge for the week",
-    "print": "Print"
+  "veillee": {
+    "button": "Family fireside",
+    "invite": "Several of you? Sit around the fire and live the mission together.",
+    "heading": "Family fireside",
+    "welcome": "Welcome around the fire! Tonight we take time to talk together about what we've lived.",
+    "howMany": "How many of you are around the fire?",
+    "start": "Light the fire",
+    "questionN": "Question {n} of {total}",
+    "stick": "The talking stick is with player {n}: it's your turn to answer!",
+    "pass": "Pass the stick",
+    "nextQuestion": "Next question",
+    "toActivity": "To the activity",
+    "activityIntro": "An activity to do together:",
+    "toPrayer": "Pray together",
+    "prayerIntro": "Let's say this prayer together, out loud:",
+    "amenAsk": "Everyone taps their \"Amen\" once they've prayed:",
+    "amen": "Amen!",
+    "allAmen": "The whole family said Amen!",
+    "toChallenge": "The family challenge",
+    "challengeIntro": "The family challenge for this week:",
+    "acceptFamily": "We accept the challenge",
+    "finish": "End the fireside",
+    "goodbye": "Thank you for this lovely evening. Now go and live your mission together. God bless you!",
+    "close": "Put out the fire"
   }
 }

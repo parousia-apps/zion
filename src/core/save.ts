@@ -26,6 +26,8 @@ export interface JournalEntry {
   note?: string;
   /** Le Gardien a déjà demandé des nouvelles. */
   asked?: boolean;
+  /** Défi pris ensemble pendant une veillée en famille. */
+  family?: boolean;
 }
 
 export interface SaveData {

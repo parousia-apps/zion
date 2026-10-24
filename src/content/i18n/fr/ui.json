@@ -257,20 +257,32 @@
     "keeper": "Ezra, le Gardien",
     "yesTell": "Oui, je raconte",
     "notYet": "Pas encore",
-    "encourage": "Ce n'est pas grave. Chaque jour est une nouvelle occasion. Je prie pour toi !"
+    "encourage": "Ce n'est pas grave. Chaque jour est une nouvelle occasion. Je prie pour toi !",
+    "family": "Défi de la famille"
   },
-  "guide": {
-    "button": "Guide parents & moniteurs",
+  "veillee": {
+    "button": "Veillée en famille",
+    "invite": "Vous êtes plusieurs ? Asseyez-vous autour du feu pour vivre la mission ensemble.",
     "heading": "Veillée en famille",
-    "intro": "Pour vivre la mission ensemble : à la maison, à l'école du dimanche ou en groupe. Jouez sur un seul écran, puis prenez ces questions.",
-    "trait": "Trait du Christ :",
-    "jesus": "Comme Jésus :",
-    "read": "À lire ensemble :",
-    "questions": "Questions pour en parler",
-    "activity": "Activité à faire ensemble",
-    "verse": "Verset à apprendre",
-    "prayer": "Prière",
-    "challenge": "Défi pour la semaine",
-    "print": "Imprimer"
+    "welcome": "Bienvenue autour du feu ! Ce soir, on prend le temps de parler ensemble de ce que nous avons vécu.",
+    "howMany": "Combien êtes-vous autour du feu ?",
+    "start": "Allumer le feu",
+    "questionN": "Question {n} sur {total}",
+    "stick": "Le bâton de parole est au joueur {n} : c'est à toi de répondre !",
+    "pass": "Passer le bâton",
+    "nextQuestion": "Question suivante",
+    "toActivity": "Vers l'activité",
+    "activityIntro": "Une activité à faire ensemble :",
+    "toPrayer": "Prier ensemble",
+    "prayerIntro": "Disons cette prière ensemble, à voix haute :",
+    "amenAsk": "Chacun touche son « Amen » quand il a prié :",
+    "amen": "Amen !",
+    "allAmen": "Toute la famille a dit Amen !",
+    "toChallenge": "Le défi de la famille",
+    "challengeIntro": "Le défi de la famille pour cette semaine :",
+    "acceptFamily": "Nous acceptons le défi",
+    "finish": "Terminer la veillée",
+    "goodbye": "Merci pour cette belle veillée. Maintenant, allez vivre votre mission ensemble. Que Dieu vous garde !",
+    "close": "Éteindre le feu"
   }
 }

@@ -40,6 +40,10 @@ export function renderLife(questId: string, calm: boolean): void {
   const accepted = save.journal.some((j) => j.questId === questId && Date.now() - j.acceptedAt < 7 * DAY);
   box.innerHTML = `
     <h3 class="life-heading">${esc(t('life.heading'))}</h3>
+    <div class="life-family">
+      <p>${esc(t('veillee.invite'))}</p>
+      <button class="btn btn-primary" data-veillee="${questId}"><span aria-hidden="true">🔥</span> ${esc(t('veillee.button'))}</button>
+    </div>
 
     <article class="life-step">
       <h4><span aria-hidden="true">📖</span> ${esc(t('life.bible'))}</h4>
@@ -213,9 +217,9 @@ export function renderJournal(): void {
         const q = QUESTS.find((x) => x.id === j.questId);
         const text: QuestText | undefined = questText(j.questId);
         const date = new Date(j.acceptedAt).toLocaleDateString(lang, { day: 'numeric', month: 'long' });
-        return `<li class="journal-entry page">
+        return `<li class="journal-entry page${j.family ? ' family' : ''}">
           <div class="journal-head"><span class="mini-ill">${q ? renderIcon(q.traitIcon) : ''}</span>
-            <div><p class="journal-trait">${esc(text?.trait.name ?? '')}</p><p class="note">${esc(t('journal.since', { date }))}</p></div></div>
+            <div><p class="journal-trait">${esc(text?.trait.name ?? '')}${j.family ? ` · ${esc(t('journal.family'))}` : ''}</p><p class="note">${esc(t('journal.since', { date }))}</p></div></div>
           <p>${esc(typo(text?.life?.challenge ?? ''))}</p>
           <label class="switch"><input type="checkbox" role="switch" data-lived="${i}" ${j.lived ? 'checked' : ''}/><span>${esc(t('journal.lived'))}</span></label>
           <label class="field"><span>${esc(t('journal.tell'))}</span><textarea data-note="${i}" rows="3" placeholder="${esc(t('journal.placeholder'))}">${esc(j.note ?? '')}</textarea></label>
@@ -238,28 +242,4 @@ export function renderJournal(): void {
   $('journal-verses').innerHTML = save.verses.length
     ? save.verses.map((v) => `<li>✨ ${esc(v)}</li>`).join('')
     : `<li class="note">${esc(t('journal.noVerse'))}</li>`;
-}
-
-/* ------------------------------------------------------------------ */
-/* Guide parents et moniteurs (veillée en famille)                      */
-/* ------------------------------------------------------------------ */
-
-export function openGuide(questId: string): void {
-  const dlg = $<HTMLDialogElement>('dlg-guide');
-  const text = questText(questId);
-  const life = text.life;
-  $('guide-title').textContent = `${t('guide.heading')} · ${text.title}`;
-  $('guide-body').innerHTML = life
-    ? `<p><strong>${esc(t('guide.trait'))}</strong> ${esc(text.trait.name)} — ${esc(typo(text.trait.description))}</p>
-       <p><strong>${esc(t('guide.jesus'))}</strong> ${esc(typo(text.trait.jesus))} <em>(${esc(text.trait.jesusRef)})</em></p>
-       <p><strong>${esc(t('guide.read'))}</strong> ${esc(life.bibleRef)}</p>
-       <h3>${esc(t('guide.questions'))}</h3>
-       <ul>${life.family.map((f) => `<li>${esc(typo(f))}</li>`).join('')}</ul>
-       <p>${esc(typo(text.ending.reflection))}</p>
-       <h3>${esc(t('guide.activity'))}</h3><p>${esc(typo(life.activity))}</p>
-       <h3>${esc(t('guide.verse'))}</h3><p>« ${esc(life.verse)} » <em>${esc(life.verseRef)}</em></p>
-       <h3>${esc(t('guide.prayer'))}</h3><p>${esc(typo(life.prayer))}</p>
-       <h3>${esc(t('guide.challenge'))}</h3><p>${esc(typo(life.challenge))}</p>`
-    : '';
-  dlg.showModal();
 }

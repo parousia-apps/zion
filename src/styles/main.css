@@ -600,15 +600,54 @@ html.hc .life-ref { color: var(--gold); }
 .journal-trait { font-family: var(--font-title); font-style: italic; font-size: 1.2rem; margin: 0; }
 .journal-entry textarea { font: inherit; width: 100%; border: 2px solid var(--ink); border-radius: 12px; padding: 0.5rem; background: var(--page); color: var(--text); }
 .journal-verses { list-style: none; padding: 0; text-align: center; }
-.guide-body h3 { font-style: italic; color: var(--royal); margin-top: 1rem; }
 .story-body .btn-small { align-self: stretch; }
 
-/* Impression du guide : seule la fenêtre du guide s'imprime. */
-@media print {
-  body > *:not(#dlg-guide) { display: none !important; }
-  #dlg-guide { position: static; display: block; box-shadow: none; border: 0; max-height: none; width: 100%; }
-  #dlg-guide .header-actions { display: none; }
-}
+/* ------------------------------------------------- veillée autour du feu */
+
+.veillee { background: radial-gradient(ellipse at 50% 100%, #5a2a0a 0%, #1b1240 45%, #0c0e33 100%); align-content: start; padding-bottom: 9rem; }
+html.hc .veillee { background: #000; }
+.veillee-sky { position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(1.5px 1.5px at 15% 20%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 70% 12%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 40% 30%, #ffe9a8 50%, transparent 51%), radial-gradient(1px 1px at 85% 35%, #fff 50%, transparent 51%);
+  animation: twinkle 4s ease-in-out infinite alternate; }
+.veillee-card { position: relative; width: min(38rem, 100%); padding: 1.2rem 1.3rem 1.3rem; margin-top: 0.5rem; animation: card-in 0.6s both; }
+.veillee-card h2 { font-style: italic; color: var(--crimson); font-size: 1.4rem; margin: 0; }
+html.hc .veillee-card h2 { color: var(--gold); }
+.veillee-stage { margin-top: 0.6rem; }
+.v-keeper { font-size: 1.25rem; margin: 0.4rem 0 0.8rem; }
+.v-keeper-name { display: block; font-family: var(--font-title); font-style: italic; color: var(--crimson); font-size: 1rem; }
+html.hc .v-keeper-name { color: var(--gold); }
+.v-ask { font-weight: 700; margin: 0.6rem 0 0.4rem; }
+.v-count { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+.v-num { width: 52px; padding: 0; }
+.v-progress { font-weight: 700; color: var(--muted); margin: 0; font-size: 0.9rem; }
+.v-stick { display: flex; align-items: center; gap: 0.7rem; background: color-mix(in srgb, var(--stick) 14%, transparent); border: 3px solid var(--stick); border-radius: 14px; padding: 0.5rem 0.8rem; font-weight: 700; }
+.v-stick p { margin: 0; }
+.v-stick-icon { width: 14px; height: 52px; border-radius: 7px; background: linear-gradient(180deg, var(--stick), #6b3c1c); transform: rotate(-20deg); animation: pop 0.4s both; }
+.v-players { display: flex; gap: 0.4rem; margin: 0.6rem 0; }
+.v-player { width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 700; opacity: 0.45; transition: transform 0.2s, opacity 0.2s; }
+.v-player.active { opacity: 1; transform: scale(1.25); box-shadow: 0 0 0 3px #fff, 0 0 14px var(--gold); }
+.v-actions { justify-content: flex-end; margin-top: 0.8rem; }
+.v-prayer { font-family: var(--font-title); font-style: italic; font-size: 1.25rem; border-left: 4px solid var(--gold); margin: 0.4rem 0; padding: 0.4rem 0.9rem; }
+.v-amen { border-color: var(--c); color: var(--c); background: #fff; }
+.v-amen.done { background: var(--c); color: #fff; }
+.life-family { background: rgba(242, 183, 5, 0.14); border: 2px solid var(--gold); border-radius: 12px; padding: 0.7rem 0.9rem; margin-bottom: 0.8rem; text-align: center; }
+.life-family p { margin: 0 0 0.4rem; font-weight: 700; }
+.journal-entry.family { box-shadow: var(--frame), 0 0 0 4px rgba(242, 183, 5, 0.45); }
+
+/* Le feu de camp */
+.v-fire { position: fixed; left: 50%; bottom: 0.4rem; width: 140px; height: 130px; translate: -50% 0; pointer-events: none; z-index: 11; }
+.v-fire::before { content: ''; position: absolute; left: 50%; bottom: 10px; width: 260px; height: 160px; translate: -50% 0; border-radius: 50%; background: radial-gradient(circle, rgba(255, 170, 60, 0.45), transparent 65%); animation: glow-pulse 2.4s ease-in-out infinite; }
+.v-fire .log { position: absolute; bottom: 8px; left: 50%; width: 110px; height: 16px; margin-left: -55px; border-radius: 8px; background: linear-gradient(180deg, #8b5a2b, #4a2a10); }
+.v-fire .l1 { transform: rotate(14deg); }
+.v-fire .l2 { transform: rotate(-14deg); }
+.v-fire .flame { position: absolute; left: 50%; bottom: 18px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; transform-origin: 50% 100%; animation: flicker-flame 0.9s ease-in-out infinite alternate; }
+.v-fire .f1 { width: 70px; height: 100px; margin-left: -35px; background: radial-gradient(circle at 50% 75%, #fff3b0, #ffb300 45%, #e64a19 80%); }
+.v-fire .f2 { width: 46px; height: 70px; margin-left: -48px; background: radial-gradient(circle at 50% 75%, #fff3b0, #ff9800 60%, transparent); animation-delay: -0.3s; }
+.v-fire .f3 { width: 40px; height: 62px; margin-left: 6px; background: radial-gradient(circle at 50% 75%, #fff3b0, #ff9800 60%, transparent); animation-delay: -0.6s; }
+.v-spark { position: absolute; bottom: 60px; width: 5px; height: 5px; border-radius: 50%; background: #ffd54a; box-shadow: 0 0 6px #ffb300; animation: spark-up 1.5s ease-out forwards; }
+@keyframes flicker-flame { from { transform: scale(1, 1) rotate(-2deg); } to { transform: scale(0.92, 1.08) rotate(2deg); } }
+@keyframes glow-pulse { 50% { opacity: 0.7; } }
+@keyframes spark-up { from { opacity: 1; transform: translate(0, 0); } to { opacity: 0; transform: translate(var(--dx), -140px); } }
 
 /* ------------------------------------------------------- lecteur de chants */
 

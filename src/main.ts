@@ -21,6 +21,7 @@ import { $, announce, countUp, esc, showScreen, translateDom } from './ui/dom';
 import { renderIcon } from './ui/illustrations';
 import { MusicPlayer } from './ui/MusicPlayer';
 import { renderFollowup, renderJournal, renderLife } from './ui/Life';
+import { Veillee } from './ui/Veillee';
 
 /**
  * Point d'entrée : démarrage, navigation entre écrans, réglages.
@@ -208,6 +209,7 @@ function renderStories(): void {
           <p class="story-summary">${esc(text.summary)}</p>
           ${progress?.done ? `<span class="story-status">✓ ${esc(t('stories.done'))}</span>` : ''}
           <button class="btn btn-primary" data-quest="${q.id}" aria-describedby="q-${q.id}">${esc(label)}</button>
+          ${progress?.done && text.life ? `<button class="btn btn-light btn-small" data-veillee="${q.id}" aria-describedby="q-${q.id}"><span aria-hidden="true">🔥</span> ${esc(t('veillee.button'))}</button>` : ''}
           ${text.scrolls?.livre ? `<button class="btn btn-light btn-small" data-book="${q.id}" aria-describedby="q-${q.id}"><span aria-hidden="true">📖</span> ${esc(t('stories.readBook'))}</button>` : ''}
         </div>
       </article>`;
@@ -323,6 +325,13 @@ async function boot(): Promise<void> {
   renderLangSwitch();
   $('screen-game').tabIndex = -1;
   bindSettings();
+  // Veillée en famille : un bouton sur les missions terminées et à la fin de chaque mission.
+  const veillee = new Veillee();
+  document.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-veillee]');
+    if (b) veillee.open(b.dataset.veillee!);
+  });
+
   // Lecteur de chants du dossier sounds/.
   const songs = new MusicPlayer();
   $('btn-songs').addEventListener('click', () => songs.show());

@@ -355,18 +355,22 @@
       <button id="verse-listen" class="btn btn-light btn-small"><span aria-hidden="true">🔊</span> <span data-i18n="life.listenVerse"></span></button>
     </dialog>
 
-    <!-- ============ Guide parents & moniteurs ============ -->
-    <dialog id="dlg-guide" class="modal modal-wide page" aria-labelledby="guide-title">
-      <div class="modal-head">
-        <h2 id="guide-title"></h2>
-        <span class="header-actions">
-          <button id="guide-print" class="btn btn-light btn-small" data-i18n="guide.print"></button>
-          <button id="guide-close" class="btn btn-light btn-small" data-i18n="settings.close"></button>
-        </span>
+    <!-- ============ Veillée en famille (autour du feu) ============ -->
+    <div id="veillee" class="overlay veillee" hidden role="dialog" aria-modal="true" aria-labelledby="veillee-title">
+      <div class="veillee-sky" aria-hidden="true"></div>
+      <div class="veillee-card page">
+        <div class="modal-head">
+          <h2 id="veillee-title"></h2>
+          <button id="veillee-close" class="btn btn-light btn-small" data-i18n="settings.close"></button>
+        </div>
+        <div id="veillee-stage" class="veillee-stage"></div>
       </div>
-      <p class="note" data-i18n="guide.intro"></p>
-      <div id="guide-body" class="guide-body"></div>
-    </dialog>
+      <!-- Le feu de camp : flammes et braises animées en CSS -->
+      <div id="veillee-fire" class="v-fire" aria-hidden="true">
+        <span class="flame f1"></span><span class="flame f2"></span><span class="flame f3"></span>
+        <span class="log l1"></span><span class="log l2"></span>
+      </div>
+    </div>
 
     <!-- ============ Lecteur de chants (dossier sounds/) ============ -->
     <section id="music-player" class="music-player page" hidden aria-labelledby="mp-heading">
