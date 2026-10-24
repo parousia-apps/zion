@@ -234,8 +234,13 @@ s'affiche : le jeu reste jouable.
    `vercel.json` précise déjà la commande de build et le cache des fichiers.
 3. Chaque `git push` redéploie automatiquement.
 
-Aucun serveur, aucune base de données : la progression est sauvegardée dans le
-`localStorage` du navigateur, sans compte et sans donnée personnelle envoyée.
+Aucun serveur, aucune base de données : la progression et le carnet du veilleur sont sauvegardés
+dans le `localStorage` du navigateur, sans compte.
+
+**Statistiques de visite** : le site utilise Vercel Web Analytics (`@vercel/analytics`, appelé dans
+`src/main.ts` avec `inject()`, la version Vite de `<Analytics />` de Next.js). Il compte les visites
+de façon anonyme, sans cookie ni donnée personnelle. Pour voir les chiffres : dans le tableau de bord
+Vercel, onglet **Analytics**, cliquer sur **Enable**, puis redéployer.
 
 ---
 

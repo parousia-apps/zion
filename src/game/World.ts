@@ -29,6 +29,8 @@ export interface EntityState {
   reach: number;
   /** Prochain moment où l'entité choisit un nouveau point de promenade. */
   wanderAt: number;
+  /** Prochain petit geste (saluer, montrer) d'un figurant au repos. */
+  gestureAt: number;
 }
 
 interface Solid {
@@ -218,6 +220,7 @@ export class World {
       speed: 3,
       reach: e.reach ?? defaultReach(e.model),
       wanderAt: Math.random() * 4,
+      gestureAt: 3 + Math.random() * 8,
     });
   }
 
@@ -558,7 +561,7 @@ export class World {
           if (e.hideOnArrive) this.hide([e.def.id]);
         }
       } else if (e.mode === 'idle') {
-        this.idle(e, dt, t);
+        this.idle(e, dt, t, player.position);
       }
       // Les animations ne sont calculées que près du joueur (économie de batterie).
       if (e.anim && e.obj.visible && e.obj.position.distanceTo(player.position) < ANIMATION_RANGE) {
@@ -574,7 +577,8 @@ export class World {
     const dx = target.x - p.x;
     const dz = target.z - p.z;
     const d = Math.hypot(dx, dz);
-    if (d <= gap) {
+    // Petite tolérance : sans elle, les arrondis laissent un écart infime et on n'arrive jamais.
+    if (d <= gap + 0.02) {
       this.motion(e, false, speed);
       return true;
     }
@@ -586,19 +590,47 @@ export class World {
     return false;
   }
 
-  private idle(e: EntityState, dt: number, t: number) {
-    const w = e.def.wander ?? 0;
-    if (w > 0 && !this.reduceMotion) {
-      if (t > e.wanderAt) {
-        e.wanderAt = t + 3 + Math.random() * 4;
+  /**
+   * Un figurant au repos ne reste pas planté : il se promène autour de sa place,
+   * fait de petits gestes, et se tourne vers le joueur quand celui-ci s'approche.
+   */
+  private idle(e: EntityState, dt: number, t: number, player: THREE.Vector3) {
+    const isPerson = e.def.model === 'person' && !e.def.look?.lying && !e.def.look?.wheelchair;
+    // Par défaut, une personne se promène doucement (sauf si "wander": 0 la garde à son poste).
+    const w = e.def.wander ?? (isPerson ? 1.6 : 0);
+    const near = e.obj.position.distanceTo(player) < e.reach + 1.2;
+    if (this.reduceMotion) {
+      this.motion(e, false, 1);
+      return;
+    }
+    if (near && isPerson) {
+      // Quelqu'un s'approche : on s'arrête et on le regarde.
+      e.dest = undefined;
+      const look = Math.atan2(player.x - e.obj.position.x, player.z - e.obj.position.z);
+      e.obj.rotation.y = turnTowards(e.obj.rotation.y, look, dt * 4);
+      this.motion(e, false, 1);
+      return;
+    }
+    if (w > 0) {
+      if (!e.dest && t > e.wanderAt) {
+        e.wanderAt = t + 3 + Math.random() * 5;
         const a = Math.random() * Math.PI * 2;
-        e.dest = new THREE.Vector3(e.home.x + Math.cos(a) * w * Math.random(), 0, e.home.z + Math.sin(a) * w * Math.random());
+        const dest = new THREE.Vector3(e.home.x + Math.cos(a) * w * (0.4 + Math.random() * 0.6), 0, e.home.z + Math.sin(a) * w * (0.4 + Math.random() * 0.6));
+        // On ne choisit pas un chemin qui traverse une maison ou un étal.
+        if (!this.firstObstacle(e.obj.position, dest)) e.dest = dest;
       }
       if (e.dest) {
-        const arrived = this.chase(e, e.dest, 0.1, 0.9, dt);
+        const arrived = this.chase(e, e.dest, 0.1, isPerson ? 1 : 0.9, dt);
         if (arrived) e.dest = undefined;
         return;
       }
+    }
+    // À l'arrêt : de temps en temps, un geste (saluer, montrer quelque chose).
+    if (isPerson && t > e.gestureAt) {
+      e.gestureAt = t + 6 + Math.random() * 8;
+      const c = e.anim?.character;
+      const action = Math.random() > 0.5 ? c?.actions.interact : c?.actions.wave;
+      action?.reset().fadeIn(0.2).play();
     }
     this.motion(e, false, 1);
   }

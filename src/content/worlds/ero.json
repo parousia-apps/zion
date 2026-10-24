@@ -267,7 +267,8 @@
         "skin": "#7a4a2a",
         "scarf": "#f2efe6",
         "staff": true
-      }
+      },
+      "wander": 0
     }
   ],
   "zones": [

@@ -5,4 +5,5 @@ assets-src
 .vercel
 .DS_Store
 
-.claude
+/.claude
+/.idea

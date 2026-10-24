@@ -52,7 +52,8 @@
             "accent": "#ffc21a",
             "hair": "#1b1b1b",
             "skin": "#c68642"
-          }
+          },
+          "wander": 1.2
         },
         {
           "id": "presse2",
@@ -68,7 +69,8 @@
             "hair": "#3e2410",
             "beard": "#3e2410",
             "skin": "#a8693a"
-          }
+          },
+          "wander": 1.2
         }
       ],
       "steps": [

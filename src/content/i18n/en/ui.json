@@ -140,7 +140,7 @@
     "performance": "Performance",
     "lowQuality": "Battery saver (for older phones)",
     "data": "My data",
-    "dataInfo": "Your progress is saved only on this device. No account, no data sent anywhere.",
+    "dataInfo": "Your progress and notebook stay only on this device, with no account. The site counts visits anonymously (no cookies, no personal data).",
     "reset": "Erase my progress",
     "resetConfirm": "Erase all your progress?",
     "resetDone": "Progress erased."

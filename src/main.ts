@@ -3,6 +3,7 @@ import '@fontsource/atkinson-hyperlegible/700.css';
 import '@fontsource/fraunces/600.css';
 import '@fontsource/fraunces/900-italic.css';
 import './styles/main.css';
+import { inject } from '@vercel/analytics';
 
 import { QUESTS, getQuest } from './content';
 import { LANGUAGES, currentLanguage, questText, setLanguage, t, typo } from './core/i18n';
@@ -390,5 +391,9 @@ async function boot(): Promise<void> {
 
   goTitle();
 }
+
+// Statistiques de visite Vercel (anonymes, sans cookie). Version « vanilla » pour Vite :
+// l'équivalent du composant <Analytics /> de Next.js. N'envoie rien en développement.
+inject({ mode: import.meta.env.PROD ? 'production' : 'development', debug: false });
 
 void boot();

@@ -463,7 +463,8 @@
         "staff": true,
         "lantern": true,
         "base": "man"
-      }
+      },
+      "wander": 0
     },
     {
       "id": "soigneuse",
@@ -478,7 +479,8 @@
         "accent": "#ffffff",
         "scarf": "#ffffff",
         "skin": "#c68642"
-      }
+      },
+      "wander": 0
     },
     {
       "id": "marchande",
@@ -494,7 +496,8 @@
         "accent": "#2340ff",
         "scarf": "#ff4f7b",
         "skin": "#8d5524"
-      }
+      },
+      "wander": 0
     },
     {
       "id": "passant",

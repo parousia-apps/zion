@@ -132,7 +132,7 @@
     "performance": "Performance",
     "lowQuality": "Mode économie (pour les vieux téléphones)",
     "data": "Mes données",
-    "dataInfo": "Ta progression est enregistrée seulement sur cet appareil. Pas de compte, aucune donnée envoyée.",
+    "dataInfo": "Ta progression et ton carnet restent seulement sur cet appareil, sans compte. Le site compte les visites de façon anonyme (sans cookie, sans donnée personnelle).",
     "reset": "Effacer ma progression",
     "resetConfirm": "Effacer toute ta progression ?",
     "resetDone": "Progression effacée.",

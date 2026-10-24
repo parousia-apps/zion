@@ -195,7 +195,8 @@
         "hair": "#e8e8e8",
         "skin": "#a8693a",
         "staff": true
-      }
+      },
+      "wander": 0
     },
     {
       "id": "cerf",

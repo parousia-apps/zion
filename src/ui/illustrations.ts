@@ -45,7 +45,11 @@ function person(x: number, y: number, o: PersonOpts): string {
   const s = o.s ?? 1;
   const f = o.flip ? -1 : 1;
   const skin = o.skin ?? C.skin[1];
-  const arm = (d: string) => `<path d="${d}" fill="none" stroke="${o.robe}" stroke-width="5" stroke-linecap="round"/><circle cx="${d.split(' ').pop()!.split(',')[0]}" cy="${d.split(' ').pop()!.split(',')[1]}" r="2.6" fill="${skin}"/>`;
+  // La main se dessine au bout du bras (dernier point du tracé, ex. « L9,-11 »).
+  const arm = (d: string) => {
+    const [hx, hy] = d.split(' ').pop()!.replace(/^[A-Z]/, '').split(',');
+    return `<path d="${d}" fill="none" stroke="${o.robe}" stroke-width="5" stroke-linecap="round"/><circle cx="${hx}" cy="${hy}" r="2.6" fill="${skin}"/>`;
+  };
   const arms = {
     down: arm('M-6,-24 L-9,-11') + arm('M6,-24 L9,-11'),
     reach: arm('M-6,-24 L-9,-11') + arm('M6,-24 L17,-18'),
