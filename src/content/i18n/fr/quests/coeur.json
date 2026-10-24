@@ -34,12 +34,12 @@
       {
         "who": "gardien",
         "text": "Dans la Bible, il y a un garçon que personne ne remarquait. Même pas sa propre famille !",
-        "audio": "/audio/fr/coeur/intro-0-6f94dbf4.mp3"
+        "audio": "/audio/fr/coeur/intro-0-10587dc2.mp3"
       },
       {
         "who": "gardien",
         "text": "Viens… Allons à Bethléem, il y a environ trois mille ans.",
-        "audio": "/audio/fr/coeur/intro-1-09d300d8.mp3"
+        "audio": "/audio/fr/coeur/intro-1-a3d2092d.mp3"
       }
     ],
     "story": [
@@ -57,7 +57,7 @@
         "who": "player",
         "text": "Oh non ! Trois moutons se sont éloignés. Je dois les ramener à la bergerie.",
         "snd": "bleat",
-        "audio": "/audio/fr/coeur/story-2-72e5f3c1.mp3"
+        "audio": "/audio/fr/coeur/story-2-3c46b659.mp3"
       }
     ],
     "safe": [
@@ -65,7 +65,7 @@
         "who": "player",
         "text": "Voilà, tout le troupeau est à l'abri. Un bon berger veille sur chacun de ses moutons.",
         "fx": "sunset",
-        "audio": "/audio/fr/coeur/safe-0-36f48476.mp3"
+        "audio": "/audio/fr/coeur/safe-0-319a08fe.mp3"
       },
       {
         "who": "narrator",
@@ -83,34 +83,34 @@
       {
         "who": "player",
         "text": "Le Seigneur est mon berger, je ne manque de rien.",
-        "audio": "/audio/fr/coeur/psalm-1-36c4e143.mp3"
+        "audio": "/audio/fr/coeur/psalm-1-5fdc6f98.mp3"
       },
       {
         "who": "player",
         "text": "Il me conduit dans l'herbe verte, près de l'eau calme. Il prend soin de moi.",
-        "audio": "/audio/fr/coeur/psalm-2-43f4f23f.mp3"
+        "audio": "/audio/fr/coeur/psalm-2-22c64258.mp3"
       },
       {
         "who": "player",
         "text": "Même quand j'ai peur, je ne suis pas seul : le Seigneur est avec moi.",
-        "audio": "/audio/fr/coeur/psalm-3-8c225544.mp3"
+        "audio": "/audio/fr/coeur/psalm-3-9e40e1f2.mp3"
       }
     ],
     "call": [
       {
         "who": "serviteur",
         "text": "David ! David ! Ton père te demande. Le prophète Samuel est à la maison !",
-        "audio": "/audio/fr/coeur/call-0-7d3ed554.mp3"
+        "audio": "/audio/fr/coeur/call-0-9bc04428.mp3"
       },
       {
         "who": "serviteur",
         "text": "Il a vu tous tes frères, et il a dit : « Ce n'est aucun d'eux. N'y a-t-il pas un autre fils ? »",
-        "audio": "/audio/fr/coeur/call-1-2f230f13.mp3"
+        "audio": "/audio/fr/coeur/call-1-fabb6af4.mp3"
       },
       {
         "who": "player",
         "text": "Moi ? Mais je suis le plus petit… J'arrive !",
-        "audio": "/audio/fr/coeur/call-2-40d5ba10.mp3"
+        "audio": "/audio/fr/coeur/call-2-0bf54604.mp3"
       }
     ],
     "anoint": [
@@ -127,7 +127,7 @@
       {
         "who": "samuel",
         "text": "C'est lui. C'est David que Dieu a choisi !",
-        "audio": "/audio/fr/coeur/anoint-2-64f788bd.mp3"
+        "audio": "/audio/fr/coeur/anoint-2-f9573f3b.mp3"
       },
       {
         "who": "narrator",
@@ -138,34 +138,34 @@
       {
         "who": "jesse",
         "text": "Mon plus jeune fils… choisi par Dieu !",
-        "audio": "/audio/fr/coeur/anoint-4-89e6c1ef.mp3"
+        "audio": "/audio/fr/coeur/anoint-4-07414125.mp3"
       }
     ],
     "festival": [
       {
         "who": "myriam",
         "text": "Ah, notre apprenti veilleur ! Ce soir, c'est la Fête des lumières, et il me manque des musiciens.",
-        "audio": "/audio/fr/coeur/festival-0-6509758a.mp3"
+        "audio": "/audio/fr/coeur/festival-0-18a0b675.mp3"
       },
       {
         "who": "myriam",
         "text": "Ben joue du tambour au marché. Sarah joue de la flûte près des maisons, à l'est. Ramène-les-moi sur la scène !",
-        "audio": "/audio/fr/coeur/festival-1-fa5e81c7.mp3"
+        "audio": "/audio/fr/coeur/festival-1-864fa4dc.mp3"
       },
       {
         "who": "player",
         "text": "Et Élie ? Il joue de la harpe magnifiquement.",
-        "audio": "/audio/fr/coeur/festival-2-b1eb2644.mp3"
+        "audio": "/audio/fr/coeur/festival-2-8b3b91db.mp3"
       },
       {
         "who": "myriam",
         "text": "Élie ? Euh… Il est en fauteuil roulant, et la scène a des marches. Je n'y avais pas pensé…",
-        "audio": "/audio/fr/coeur/festival-3-6a92371d.mp3"
+        "audio": "/audio/fr/coeur/festival-3-29b98563.mp3"
       },
       {
         "who": "player",
         "text": "Dieu regarde le cœur. Je vais le chercher aussi !",
-        "audio": "/audio/fr/coeur/festival-4-a269af6b.mp3"
+        "audio": "/audio/fr/coeur/festival-4-7abd2961.mp3"
       }
     ],
     "ben": [
@@ -173,43 +173,43 @@
         "who": "ben",
         "text": "La fête ? Avec plaisir, j'apporte mon tambour !",
         "snd": "drum",
-        "audio": "/audio/fr/coeur/ben-0-14bc1fe7.mp3"
+        "audio": "/audio/fr/coeur/ben-0-3bf91486.mp3"
       }
     ],
     "sarah": [
       {
         "who": "sarah",
         "text": "Ma flûte est prête. Allons-y !",
-        "audio": "/audio/fr/coeur/sarah-0-a901856e.mp3"
+        "audio": "/audio/fr/coeur/sarah-0-d951618b.mp3"
       }
     ],
     "elie": [
       {
         "who": "elie",
         "text": "Moi ? D'habitude, personne ne pense à moi pour ce genre de chose…",
-        "audio": "/audio/fr/coeur/elie-0-af3a0657.mp3"
+        "audio": "/audio/fr/coeur/elie-0-5f16e822.mp3"
       },
       {
         "who": "player",
         "text": "Moi, je pense à toi. Tu joues de la harpe comme le roi David !",
-        "audio": "/audio/fr/coeur/elie-1-a961027a.mp3"
+        "audio": "/audio/fr/coeur/elie-1-4e188a7d.mp3"
       },
       {
         "who": "elie",
         "text": "Alors je viens. Merci de m'avoir choisi.",
-        "audio": "/audio/fr/coeur/elie-2-f2f60682.mp3"
+        "audio": "/audio/fr/coeur/elie-2-d2988dce.mp3"
       }
     ],
     "ready": [
       {
         "who": "myriam",
         "text": "Vous êtes tous là ! Mais attendez… Élie ne peut pas monter les marches.",
-        "audio": "/audio/fr/coeur/ready-0-c0549471.mp3"
+        "audio": "/audio/fr/coeur/ready-0-5ed2c1c6.mp3"
       },
       {
         "who": "myriam",
         "text": "J'ai une idée : installons une rampe. Une fête où quelqu'un reste en bas, ce n'est pas une vraie fête !",
-        "audio": "/audio/fr/coeur/ready-1-1bcca527.mp3"
+        "audio": "/audio/fr/coeur/ready-1-170050a0.mp3"
       }
     ],
     "concert": [
@@ -228,24 +228,24 @@
         "who": "myriam",
         "text": "Bravo ! Quelle musique ! Sans Élie, il aurait manqué le plus beau.",
         "fx": "celebrate",
-        "audio": "/audio/fr/coeur/concert-2-134609a8.mp3"
+        "audio": "/audio/fr/coeur/concert-2-3ca8718c.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
         "text": "Samuel a failli choisir le plus grand et le plus fort. Mais Dieu regarde le cœur.",
-        "audio": "/audio/fr/coeur/debrief-0-9b967848.mp3"
+        "audio": "/audio/fr/coeur/debrief-0-f7b37264.mp3"
       },
       {
         "who": "gardien",
         "text": "Aujourd'hui, tu as vu ce que d'autres ne voyaient pas : le talent et le cœur d'Élie.",
-        "audio": "/audio/fr/coeur/debrief-1-6aecea23.mp3"
+        "audio": "/audio/fr/coeur/debrief-1-31198153.mp3"
       },
       {
         "who": "gardien",
         "text": "Jésus faisait pareil : il accueillait les enfants, les malades, ceux qu'on laissait de côté. Te voilà vrai veilleur de Zion !",
-        "audio": "/audio/fr/coeur/debrief-2-7bfa0b01.mp3"
+        "audio": "/audio/fr/coeur/debrief-2-5481ec8e.mp3"
       }
     ]
   },

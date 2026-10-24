@@ -42,12 +42,12 @@
       {
         "who": "gardien",
         "text": "Aujourd'hui, je vais te raconter un conte venu de très loin, de la ville d'ERO. Il parle de la peur… et de la paix.",
-        "audio": "/audio/fr/amani/intro-0-4cbb9451.mp3"
+        "audio": "/audio/fr/amani/intro-0-6f924733.mp3"
       },
       {
         "who": "gardien",
         "text": "Ferme les yeux. Dans ce conte, tu es Nala, une petite fille courageuse.",
-        "audio": "/audio/fr/amani/intro-1-438ab364.mp3"
+        "audio": "/audio/fr/amani/intro-1-a7c07abd.mp3"
       }
     ],
     "rain": [
@@ -72,7 +72,7 @@
       {
         "who": "enfant1",
         "text": "Au secours ! Le tonnerre ! Tout le monde à la maison !",
-        "audio": "/audio/fr/amani/thunder-1-562dd365.mp3"
+        "audio": "/audio/fr/amani/thunder-1-5c178d8b.mp3"
       },
       {
         "who": "narrator",
@@ -84,13 +84,13 @@
       {
         "who": "player",
         "text": "Mais que veut-elle nous dire ? Pourquoi cette voix gronde-t-elle si fort ?",
-        "audio": "/audio/fr/amani/ask-0-72635c15.mp3"
+        "audio": "/audio/fr/amani/ask-0-36572a5a.mp3"
       },
       {
         "who": "player",
         "text": "Qui es-tu, et pourquoi grondes-tu ? Si tu veux me parler, dis juste bonjour. Je m'appelle Nala, et j'aimerais être ton amie !",
         "snd": "thunder",
-        "audio": "/audio/fr/amani/ask-1-e37fe20b.mp3"
+        "audio": "/audio/fr/amani/ask-1-d874ddbd.mp3"
       },
       {
         "who": "narrator",
@@ -100,7 +100,7 @@
       {
         "who": "player",
         "text": "Il y a une voix qui essaie de nous parler. Mais le tonnerre nous effraie et nous empêche d'entendre la voix qui sourit.",
-        "audio": "/audio/fr/amani/ask-3-cf16b2ff.mp3"
+        "audio": "/audio/fr/amani/ask-3-5045891c.mp3"
       }
     ],
     "bed": [
@@ -119,40 +119,40 @@
       {
         "who": "amani",
         "text": "Bonjour, Nala !",
-        "audio": "/audio/fr/amani/dream-1-6e9b244a.mp3"
+        "audio": "/audio/fr/amani/dream-1-f3c0fc20.mp3"
       }
     ],
     "star": [
       {
         "who": "player",
         "text": "Bonjour ! Comment connais-tu mon nom ? Qui es-tu ? Et que veux-tu ?",
-        "audio": "/audio/fr/amani/star-0-df3499c9.mp3"
+        "audio": "/audio/fr/amani/star-0-07830c5b.mp3"
       },
       {
         "who": "amani",
         "text": "Moi ? Je connais les noms de tout le monde. Je t'ai entendue dire qu'il fallait se présenter et demander si on pouvait être amis !",
-        "audio": "/audio/fr/amani/star-1-5a288a94.mp3"
+        "audio": "/audio/fr/amani/star-1-52ff2de1.mp3"
       },
       {
         "who": "player",
         "text": "Serais-tu la voix que le tonnerre empêche d'entendre ?",
-        "audio": "/audio/fr/amani/star-2-b895db92.mp3"
+        "audio": "/audio/fr/amani/star-2-55495cdd.mp3"
       },
       {
         "who": "amani",
         "text": "Tu as pu entendre la voix qui sourit parce que tu as été courageuse. Le grondement que les autres entendent, c'est en fait la peur qui est dans leur cœur. C'est elle qui les empêche de m'entendre.",
-        "audio": "/audio/fr/amani/star-3-fff682af.mp3"
+        "audio": "/audio/fr/amani/star-3-f859d243.mp3"
       },
       {
         "who": "amani",
         "text": "Ne laisse pas la peur te dominer. Reste courageuse, pense très fort à moi, et tu m'entendras de plus en plus clairement.",
-        "audio": "/audio/fr/amani/star-4-5c8ddf18.mp3"
+        "audio": "/audio/fr/amani/star-4-39b52c0d.mp3"
       },
       {
         "who": "amani",
         "text": "Mon nom, c'est Amani, ce qui veut dire paix ! Quand le tonnerre grondera à nouveau, garde ton calme, sois tranquille, et tu m'entendras. Va le raconter à tout le village !",
         "fx": "glow",
-        "audio": "/audio/fr/amani/star-5-80786656.mp3"
+        "audio": "/audio/fr/amani/star-5-6416fbbd.mp3"
       }
     ],
     "wake": [
@@ -165,50 +165,50 @@
         "who": "player",
         "text": "Amani, Amani, la paix est dans mon cœur ! Je n'ai plus peur ! Je n'ai plus peur !",
         "fx": "harp",
-        "audio": "/audio/fr/amani/wake-1-4540d487.mp3"
+        "audio": "/audio/fr/amani/wake-1-681e692f.mp3"
       }
     ],
     "mote": [
       {
         "who": "player",
         "text": "Môté ! Amani, Amani… je l'ai vu !",
-        "audio": "/audio/fr/amani/mote-0-e674abe3.mp3"
+        "audio": "/audio/fr/amani/mote-0-1c0ef619.mp3"
       },
       {
         "who": "mote",
         "text": "De quoi parles-tu, Nala ? Je ne te comprends pas.",
-        "audio": "/audio/fr/amani/mote-1-8ca241ab.mp3"
+        "audio": "/audio/fr/amani/mote-1-1cc424b8.mp3"
       },
       {
         "who": "player",
         "text": "Je l'ai vu dans mon rêve ! C'est la peur qui nous empêche d'entendre la voix qui sourit. Quand le tonnerre grondera, il suffira de penser très fort à lui et de chanter : « Amani, Amani, la paix est dans mon cœur ! »",
-        "audio": "/audio/fr/amani/mote-2-21dfbf30.mp3"
+        "audio": "/audio/fr/amani/mote-2-95d1fbf8.mp3"
       },
       {
         "who": "mote",
         "text": "Maintenant, nous sommes deux à entendre la voix qui sourit ! Va, Nala : invite les habitants sur la place.",
-        "audio": "/audio/fr/amani/mote-3-4905ecfd.mp3"
+        "audio": "/audio/fr/amani/mote-3-4e64152c.mp3"
       }
     ],
     "hab1": [
       {
         "who": "hab1",
         "text": "Nala ? Viens, on dirait que tu as une bonne nouvelle ! Je te suis.",
-        "audio": "/audio/fr/amani/hab1-0-6beb6cdc.mp3"
+        "audio": "/audio/fr/amani/hab1-0-beefffca.mp3"
       }
     ],
     "hab2": [
       {
         "who": "hab2",
         "text": "Une voix qui sourit ? Je veux entendre ça. Allons-y !",
-        "audio": "/audio/fr/amani/hab2-0-b6fb302a.mp3"
+        "audio": "/audio/fr/amani/hab2-0-9c704cfc.mp3"
       }
     ],
     "hab3": [
       {
         "who": "hab3",
         "text": "Plus peur du tonnerre ? Ah, si c'était vrai… Je viens avec toi.",
-        "audio": "/audio/fr/amani/hab3-0-f2428e8c.mp3"
+        "audio": "/audio/fr/amani/hab3-0-1abb3106.mp3"
       }
     ],
     "together": [
@@ -220,13 +220,13 @@
       {
         "who": "hab2",
         "text": "Depuis tout ce temps, c'était la peur qui nous empêchait d'entendre Amani ? Ah, quelle joie !",
-        "audio": "/audio/fr/amani/together-1-f76fad16.mp3"
+        "audio": "/audio/fr/amani/together-1-a90c17c9.mp3"
       },
       {
         "who": "hab1",
         "text": "Nous sommes libérés de la peur ! Chantons tous ensemble : Amani, Amani, la paix est dans mon cœur !",
         "fx": "rainbow",
-        "audio": "/audio/fr/amani/together-2-56787ff3.mp3"
+        "audio": "/audio/fr/amani/together-2-c4e8522b.mp3"
       },
       {
         "who": "narrator",
@@ -253,30 +253,30 @@
       {
         "who": "mila",
         "text": "J'ai peur du tonnerre… Il fait trop de bruit…",
-        "audio": "/audio/fr/amani/mila-0-0e4f7417.mp3"
+        "audio": "/audio/fr/amani/mila-0-2f5fa454.mp3"
       },
       {
         "who": "player",
         "text": "Moi aussi, j'avais peur. Respire avec moi, doucement… Tu sais, un jour, pendant une tempête, Jésus a dit au vent : « Silence, calme-toi ! » Et tout est devenu calme.",
-        "audio": "/audio/fr/amani/mila-1-268b7465.mp3"
+        "audio": "/audio/fr/amani/mila-1-25b26682.mp3"
       },
       {
         "who": "player",
         "text": "Chantons ensemble : Amani, Amani, la paix est dans mon cœur ! Je n'ai plus peur !",
         "fx": "harp",
-        "audio": "/audio/fr/amani/mila-2-0522920b.mp3"
+        "audio": "/audio/fr/amani/mila-2-fe470685.mp3"
       },
       {
         "who": "mila",
         "text": "Je n'ai plus peur… Tu veux bien m'accompagner jusqu'à la tour ?",
-        "audio": "/audio/fr/amani/mila-3-1af28262.mp3"
+        "audio": "/audio/fr/amani/mila-3-4dce8a52.mp3"
       }
     ],
     "shelter": [
       {
         "who": "gardien",
         "text": "Entrez, entrez ! Ici, vous êtes à l'abri. Bravo d'être restée près d'elle.",
-        "audio": "/audio/fr/amani/shelter-0-3e66c3bf.mp3"
+        "audio": "/audio/fr/amani/shelter-0-067ed696.mp3"
       },
       {
         "who": "narrator",
@@ -289,17 +289,17 @@
       {
         "who": "gardien",
         "text": "La peur fait beaucoup de bruit dans notre cœur, comme le tonnerre. Elle nous empêche d'entendre Dieu.",
-        "audio": "/audio/fr/amani/debrief-0-ceb63c11.mp3"
+        "audio": "/audio/fr/amani/debrief-0-44efe601.mp3"
       },
       {
         "who": "gardien",
         "text": "Dans la Bible, le prophète Élie a entendu Dieu non pas dans le vent ni dans le tonnerre, mais dans un murmure doux et léger.",
-        "audio": "/audio/fr/amani/debrief-1-6d65aa92.mp3"
+        "audio": "/audio/fr/amani/debrief-1-41bd3c9d.mp3"
       },
       {
         "who": "gardien",
         "text": "Et Jésus nous dit : « Je vous laisse la paix, je vous donne ma paix. » Quand tu as peur, arrête-toi, pense à lui… et écoute sa voix qui sourit.",
-        "audio": "/audio/fr/amani/debrief-2-923c08c9.mp3"
+        "audio": "/audio/fr/amani/debrief-2-9bbde7e6.mp3"
       }
     ]
   },

@@ -11,8 +11,12 @@ dans le champ "audio" de la réplique. Le nom du fichier contient une empreinte
 du texte et de la voix : si rien n'a changé, on ne régénère pas ; si le texte
 change, un nouveau fichier est créé et l'ancien supprimé.
 
-Le nom de la personne qui parle est dit d'abord par le narrateur (pour les
-joueurs aveugles), puis la réplique avec la voix du personnage.
+Le nom de la personne qui parle n'est pas lu (il est affiché, et annoncé aux
+lecteurs d'écran) : chaque personnage a sa propre voix.
+
+Les autres textes lus à voix haute (objectifs, trait du Christ, fin de mission,
+veillée, prière…) vont dans un recueil : public/audio/<langue>/phrases.json
+associe chaque phrase à son mp3 ; le jeu le consulte avant la synthèse vocale.
 
 Installation (une fois) : bash scripts/voices/setup.sh
 """
@@ -21,6 +25,7 @@ import glob
 import hashlib
 import json
 import os
+import re
 import sys
 
 import numpy as np
@@ -57,11 +62,27 @@ def fingerprint(*parts):
     return hashlib.sha1(json.dumps(parts, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:8]
 
 
+REF_WORDS = {'fr': ('verset', 'à'), 'en': ('verse', 'to')}
+
+
 def spoken(lang, text):
-    """Le texte tel qu'on veut l'entendre : prononciations corrigées, sans guillemets."""
+    """Le texte tel qu'on veut l'entendre : prononciations corrigées, sans guillemets,
+    références bibliques en toutes lettres (« Jean 14.27 » → « Jean 14, verset 27 »)."""
     for word, say in CONFIG['prononciation'].get(lang, {}).items():
         text = text.replace(word, say)
+    verse, to = REF_WORDS.get(lang, REF_WORDS['en'])
+    text = re.sub(r'(\d+)[.:](\d+)-(\d+)', rf'\1, {verse}s \2 {to} \3', text)
+    text = re.sub(r'(\d+)[.:](\d+)', rf'\1, {verse} \2', text)
     return text.replace('«', '').replace('»', '').replace('…', '...').strip()
+
+
+def phrase_key(text):
+    """Même calcul que phraseKey() dans src/core/speech.ts."""
+    import unicodedata
+    text = unicodedata.normalize('NFC', text).lower()
+    text = re.sub(r'[«»"“”]', '', text).replace('\u00a0', ' ').replace('\u202f', ' ')
+    text = re.sub(r'\s+', ' ', text).strip()
+    return re.sub(r'[\s.!?:;,…]+$', '', text)
 
 
 def synth(lang, text, preset):
@@ -104,16 +125,12 @@ def build_quest(lang, file, world_names):
         if not os.path.exists(path):
             render(lang, path, parts)
             made += 1
-            print(f'  + {lang}/{quest}/{filename}')
+            print(f'  + {lang}/{quest}/{filename}', flush=True)
         item['audio'] = f'/audio/{lang}/{quest}/{filename}'
 
     for key, lines in data.get('dialogs', {}).items():
         for i, line in enumerate(lines):
-            parts = [(line['text'], preset_for(lang, quest, line['who']))]
-            name = names.get(line['who'])
-            if line['who'] != 'narrator' and name:
-                parts.insert(0, (name, narrator))
-            handle(line, f'{key}-{i}', parts)
+            handle(line, f'{key}-{i}', [(line['text'], preset_for(lang, quest, line['who']))])
 
     for key, scroll in (data.get('scrolls') or {}).items():
         for i, panel in enumerate(scroll['panels']):
@@ -126,7 +143,69 @@ def build_quest(lang, file, world_names):
                 os.remove(os.path.join(out_dir, old))
 
     write_json(file, data)
-    print(f'{lang}/{quest} : {len(keep)} répliques, {made} nouvelles')
+    print(f'{lang}/{quest} : {len(keep)} répliques, {made} nouvelles', flush=True)
+
+
+def lookup(tree, key):
+    for part in key.split('.'):
+        tree = tree.get(part) if isinstance(tree, dict) else None
+    return tree
+
+
+def build_phrases(lang, quest_files, world_names):
+    """Le recueil : tous les autres textes que le jeu lit à voix haute."""
+    ui = read_json(os.path.join(ROOT, 'src', 'content', 'i18n', lang, 'ui.json'))
+    voices = CONFIG['voix'][lang]
+    narrator, keeper = voices['narrateur'], voices[CONFIG['personnages']['gardien']]
+    items = []  # (texte, voix)
+
+    def tr(key, **vars):
+        text = lookup(ui, key) or ''
+        for k, v in vars.items():
+            text = text.replace('{' + k + '}', v)
+        return text
+
+    for key in ['setup.heading', 'setup.intro', 'setup.readAloud', 'end.bravo', 'end.missionDone',
+                'trait.heading', 'trait.jesus', 'where.none']:
+        items.append((tr(key), narrator))
+    for key in ['veillee.welcome', 'veillee.activityIntro', 'veillee.prayerIntro', 'veillee.challengeIntro',
+                'veillee.goodbye', 'life.keeperAsks', 'journal.keeper', 'journal.encourage']:
+        items.append((tr(key), keeper))
+
+    names = dict(world_names)
+    for qf in quest_files:
+        q = read_json(qf)
+        names.update(q.get('names', {}))
+        items += [(q['trait']['name'], narrator), (q['trait']['description'], narrator),
+                  (q['trait']['jesus'], narrator), (q['ending']['message'], narrator)]
+        items += [(tr('announce.objective', text=o), narrator) for o in q.get('objectives', {}).values()]
+        life = q.get('life')
+        if life:
+            items += [(life[k], keeper) for k in ['bibleQuestion', 'prayer', 'followup', 'activity', 'challenge']]
+            items += [(f, keeper) for f in life.get('family', [])]
+            items += [(life['verse'], narrator), (life['verseRef'], narrator)]
+    for name in list(names.values()) + [tr('where.zone')]:
+        for key in ['where.guiding', 'where.here', 'where.arrived']:
+            items.append((tr(key, name=name), narrator))
+
+    out_dir = os.path.join(ROOT, 'public', 'audio', lang, 'phrases')
+    manifest, keep, made = {}, set(), 0
+    for text, preset in items:
+        k = phrase_key(text)
+        if not k or k in manifest:
+            continue
+        filename = f'{fingerprint(text, preset)}.mp3'
+        path = os.path.join(out_dir, filename)
+        keep.add(filename)
+        if not os.path.exists(path):
+            render(lang, path, [(text, preset)])
+            made += 1
+        manifest[k] = f'/audio/{lang}/phrases/{filename}'
+    for old in os.listdir(out_dir) if os.path.isdir(out_dir) else []:
+        if old.endswith('.mp3') and old not in keep:
+            os.remove(os.path.join(out_dir, old))
+    write_json(os.path.join(ROOT, 'public', 'audio', lang, 'phrases.json'), manifest)
+    print(f'{lang}/phrases : {len(manifest)} phrases, {made} nouvelles', flush=True)
 
 
 def main():
@@ -137,9 +216,12 @@ def main():
         world_names = {}
         for wf in sorted(glob.glob(os.path.join(ROOT, 'src', 'content', 'i18n', lang, 'worlds', '*.json'))):
             world_names.update(read_json(wf).get('names', {}))
-        for qf in sorted(glob.glob(os.path.join(ROOT, 'src', 'content', 'i18n', lang, 'quests', '*.json'))):
+        quest_files = sorted(glob.glob(os.path.join(ROOT, 'src', 'content', 'i18n', lang, 'quests', '*.json')))
+        for qf in quest_files:
             if not only or os.path.splitext(os.path.basename(qf))[0] in only:
                 build_quest(lang, qf, world_names)
+        if not only or 'phrases' in only:
+            build_phrases(lang, quest_files, world_names)
 
 
 if __name__ == '__main__':

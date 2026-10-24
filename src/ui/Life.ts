@@ -13,7 +13,7 @@ import { renderIcon } from './illustrations';
  * - une prière ; le défi du veilleur pour la semaine ; le verset à retenir ;
  * - le carnet du veilleur (privé, sans points ni classement) ;
  * - le Gardien qui demande des nouvelles au retour ;
- * - le guide pour les parents et moniteurs (veillée en famille, imprimable).
+ * - la veillée en famille (voir Veillee.ts).
  *
  * Principe : on ne compte pas les bonnes actions (Matthieu 6.1-4). Le carnet
  * garde des souvenirs, pas un score.
@@ -79,7 +79,7 @@ export function renderLife(questId: string, calm: boolean): void {
   $('life-read').addEventListener('click', () => {
     const q = $('life-question');
     q.hidden = false;
-    speech.speak(`${t('life.keeperAsks')} ${life.bibleQuestion}`);
+    speech.speak([t('life.keeperAsks'), life.bibleQuestion]);
     q.focus?.();
   });
   $('life-pray').addEventListener('click', () => speech.speak(life.prayer));
@@ -140,7 +140,7 @@ export function openVerseGame(verse: string, ref: string, calm: boolean): void {
           if (!save.verses.includes(ref)) save.verses.push(ref);
           persist();
           audio.celebrate();
-          speech.speak(`${verse} ${ref}`);
+          speech.speak([verse, ref]);
           announce(t('life.verseDone'));
         }
       } else {
@@ -154,7 +154,7 @@ export function openVerseGame(verse: string, ref: string, calm: boolean): void {
       }
     });
   });
-  $('verse-listen').onclick = () => speech.speak(`${verse} ${ref}`);
+  $('verse-listen').onclick = () => speech.speak([verse, ref]);
   $('verse-close').onclick = () => dlg.close();
   dlg.showModal();
   (pool.querySelector('button') as HTMLButtonElement | null)?.focus();
@@ -183,7 +183,7 @@ export function renderFollowup(onOpenJournal: () => void): void {
       <button class="btn btn-light btn-small" id="fu-not">${esc(t('journal.notYet'))}</button>
     </div>
     <p class="note" id="fu-msg" hidden></p>`;
-  speech.speak(`${t('journal.keeper')}. ${text.life?.followup ?? ''}`);
+  speech.speak([t('journal.keeper'), text.life?.followup ?? '']);
   $('fu-yes').addEventListener('click', () => {
     entry.asked = true;
     entry.lived = true;

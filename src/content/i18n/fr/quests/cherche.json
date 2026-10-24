@@ -26,51 +26,51 @@
       {
         "who": "gardien",
         "text": "Sais-tu combien il y a d'habitants à Zion ? Beaucoup ! Et pourtant, Dieu connaît chacun par son nom.",
-        "audio": "/audio/fr/cherche/intro-0-c2f831d5.mp3"
+        "audio": "/audio/fr/cherche/intro-0-15eccb63.mp3"
       },
       {
         "who": "gardien",
         "text": "Écoute cette histoire que Jésus a racontée.",
-        "audio": "/audio/fr/cherche/intro-1-e08e4ed6.mp3"
+        "audio": "/audio/fr/cherche/intro-1-6f67e363.mp3"
       }
     ],
     "missing": [
       {
         "who": "lea",
         "text": "Salut ! On joue à la ronde, mais on n'est que trois…",
-        "audio": "/audio/fr/cherche/missing-0-ddc5b491.mp3"
+        "audio": "/audio/fr/cherche/missing-0-98ce64b9.mp3"
       },
       {
         "who": "samy",
         "text": "Timothée jouait avec nous avant. Mais on s'est moqués de lui parce qu'il court lentement… Alors il est parti.",
-        "audio": "/audio/fr/cherche/missing-1-f203872d.mp3"
+        "audio": "/audio/fr/cherche/missing-1-955d43e1.mp3"
       },
       {
         "who": "ana",
         "text": "Il est peut-être caché quelque part près des remparts. Personne n'est allé le chercher.",
-        "audio": "/audio/fr/cherche/missing-2-17234654.mp3"
+        "audio": "/audio/fr/cherche/missing-2-b5bada86.mp3"
       },
       {
         "who": "player",
         "text": "Moi, j'y vais. Tout le monde compte !",
-        "audio": "/audio/fr/cherche/missing-3-11a93a19.mp3"
+        "audio": "/audio/fr/cherche/missing-3-7f8fbb14.mp3"
       }
     ],
     "found": [
       {
         "who": "timothee",
         "text": "Qu'est-ce que tu fais là ? Personne ne veut de moi…",
-        "audio": "/audio/fr/cherche/found-0-51e0fcc7.mp3"
+        "audio": "/audio/fr/cherche/found-0-8b167d38.mp3"
       },
       {
         "who": "player",
         "text": "Ce n'est pas vrai. Je suis là exprès pour toi. Sans toi, il manque quelqu'un !",
-        "audio": "/audio/fr/cherche/found-1-132d4432.mp3"
+        "audio": "/audio/fr/cherche/found-1-b67a8d62.mp3"
       },
       {
         "who": "timothee",
         "text": "C'est vrai ? Bon… d'accord, je viens avec toi.",
-        "audio": "/audio/fr/cherche/found-2-c0ef8e72.mp3"
+        "audio": "/audio/fr/cherche/found-2-56f4c270.mp3"
       }
     ],
     "back": [
@@ -85,34 +85,34 @@
         "who": "lea",
         "text": "Timothée ! Tu es revenu ! Pardon de nous être moqués de toi.",
         "fx": "celebrate",
-        "audio": "/audio/fr/cherche/party-0-5cffd6aa.mp3"
+        "audio": "/audio/fr/cherche/party-0-31ce61fc.mp3"
       },
       {
         "who": "samy",
         "text": "Viens dans la ronde ! On va jouer à un jeu où tout le monde peut gagner.",
-        "audio": "/audio/fr/cherche/party-1-f1cbd9f1.mp3"
+        "audio": "/audio/fr/cherche/party-1-05d79945.mp3"
       },
       {
         "who": "timothee",
         "text": "Merci de m'avoir cherché… Je me sens à nouveau à ma place.",
-        "audio": "/audio/fr/cherche/party-2-c6267492.mp3"
+        "audio": "/audio/fr/cherche/party-2-217df1eb.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
         "text": "Il y a de la joie à Zion aujourd'hui, comme il y a de la joie dans le ciel quand quelqu'un revient vers Dieu.",
-        "audio": "/audio/fr/cherche/debrief-0-cc5639dd.mp3"
+        "audio": "/audio/fr/cherche/debrief-0-333a841c.mp3"
       },
       {
         "who": "gardien",
         "text": "Le berger n'a pas dit : « Tant pis, il m'en reste quatre-vingt-dix-neuf. » Pour lui, chaque brebis comptait.",
-        "audio": "/audio/fr/cherche/debrief-1-5a448747.mp3"
+        "audio": "/audio/fr/cherche/debrief-1-e87007e4.mp3"
       },
       {
         "who": "gardien",
         "text": "Jésus est comme ce berger. Il ne nous oublie jamais. Et il nous apprend à aller chercher ceux qui sont seuls.",
-        "audio": "/audio/fr/cherche/debrief-2-29982eae.mp3"
+        "audio": "/audio/fr/cherche/debrief-2-a7279d3c.mp3"
       }
     ]
   },

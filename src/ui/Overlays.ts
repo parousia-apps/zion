@@ -115,7 +115,7 @@ export class TraitCard {
     this.root.hidden = false;
     $('trait-name').focus({ preventScroll: true });
     audio.play('bell');
-    speech.speak(`${t('trait.heading')}. ${text.trait.name}. ${text.trait.description} ${t('trait.jesus')}. ${text.trait.jesus}`);
+    speech.speak([t('trait.heading'), text.trait.name, text.trait.description, t('trait.jesus'), text.trait.jesus]);
     return new Promise((r) => (this.resolve = r));
   }
 

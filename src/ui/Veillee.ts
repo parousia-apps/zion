@@ -62,9 +62,10 @@ export class Veillee {
   }
 
   /** Le Gardien parle : texte affiché ET lu à voix haute. */
-  private say(text: string): string {
+  private say(text: string | string[]): string {
     speech.speak(text);
-    return `<p class="v-keeper"><span class="v-keeper-name">${esc(t('journal.keeper'))}</span>${esc(typo(text))}</p>`;
+    const shown = Array.isArray(text) ? text.join(' ') : text;
+    return `<p class="v-keeper"><span class="v-keeper-name">${esc(t('journal.keeper'))}</span>${esc(typo(shown))}</p>`;
   }
 
   private render(): void {
@@ -124,12 +125,12 @@ export class Veillee {
       }
       case 'activity':
         s.innerHTML =
-          this.say(`${t('veillee.activityIntro')} ${life.activity}`) +
+          this.say([t('veillee.activityIntro'), life.activity]) +
           `<div class="life-actions v-actions"><button class="btn btn-primary" id="v-next">${esc(t('veillee.toPrayer'))}</button></div>`;
         $('v-next').addEventListener('click', () => this.go('prayer'));
         break;
       case 'prayer': {
-        speech.speak(`${t('veillee.prayerIntro')} ${life.prayer}`);
+        speech.speak([t('veillee.prayerIntro'), life.prayer]);
         s.innerHTML =
           `<p class="v-keeper"><span class="v-keeper-name">${esc(t('journal.keeper'))}</span>${esc(t('veillee.prayerIntro'))}</p>
            <blockquote class="v-prayer">${esc(typo(life.prayer))}</blockquote>
@@ -158,7 +159,7 @@ export class Veillee {
       case 'challenge': {
         const already = save.journal.some((j) => j.questId === this.questId && j.family && Date.now() - j.acceptedAt < 7 * 864e5);
         s.innerHTML =
-          this.say(`${t('veillee.challengeIntro')} ${life.challenge}`) +
+          this.say([t('veillee.challengeIntro'), life.challenge]) +
           `<div class="life-actions v-actions">
              <button class="btn btn-primary" id="v-accept" ${already ? 'disabled' : ''}>${esc(already ? t('life.accepted') : t('veillee.acceptFamily'))}</button>
              <button class="btn btn-light" id="v-next">${esc(t('veillee.finish'))}</button>

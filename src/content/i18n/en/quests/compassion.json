@@ -29,17 +29,17 @@
       {
         "who": "gardien",
         "text": "Welcome to Zion, the City of the Watchers! I am Ezra, Keeper of the tower.",
-        "audio": "/audio/en/compassion/welcome-0-f05b4d7a.mp3"
+        "audio": "/audio/en/compassion/welcome-0-78dc9bfb.mp3"
       },
       {
         "who": "gardien",
         "text": "Here, a watcher doesn't only watch the walls: they watch over people. They notice who needs help.",
-        "audio": "/audio/en/compassion/welcome-1-92109289.mp3"
+        "audio": "/audio/en/compassion/welcome-1-32b53111.mp3"
       },
       {
         "who": "gardien",
         "text": "Would you like to become an apprentice watcher? Then first, listen to a story Jesus told.",
-        "audio": "/audio/en/compassion/welcome-2-5b941888.mp3"
+        "audio": "/audio/en/compassion/welcome-2-2a489342.mp3"
       }
     ],
     "alert": [
@@ -52,7 +52,7 @@
       {
         "who": "gardien",
         "text": "Did you hear that? Someone needs help. People are walking past… What will you do?",
-        "audio": "/audio/en/compassion/alert-1-809baeac.mp3"
+        "audio": "/audio/en/compassion/alert-1-a27d75a8.mp3"
       }
     ],
     "help": [
@@ -64,18 +64,18 @@
       {
         "who": "naomi_sol",
         "text": "Ouch… People just walk past without stopping…",
-        "audio": "/audio/en/compassion/help-1-d7f7a301.mp3"
+        "audio": "/audio/en/compassion/help-1-4b8133c6.mp3"
       },
       {
         "who": "player",
         "text": "I'm stopping. Take my hand, I'll help you up.",
         "fx": "heal",
-        "audio": "/audio/en/compassion/help-2-e0b56cbd.mp3"
+        "audio": "/audio/en/compassion/help-2-f06e1d1b.mp3"
       },
       {
         "who": "naomi_sol",
         "text": "Thank you, that's so kind. Could you walk with me to the house of care?",
-        "audio": "/audio/en/compassion/help-3-e119f76a.mp3"
+        "audio": "/audio/en/compassion/help-3-6d6a8ec6.mp3"
       }
     ],
     "arrive": [
@@ -89,34 +89,34 @@
       {
         "who": "soigneuse",
         "text": "Naomi! Come and sit down, I'll bandage your ankle.",
-        "audio": "/audio/en/compassion/care-0-01665ff0.mp3"
+        "audio": "/audio/en/compassion/care-0-492beb14.mp3"
       },
       {
         "who": "soigneuse",
         "text": "Thank you for bringing her. Many people walked past her. You took the time to stop.",
-        "audio": "/audio/en/compassion/care-1-ca8e278d.mp3"
+        "audio": "/audio/en/compassion/care-1-17b55154.mp3"
       },
       {
         "who": "naomi",
         "text": "I won't forget you. God bless you!",
-        "audio": "/audio/en/compassion/care-2-7e19d12a.mp3"
+        "audio": "/audio/en/compassion/care-2-3e8027dc.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
         "text": "I saw what you did. You were Naomi's neighbour, just like the Samaritan in the story.",
-        "audio": "/audio/en/compassion/debrief-0-a34c256e.mp3"
+        "audio": "/audio/en/compassion/debrief-0-a1fa69e6.mp3"
       },
       {
         "who": "gardien",
         "text": "Jesus doesn't ask us: \"Who deserves my help?\" He asks: \"Who can I be a neighbour to today?\"",
-        "audio": "/audio/en/compassion/debrief-1-50d77776.mp3"
+        "audio": "/audio/en/compassion/debrief-1-b6edb966.mp3"
       },
       {
         "who": "gardien",
         "text": "Your heart saw, and your hands helped. That is compassion.",
-        "audio": "/audio/en/compassion/debrief-2-60618792.mp3"
+        "audio": "/audio/en/compassion/debrief-2-388941d3.mp3"
       }
     ]
   },

@@ -31,12 +31,12 @@
       {
         "who": "gardien",
         "text": "Today I won't just tell you a story. I'll let you live it!",
-        "audio": "/audio/en/fidelite/intro-0-4bdad9c8.mp3"
+        "audio": "/audio/en/fidelite/intro-0-3cda1363.mp3"
       },
       {
         "who": "gardien",
         "text": "Close your eyes… Imagine… We are very, very long ago.",
-        "audio": "/audio/en/fidelite/intro-1-d938010e.mp3"
+        "audio": "/audio/en/fidelite/intro-1-0aff7b43.mp3"
       }
     ],
     "story": [
@@ -65,29 +65,29 @@
       {
         "who": "noe",
         "text": "Hello! You've come just in time, I need help.",
-        "audio": "/audio/en/fidelite/askHelp-0-2d447680.mp3"
+        "audio": "/audio/en/fidelite/askHelp-0-ecb846e3.mp3"
       },
       {
         "who": "noe",
         "text": "People laughed at me: \"A boat, here, so far from the sea?\" But God asked me to, and I trust him.",
-        "audio": "/audio/en/fidelite/askHelp-1-22095383.mp3"
+        "audio": "/audio/en/fidelite/askHelp-1-dc3472f0.mp3"
       },
       {
         "who": "noe",
         "text": "God told me to bring the animals in two by two. Go near the stag and the doe, the horses and the zebras: they will follow you to the ark's ramp.",
-        "audio": "/audio/en/fidelite/askHelp-2-6e702341.mp3"
+        "audio": "/audio/en/fidelite/askHelp-2-cf6dcf13.mp3"
       }
     ],
     "allIn": [
       {
         "who": "noe",
         "text": "Well done! All the animals are safe.",
-        "audio": "/audio/en/fidelite/allIn-0-d58ec689.mp3"
+        "audio": "/audio/en/fidelite/allIn-0-b9562c7b.mp3"
       },
       {
         "who": "noe",
         "text": "I'm going into the ark. Come quickly, the first drops are falling!",
-        "audio": "/audio/en/fidelite/allIn-1-fc20c9f9.mp3"
+        "audio": "/audio/en/fidelite/allIn-1-9df51417.mp3"
       }
     ],
     "flood": [
@@ -130,39 +130,39 @@
       {
         "who": "ruth",
         "text": "Ah, there you are! I have to go and visit my sister, on the other side of the hill.",
-        "audio": "/audio/en/fidelite/promise-0-560bd4b1.mp3"
+        "audio": "/audio/en/fidelite/promise-0-4c1b1b02.mp3"
       },
       {
         "who": "ruth",
         "text": "The sky is turning grey… My three sheep are wandering around the city. Can you promise to bring them back into the pen before the storm?",
-        "audio": "/audio/en/fidelite/promise-1-949f38d5.mp3"
+        "audio": "/audio/en/fidelite/promise-1-379fd393.mp3"
       },
       {
         "who": "player",
         "text": "I promise, Grandma Ruth!",
-        "audio": "/audio/en/fidelite/promise-2-d5ada142.mp3"
+        "audio": "/audio/en/fidelite/promise-2-b829a943.mp3"
       },
       {
         "who": "ruth",
         "text": "Thank you. I know I can count on you.",
-        "audio": "/audio/en/fidelite/promise-3-b48af4f3.mp3"
+        "audio": "/audio/en/fidelite/promise-3-83bce92e.mp3"
       }
     ],
     "tease": [
       {
         "who": "moqueur1",
         "text": "Hey! Forget those sheep and come and play with us!",
-        "audio": "/audio/en/fidelite/tease-0-add9cb4f.mp3"
+        "audio": "/audio/en/fidelite/tease-0-cca83196.mp3"
       },
       {
         "who": "moqueur2",
         "text": "It's never going to rain, look at the sky! You're tiring yourself out for nothing!",
-        "audio": "/audio/en/fidelite/tease-1-8045494e.mp3"
+        "audio": "/audio/en/fidelite/tease-1-b2c122a0.mp3"
       },
       {
         "who": "player",
         "text": "I promised Grandma Ruth. A promise is a promise… even when others laugh.",
-        "audio": "/audio/en/fidelite/tease-2-38ee7b31.mp3"
+        "audio": "/audio/en/fidelite/tease-2-75b9e592.mp3"
       }
     ],
     "storm": [
@@ -181,7 +181,7 @@
       {
         "who": "moqueur1",
         "text": "You were right… You kept your promise. Well done!",
-        "audio": "/audio/en/fidelite/storm-2-71e6ab8e.mp3"
+        "audio": "/audio/en/fidelite/storm-2-ecbaaaab.mp3"
       },
       {
         "who": "narrator",
@@ -194,29 +194,29 @@
       {
         "who": "ruth",
         "text": "My sheep are all here, safe and sound! You kept your word.",
-        "audio": "/audio/en/fidelite/thanks-0-a2a3f1cb.mp3"
+        "audio": "/audio/en/fidelite/thanks-0-69104f45.mp3"
       },
       {
         "who": "ruth",
         "text": "When someone keeps their promises, you can trust them. You're like Jesus, you know.",
-        "audio": "/audio/en/fidelite/thanks-1-126df039.mp3"
+        "audio": "/audio/en/fidelite/thanks-1-fdacbe54.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
         "text": "Noah trusted God before he saw a single drop of rain. And you kept your promise even when others laughed.",
-        "audio": "/audio/en/fidelite/debrief-0-4d9b86db.mp3"
+        "audio": "/audio/en/fidelite/debrief-0-a21d5362.mp3"
       },
       {
         "who": "gardien",
         "text": "God is faithful: he never forgets what he has promised. Jesus told us: \"I am with you always.\"",
-        "audio": "/audio/en/fidelite/debrief-1-4542a032.mp3"
+        "audio": "/audio/en/fidelite/debrief-1-31cb7efc.mp3"
       },
       {
         "who": "gardien",
         "text": "A faithful watcher is someone others can count on. Thank you for being one!",
-        "audio": "/audio/en/fidelite/debrief-2-1bafb874.mp3"
+        "audio": "/audio/en/fidelite/debrief-2-81eee523.mp3"
       }
     ]
   },

@@ -42,12 +42,12 @@
       {
         "who": "gardien",
         "text": "Today I'll tell you a tale from very far away, from the town of ERO. It's about fear… and peace.",
-        "audio": "/audio/en/amani/intro-0-f2a49750.mp3"
+        "audio": "/audio/en/amani/intro-0-66ff3349.mp3"
       },
       {
         "who": "gardien",
         "text": "Close your eyes. In this tale, you are Nala, a brave little girl.",
-        "audio": "/audio/en/amani/intro-1-08153359.mp3"
+        "audio": "/audio/en/amani/intro-1-2c3e2897.mp3"
       }
     ],
     "rain": [
@@ -72,7 +72,7 @@
       {
         "who": "enfant1",
         "text": "Help! Thunder! Everyone go home!",
-        "audio": "/audio/en/amani/thunder-1-ac90e83b.mp3"
+        "audio": "/audio/en/amani/thunder-1-9fbffa24.mp3"
       },
       {
         "who": "narrator",
@@ -84,13 +84,13 @@
       {
         "who": "player",
         "text": "What is it trying to tell us? Why does this voice rumble so loud?",
-        "audio": "/audio/en/amani/ask-0-77fb8e7f.mp3"
+        "audio": "/audio/en/amani/ask-0-d9666e08.mp3"
       },
       {
         "who": "player",
         "text": "Who are you, and why do you rumble? If you want to talk to me, just say hello. My name is Nala, and I'd like to be your friend!",
         "snd": "thunder",
-        "audio": "/audio/en/amani/ask-1-a6c8f121.mp3"
+        "audio": "/audio/en/amani/ask-1-feec2c22.mp3"
       },
       {
         "who": "narrator",
@@ -100,7 +100,7 @@
       {
         "who": "player",
         "text": "There's a voice trying to talk to us. But the thunder frightens us and stops us from hearing the smiling voice.",
-        "audio": "/audio/en/amani/ask-3-7192e8be.mp3"
+        "audio": "/audio/en/amani/ask-3-2be949ba.mp3"
       }
     ],
     "bed": [
@@ -119,40 +119,40 @@
       {
         "who": "amani",
         "text": "Hello, Nala!",
-        "audio": "/audio/en/amani/dream-1-a08ca62a.mp3"
+        "audio": "/audio/en/amani/dream-1-c894c050.mp3"
       }
     ],
     "star": [
       {
         "who": "player",
         "text": "Hello! How do you know my name? Who are you? And what do you want?",
-        "audio": "/audio/en/amani/star-0-14ddab1b.mp3"
+        "audio": "/audio/en/amani/star-0-5fe51810.mp3"
       },
       {
         "who": "amani",
         "text": "Me? I know everyone's name. I heard you say we should introduce ourselves and ask if we could be friends!",
-        "audio": "/audio/en/amani/star-1-78cf1734.mp3"
+        "audio": "/audio/en/amani/star-1-3431c3d6.mp3"
       },
       {
         "who": "player",
         "text": "Are you the voice the thunder stops us from hearing?",
-        "audio": "/audio/en/amani/star-2-4c00bc15.mp3"
+        "audio": "/audio/en/amani/star-2-1a13c2b8.mp3"
       },
       {
         "who": "amani",
         "text": "You could hear the smiling voice because you were brave. The rumbling the others hear is really the fear in their hearts. That's what stops them from hearing me.",
-        "audio": "/audio/en/amani/star-3-570b374b.mp3"
+        "audio": "/audio/en/amani/star-3-b40879a0.mp3"
       },
       {
         "who": "amani",
         "text": "Don't let fear rule you. Stay brave, think hard about me, and you'll hear me more and more clearly.",
-        "audio": "/audio/en/amani/star-4-d6c24b24.mp3"
+        "audio": "/audio/en/amani/star-4-34acb281.mp3"
       },
       {
         "who": "amani",
         "text": "My name is Amani, which means peace! When the thunder rumbles again, stay calm, be still, and you will hear me. Go and tell the whole village!",
         "fx": "glow",
-        "audio": "/audio/en/amani/star-5-47eb97bc.mp3"
+        "audio": "/audio/en/amani/star-5-128d109b.mp3"
       }
     ],
     "wake": [
@@ -165,50 +165,50 @@
         "who": "player",
         "text": "Amani, Amani, there is peace in my heart! I'm not afraid anymore! I'm not afraid anymore!",
         "fx": "harp",
-        "audio": "/audio/en/amani/wake-1-c7a4f201.mp3"
+        "audio": "/audio/en/amani/wake-1-ed57f318.mp3"
       }
     ],
     "mote": [
       {
         "who": "player",
         "text": "Môté! Amani, Amani… I saw him!",
-        "audio": "/audio/en/amani/mote-0-d233a636.mp3"
+        "audio": "/audio/en/amani/mote-0-4b11ed9f.mp3"
       },
       {
         "who": "mote",
         "text": "What are you talking about, Nala? I don't understand.",
-        "audio": "/audio/en/amani/mote-1-f1600c56.mp3"
+        "audio": "/audio/en/amani/mote-1-52023751.mp3"
       },
       {
         "who": "player",
         "text": "I saw him in my dream! It's fear that stops us from hearing the smiling voice. When the thunder rumbles, we just need to think hard about him and sing: \"Amani, Amani, there is peace in my heart!\"",
-        "audio": "/audio/en/amani/mote-2-870a3bff.mp3"
+        "audio": "/audio/en/amani/mote-2-f8dd6454.mp3"
       },
       {
         "who": "mote",
         "text": "Now there are two of us who hear the smiling voice! Go, Nala: invite the townspeople to the square.",
-        "audio": "/audio/en/amani/mote-3-896c2bb9.mp3"
+        "audio": "/audio/en/amani/mote-3-0e1fa1ab.mp3"
       }
     ],
     "hab1": [
       {
         "who": "hab1",
         "text": "Nala? Come, it looks like you have good news! I'll follow you.",
-        "audio": "/audio/en/amani/hab1-0-c0b72ee4.mp3"
+        "audio": "/audio/en/amani/hab1-0-64d97f39.mp3"
       }
     ],
     "hab2": [
       {
         "who": "hab2",
         "text": "A smiling voice? I want to hear that. Let's go!",
-        "audio": "/audio/en/amani/hab2-0-aa1f03e2.mp3"
+        "audio": "/audio/en/amani/hab2-0-21b98479.mp3"
       }
     ],
     "hab3": [
       {
         "who": "hab3",
         "text": "No more fear of thunder? Oh, if only… I'm coming with you.",
-        "audio": "/audio/en/amani/hab3-0-b0498751.mp3"
+        "audio": "/audio/en/amani/hab3-0-003ee7f3.mp3"
       }
     ],
     "together": [
@@ -220,13 +220,13 @@
       {
         "who": "hab2",
         "text": "All this time, it was fear that stopped us from hearing Amani? Oh, what joy!",
-        "audio": "/audio/en/amani/together-1-1ffeb443.mp3"
+        "audio": "/audio/en/amani/together-1-9250f6cd.mp3"
       },
       {
         "who": "hab1",
         "text": "We are free from fear! Let's all sing together: Amani, Amani, there is peace in my heart!",
         "fx": "rainbow",
-        "audio": "/audio/en/amani/together-2-d55af9f4.mp3"
+        "audio": "/audio/en/amani/together-2-83bdea04.mp3"
       },
       {
         "who": "narrator",
@@ -253,30 +253,30 @@
       {
         "who": "mila",
         "text": "I'm scared of the thunder… It's too loud…",
-        "audio": "/audio/en/amani/mila-0-b5ac2c3f.mp3"
+        "audio": "/audio/en/amani/mila-0-db2c0e55.mp3"
       },
       {
         "who": "player",
         "text": "I used to be scared too. Breathe with me, slowly… You know, one day during a storm, Jesus said to the wind: \"Peace! Be still!\" And everything became calm.",
-        "audio": "/audio/en/amani/mila-1-e96daf07.mp3"
+        "audio": "/audio/en/amani/mila-1-6c631ccb.mp3"
       },
       {
         "who": "player",
         "text": "Let's sing together: Amani, Amani, there is peace in my heart! I'm not afraid anymore!",
         "fx": "harp",
-        "audio": "/audio/en/amani/mila-2-e1042f06.mp3"
+        "audio": "/audio/en/amani/mila-2-9ee95f07.mp3"
       },
       {
         "who": "mila",
         "text": "I'm not afraid anymore… Will you walk with me to the tower?",
-        "audio": "/audio/en/amani/mila-3-a6dc062e.mp3"
+        "audio": "/audio/en/amani/mila-3-a57362b7.mp3"
       }
     ],
     "shelter": [
       {
         "who": "gardien",
         "text": "Come in, come in! You're safe here. Well done for staying with her.",
-        "audio": "/audio/en/amani/shelter-0-1e4f8572.mp3"
+        "audio": "/audio/en/amani/shelter-0-47c88d8c.mp3"
       },
       {
         "who": "narrator",
@@ -289,17 +289,17 @@
       {
         "who": "gardien",
         "text": "Fear makes a lot of noise in our hearts, like thunder. It stops us from hearing God.",
-        "audio": "/audio/en/amani/debrief-0-c6157336.mp3"
+        "audio": "/audio/en/amani/debrief-0-1c38da4a.mp3"
       },
       {
         "who": "gardien",
         "text": "In the Bible, the prophet Elijah heard God not in the wind or the thunder, but in a gentle whisper.",
-        "audio": "/audio/en/amani/debrief-1-788c1336.mp3"
+        "audio": "/audio/en/amani/debrief-1-f23d4849.mp3"
       },
       {
         "who": "gardien",
         "text": "And Jesus tells us: \"Peace I leave with you. My peace I give to you.\" When you're afraid, stop, think of him… and listen to his smiling voice.",
-        "audio": "/audio/en/amani/debrief-2-8a120644.mp3"
+        "audio": "/audio/en/amani/debrief-2-a30d8195.mp3"
       }
     ]
   },

@@ -80,7 +80,11 @@ export class DialogBox {
     const o = this.opts!;
     this.name.textContent = o.names[line.who] ?? line.who;
     this.badge.style.background = o.colors[line.who] ?? '#ffc21a';
-    this.text.textContent = typo(line.text);
+    // Le nom est aussi dans la région aria-live (caché à l'écran) : le lecteur d'écran dit qui parle.
+    const who = document.createElement('span');
+    who.className = 'sr-only';
+    who.textContent = line.who === 'narrator' ? '' : `${o.names[line.who] ?? line.who} : `;
+    this.text.replaceChildren(who, typo(line.text));
     const last = this.index === this.lines.length - 1;
     this.nextLabel.textContent = last ? t('dialog.close') : t('dialog.next');
     // Rejoue l'animation d'apparition à chaque réplique.

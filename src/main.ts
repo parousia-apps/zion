@@ -47,6 +47,7 @@ function applySettings(): void {
   applySettingsToDocument(settings);
   speech.enabled = settings.readAloud;
   speech.rate = settings.speechRate;
+  if (speech.lang !== currentLanguage().speech || !speech.phrasesLoaded) void speech.loadPhrases(currentLanguage().code);
   speech.lang = currentLanguage().speech;
   speech.voiceURI = settings.voice;
   audio.enabled = settings.sfx;
@@ -183,7 +184,7 @@ function goSetup(): void {
   });
   sync();
   showScreen('screen-setup');
-  speech.speak(`${t('setup.heading')} ${t('setup.intro')}`);
+  speech.speak([t('setup.heading'), t('setup.intro')]);
 }
 
 function renderStories(): void {
@@ -313,7 +314,7 @@ function showEnd(id: string): void {
   showScreen('screen-end');
   music.play('joy');
   audio.celebrate();
-  speech.speak(`${t('end.bravo')} ${t('end.missionDone')}. ${text.trait.name}. ${text.ending.message}`);
+  speech.speak([t('end.bravo'), t('end.missionDone'), text.trait.name, text.ending.message]);
 }
 
 /* ------------------------------------------------------------ démarrage */

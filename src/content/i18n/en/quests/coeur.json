@@ -34,12 +34,12 @@
       {
         "who": "gardien",
         "text": "In the Bible, there's a boy nobody noticed. Not even his own family!",
-        "audio": "/audio/en/coeur/intro-0-d5f7e0c5.mp3"
+        "audio": "/audio/en/coeur/intro-0-869d8efd.mp3"
       },
       {
         "who": "gardien",
         "text": "Come… Let's go to Bethlehem, about three thousand years ago.",
-        "audio": "/audio/en/coeur/intro-1-ea93fae4.mp3"
+        "audio": "/audio/en/coeur/intro-1-fd080fb9.mp3"
       }
     ],
     "story": [
@@ -57,7 +57,7 @@
         "who": "player",
         "text": "Oh no! Three sheep have wandered off. I must bring them back to the sheepfold.",
         "snd": "bleat",
-        "audio": "/audio/en/coeur/story-2-1019a467.mp3"
+        "audio": "/audio/en/coeur/story-2-6a30550e.mp3"
       }
     ],
     "safe": [
@@ -65,7 +65,7 @@
         "who": "player",
         "text": "There, the whole flock is safe. A good shepherd watches over every one of his sheep.",
         "fx": "sunset",
-        "audio": "/audio/en/coeur/safe-0-a7d42ce1.mp3"
+        "audio": "/audio/en/coeur/safe-0-e616edc0.mp3"
       },
       {
         "who": "narrator",
@@ -83,34 +83,34 @@
       {
         "who": "player",
         "text": "The Lord is my shepherd, I have everything I need.",
-        "audio": "/audio/en/coeur/psalm-1-32e10e5f.mp3"
+        "audio": "/audio/en/coeur/psalm-1-21aed0ab.mp3"
       },
       {
         "who": "player",
         "text": "He leads me to green grass and calm water. He takes care of me.",
-        "audio": "/audio/en/coeur/psalm-2-42a8cc1a.mp3"
+        "audio": "/audio/en/coeur/psalm-2-801293c2.mp3"
       },
       {
         "who": "player",
         "text": "Even when I'm afraid, I'm not alone: the Lord is with me.",
-        "audio": "/audio/en/coeur/psalm-3-38768574.mp3"
+        "audio": "/audio/en/coeur/psalm-3-ebd96b68.mp3"
       }
     ],
     "call": [
       {
         "who": "serviteur",
         "text": "David! David! Your father is calling you. The prophet Samuel is at the house!",
-        "audio": "/audio/en/coeur/call-0-5ed2fd15.mp3"
+        "audio": "/audio/en/coeur/call-0-9bde0e34.mp3"
       },
       {
         "who": "serviteur",
         "text": "He has seen all your brothers, and he said: \"It's none of them. Don't you have another son?\"",
-        "audio": "/audio/en/coeur/call-1-d2653e55.mp3"
+        "audio": "/audio/en/coeur/call-1-4a79f650.mp3"
       },
       {
         "who": "player",
         "text": "Me? But I'm the youngest… I'm coming!",
-        "audio": "/audio/en/coeur/call-2-58a741f4.mp3"
+        "audio": "/audio/en/coeur/call-2-c312bfe7.mp3"
       }
     ],
     "anoint": [
@@ -127,7 +127,7 @@
       {
         "who": "samuel",
         "text": "He is the one. God has chosen David!",
-        "audio": "/audio/en/coeur/anoint-2-cb3891b1.mp3"
+        "audio": "/audio/en/coeur/anoint-2-aed0a170.mp3"
       },
       {
         "who": "narrator",
@@ -138,34 +138,34 @@
       {
         "who": "jesse",
         "text": "My youngest son… chosen by God!",
-        "audio": "/audio/en/coeur/anoint-4-8a58da10.mp3"
+        "audio": "/audio/en/coeur/anoint-4-b53d6f30.mp3"
       }
     ],
     "festival": [
       {
         "who": "myriam",
         "text": "Ah, our apprentice watcher! Tonight is the Festival of Lights, and I'm short of musicians.",
-        "audio": "/audio/en/coeur/festival-0-ca3acff0.mp3"
+        "audio": "/audio/en/coeur/festival-0-de18d7a4.mp3"
       },
       {
         "who": "myriam",
         "text": "Ben plays the drum at the market. Sarah plays the flute near the houses to the east. Bring them to the stage!",
-        "audio": "/audio/en/coeur/festival-1-0aa189d2.mp3"
+        "audio": "/audio/en/coeur/festival-1-ddbb4010.mp3"
       },
       {
         "who": "player",
         "text": "And Eli? He plays the harp beautifully.",
-        "audio": "/audio/en/coeur/festival-2-44ddb8ab.mp3"
+        "audio": "/audio/en/coeur/festival-2-f33d77c6.mp3"
       },
       {
         "who": "myriam",
         "text": "Eli? Erm… He uses a wheelchair, and the stage has steps. I hadn't thought of him…",
-        "audio": "/audio/en/coeur/festival-3-def0f94e.mp3"
+        "audio": "/audio/en/coeur/festival-3-8cdaaf86.mp3"
       },
       {
         "who": "player",
         "text": "God looks at the heart. I'll go and get him too!",
-        "audio": "/audio/en/coeur/festival-4-61c76f15.mp3"
+        "audio": "/audio/en/coeur/festival-4-5b191e74.mp3"
       }
     ],
     "ben": [
@@ -173,43 +173,43 @@
         "who": "ben",
         "text": "The festival? With pleasure, I'll bring my drum!",
         "snd": "drum",
-        "audio": "/audio/en/coeur/ben-0-5877b593.mp3"
+        "audio": "/audio/en/coeur/ben-0-b4d3ff4b.mp3"
       }
     ],
     "sarah": [
       {
         "who": "sarah",
         "text": "My flute is ready. Let's go!",
-        "audio": "/audio/en/coeur/sarah-0-fbd0a6fb.mp3"
+        "audio": "/audio/en/coeur/sarah-0-47643271.mp3"
       }
     ],
     "elie": [
       {
         "who": "elie",
         "text": "Me? Usually nobody thinks of me for this kind of thing…",
-        "audio": "/audio/en/coeur/elie-0-d6e34cf9.mp3"
+        "audio": "/audio/en/coeur/elie-0-55bf1c4c.mp3"
       },
       {
         "who": "player",
         "text": "I'm thinking of you. You play the harp like King David!",
-        "audio": "/audio/en/coeur/elie-1-3a5f57bc.mp3"
+        "audio": "/audio/en/coeur/elie-1-d98f5195.mp3"
       },
       {
         "who": "elie",
         "text": "Then I'll come. Thank you for choosing me.",
-        "audio": "/audio/en/coeur/elie-2-7aa6fb7a.mp3"
+        "audio": "/audio/en/coeur/elie-2-86526dce.mp3"
       }
     ],
     "ready": [
       {
         "who": "myriam",
         "text": "You're all here! But wait… Eli can't climb the steps.",
-        "audio": "/audio/en/coeur/ready-0-bd67a5b3.mp3"
+        "audio": "/audio/en/coeur/ready-0-6aa31403.mp3"
       },
       {
         "who": "myriam",
         "text": "I have an idea: let's put in a ramp. A party where someone is left at the bottom isn't a real party!",
-        "audio": "/audio/en/coeur/ready-1-cd9f4652.mp3"
+        "audio": "/audio/en/coeur/ready-1-7712c75f.mp3"
       }
     ],
     "concert": [
@@ -228,24 +228,24 @@
         "who": "myriam",
         "text": "Bravo! What music! Without Eli, the best part would have been missing.",
         "fx": "celebrate",
-        "audio": "/audio/en/coeur/concert-2-b5545556.mp3"
+        "audio": "/audio/en/coeur/concert-2-d4c4c7d8.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
         "text": "Samuel nearly chose the tallest and strongest. But God looks at the heart.",
-        "audio": "/audio/en/coeur/debrief-0-abf5eae5.mp3"
+        "audio": "/audio/en/coeur/debrief-0-8d3a8093.mp3"
       },
       {
         "who": "gardien",
         "text": "Today you saw what others didn't: Eli's talent and Eli's heart.",
-        "audio": "/audio/en/coeur/debrief-1-d173dee4.mp3"
+        "audio": "/audio/en/coeur/debrief-1-c068fd44.mp3"
       },
       {
         "who": "gardien",
         "text": "Jesus did the same: he welcomed children, the sick, those who were left out. You are now a true watcher of Zion!",
-        "audio": "/audio/en/coeur/debrief-2-5cabe8a1.mp3"
+        "audio": "/audio/en/coeur/debrief-2-2bfa2c56.mp3"
       }
     ]
   },
