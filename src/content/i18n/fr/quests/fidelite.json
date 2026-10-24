@@ -30,160 +30,193 @@
     "intro": [
       {
         "who": "gardien",
-        "text": "Aujourd'hui, je ne vais pas seulement te raconter une histoire. Je vais te la faire vivre !"
+        "text": "Aujourd'hui, je ne vais pas seulement te raconter une histoire. Je vais te la faire vivre !",
+        "audio": "/audio/fr/fidelite/intro-0-bd36ad71.mp3"
       },
       {
         "who": "gardien",
-        "text": "Ferme les yeux… Imagine… Nous sommes il y a très, très longtemps."
+        "text": "Ferme les yeux… Imagine… Nous sommes il y a très, très longtemps.",
+        "audio": "/audio/fr/fidelite/intro-1-f2fe8af2.mp3"
       }
     ],
     "story": [
       {
         "who": "narrator",
-        "text": "Il y a très longtemps, les gens sur la terre faisaient beaucoup de mal. Ils avaient oublié Dieu."
+        "text": "Il y a très longtemps, les gens sur la terre faisaient beaucoup de mal. Ils avaient oublié Dieu.",
+        "audio": "/audio/fr/fidelite/story-0-35c7b162.mp3"
       },
       {
         "who": "narrator",
-        "text": "Mais un homme, Noé, aimait Dieu et l'écoutait. Dieu lui dit : « Construis une grande arche, un énorme bateau en bois. »"
+        "text": "Mais un homme, Noé, aimait Dieu et l'écoutait. Dieu lui dit : « Construis une grande arche, un énorme bateau en bois. »",
+        "audio": "/audio/fr/fidelite/story-1-e02d7c27.mp3"
       },
       {
         "who": "narrator",
-        "text": "« Un déluge va venir. Je veux te protéger, toi, ta famille et les animaux. »"
+        "text": "« Un déluge va venir. Je veux te protéger, toi, ta famille et les animaux. »",
+        "audio": "/audio/fr/fidelite/story-2-76d8eb3a.mp3"
       },
       {
         "who": "narrator",
-        "text": "Noé a obéi. Il a construit l'arche pendant des années, alors qu'il n'y avait pas un nuage dans le ciel ! Va parler à Noé."
+        "text": "Noé a obéi. Il a construit l'arche pendant des années, alors qu'il n'y avait pas un nuage dans le ciel ! Va parler à Noé.",
+        "audio": "/audio/fr/fidelite/story-3-bada7837.mp3"
       }
     ],
     "askHelp": [
       {
         "who": "noe",
-        "text": "Bonjour ! Tu tombes bien, j'ai besoin d'aide."
+        "text": "Bonjour ! Tu tombes bien, j'ai besoin d'aide.",
+        "audio": "/audio/fr/fidelite/askHelp-0-0641da78.mp3"
       },
       {
         "who": "noe",
-        "text": "Les gens se moquaient de moi : « Un bateau, ici, si loin de la mer ? » Mais Dieu me l'a demandé, et je lui fais confiance."
+        "text": "Les gens se moquaient de moi : « Un bateau, ici, si loin de la mer ? » Mais Dieu me l'a demandé, et je lui fais confiance.",
+        "audio": "/audio/fr/fidelite/askHelp-1-305a6601.mp3"
       },
       {
         "who": "noe",
-        "text": "Dieu a dit de faire entrer les animaux deux par deux. Approche-toi du cerf et de la biche, des chevaux et des zèbres : ils te suivront jusqu'à la rampe de l'arche."
+        "text": "Dieu a dit de faire entrer les animaux deux par deux. Approche-toi du cerf et de la biche, des chevaux et des zèbres : ils te suivront jusqu'à la rampe de l'arche.",
+        "audio": "/audio/fr/fidelite/askHelp-2-628a7838.mp3"
       }
     ],
     "allIn": [
       {
         "who": "noe",
-        "text": "Bravo ! Tous les animaux sont à l'abri."
+        "text": "Bravo ! Tous les animaux sont à l'abri.",
+        "audio": "/audio/fr/fidelite/allIn-0-0a450605.mp3"
       },
       {
         "who": "noe",
-        "text": "J'entre dans l'arche. Viens vite toi aussi, les premières gouttes arrivent !"
+        "text": "J'entre dans l'arche. Viens vite toi aussi, les premières gouttes arrivent !",
+        "audio": "/audio/fr/fidelite/allIn-1-5fc47394.mp3"
       }
     ],
     "flood": [
       {
         "who": "narrator",
         "text": "Dieu ferme lui-même la porte de l'arche. Alors la pluie se met à tomber…",
-        "fx": "rain"
+        "fx": "rain",
+        "audio": "/audio/fr/fidelite/flood-0-3e8d53da.mp3"
       },
       {
         "who": "narrator",
         "text": "Il pleut pendant quarante jours et quarante nuits. L'eau recouvre toute la terre.",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/fr/fidelite/flood-1-a65bafca.mp3"
       },
       {
         "who": "narrator",
-        "text": "Mais dans l'arche, Noé, sa famille et les animaux sont en sécurité. Dieu ne les a pas oubliés."
+        "text": "Mais dans l'arche, Noé, sa famille et les animaux sont en sécurité. Dieu ne les a pas oubliés.",
+        "audio": "/audio/fr/fidelite/flood-2-8e0df3b2.mp3"
       },
       {
         "who": "narrator",
         "text": "Un jour, la pluie s'arrête. Noé envoie une colombe. Elle revient avec une feuille d'olivier dans le bec : la terre sèche est revenue !",
-        "fx": "dove"
+        "fx": "dove",
+        "audio": "/audio/fr/fidelite/flood-3-b7a89693.mp3"
       },
       {
         "who": "narrator",
         "text": "Tout le monde sort de l'arche. Et dans le ciel apparaît un arc-en-ciel.",
-        "fx": "rainbow"
+        "fx": "rainbow",
+        "audio": "/audio/fr/fidelite/flood-4-d3fc1fa7.mp3"
       },
       {
         "who": "narrator",
-        "text": "Dieu dit : « C'est le signe de ma promesse : plus jamais un déluge ne détruira la terre. » Dieu tient toujours ses promesses."
+        "text": "Dieu dit : « C'est le signe de ma promesse : plus jamais un déluge ne détruira la terre. » Dieu tient toujours ses promesses.",
+        "audio": "/audio/fr/fidelite/flood-5-f847906c.mp3"
       }
     ],
     "promise": [
       {
         "who": "ruth",
-        "text": "Ah, te voilà ! Je dois partir voir ma sœur, de l'autre côté de la colline."
+        "text": "Ah, te voilà ! Je dois partir voir ma sœur, de l'autre côté de la colline.",
+        "audio": "/audio/fr/fidelite/promise-0-c37fd8fb.mp3"
       },
       {
         "who": "ruth",
-        "text": "Le ciel devient gris… Mes trois brebis se promènent dans la cité. Peux-tu me promettre de les ramener dans l'enclos avant l'orage ?"
+        "text": "Le ciel devient gris… Mes trois brebis se promènent dans la cité. Peux-tu me promettre de les ramener dans l'enclos avant l'orage ?",
+        "audio": "/audio/fr/fidelite/promise-1-dacaf500.mp3"
       },
       {
         "who": "player",
-        "text": "Je te le promets, Mamie Ruth !"
+        "text": "Je te le promets, Mamie Ruth !",
+        "audio": "/audio/fr/fidelite/promise-2-990d8ce0.mp3"
       },
       {
         "who": "ruth",
-        "text": "Merci. Je sais que je peux compter sur toi."
+        "text": "Merci. Je sais que je peux compter sur toi.",
+        "audio": "/audio/fr/fidelite/promise-3-e81fd0e3.mp3"
       }
     ],
     "tease": [
       {
         "who": "moqueur1",
-        "text": "Hé ! Laisse ces brebis et viens jouer avec nous !"
+        "text": "Hé ! Laisse ces brebis et viens jouer avec nous !",
+        "audio": "/audio/fr/fidelite/tease-0-e408c47e.mp3"
       },
       {
         "who": "moqueur2",
-        "text": "Il ne va jamais pleuvoir, regarde le ciel ! Tu te fatigues pour rien !"
+        "text": "Il ne va jamais pleuvoir, regarde le ciel ! Tu te fatigues pour rien !",
+        "audio": "/audio/fr/fidelite/tease-1-8c7b41da.mp3"
       },
       {
         "who": "player",
-        "text": "J'ai promis à Mamie Ruth. Une promesse, ça se tient… même quand les autres se moquent."
+        "text": "J'ai promis à Mamie Ruth. Une promesse, ça se tient… même quand les autres se moquent.",
+        "audio": "/audio/fr/fidelite/tease-2-916451b5.mp3"
       }
     ],
     "storm": [
       {
         "who": "narrator",
         "text": "À peine la dernière brebis est-elle rentrée que la pluie se met à tomber très fort !",
-        "fx": "rain"
+        "fx": "rain",
+        "audio": "/audio/fr/fidelite/storm-0-636e225d.mp3"
       },
       {
         "who": "narrator",
         "text": "Les brebis sont bien au sec. Les enfants courent se mettre à l'abri.",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/fr/fidelite/storm-1-0013ab2c.mp3"
       },
       {
         "who": "moqueur1",
-        "text": "Tu avais raison… Tu as tenu ta promesse. Bravo !"
+        "text": "Tu avais raison… Tu as tenu ta promesse. Bravo !",
+        "audio": "/audio/fr/fidelite/storm-2-117e0e11.mp3"
       },
       {
         "who": "narrator",
         "text": "Puis le soleil revient, et un arc-en-ciel s'étend au-dessus de Zion, comme une promesse.",
-        "fx": "rainbow"
+        "fx": "rainbow",
+        "audio": "/audio/fr/fidelite/storm-3-4a9437ad.mp3"
       }
     ],
     "thanks": [
       {
         "who": "ruth",
-        "text": "Mes brebis sont toutes là, bien à l'abri ! Tu as tenu parole."
+        "text": "Mes brebis sont toutes là, bien à l'abri ! Tu as tenu parole.",
+        "audio": "/audio/fr/fidelite/thanks-0-95c41a11.mp3"
       },
       {
         "who": "ruth",
-        "text": "Quand quelqu'un tient ses promesses, on peut lui faire confiance. Tu ressembles à Jésus, tu sais."
+        "text": "Quand quelqu'un tient ses promesses, on peut lui faire confiance. Tu ressembles à Jésus, tu sais.",
+        "audio": "/audio/fr/fidelite/thanks-1-f8a1d04d.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
-        "text": "Noé a fait confiance à Dieu avant de voir la moindre goutte de pluie. Et toi, tu as tenu ta promesse malgré les moqueries."
+        "text": "Noé a fait confiance à Dieu avant de voir la moindre goutte de pluie. Et toi, tu as tenu ta promesse malgré les moqueries.",
+        "audio": "/audio/fr/fidelite/debrief-0-84fb7756.mp3"
       },
       {
         "who": "gardien",
-        "text": "Dieu est fidèle : il n'oublie jamais ce qu'il a promis. Jésus nous a dit : « Je suis avec vous tous les jours. »"
+        "text": "Dieu est fidèle : il n'oublie jamais ce qu'il a promis. Jésus nous a dit : « Je suis avec vous tous les jours. »",
+        "audio": "/audio/fr/fidelite/debrief-1-277f2aa0.mp3"
       },
       {
         "who": "gardien",
-        "text": "Un veilleur fidèle, c'est quelqu'un sur qui on peut compter. Merci d'en être un !"
+        "text": "Un veilleur fidèle, c'est quelqu'un sur qui on peut compter. Merci d'en être un !",
+        "audio": "/audio/fr/fidelite/debrief-2-1ced2df9.mp3"
       }
     ]
   },

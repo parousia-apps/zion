@@ -41,221 +41,265 @@
     "intro": [
       {
         "who": "gardien",
-        "text": "Today I'll tell you a tale from very far away, from the town of ERO. It's about fear… and peace."
+        "text": "Today I'll tell you a tale from very far away, from the town of ERO. It's about fear… and peace.",
+        "audio": "/audio/en/amani/intro-0-f2a49750.mp3"
       },
       {
         "who": "gardien",
-        "text": "Close your eyes. In this tale, you are Nala, a brave little girl."
+        "text": "Close your eyes. In this tale, you are Nala, a brave little girl.",
+        "audio": "/audio/en/amani/intro-1-08153359.mp3"
       }
     ],
     "rain": [
       {
         "who": "narrator",
-        "text": "One day of pouring rain, so much water flowed that the streets were flooded. The people of ERO all took shelter in their homes."
+        "text": "One day of pouring rain, so much water flowed that the streets were flooded. The people of ERO all took shelter in their homes.",
+        "audio": "/audio/en/amani/rain-0-df9a1195.mp3"
       },
       {
         "who": "narrator",
-        "text": "The children, though, played in the rain; without a care in the world, they laughed and shouted."
+        "text": "The children, though, played in the rain; without a care in the world, they laughed and shouted.",
+        "audio": "/audio/en/amani/rain-1-61c78aec.mp3"
       }
     ],
     "thunder": [
       {
         "who": "narrator",
         "text": "Then suddenly, a great noise rang out from the sky, like thunder rumbling.",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/en/amani/thunder-0-0c7d7153.mp3"
       },
       {
         "who": "enfant1",
-        "text": "Help! Thunder! Everyone go home!"
+        "text": "Help! Thunder! Everyone go home!",
+        "audio": "/audio/en/amani/thunder-1-ac90e83b.mp3"
       },
       {
         "who": "narrator",
-        "text": "The children ran to hide. But Nala stayed where she was and looked up at the sky."
+        "text": "The children ran to hide. But Nala stayed where she was and looked up at the sky.",
+        "audio": "/audio/en/amani/thunder-2-c5e1d0f5.mp3"
       }
     ],
     "ask": [
       {
         "who": "player",
-        "text": "What is it trying to tell us? Why does this voice rumble so loud?"
+        "text": "What is it trying to tell us? Why does this voice rumble so loud?",
+        "audio": "/audio/en/amani/ask-0-77fb8e7f.mp3"
       },
       {
         "who": "player",
         "text": "Who are you, and why do you rumble? If you want to talk to me, just say hello. My name is Nala, and I'd like to be your friend!",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/en/amani/ask-1-a6c8f121.mp3"
       },
       {
         "who": "narrator",
-        "text": "The thunder rumbled again. But this time, behind the noise, a smiling voice was hiding… still far away."
+        "text": "The thunder rumbled again. But this time, behind the noise, a smiling voice was hiding… still far away.",
+        "audio": "/audio/en/amani/ask-2-722774f5.mp3"
       },
       {
         "who": "player",
-        "text": "There's a voice trying to talk to us. But the thunder frightens us and stops us from hearing the smiling voice."
+        "text": "There's a voice trying to talk to us. But the thunder frightens us and stops us from hearing the smiling voice.",
+        "audio": "/audio/en/amani/ask-3-7192e8be.mp3"
       }
     ],
     "bed": [
       {
         "who": "narrator",
-        "text": "Nala went home and got into bed. She fell asleep with this thought…"
+        "text": "Nala went home and got into bed. She fell asleep with this thought…",
+        "audio": "/audio/en/amani/bed-0-ff5dac15.mp3"
       }
     ],
     "dream": [
       {
         "who": "narrator",
-        "text": "She had a dream in which she saw a star coming closer."
+        "text": "She had a dream in which she saw a star coming closer.",
+        "audio": "/audio/en/amani/dream-0-6264cde5.mp3"
       },
       {
         "who": "amani",
-        "text": "Hello, Nala!"
+        "text": "Hello, Nala!",
+        "audio": "/audio/en/amani/dream-1-a08ca62a.mp3"
       }
     ],
     "star": [
       {
         "who": "player",
-        "text": "Hello! How do you know my name? Who are you? And what do you want?"
+        "text": "Hello! How do you know my name? Who are you? And what do you want?",
+        "audio": "/audio/en/amani/star-0-14ddab1b.mp3"
       },
       {
         "who": "amani",
-        "text": "Me? I know everyone's name. I heard you say we should introduce ourselves and ask if we could be friends!"
+        "text": "Me? I know everyone's name. I heard you say we should introduce ourselves and ask if we could be friends!",
+        "audio": "/audio/en/amani/star-1-78cf1734.mp3"
       },
       {
         "who": "player",
-        "text": "Are you the voice the thunder stops us from hearing?"
+        "text": "Are you the voice the thunder stops us from hearing?",
+        "audio": "/audio/en/amani/star-2-4c00bc15.mp3"
       },
       {
         "who": "amani",
-        "text": "You could hear the smiling voice because you were brave. The rumbling the others hear is really the fear in their hearts. That's what stops them from hearing me."
+        "text": "You could hear the smiling voice because you were brave. The rumbling the others hear is really the fear in their hearts. That's what stops them from hearing me.",
+        "audio": "/audio/en/amani/star-3-570b374b.mp3"
       },
       {
         "who": "amani",
-        "text": "Don't let fear rule you. Stay brave, think hard about me, and you'll hear me more and more clearly."
+        "text": "Don't let fear rule you. Stay brave, think hard about me, and you'll hear me more and more clearly.",
+        "audio": "/audio/en/amani/star-4-d6c24b24.mp3"
       },
       {
         "who": "amani",
         "text": "My name is Amani, which means peace! When the thunder rumbles again, stay calm, be still, and you will hear me. Go and tell the whole village!",
-        "fx": "glow"
+        "fx": "glow",
+        "audio": "/audio/en/amani/star-5-47eb97bc.mp3"
       }
     ],
     "wake": [
       {
         "who": "narrator",
-        "text": "Nala woke up with just one word on her lips. She sang out loud:"
+        "text": "Nala woke up with just one word on her lips. She sang out loud:",
+        "audio": "/audio/en/amani/wake-0-3d404d71.mp3"
       },
       {
         "who": "player",
         "text": "Amani, Amani, there is peace in my heart! I'm not afraid anymore! I'm not afraid anymore!",
-        "fx": "harp"
+        "fx": "harp",
+        "audio": "/audio/en/amani/wake-1-c7a4f201.mp3"
       }
     ],
     "mote": [
       {
         "who": "player",
-        "text": "Môté! Amani, Amani… I saw him!"
+        "text": "Môté! Amani, Amani… I saw him!",
+        "audio": "/audio/en/amani/mote-0-d233a636.mp3"
       },
       {
         "who": "mote",
-        "text": "What are you talking about, Nala? I don't understand."
+        "text": "What are you talking about, Nala? I don't understand.",
+        "audio": "/audio/en/amani/mote-1-f1600c56.mp3"
       },
       {
         "who": "player",
-        "text": "I saw him in my dream! It's fear that stops us from hearing the smiling voice. When the thunder rumbles, we just need to think hard about him and sing: \"Amani, Amani, there is peace in my heart!\""
+        "text": "I saw him in my dream! It's fear that stops us from hearing the smiling voice. When the thunder rumbles, we just need to think hard about him and sing: \"Amani, Amani, there is peace in my heart!\"",
+        "audio": "/audio/en/amani/mote-2-870a3bff.mp3"
       },
       {
         "who": "mote",
-        "text": "Now there are two of us who hear the smiling voice! Go, Nala: invite the townspeople to the square."
+        "text": "Now there are two of us who hear the smiling voice! Go, Nala: invite the townspeople to the square.",
+        "audio": "/audio/en/amani/mote-3-896c2bb9.mp3"
       }
     ],
     "hab1": [
       {
         "who": "hab1",
-        "text": "Nala? Come, it looks like you have good news! I'll follow you."
+        "text": "Nala? Come, it looks like you have good news! I'll follow you.",
+        "audio": "/audio/en/amani/hab1-0-c0b72ee4.mp3"
       }
     ],
     "hab2": [
       {
         "who": "hab2",
-        "text": "A smiling voice? I want to hear that. Let's go!"
+        "text": "A smiling voice? I want to hear that. Let's go!",
+        "audio": "/audio/en/amani/hab2-0-aa1f03e2.mp3"
       }
     ],
     "hab3": [
       {
         "who": "hab3",
-        "text": "No more fear of thunder? Oh, if only… I'm coming with you."
+        "text": "No more fear of thunder? Oh, if only… I'm coming with you.",
+        "audio": "/audio/en/amani/hab3-0-b0498751.mp3"
       }
     ],
     "together": [
       {
         "who": "narrator",
-        "text": "Everyone listened to Nala in amazement."
+        "text": "Everyone listened to Nala in amazement.",
+        "audio": "/audio/en/amani/together-0-56a495db.mp3"
       },
       {
         "who": "hab2",
-        "text": "All this time, it was fear that stopped us from hearing Amani? Oh, what joy!"
+        "text": "All this time, it was fear that stopped us from hearing Amani? Oh, what joy!",
+        "audio": "/audio/en/amani/together-1-1ffeb443.mp3"
       },
       {
         "who": "hab1",
         "text": "We are free from fear! Let's all sing together: Amani, Amani, there is peace in my heart!",
-        "fx": "rainbow"
+        "fx": "rainbow",
+        "audio": "/audio/en/amani/together-2-d55af9f4.mp3"
       },
       {
         "who": "narrator",
         "text": "Môté smiled, and so did Nala. From now on, every time the thunder rumbles, the people of ERO will know how to listen to the smiling voice.",
-        "fx": "celebrate"
+        "fx": "celebrate",
+        "audio": "/audio/en/amani/together-3-99b2ca50.mp3"
       }
     ],
     "storm": [
       {
         "who": "narrator",
         "text": "Back in Zion… the sky grows dark, and thunder rumbles over the city!",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/en/amani/storm-0-2836fd59.mp3"
       },
       {
         "who": "narrator",
         "text": "Near the market, someone is crying.",
-        "snd": "cry"
+        "snd": "cry",
+        "audio": "/audio/en/amani/storm-1-195465bd.mp3"
       }
     ],
     "mila": [
       {
         "who": "mila",
-        "text": "I'm scared of the thunder… It's too loud…"
+        "text": "I'm scared of the thunder… It's too loud…",
+        "audio": "/audio/en/amani/mila-0-b5ac2c3f.mp3"
       },
       {
         "who": "player",
-        "text": "I used to be scared too. Breathe with me, slowly… You know, one day during a storm, Jesus said to the wind: \"Peace! Be still!\" And everything became calm."
+        "text": "I used to be scared too. Breathe with me, slowly… You know, one day during a storm, Jesus said to the wind: \"Peace! Be still!\" And everything became calm.",
+        "audio": "/audio/en/amani/mila-1-e96daf07.mp3"
       },
       {
         "who": "player",
         "text": "Let's sing together: Amani, Amani, there is peace in my heart! I'm not afraid anymore!",
-        "fx": "harp"
+        "fx": "harp",
+        "audio": "/audio/en/amani/mila-2-e1042f06.mp3"
       },
       {
         "who": "mila",
-        "text": "I'm not afraid anymore… Will you walk with me to the tower?"
+        "text": "I'm not afraid anymore… Will you walk with me to the tower?",
+        "audio": "/audio/en/amani/mila-3-a6dc062e.mp3"
       }
     ],
     "shelter": [
       {
         "who": "gardien",
-        "text": "Come in, come in! You're safe here. Well done for staying with her."
+        "text": "Come in, come in! You're safe here. Well done for staying with her.",
+        "audio": "/audio/en/amani/shelter-0-1e4f8572.mp3"
       },
       {
         "who": "narrator",
         "text": "Little by little, the storm moves away, and the sun comes back over Zion.",
-        "fx": "rainbow"
+        "fx": "rainbow",
+        "audio": "/audio/en/amani/shelter-1-08656cca.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
-        "text": "Fear makes a lot of noise in our hearts, like thunder. It stops us from hearing God."
+        "text": "Fear makes a lot of noise in our hearts, like thunder. It stops us from hearing God.",
+        "audio": "/audio/en/amani/debrief-0-c6157336.mp3"
       },
       {
         "who": "gardien",
-        "text": "In the Bible, the prophet Elijah heard God not in the wind or the thunder, but in a gentle whisper."
+        "text": "In the Bible, the prophet Elijah heard God not in the wind or the thunder, but in a gentle whisper.",
+        "audio": "/audio/en/amani/debrief-1-788c1336.mp3"
       },
       {
         "who": "gardien",
-        "text": "And Jesus tells us: \"Peace I leave with you. My peace I give to you.\" When you're afraid, stop, think of him… and listen to his smiling voice."
+        "text": "And Jesus tells us: \"Peace I leave with you. My peace I give to you.\" When you're afraid, stop, think of him… and listen to his smiling voice.",
+        "audio": "/audio/en/amani/debrief-2-8a120644.mp3"
       }
     ]
   },
@@ -280,59 +324,73 @@
       "panels": [
         {
           "icon": "img:/books/amani/page-01.webp",
-          "text": "Amani, Amani, there is peace in my heart!"
+          "text": "Amani, Amani, there is peace in my heart!",
+          "audio": "/audio/en/amani/scroll-livre-0-7883bb4b.mp3"
         },
         {
           "icon": "img:/books/amani/page-02.webp",
-          "text": "One day of pouring rain, so much water flowed that the streets were flooded! The people of this town called ERO all took shelter in their homes. The children, though, played in the rain; without a care in the world, they laughed and shouted."
+          "text": "One day of pouring rain, so much water flowed that the streets were flooded! The people of this town called ERO all took shelter in their homes. The children, though, played in the rain; without a care in the world, they laughed and shouted.",
+          "audio": "/audio/en/amani/scroll-livre-1-891adaae.mp3"
         },
         {
           "icon": "img:/books/amani/page-03.webp",
-          "text": "Then suddenly, a great noise rang out from the sky, like thunder rumbling."
+          "text": "Then suddenly, a great noise rang out from the sky, like thunder rumbling.",
+          "audio": "/audio/en/amani/scroll-livre-2-0c7d7153.mp3"
         },
         {
           "icon": "img:/books/amani/page-04.webp",
-          "text": "Struck by this voice, Nala wondered: \"What is it trying to tell us? Why does this voice rumble so loud that it frightens us?\" The voice was heard again, but none of the townspeople understood what it was trying to say! So Nala, a brave and determined girl, began to ask it: \"Who are you, and why do you rumble? It's not the first time I've heard you. If you want to talk to me, just say hello. My name is Nala and I'd like to be your friend. And where do you come from? What do you do? Who are you?\""
+          "text": "Struck by this voice, Nala wondered: \"What is it trying to tell us? Why does this voice rumble so loud that it frightens us?\" The voice was heard again, but none of the townspeople understood what it was trying to say! So Nala, a brave and determined girl, began to ask it: \"Who are you, and why do you rumble? It's not the first time I've heard you. If you want to talk to me, just say hello. My name is Nala and I'd like to be your friend. And where do you come from? What do you do? Who are you?\"",
+          "audio": "/audio/en/amani/scroll-livre-3-29b54a93.mp3"
         },
         {
           "icon": "img:/books/amani/page-05.webp",
-          "text": "She heard the thunder rumble again, but this time, behind the noise, a smiling voice was hiding. It still seemed far away, as if she had to concentrate very hard to hear it. She went home and got into bed. Lying there, she said to herself: \"There is a voice trying to speak to us, but the thunder frightens us and stops us from hearing the smiling voice!\""
+          "text": "She heard the thunder rumble again, but this time, behind the noise, a smiling voice was hiding. It still seemed far away, as if she had to concentrate very hard to hear it. She went home and got into bed. Lying there, she said to herself: \"There is a voice trying to speak to us, but the thunder frightens us and stops us from hearing the smiling voice!\"",
+          "audio": "/audio/en/amani/scroll-livre-4-12063d80.mp3"
         },
         {
           "icon": "img:/books/amani/page-06.webp",
-          "text": "She fell asleep with this thought and had a dream in which she saw a star coming closer. In her dream, the star said: \"Hello, Nala!\" \"Hello! How do you know my name? Who are you? And what do you want?\" asked Nala. The star replied: \"Me? I know everyone's name, I know everything.\" And Nala asked again: \"But who are you? And what do you want?\""
+          "text": "She fell asleep with this thought and had a dream in which she saw a star coming closer. In her dream, the star said: \"Hello, Nala!\" \"Hello! How do you know my name? Who are you? And what do you want?\" asked Nala. The star replied: \"Me? I know everyone's name, I know everything.\" And Nala asked again: \"But who are you? And what do you want?\"",
+          "audio": "/audio/en/amani/scroll-livre-5-e0d8067d.mp3"
         },
         {
           "icon": "img:/books/amani/page-07.webp",
-          "text": "The star went on: \"I heard you say we should introduce ourselves and ask if we could be friends!\" Nala replied: \"Oh yes! Are you the voice the thunder stops us from hearing? Because I still don't know how to hear it clearly!\" The star answered: \"You know, Nala, you could hear the smiling voice because you were brave. The others ran into their houses because the rumbling of thunder they hear is really the fear in their hearts, and it stops them from hearing me.\""
+          "text": "The star went on: \"I heard you say we should introduce ourselves and ask if we could be friends!\" Nala replied: \"Oh yes! Are you the voice the thunder stops us from hearing? Because I still don't know how to hear it clearly!\" The star answered: \"You know, Nala, you could hear the smiling voice because you were brave. The others ran into their houses because the rumbling of thunder they hear is really the fear in their hearts, and it stops them from hearing me.\"",
+          "audio": "/audio/en/amani/scroll-livre-6-11980d91.mp3"
         },
         {
           "icon": "img:/books/amani/page-08.webp",
-          "text": "\"Shall I tell you how to hear the smiling voice? Don't let fear rule you. Stay brave, think hard about me, and you'll hear me more and more clearly. Above all, don't forget to tell the whole village what I'm telling you! Tell them they don't need to be afraid of the thunder anymore! I am the voice that cries louder than the thunder! My name is Amani, which means peace! When the thunder rumbles again, stay calm, be still, and you will hear me!\""
+          "text": "\"Shall I tell you how to hear the smiling voice? Don't let fear rule you. Stay brave, think hard about me, and you'll hear me more and more clearly. Above all, don't forget to tell the whole village what I'm telling you! Tell them they don't need to be afraid of the thunder anymore! I am the voice that cries louder than the thunder! My name is Amani, which means peace! When the thunder rumbles again, stay calm, be still, and you will hear me!\"",
+          "audio": "/audio/en/amani/scroll-livre-7-c29bc1af.mp3"
         },
         {
           "icon": "img:/books/amani/page-09.webp",
-          "text": "Nala woke up with just one word on her lips: \"Amani, Amani… there is peace in my heart… I'm not afraid anymore!\" She sang out loud: \"Amani, Amani, there is peace in my heart! Amani, Amani, there is peace in my heart! I'm not afraid anymore! I'm not afraid anymore!\""
+          "text": "Nala woke up with just one word on her lips: \"Amani, Amani… there is peace in my heart… I'm not afraid anymore!\" She sang out loud: \"Amani, Amani, there is peace in my heart! Amani, Amani, there is peace in my heart! I'm not afraid anymore! I'm not afraid anymore!\"",
+          "audio": "/audio/en/amani/scroll-livre-8-3cec217f.mp3"
         },
         {
           "icon": "img:/books/amani/page-10.webp",
-          "text": "Nala ran out of her house, full of joy. She ran to Môté, the guardian and protector of the people of ERO. Out of breath, the only word that came out of her mouth was: \"Amani, Amani… I saw him!\""
+          "text": "Nala ran out of her house, full of joy. She ran to Môté, the guardian and protector of the people of ERO. Out of breath, the only word that came out of her mouth was: \"Amani, Amani… I saw him!\"",
+          "audio": "/audio/en/amani/scroll-livre-9-d37895a6.mp3"
         },
         {
           "icon": "img:/books/amani/page-11.webp",
-          "text": "Môté, puzzled, asked her: \"What are you talking about, Nala? I don't understand.\" Nala answered again: \"Amani! Amani! I saw him in my dream. He told me to tell everyone in ERO that they don't have to be afraid of the thunder anymore! It's fear that stops us from hearing the smiling voice. Every time the thunder rumbles again, we just need to think hard and sing: Amani, Amani, there is peace in my heart! I'm not afraid anymore!\""
+          "text": "Môté, puzzled, asked her: \"What are you talking about, Nala? I don't understand.\" Nala answered again: \"Amani! Amani! I saw him in my dream. He told me to tell everyone in ERO that they don't have to be afraid of the thunder anymore! It's fear that stops us from hearing the smiling voice. Every time the thunder rumbles again, we just need to think hard and sing: Amani, Amani, there is peace in my heart! I'm not afraid anymore!\"",
+          "audio": "/audio/en/amani/scroll-livre-10-4317d1d4.mp3"
         },
         {
           "icon": "img:/books/amani/page-12.webp",
-          "text": "Môté listened to Nala very carefully. He smiled and said: \"Now there are two of us who hear the smiling voice!\" He invited the people of ERO to hear what the smiling voice had told Nala."
+          "text": "Môté listened to Nala very carefully. He smiled and said: \"Now there are two of us who hear the smiling voice!\" He invited the people of ERO to hear what the smiling voice had told Nala.",
+          "audio": "/audio/en/amani/scroll-livre-11-89e403f4.mp3"
         },
         {
           "icon": "img:/books/amani/page-13.webp",
-          "text": "Everyone was amazed by what they heard. Many exclaimed: \"All this time, it was fear that stopped us from hearing Amani? Oh, what joy! We are free from fear! From now on we can answer the thunder!\""
+          "text": "Everyone was amazed by what they heard. Many exclaimed: \"All this time, it was fear that stopped us from hearing Amani? Oh, what joy! We are free from fear! From now on we can answer the thunder!\"",
+          "audio": "/audio/en/amani/scroll-livre-12-55a52443.mp3"
         },
         {
           "icon": "img:/books/amani/page-14.webp",
-          "text": "Môté, the guardian and protector of the town of ERO, smiled, and so did Nala. They were happy and at peace, and from now on, every time the thunder rumbles, they will know how to listen to the smiling voice."
+          "text": "Môté, the guardian and protector of the town of ERO, smiled, and so did Nala. They were happy and at peace, and from now on, every time the thunder rumbles, they will know how to listen to the smiling voice.",
+          "audio": "/audio/en/amani/scroll-livre-13-53c7da94.mp3"
         }
       ]
     }

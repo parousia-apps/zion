@@ -33,182 +33,219 @@
     "intro": [
       {
         "who": "gardien",
-        "text": "Dans la Bible, il y a un garçon que personne ne remarquait. Même pas sa propre famille !"
+        "text": "Dans la Bible, il y a un garçon que personne ne remarquait. Même pas sa propre famille !",
+        "audio": "/audio/fr/coeur/intro-0-6f94dbf4.mp3"
       },
       {
         "who": "gardien",
-        "text": "Viens… Allons à Bethléem, il y a environ trois mille ans."
+        "text": "Viens… Allons à Bethléem, il y a environ trois mille ans.",
+        "audio": "/audio/fr/coeur/intro-1-09d300d8.mp3"
       }
     ],
     "story": [
       {
         "who": "narrator",
-        "text": "À Bethléem vit un jeune garçon nommé David. C'est le plus jeune des huit fils de Jessé."
+        "text": "À Bethléem vit un jeune garçon nommé David. C'est le plus jeune des huit fils de Jessé.",
+        "audio": "/audio/fr/coeur/story-0-65023338.mp3"
       },
       {
         "who": "narrator",
-        "text": "Ses grands frères sont grands et forts. Lui, on l'envoie garder les moutons. Et ce berger, c'est toi !"
+        "text": "Ses grands frères sont grands et forts. Lui, on l'envoie garder les moutons. Et ce berger, c'est toi !",
+        "audio": "/audio/fr/coeur/story-1-8d3ce0a6.mp3"
       },
       {
         "who": "player",
         "text": "Oh non ! Trois moutons se sont éloignés. Je dois les ramener à la bergerie.",
-        "snd": "bleat"
+        "snd": "bleat",
+        "audio": "/audio/fr/coeur/story-2-72e5f3c1.mp3"
       }
     ],
     "safe": [
       {
         "who": "player",
         "text": "Voilà, tout le troupeau est à l'abri. Un bon berger veille sur chacun de ses moutons.",
-        "fx": "sunset"
+        "fx": "sunset",
+        "audio": "/audio/fr/coeur/safe-0-36f48476.mp3"
       },
       {
         "who": "narrator",
-        "text": "Le soir tombe. David aime prendre sa harpe pour chanter Dieu."
+        "text": "Le soir tombe. David aime prendre sa harpe pour chanter Dieu.",
+        "audio": "/audio/fr/coeur/safe-1-7b35c503.mp3"
       }
     ],
     "psalm": [
       {
         "who": "narrator",
         "text": "David joue de la harpe et chante. Son chant deviendra le Psaume 23.",
-        "fx": "harp"
+        "fx": "harp",
+        "audio": "/audio/fr/coeur/psalm-0-c737aaa0.mp3"
       },
       {
         "who": "player",
-        "text": "Le Seigneur est mon berger, je ne manque de rien."
+        "text": "Le Seigneur est mon berger, je ne manque de rien.",
+        "audio": "/audio/fr/coeur/psalm-1-36c4e143.mp3"
       },
       {
         "who": "player",
-        "text": "Il me conduit dans l'herbe verte, près de l'eau calme. Il prend soin de moi."
+        "text": "Il me conduit dans l'herbe verte, près de l'eau calme. Il prend soin de moi.",
+        "audio": "/audio/fr/coeur/psalm-2-43f4f23f.mp3"
       },
       {
         "who": "player",
-        "text": "Même quand j'ai peur, je ne suis pas seul : le Seigneur est avec moi."
+        "text": "Même quand j'ai peur, je ne suis pas seul : le Seigneur est avec moi.",
+        "audio": "/audio/fr/coeur/psalm-3-8c225544.mp3"
       }
     ],
     "call": [
       {
         "who": "serviteur",
-        "text": "David ! David ! Ton père te demande. Le prophète Samuel est à la maison !"
+        "text": "David ! David ! Ton père te demande. Le prophète Samuel est à la maison !",
+        "audio": "/audio/fr/coeur/call-0-7d3ed554.mp3"
       },
       {
         "who": "serviteur",
-        "text": "Il a vu tous tes frères, et il a dit : « Ce n'est aucun d'eux. N'y a-t-il pas un autre fils ? »"
+        "text": "Il a vu tous tes frères, et il a dit : « Ce n'est aucun d'eux. N'y a-t-il pas un autre fils ? »",
+        "audio": "/audio/fr/coeur/call-1-2f230f13.mp3"
       },
       {
         "who": "player",
-        "text": "Moi ? Mais je suis le plus petit… J'arrive !"
+        "text": "Moi ? Mais je suis le plus petit… J'arrive !",
+        "audio": "/audio/fr/coeur/call-2-40d5ba10.mp3"
       }
     ],
     "anoint": [
       {
         "who": "narrator",
-        "text": "Quand Samuel avait vu Éliab, le grand frère, il avait pensé : « Celui-là, si grand et si fort, c'est sûrement lui ! »"
+        "text": "Quand Samuel avait vu Éliab, le grand frère, il avait pensé : « Celui-là, si grand et si fort, c'est sûrement lui ! »",
+        "audio": "/audio/fr/coeur/anoint-0-297e8105.mp3"
       },
       {
         "who": "narrator",
-        "text": "Mais Dieu lui avait dit : « Ne regarde pas son apparence ni sa taille. Les hommes regardent ce qui se voit, mais moi, je regarde le cœur. »"
+        "text": "Mais Dieu lui avait dit : « Ne regarde pas son apparence ni sa taille. Les hommes regardent ce qui se voit, mais moi, je regarde le cœur. »",
+        "audio": "/audio/fr/coeur/anoint-1-c79c71db.mp3"
       },
       {
         "who": "samuel",
-        "text": "C'est lui. C'est David que Dieu a choisi !"
+        "text": "C'est lui. C'est David que Dieu a choisi !",
+        "audio": "/audio/fr/coeur/anoint-2-64f788bd.mp3"
       },
       {
         "who": "narrator",
         "text": "Samuel verse de l'huile sur la tête de David : c'est le signe que Dieu l'a choisi pour devenir un jour roi d'Israël. Et l'Esprit du Seigneur est avec lui.",
-        "fx": "glow"
+        "fx": "glow",
+        "audio": "/audio/fr/coeur/anoint-3-be4e6146.mp3"
       },
       {
         "who": "jesse",
-        "text": "Mon plus jeune fils… choisi par Dieu !"
+        "text": "Mon plus jeune fils… choisi par Dieu !",
+        "audio": "/audio/fr/coeur/anoint-4-89e6c1ef.mp3"
       }
     ],
     "festival": [
       {
         "who": "myriam",
-        "text": "Ah, notre apprenti veilleur ! Ce soir, c'est la Fête des lumières, et il me manque des musiciens."
+        "text": "Ah, notre apprenti veilleur ! Ce soir, c'est la Fête des lumières, et il me manque des musiciens.",
+        "audio": "/audio/fr/coeur/festival-0-6509758a.mp3"
       },
       {
         "who": "myriam",
-        "text": "Ben joue du tambour au marché. Sarah joue de la flûte près des maisons, à l'est. Ramène-les-moi sur la scène !"
+        "text": "Ben joue du tambour au marché. Sarah joue de la flûte près des maisons, à l'est. Ramène-les-moi sur la scène !",
+        "audio": "/audio/fr/coeur/festival-1-fa5e81c7.mp3"
       },
       {
         "who": "player",
-        "text": "Et Élie ? Il joue de la harpe magnifiquement."
+        "text": "Et Élie ? Il joue de la harpe magnifiquement.",
+        "audio": "/audio/fr/coeur/festival-2-b1eb2644.mp3"
       },
       {
         "who": "myriam",
-        "text": "Élie ? Euh… Il est en fauteuil roulant, et la scène a des marches. Je n'y avais pas pensé…"
+        "text": "Élie ? Euh… Il est en fauteuil roulant, et la scène a des marches. Je n'y avais pas pensé…",
+        "audio": "/audio/fr/coeur/festival-3-6a92371d.mp3"
       },
       {
         "who": "player",
-        "text": "Dieu regarde le cœur. Je vais le chercher aussi !"
+        "text": "Dieu regarde le cœur. Je vais le chercher aussi !",
+        "audio": "/audio/fr/coeur/festival-4-a269af6b.mp3"
       }
     ],
     "ben": [
       {
         "who": "ben",
         "text": "La fête ? Avec plaisir, j'apporte mon tambour !",
-        "snd": "drum"
+        "snd": "drum",
+        "audio": "/audio/fr/coeur/ben-0-14bc1fe7.mp3"
       }
     ],
     "sarah": [
       {
         "who": "sarah",
-        "text": "Ma flûte est prête. Allons-y !"
+        "text": "Ma flûte est prête. Allons-y !",
+        "audio": "/audio/fr/coeur/sarah-0-a901856e.mp3"
       }
     ],
     "elie": [
       {
         "who": "elie",
-        "text": "Moi ? D'habitude, personne ne pense à moi pour ce genre de chose…"
+        "text": "Moi ? D'habitude, personne ne pense à moi pour ce genre de chose…",
+        "audio": "/audio/fr/coeur/elie-0-af3a0657.mp3"
       },
       {
         "who": "player",
-        "text": "Moi, je pense à toi. Tu joues de la harpe comme le roi David !"
+        "text": "Moi, je pense à toi. Tu joues de la harpe comme le roi David !",
+        "audio": "/audio/fr/coeur/elie-1-a961027a.mp3"
       },
       {
         "who": "elie",
-        "text": "Alors je viens. Merci de m'avoir choisi."
+        "text": "Alors je viens. Merci de m'avoir choisi.",
+        "audio": "/audio/fr/coeur/elie-2-f2f60682.mp3"
       }
     ],
     "ready": [
       {
         "who": "myriam",
-        "text": "Vous êtes tous là ! Mais attendez… Élie ne peut pas monter les marches."
+        "text": "Vous êtes tous là ! Mais attendez… Élie ne peut pas monter les marches.",
+        "audio": "/audio/fr/coeur/ready-0-c0549471.mp3"
       },
       {
         "who": "myriam",
-        "text": "J'ai une idée : installons une rampe. Une fête où quelqu'un reste en bas, ce n'est pas une vraie fête !"
+        "text": "J'ai une idée : installons une rampe. Une fête où quelqu'un reste en bas, ce n'est pas une vraie fête !",
+        "audio": "/audio/fr/coeur/ready-1-1bcca527.mp3"
       }
     ],
     "concert": [
       {
         "who": "narrator",
-        "text": "On installe une rampe. Élie monte sur la scène avec sa harpe."
+        "text": "On installe une rampe. Élie monte sur la scène avec sa harpe.",
+        "audio": "/audio/fr/coeur/concert-0-593a8891.mp3"
       },
       {
         "who": "narrator",
         "text": "Le concert commence : le tambour de Ben, la flûte de Sarah… et la harpe d'Élie, plus belle que tout.",
-        "fx": "harp"
+        "fx": "harp",
+        "audio": "/audio/fr/coeur/concert-1-99f6bb69.mp3"
       },
       {
         "who": "myriam",
         "text": "Bravo ! Quelle musique ! Sans Élie, il aurait manqué le plus beau.",
-        "fx": "celebrate"
+        "fx": "celebrate",
+        "audio": "/audio/fr/coeur/concert-2-134609a8.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
-        "text": "Samuel a failli choisir le plus grand et le plus fort. Mais Dieu regarde le cœur."
+        "text": "Samuel a failli choisir le plus grand et le plus fort. Mais Dieu regarde le cœur.",
+        "audio": "/audio/fr/coeur/debrief-0-9b967848.mp3"
       },
       {
         "who": "gardien",
-        "text": "Aujourd'hui, tu as vu ce que d'autres ne voyaient pas : le talent et le cœur d'Élie."
+        "text": "Aujourd'hui, tu as vu ce que d'autres ne voyaient pas : le talent et le cœur d'Élie.",
+        "audio": "/audio/fr/coeur/debrief-1-6aecea23.mp3"
       },
       {
         "who": "gardien",
-        "text": "Jésus faisait pareil : il accueillait les enfants, les malades, ceux qu'on laissait de côté. Te voilà vrai veilleur de Zion !"
+        "text": "Jésus faisait pareil : il accueillait les enfants, les malades, ceux qu'on laissait de côté. Te voilà vrai veilleur de Zion !",
+        "audio": "/audio/fr/coeur/debrief-2-7bfa0b01.mp3"
       }
     ]
   },

@@ -1,0 +1,63 @@
+{
+  "_aide": "Réglages des voix Kokoro. Une « voix » = un mélange de voix Kokoro (poids), une vitesse et une hauteur (pitch < 1 = plus grave, > 1 = plus aigu). Après un changement : npm run voices.",
+  "prononciation": {
+    "fr": { "ERO": "Éro" },
+    "en": { "ERO": "Eh-ro" }
+  },
+  "voix": {
+    "fr": {
+      "narrateur":  { "mix": { "ff_siwis": 1 }, "vitesse": 0.95, "hauteur": 1 },
+      "vieil_homme": { "mix": { "ff_siwis": 1 }, "vitesse": 0.92, "hauteur": 0.8 },
+      "homme":      { "mix": { "ff_siwis": 1 }, "vitesse": 0.98, "hauteur": 0.86 },
+      "femme":      { "mix": { "ff_siwis": 1 }, "vitesse": 1, "hauteur": 0.98 },
+      "vieille_femme": { "mix": { "ff_siwis": 1 }, "vitesse": 0.88, "hauteur": 0.93 },
+      "fille":      { "mix": { "ff_siwis": 1 }, "vitesse": 1, "hauteur": 1.12 },
+      "garcon":     { "mix": { "ff_siwis": 1 }, "vitesse": 1, "hauteur": 1.07 },
+      "enfant":     { "mix": { "ff_siwis": 1 }, "vitesse": 1, "hauteur": 1.09 },
+      "etoile":     { "mix": { "ff_siwis": 1 }, "vitesse": 0.94, "hauteur": 1.16 }
+    },
+    "en": {
+      "narrateur":  { "mix": { "af_heart": 1 }, "vitesse": 0.95, "hauteur": 1 },
+      "vieil_homme": { "mix": { "bm_george": 1 }, "vitesse": 0.92, "hauteur": 0.94 },
+      "homme":      { "mix": { "am_michael": 1 }, "vitesse": 1, "hauteur": 1 },
+      "femme":      { "mix": { "af_bella": 1 }, "vitesse": 1, "hauteur": 1 },
+      "vieille_femme": { "mix": { "bf_isabella": 1 }, "vitesse": 0.9, "hauteur": 0.95 },
+      "fille":      { "mix": { "af_sky": 1 }, "vitesse": 1, "hauteur": 1.1 },
+      "garcon":     { "mix": { "am_puck": 1 }, "vitesse": 1, "hauteur": 1.1 },
+      "enfant":     { "mix": { "af_nova": 1 }, "vitesse": 1, "hauteur": 1.08 },
+      "etoile":     { "mix": { "af_nova": 1 }, "vitesse": 0.94, "hauteur": 1.14 }
+    }
+  },
+  "_personnages": "Qui parle → quelle voix. « quete:id » permet une exception pour une seule mission.",
+  "personnages": {
+    "narrator": "narrateur",
+    "player": "enfant",
+    "amani:player": "fille",
+    "gardien": "vieil_homme",
+    "mote": "vieil_homme",
+    "noe": "vieil_homme",
+    "samuel": "vieil_homme",
+    "jesse": "vieil_homme",
+    "hab2": "homme",
+    "serviteur": "homme",
+    "soigneuse": "femme",
+    "myriam": "femme",
+    "hab1": "femme",
+    "hab3": "femme",
+    "naomi": "femme",
+    "naomi_sol": "femme",
+    "ruth": "vieille_femme",
+    "amani": "etoile",
+    "mila": "fille",
+    "lea": "fille",
+    "ana": "fille",
+    "sarah": "fille",
+    "moqueur2": "fille",
+    "enfant1": "garcon",
+    "samy": "garcon",
+    "timothee": "garcon",
+    "ben": "garcon",
+    "elie": "garcon",
+    "moqueur1": "garcon"
+  }
+}

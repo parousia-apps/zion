@@ -30,160 +30,193 @@
     "intro": [
       {
         "who": "gardien",
-        "text": "Today I won't just tell you a story. I'll let you live it!"
+        "text": "Today I won't just tell you a story. I'll let you live it!",
+        "audio": "/audio/en/fidelite/intro-0-4bdad9c8.mp3"
       },
       {
         "who": "gardien",
-        "text": "Close your eyes… Imagine… We are very, very long ago."
+        "text": "Close your eyes… Imagine… We are very, very long ago.",
+        "audio": "/audio/en/fidelite/intro-1-d938010e.mp3"
       }
     ],
     "story": [
       {
         "who": "narrator",
-        "text": "A very long time ago, people on earth were doing a lot of harm. They had forgotten God."
+        "text": "A very long time ago, people on earth were doing a lot of harm. They had forgotten God.",
+        "audio": "/audio/en/fidelite/story-0-566f90a4.mp3"
       },
       {
         "who": "narrator",
-        "text": "But one man, Noah, loved God and listened to him. God said to him: \"Build a great ark, a huge wooden boat.\""
+        "text": "But one man, Noah, loved God and listened to him. God said to him: \"Build a great ark, a huge wooden boat.\"",
+        "audio": "/audio/en/fidelite/story-1-e5ba3543.mp3"
       },
       {
         "who": "narrator",
-        "text": "\"A flood is coming. I want to protect you, your family and the animals.\""
+        "text": "\"A flood is coming. I want to protect you, your family and the animals.\"",
+        "audio": "/audio/en/fidelite/story-2-aa8e8f3d.mp3"
       },
       {
         "who": "narrator",
-        "text": "Noah obeyed. He built the ark for years, when there wasn't a single cloud in the sky! Go and talk to Noah."
+        "text": "Noah obeyed. He built the ark for years, when there wasn't a single cloud in the sky! Go and talk to Noah.",
+        "audio": "/audio/en/fidelite/story-3-2cb1cc27.mp3"
       }
     ],
     "askHelp": [
       {
         "who": "noe",
-        "text": "Hello! You've come just in time, I need help."
+        "text": "Hello! You've come just in time, I need help.",
+        "audio": "/audio/en/fidelite/askHelp-0-2d447680.mp3"
       },
       {
         "who": "noe",
-        "text": "People laughed at me: \"A boat, here, so far from the sea?\" But God asked me to, and I trust him."
+        "text": "People laughed at me: \"A boat, here, so far from the sea?\" But God asked me to, and I trust him.",
+        "audio": "/audio/en/fidelite/askHelp-1-22095383.mp3"
       },
       {
         "who": "noe",
-        "text": "God told me to bring the animals in two by two. Go near the stag and the doe, the horses and the zebras: they will follow you to the ark's ramp."
+        "text": "God told me to bring the animals in two by two. Go near the stag and the doe, the horses and the zebras: they will follow you to the ark's ramp.",
+        "audio": "/audio/en/fidelite/askHelp-2-6e702341.mp3"
       }
     ],
     "allIn": [
       {
         "who": "noe",
-        "text": "Well done! All the animals are safe."
+        "text": "Well done! All the animals are safe.",
+        "audio": "/audio/en/fidelite/allIn-0-d58ec689.mp3"
       },
       {
         "who": "noe",
-        "text": "I'm going into the ark. Come quickly, the first drops are falling!"
+        "text": "I'm going into the ark. Come quickly, the first drops are falling!",
+        "audio": "/audio/en/fidelite/allIn-1-fc20c9f9.mp3"
       }
     ],
     "flood": [
       {
         "who": "narrator",
         "text": "God himself closes the door of the ark. Then the rain begins to fall…",
-        "fx": "rain"
+        "fx": "rain",
+        "audio": "/audio/en/fidelite/flood-0-f4d8dd2d.mp3"
       },
       {
         "who": "narrator",
         "text": "It rains for forty days and forty nights. Water covers the whole earth.",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/en/fidelite/flood-1-4afbcff9.mp3"
       },
       {
         "who": "narrator",
-        "text": "But inside the ark, Noah, his family and the animals are safe. God has not forgotten them."
+        "text": "But inside the ark, Noah, his family and the animals are safe. God has not forgotten them.",
+        "audio": "/audio/en/fidelite/flood-2-49f51274.mp3"
       },
       {
         "who": "narrator",
         "text": "One day, the rain stops. Noah sends out a dove. It comes back with an olive leaf in its beak: dry land has returned!",
-        "fx": "dove"
+        "fx": "dove",
+        "audio": "/audio/en/fidelite/flood-3-5eeb0172.mp3"
       },
       {
         "who": "narrator",
         "text": "Everyone comes out of the ark. And a rainbow appears in the sky.",
-        "fx": "rainbow"
+        "fx": "rainbow",
+        "audio": "/audio/en/fidelite/flood-4-a936a77e.mp3"
       },
       {
         "who": "narrator",
-        "text": "God says: \"This is the sign of my promise: never again will a flood destroy the earth.\" God always keeps his promises."
+        "text": "God says: \"This is the sign of my promise: never again will a flood destroy the earth.\" God always keeps his promises.",
+        "audio": "/audio/en/fidelite/flood-5-a86eb98c.mp3"
       }
     ],
     "promise": [
       {
         "who": "ruth",
-        "text": "Ah, there you are! I have to go and visit my sister, on the other side of the hill."
+        "text": "Ah, there you are! I have to go and visit my sister, on the other side of the hill.",
+        "audio": "/audio/en/fidelite/promise-0-560bd4b1.mp3"
       },
       {
         "who": "ruth",
-        "text": "The sky is turning grey… My three sheep are wandering around the city. Can you promise to bring them back into the pen before the storm?"
+        "text": "The sky is turning grey… My three sheep are wandering around the city. Can you promise to bring them back into the pen before the storm?",
+        "audio": "/audio/en/fidelite/promise-1-949f38d5.mp3"
       },
       {
         "who": "player",
-        "text": "I promise, Grandma Ruth!"
+        "text": "I promise, Grandma Ruth!",
+        "audio": "/audio/en/fidelite/promise-2-d5ada142.mp3"
       },
       {
         "who": "ruth",
-        "text": "Thank you. I know I can count on you."
+        "text": "Thank you. I know I can count on you.",
+        "audio": "/audio/en/fidelite/promise-3-b48af4f3.mp3"
       }
     ],
     "tease": [
       {
         "who": "moqueur1",
-        "text": "Hey! Forget those sheep and come and play with us!"
+        "text": "Hey! Forget those sheep and come and play with us!",
+        "audio": "/audio/en/fidelite/tease-0-add9cb4f.mp3"
       },
       {
         "who": "moqueur2",
-        "text": "It's never going to rain, look at the sky! You're tiring yourself out for nothing!"
+        "text": "It's never going to rain, look at the sky! You're tiring yourself out for nothing!",
+        "audio": "/audio/en/fidelite/tease-1-8045494e.mp3"
       },
       {
         "who": "player",
-        "text": "I promised Grandma Ruth. A promise is a promise… even when others laugh."
+        "text": "I promised Grandma Ruth. A promise is a promise… even when others laugh.",
+        "audio": "/audio/en/fidelite/tease-2-38ee7b31.mp3"
       }
     ],
     "storm": [
       {
         "who": "narrator",
         "text": "The last sheep is barely inside when the rain starts pouring down!",
-        "fx": "rain"
+        "fx": "rain",
+        "audio": "/audio/en/fidelite/storm-0-be9dfb36.mp3"
       },
       {
         "who": "narrator",
         "text": "The sheep are nice and dry. The children run for shelter.",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/en/fidelite/storm-1-c7011c94.mp3"
       },
       {
         "who": "moqueur1",
-        "text": "You were right… You kept your promise. Well done!"
+        "text": "You were right… You kept your promise. Well done!",
+        "audio": "/audio/en/fidelite/storm-2-71e6ab8e.mp3"
       },
       {
         "who": "narrator",
         "text": "Then the sun comes back, and a rainbow stretches over Zion, like a promise.",
-        "fx": "rainbow"
+        "fx": "rainbow",
+        "audio": "/audio/en/fidelite/storm-3-73ef7821.mp3"
       }
     ],
     "thanks": [
       {
         "who": "ruth",
-        "text": "My sheep are all here, safe and sound! You kept your word."
+        "text": "My sheep are all here, safe and sound! You kept your word.",
+        "audio": "/audio/en/fidelite/thanks-0-a2a3f1cb.mp3"
       },
       {
         "who": "ruth",
-        "text": "When someone keeps their promises, you can trust them. You're like Jesus, you know."
+        "text": "When someone keeps their promises, you can trust them. You're like Jesus, you know.",
+        "audio": "/audio/en/fidelite/thanks-1-126df039.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
-        "text": "Noah trusted God before he saw a single drop of rain. And you kept your promise even when others laughed."
+        "text": "Noah trusted God before he saw a single drop of rain. And you kept your promise even when others laughed.",
+        "audio": "/audio/en/fidelite/debrief-0-4d9b86db.mp3"
       },
       {
         "who": "gardien",
-        "text": "God is faithful: he never forgets what he has promised. Jesus told us: \"I am with you always.\""
+        "text": "God is faithful: he never forgets what he has promised. Jesus told us: \"I am with you always.\"",
+        "audio": "/audio/en/fidelite/debrief-1-4542a032.mp3"
       },
       {
         "who": "gardien",
-        "text": "A faithful watcher is someone others can count on. Thank you for being one!"
+        "text": "A faithful watcher is someone others can count on. Thank you for being one!",
+        "audio": "/audio/en/fidelite/debrief-2-1bafb874.mp3"
       }
     ]
   },

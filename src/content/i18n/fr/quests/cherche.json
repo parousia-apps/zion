@@ -25,78 +25,94 @@
     "intro": [
       {
         "who": "gardien",
-        "text": "Sais-tu combien il y a d'habitants à Zion ? Beaucoup ! Et pourtant, Dieu connaît chacun par son nom."
+        "text": "Sais-tu combien il y a d'habitants à Zion ? Beaucoup ! Et pourtant, Dieu connaît chacun par son nom.",
+        "audio": "/audio/fr/cherche/intro-0-c2f831d5.mp3"
       },
       {
         "who": "gardien",
-        "text": "Écoute cette histoire que Jésus a racontée."
+        "text": "Écoute cette histoire que Jésus a racontée.",
+        "audio": "/audio/fr/cherche/intro-1-e08e4ed6.mp3"
       }
     ],
     "missing": [
       {
         "who": "lea",
-        "text": "Salut ! On joue à la ronde, mais on n'est que trois…"
+        "text": "Salut ! On joue à la ronde, mais on n'est que trois…",
+        "audio": "/audio/fr/cherche/missing-0-ddc5b491.mp3"
       },
       {
         "who": "samy",
-        "text": "Timothée jouait avec nous avant. Mais on s'est moqués de lui parce qu'il court lentement… Alors il est parti."
+        "text": "Timothée jouait avec nous avant. Mais on s'est moqués de lui parce qu'il court lentement… Alors il est parti.",
+        "audio": "/audio/fr/cherche/missing-1-f203872d.mp3"
       },
       {
         "who": "ana",
-        "text": "Il est peut-être caché quelque part près des remparts. Personne n'est allé le chercher."
+        "text": "Il est peut-être caché quelque part près des remparts. Personne n'est allé le chercher.",
+        "audio": "/audio/fr/cherche/missing-2-17234654.mp3"
       },
       {
         "who": "player",
-        "text": "Moi, j'y vais. Tout le monde compte !"
+        "text": "Moi, j'y vais. Tout le monde compte !",
+        "audio": "/audio/fr/cherche/missing-3-11a93a19.mp3"
       }
     ],
     "found": [
       {
         "who": "timothee",
-        "text": "Qu'est-ce que tu fais là ? Personne ne veut de moi…"
+        "text": "Qu'est-ce que tu fais là ? Personne ne veut de moi…",
+        "audio": "/audio/fr/cherche/found-0-51e0fcc7.mp3"
       },
       {
         "who": "player",
-        "text": "Ce n'est pas vrai. Je suis là exprès pour toi. Sans toi, il manque quelqu'un !"
+        "text": "Ce n'est pas vrai. Je suis là exprès pour toi. Sans toi, il manque quelqu'un !",
+        "audio": "/audio/fr/cherche/found-1-132d4432.mp3"
       },
       {
         "who": "timothee",
-        "text": "C'est vrai ? Bon… d'accord, je viens avec toi."
+        "text": "C'est vrai ? Bon… d'accord, je viens avec toi.",
+        "audio": "/audio/fr/cherche/found-2-c0ef8e72.mp3"
       }
     ],
     "back": [
       {
         "who": "narrator",
-        "text": "Timothée est de retour sur la place de la fontaine."
+        "text": "Timothée est de retour sur la place de la fontaine.",
+        "audio": "/audio/fr/cherche/back-0-bf205838.mp3"
       }
     ],
     "party": [
       {
         "who": "lea",
         "text": "Timothée ! Tu es revenu ! Pardon de nous être moqués de toi.",
-        "fx": "celebrate"
+        "fx": "celebrate",
+        "audio": "/audio/fr/cherche/party-0-5cffd6aa.mp3"
       },
       {
         "who": "samy",
-        "text": "Viens dans la ronde ! On va jouer à un jeu où tout le monde peut gagner."
+        "text": "Viens dans la ronde ! On va jouer à un jeu où tout le monde peut gagner.",
+        "audio": "/audio/fr/cherche/party-1-f1cbd9f1.mp3"
       },
       {
         "who": "timothee",
-        "text": "Merci de m'avoir cherché… Je me sens à nouveau à ma place."
+        "text": "Merci de m'avoir cherché… Je me sens à nouveau à ma place.",
+        "audio": "/audio/fr/cherche/party-2-c6267492.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
-        "text": "Il y a de la joie à Zion aujourd'hui, comme il y a de la joie dans le ciel quand quelqu'un revient vers Dieu."
+        "text": "Il y a de la joie à Zion aujourd'hui, comme il y a de la joie dans le ciel quand quelqu'un revient vers Dieu.",
+        "audio": "/audio/fr/cherche/debrief-0-cc5639dd.mp3"
       },
       {
         "who": "gardien",
-        "text": "Le berger n'a pas dit : « Tant pis, il m'en reste quatre-vingt-dix-neuf. » Pour lui, chaque brebis comptait."
+        "text": "Le berger n'a pas dit : « Tant pis, il m'en reste quatre-vingt-dix-neuf. » Pour lui, chaque brebis comptait.",
+        "audio": "/audio/fr/cherche/debrief-1-5a448747.mp3"
       },
       {
         "who": "gardien",
-        "text": "Jésus est comme ce berger. Il ne nous oublie jamais. Et il nous apprend à aller chercher ceux qui sont seuls."
+        "text": "Jésus est comme ce berger. Il ne nous oublie jamais. Et il nous apprend à aller chercher ceux qui sont seuls.",
+        "audio": "/audio/fr/cherche/debrief-2-29982eae.mp3"
       }
     ]
   },
@@ -107,27 +123,33 @@
       "panels": [
         {
           "icon": "ill:brebis-cent",
-          "text": "Jésus raconte : « Imaginez un berger qui a cent brebis. Il les connaît toutes, et il les aime toutes. »"
+          "text": "Jésus raconte : « Imaginez un berger qui a cent brebis. Il les connaît toutes, et il les aime toutes. »",
+          "audio": "/audio/fr/cherche/scroll-story-0-bc80c4a4.mp3"
         },
         {
           "icon": "ill:brebis-compte",
-          "text": "« Un soir, il les compte : quatre-vingt-dix-sept, quatre-vingt-dix-huit, quatre-vingt-dix-neuf… Il en manque une ! »"
+          "text": "« Un soir, il les compte : quatre-vingt-dix-sept, quatre-vingt-dix-huit, quatre-vingt-dix-neuf… Il en manque une ! »",
+          "audio": "/audio/fr/cherche/scroll-story-1-72a0469d.mp3"
         },
         {
           "icon": "ill:brebis-cherche",
-          "text": "« Le berger laisse les quatre-vingt-dix-neuf autres en sécurité. Il part chercher celle qui est perdue, dans les collines, jusqu'à ce qu'il la retrouve. »"
+          "text": "« Le berger laisse les quatre-vingt-dix-neuf autres en sécurité. Il part chercher celle qui est perdue, dans les collines, jusqu'à ce qu'il la retrouve. »",
+          "audio": "/audio/fr/cherche/scroll-story-2-56be6416.mp3"
         },
         {
           "icon": "ill:brebis-trouvee",
-          "text": "« Quand il la trouve, il est rempli de joie ! Il la met sur ses épaules et la ramène à la maison. »"
+          "text": "« Quand il la trouve, il est rempli de joie ! Il la met sur ses épaules et la ramène à la maison. »",
+          "audio": "/audio/fr/cherche/scroll-story-3-c7de0875.mp3"
         },
         {
           "icon": "ill:brebis-fete",
-          "text": "« Il appelle ses amis : Réjouissez-vous avec moi, j'ai retrouvé ma brebis qui était perdue ! »"
+          "text": "« Il appelle ses amis : Réjouissez-vous avec moi, j'ai retrouvé ma brebis qui était perdue ! »",
+          "audio": "/audio/fr/cherche/scroll-story-4-61f93b70.mp3"
         },
         {
           "icon": "ill:brebis-ciel",
-          "text": "Jésus explique : « Il y a une grande joie dans le ciel pour une seule personne qui revient vers Dieu. » Pour Dieu, chacun est précieux."
+          "text": "Jésus explique : « Il y a une grande joie dans le ciel pour une seule personne qui revient vers Dieu. » Pour Dieu, chacun est précieux.",
+          "audio": "/audio/fr/cherche/scroll-story-5-248c43a6.mp3"
         }
       ]
     }

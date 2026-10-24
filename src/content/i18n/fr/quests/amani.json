@@ -41,221 +41,265 @@
     "intro": [
       {
         "who": "gardien",
-        "text": "Aujourd'hui, je vais te raconter un conte venu de très loin, de la ville d'ERO. Il parle de la peur… et de la paix."
+        "text": "Aujourd'hui, je vais te raconter un conte venu de très loin, de la ville d'ERO. Il parle de la peur… et de la paix.",
+        "audio": "/audio/fr/amani/intro-0-4cbb9451.mp3"
       },
       {
         "who": "gardien",
-        "text": "Ferme les yeux. Dans ce conte, tu es Nala, une petite fille courageuse."
+        "text": "Ferme les yeux. Dans ce conte, tu es Nala, une petite fille courageuse.",
+        "audio": "/audio/fr/amani/intro-1-438ab364.mp3"
       }
     ],
     "rain": [
       {
         "who": "narrator",
-        "text": "Un jour de pluie abondante, l'eau coulait tellement que les rues étaient inondées. Les habitants d'ERO se réfugièrent tous dans leur maison."
+        "text": "Un jour de pluie abondante, l'eau coulait tellement que les rues étaient inondées. Les habitants d'ERO se réfugièrent tous dans leur maison.",
+        "audio": "/audio/fr/amani/rain-0-cc8cab7a.mp3"
       },
       {
         "who": "narrator",
-        "text": "Les enfants, quant à eux, jouaient sous la pluie ; sans se soucier de rien, ils se réjouissaient et criaient."
+        "text": "Les enfants, quant à eux, jouaient sous la pluie ; sans se soucier de rien, ils se réjouissaient et criaient.",
+        "audio": "/audio/fr/amani/rain-1-9751cf9b.mp3"
       }
     ],
     "thunder": [
       {
         "who": "narrator",
         "text": "Puis soudain, on entendit un grand bruit retentir du ciel : on aurait dit un tonnerre qui grondait.",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/fr/amani/thunder-0-b6573819.mp3"
       },
       {
         "who": "enfant1",
-        "text": "Au secours ! Le tonnerre ! Tout le monde à la maison !"
+        "text": "Au secours ! Le tonnerre ! Tout le monde à la maison !",
+        "audio": "/audio/fr/amani/thunder-1-562dd365.mp3"
       },
       {
         "who": "narrator",
-        "text": "Les enfants coururent se cacher. Mais Nala, elle, resta là et leva les yeux vers le ciel."
+        "text": "Les enfants coururent se cacher. Mais Nala, elle, resta là et leva les yeux vers le ciel.",
+        "audio": "/audio/fr/amani/thunder-2-da638b87.mp3"
       }
     ],
     "ask": [
       {
         "who": "player",
-        "text": "Mais que veut-elle nous dire ? Pourquoi cette voix gronde-t-elle si fort ?"
+        "text": "Mais que veut-elle nous dire ? Pourquoi cette voix gronde-t-elle si fort ?",
+        "audio": "/audio/fr/amani/ask-0-72635c15.mp3"
       },
       {
         "who": "player",
         "text": "Qui es-tu, et pourquoi grondes-tu ? Si tu veux me parler, dis juste bonjour. Je m'appelle Nala, et j'aimerais être ton amie !",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/fr/amani/ask-1-e37fe20b.mp3"
       },
       {
         "who": "narrator",
-        "text": "Le tonnerre gronda à nouveau. Mais cette fois, derrière ce bruit, se cachait une voix qui souriait… encore lointaine."
+        "text": "Le tonnerre gronda à nouveau. Mais cette fois, derrière ce bruit, se cachait une voix qui souriait… encore lointaine.",
+        "audio": "/audio/fr/amani/ask-2-3b815ffd.mp3"
       },
       {
         "who": "player",
-        "text": "Il y a une voix qui essaie de nous parler. Mais le tonnerre nous effraie et nous empêche d'entendre la voix qui sourit."
+        "text": "Il y a une voix qui essaie de nous parler. Mais le tonnerre nous effraie et nous empêche d'entendre la voix qui sourit.",
+        "audio": "/audio/fr/amani/ask-3-cf16b2ff.mp3"
       }
     ],
     "bed": [
       {
         "who": "narrator",
-        "text": "Nala rentra chez elle et s'installa dans son lit. Elle s'endormit avec cette pensée…"
+        "text": "Nala rentra chez elle et s'installa dans son lit. Elle s'endormit avec cette pensée…",
+        "audio": "/audio/fr/amani/bed-0-b2a57001.mp3"
       }
     ],
     "dream": [
       {
         "who": "narrator",
-        "text": "Elle fit un rêve où elle vit une étoile se rapprocher."
+        "text": "Elle fit un rêve où elle vit une étoile se rapprocher.",
+        "audio": "/audio/fr/amani/dream-0-de190a07.mp3"
       },
       {
         "who": "amani",
-        "text": "Bonjour, Nala !"
+        "text": "Bonjour, Nala !",
+        "audio": "/audio/fr/amani/dream-1-6e9b244a.mp3"
       }
     ],
     "star": [
       {
         "who": "player",
-        "text": "Bonjour ! Comment connais-tu mon nom ? Qui es-tu ? Et que veux-tu ?"
+        "text": "Bonjour ! Comment connais-tu mon nom ? Qui es-tu ? Et que veux-tu ?",
+        "audio": "/audio/fr/amani/star-0-df3499c9.mp3"
       },
       {
         "who": "amani",
-        "text": "Moi ? Je connais les noms de tout le monde. Je t'ai entendue dire qu'il fallait se présenter et demander si on pouvait être amis !"
+        "text": "Moi ? Je connais les noms de tout le monde. Je t'ai entendue dire qu'il fallait se présenter et demander si on pouvait être amis !",
+        "audio": "/audio/fr/amani/star-1-5a288a94.mp3"
       },
       {
         "who": "player",
-        "text": "Serais-tu la voix que le tonnerre empêche d'entendre ?"
+        "text": "Serais-tu la voix que le tonnerre empêche d'entendre ?",
+        "audio": "/audio/fr/amani/star-2-b895db92.mp3"
       },
       {
         "who": "amani",
-        "text": "Tu as pu entendre la voix qui sourit parce que tu as été courageuse. Le grondement que les autres entendent, c'est en fait la peur qui est dans leur cœur. C'est elle qui les empêche de m'entendre."
+        "text": "Tu as pu entendre la voix qui sourit parce que tu as été courageuse. Le grondement que les autres entendent, c'est en fait la peur qui est dans leur cœur. C'est elle qui les empêche de m'entendre.",
+        "audio": "/audio/fr/amani/star-3-fff682af.mp3"
       },
       {
         "who": "amani",
-        "text": "Ne laisse pas la peur te dominer. Reste courageuse, pense très fort à moi, et tu m'entendras de plus en plus clairement."
+        "text": "Ne laisse pas la peur te dominer. Reste courageuse, pense très fort à moi, et tu m'entendras de plus en plus clairement.",
+        "audio": "/audio/fr/amani/star-4-5c8ddf18.mp3"
       },
       {
         "who": "amani",
         "text": "Mon nom, c'est Amani, ce qui veut dire paix ! Quand le tonnerre grondera à nouveau, garde ton calme, sois tranquille, et tu m'entendras. Va le raconter à tout le village !",
-        "fx": "glow"
+        "fx": "glow",
+        "audio": "/audio/fr/amani/star-5-80786656.mp3"
       }
     ],
     "wake": [
       {
         "who": "narrator",
-        "text": "Nala se réveilla avec un seul mot sur les lèvres. Elle chantait de vive voix :"
+        "text": "Nala se réveilla avec un seul mot sur les lèvres. Elle chantait de vive voix :",
+        "audio": "/audio/fr/amani/wake-0-c5299489.mp3"
       },
       {
         "who": "player",
         "text": "Amani, Amani, la paix est dans mon cœur ! Je n'ai plus peur ! Je n'ai plus peur !",
-        "fx": "harp"
+        "fx": "harp",
+        "audio": "/audio/fr/amani/wake-1-4540d487.mp3"
       }
     ],
     "mote": [
       {
         "who": "player",
-        "text": "Môté ! Amani, Amani… je l'ai vu !"
+        "text": "Môté ! Amani, Amani… je l'ai vu !",
+        "audio": "/audio/fr/amani/mote-0-e674abe3.mp3"
       },
       {
         "who": "mote",
-        "text": "De quoi parles-tu, Nala ? Je ne te comprends pas."
+        "text": "De quoi parles-tu, Nala ? Je ne te comprends pas.",
+        "audio": "/audio/fr/amani/mote-1-8ca241ab.mp3"
       },
       {
         "who": "player",
-        "text": "Je l'ai vu dans mon rêve ! C'est la peur qui nous empêche d'entendre la voix qui sourit. Quand le tonnerre grondera, il suffira de penser très fort à lui et de chanter : « Amani, Amani, la paix est dans mon cœur ! »"
+        "text": "Je l'ai vu dans mon rêve ! C'est la peur qui nous empêche d'entendre la voix qui sourit. Quand le tonnerre grondera, il suffira de penser très fort à lui et de chanter : « Amani, Amani, la paix est dans mon cœur ! »",
+        "audio": "/audio/fr/amani/mote-2-21dfbf30.mp3"
       },
       {
         "who": "mote",
-        "text": "Maintenant, nous sommes deux à entendre la voix qui sourit ! Va, Nala : invite les habitants sur la place."
+        "text": "Maintenant, nous sommes deux à entendre la voix qui sourit ! Va, Nala : invite les habitants sur la place.",
+        "audio": "/audio/fr/amani/mote-3-4905ecfd.mp3"
       }
     ],
     "hab1": [
       {
         "who": "hab1",
-        "text": "Nala ? Viens, on dirait que tu as une bonne nouvelle ! Je te suis."
+        "text": "Nala ? Viens, on dirait que tu as une bonne nouvelle ! Je te suis.",
+        "audio": "/audio/fr/amani/hab1-0-6beb6cdc.mp3"
       }
     ],
     "hab2": [
       {
         "who": "hab2",
-        "text": "Une voix qui sourit ? Je veux entendre ça. Allons-y !"
+        "text": "Une voix qui sourit ? Je veux entendre ça. Allons-y !",
+        "audio": "/audio/fr/amani/hab2-0-b6fb302a.mp3"
       }
     ],
     "hab3": [
       {
         "who": "hab3",
-        "text": "Plus peur du tonnerre ? Ah, si c'était vrai… Je viens avec toi."
+        "text": "Plus peur du tonnerre ? Ah, si c'était vrai… Je viens avec toi.",
+        "audio": "/audio/fr/amani/hab3-0-f2428e8c.mp3"
       }
     ],
     "together": [
       {
         "who": "narrator",
-        "text": "Tous écoutèrent Nala avec étonnement."
+        "text": "Tous écoutèrent Nala avec étonnement.",
+        "audio": "/audio/fr/amani/together-0-89013427.mp3"
       },
       {
         "who": "hab2",
-        "text": "Depuis tout ce temps, c'était la peur qui nous empêchait d'entendre Amani ? Ah, quelle joie !"
+        "text": "Depuis tout ce temps, c'était la peur qui nous empêchait d'entendre Amani ? Ah, quelle joie !",
+        "audio": "/audio/fr/amani/together-1-f76fad16.mp3"
       },
       {
         "who": "hab1",
         "text": "Nous sommes libérés de la peur ! Chantons tous ensemble : Amani, Amani, la paix est dans mon cœur !",
-        "fx": "rainbow"
+        "fx": "rainbow",
+        "audio": "/audio/fr/amani/together-2-56787ff3.mp3"
       },
       {
         "who": "narrator",
         "text": "Môté sourit, et Nala aussi. Désormais, chaque fois que le tonnerre grondera, les habitants d'ERO sauront écouter la voix qui sourit.",
-        "fx": "celebrate"
+        "fx": "celebrate",
+        "audio": "/audio/fr/amani/together-3-1fb8ecbe.mp3"
       }
     ],
     "storm": [
       {
         "who": "narrator",
         "text": "De retour à Zion… le ciel s'assombrit, et le tonnerre gronde au-dessus de la cité !",
-        "snd": "thunder"
+        "snd": "thunder",
+        "audio": "/audio/fr/amani/storm-0-7c66c7f7.mp3"
       },
       {
         "who": "narrator",
         "text": "Près du marché, on entend quelqu'un pleurer.",
-        "snd": "cry"
+        "snd": "cry",
+        "audio": "/audio/fr/amani/storm-1-d5eaa4cd.mp3"
       }
     ],
     "mila": [
       {
         "who": "mila",
-        "text": "J'ai peur du tonnerre… Il fait trop de bruit…"
+        "text": "J'ai peur du tonnerre… Il fait trop de bruit…",
+        "audio": "/audio/fr/amani/mila-0-0e4f7417.mp3"
       },
       {
         "who": "player",
-        "text": "Moi aussi, j'avais peur. Respire avec moi, doucement… Tu sais, un jour, pendant une tempête, Jésus a dit au vent : « Silence, calme-toi ! » Et tout est devenu calme."
+        "text": "Moi aussi, j'avais peur. Respire avec moi, doucement… Tu sais, un jour, pendant une tempête, Jésus a dit au vent : « Silence, calme-toi ! » Et tout est devenu calme.",
+        "audio": "/audio/fr/amani/mila-1-268b7465.mp3"
       },
       {
         "who": "player",
         "text": "Chantons ensemble : Amani, Amani, la paix est dans mon cœur ! Je n'ai plus peur !",
-        "fx": "harp"
+        "fx": "harp",
+        "audio": "/audio/fr/amani/mila-2-0522920b.mp3"
       },
       {
         "who": "mila",
-        "text": "Je n'ai plus peur… Tu veux bien m'accompagner jusqu'à la tour ?"
+        "text": "Je n'ai plus peur… Tu veux bien m'accompagner jusqu'à la tour ?",
+        "audio": "/audio/fr/amani/mila-3-1af28262.mp3"
       }
     ],
     "shelter": [
       {
         "who": "gardien",
-        "text": "Entrez, entrez ! Ici, vous êtes à l'abri. Bravo d'être restée près d'elle."
+        "text": "Entrez, entrez ! Ici, vous êtes à l'abri. Bravo d'être restée près d'elle.",
+        "audio": "/audio/fr/amani/shelter-0-3e66c3bf.mp3"
       },
       {
         "who": "narrator",
         "text": "Petit à petit, l'orage s'éloigne, et le soleil revient sur Zion.",
-        "fx": "rainbow"
+        "fx": "rainbow",
+        "audio": "/audio/fr/amani/shelter-1-1279c3dd.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
-        "text": "La peur fait beaucoup de bruit dans notre cœur, comme le tonnerre. Elle nous empêche d'entendre Dieu."
+        "text": "La peur fait beaucoup de bruit dans notre cœur, comme le tonnerre. Elle nous empêche d'entendre Dieu.",
+        "audio": "/audio/fr/amani/debrief-0-ceb63c11.mp3"
       },
       {
         "who": "gardien",
-        "text": "Dans la Bible, le prophète Élie a entendu Dieu non pas dans le vent ni dans le tonnerre, mais dans un murmure doux et léger."
+        "text": "Dans la Bible, le prophète Élie a entendu Dieu non pas dans le vent ni dans le tonnerre, mais dans un murmure doux et léger.",
+        "audio": "/audio/fr/amani/debrief-1-6d65aa92.mp3"
       },
       {
         "who": "gardien",
-        "text": "Et Jésus nous dit : « Je vous laisse la paix, je vous donne ma paix. » Quand tu as peur, arrête-toi, pense à lui… et écoute sa voix qui sourit."
+        "text": "Et Jésus nous dit : « Je vous laisse la paix, je vous donne ma paix. » Quand tu as peur, arrête-toi, pense à lui… et écoute sa voix qui sourit.",
+        "audio": "/audio/fr/amani/debrief-2-923c08c9.mp3"
       }
     ]
   },
@@ -280,59 +324,73 @@
       "panels": [
         {
           "icon": "img:/books/amani/page-01.webp",
-          "text": "Amani, Amani, la paix est dans mon cœur !"
+          "text": "Amani, Amani, la paix est dans mon cœur !",
+          "audio": "/audio/fr/amani/scroll-livre-0-251a77eb.mp3"
         },
         {
           "icon": "img:/books/amani/page-02.webp",
-          "text": "Un jour de pluie abondante, l'eau coulait tellement que les rues étaient engorgées d'eau ! Je dirais même inondées. Les habitants de cette ville qu'on appelle ERO se réfugièrent tous dans leur maison. Les enfants, quant à eux, jouaient sous la pluie ; sans se soucier de rien, ils se réjouissaient et criaient."
+          "text": "Un jour de pluie abondante, l'eau coulait tellement que les rues étaient engorgées d'eau ! Je dirais même inondées. Les habitants de cette ville qu'on appelle ERO se réfugièrent tous dans leur maison. Les enfants, quant à eux, jouaient sous la pluie ; sans se soucier de rien, ils se réjouissaient et criaient.",
+          "audio": "/audio/fr/amani/scroll-livre-1-b1f14787.mp3"
         },
         {
           "icon": "img:/books/amani/page-03.webp",
-          "text": "Puis soudain, on entendit un grand bruit retentir du ciel, on aurait dit un tonnerre qui grondait."
+          "text": "Puis soudain, on entendit un grand bruit retentir du ciel, on aurait dit un tonnerre qui grondait.",
+          "audio": "/audio/fr/amani/scroll-livre-2-32fc6c6c.mp3"
         },
         {
           "icon": "img:/books/amani/page-04.webp",
-          "text": "Impressionnée par cette voix, Nala s'interrogea : « Mais que veut-elle nous dire ? Pourquoi cette voix gronde-t-elle aussi fort au point de nous effrayer ? » La voix se fit entendre à nouveau, mais aucun habitant ne comprenait ce qu'elle essayait de dire ! Alors Nala, cette jeune fille courageuse et déterminée, se mit à l'interroger : « Qui es-tu et pourquoi grondes-tu ? Ce n'est pas la première fois que je t'entends gronder. Si tu veux me parler, dis juste bonjour. Je m'appelle Nala et j'aimerais être ton amie. Et d'ailleurs, d'où viens-tu ? Que fais-tu ? Qui es-tu ? »"
+          "text": "Impressionnée par cette voix, Nala s'interrogea : « Mais que veut-elle nous dire ? Pourquoi cette voix gronde-t-elle aussi fort au point de nous effrayer ? » La voix se fit entendre à nouveau, mais aucun habitant ne comprenait ce qu'elle essayait de dire ! Alors Nala, cette jeune fille courageuse et déterminée, se mit à l'interroger : « Qui es-tu et pourquoi grondes-tu ? Ce n'est pas la première fois que je t'entends gronder. Si tu veux me parler, dis juste bonjour. Je m'appelle Nala et j'aimerais être ton amie. Et d'ailleurs, d'où viens-tu ? Que fais-tu ? Qui es-tu ? »",
+          "audio": "/audio/fr/amani/scroll-livre-3-5989cf97.mp3"
         },
         {
           "icon": "img:/books/amani/page-05.webp",
-          "text": "Elle entendit à nouveau le tonnerre gronder, mais cette fois derrière ce bruit se cachait une voix qui souriait. Mais elle lui semblait encore lointaine, comme s'il fallait qu'elle se concentre beaucoup pour l'entendre. Elle décida de rentrer chez elle et s'installa dans son lit. Et étant sur sa couche, elle se dit : « Il y a une voix qui essaie de nous parler, mais ce tonnerre nous effraie et nous empêche d'entendre la voix qui sourit ! »"
+          "text": "Elle entendit à nouveau le tonnerre gronder, mais cette fois derrière ce bruit se cachait une voix qui souriait. Mais elle lui semblait encore lointaine, comme s'il fallait qu'elle se concentre beaucoup pour l'entendre. Elle décida de rentrer chez elle et s'installa dans son lit. Et étant sur sa couche, elle se dit : « Il y a une voix qui essaie de nous parler, mais ce tonnerre nous effraie et nous empêche d'entendre la voix qui sourit ! »",
+          "audio": "/audio/fr/amani/scroll-livre-4-3af1c382.mp3"
         },
         {
           "icon": "img:/books/amani/page-06.webp",
-          "text": "Elle s'endormit avec cette pensée et fit un rêve où elle vit une étoile se rapprocher. L'étoile, dans son rêve, lui dit : « Bonjour, Nala ! » « Bonjour ! Comment connais-tu mon nom ? Qui es-tu ? Et que veux-tu ? » demanda Nala. L'étoile répondit : « Moi ! Je connais les noms de tout le monde, j'ai toute la connaissance. » Et Nala insista à nouveau : « Mais qui es-tu ? Et que veux-tu ? »"
+          "text": "Elle s'endormit avec cette pensée et fit un rêve où elle vit une étoile se rapprocher. L'étoile, dans son rêve, lui dit : « Bonjour, Nala ! » « Bonjour ! Comment connais-tu mon nom ? Qui es-tu ? Et que veux-tu ? » demanda Nala. L'étoile répondit : « Moi ! Je connais les noms de tout le monde, j'ai toute la connaissance. » Et Nala insista à nouveau : « Mais qui es-tu ? Et que veux-tu ? »",
+          "audio": "/audio/fr/amani/scroll-livre-5-7bcdd80e.mp3"
         },
         {
           "icon": "img:/books/amani/page-07.webp",
-          "text": "L'étoile continua : « Je t'ai entendu dire qu'il fallait se présenter et demander si on pouvait être amis ! » Nala répliqua : « Ah oui, serais-tu la voix que le tonnerre empêche d'entendre ?! Parce que je ne sais toujours pas comment faire pour l'entendre clairement ! » L'étoile lui répondit : « Tu sais, Nala, tu as pu entendre cette voix qui sourit parce que tu as été courageuse. Les autres habitants se sont enfuis dans leur maison parce que le grondement du tonnerre qu'ils entendent, c'est en fait la peur qui est dans leur cœur et qui les empêche de m'entendre. »"
+          "text": "L'étoile continua : « Je t'ai entendu dire qu'il fallait se présenter et demander si on pouvait être amis ! » Nala répliqua : « Ah oui, serais-tu la voix que le tonnerre empêche d'entendre ?! Parce que je ne sais toujours pas comment faire pour l'entendre clairement ! » L'étoile lui répondit : « Tu sais, Nala, tu as pu entendre cette voix qui sourit parce que tu as été courageuse. Les autres habitants se sont enfuis dans leur maison parce que le grondement du tonnerre qu'ils entendent, c'est en fait la peur qui est dans leur cœur et qui les empêche de m'entendre. »",
+          "audio": "/audio/fr/amani/scroll-livre-6-4aad6c37.mp3"
         },
         {
           "icon": "img:/books/amani/page-08.webp",
-          "text": "« Veux-tu que je te dise comment entendre la voix qui sourit ? Ne laisse pas la peur te dominer. Reste courageuse, pense très fort à moi, et tu m'entendras toujours de plus en plus clairement. Surtout, n'oublie pas de raconter à tout le village ce que je te dis ! Dis-leur qu'ils n'ont plus à avoir peur du tonnerre ! Je suis la voix qui crie plus fort que le tonnerre ! Mon nom, c'est Amani, ce qui veut dire paix ! Quand le tonnerre grondera à nouveau, garde ton calme, sois tranquille et tu m'entendras ! »"
+          "text": "« Veux-tu que je te dise comment entendre la voix qui sourit ? Ne laisse pas la peur te dominer. Reste courageuse, pense très fort à moi, et tu m'entendras toujours de plus en plus clairement. Surtout, n'oublie pas de raconter à tout le village ce que je te dis ! Dis-leur qu'ils n'ont plus à avoir peur du tonnerre ! Je suis la voix qui crie plus fort que le tonnerre ! Mon nom, c'est Amani, ce qui veut dire paix ! Quand le tonnerre grondera à nouveau, garde ton calme, sois tranquille et tu m'entendras ! »",
+          "audio": "/audio/fr/amani/scroll-livre-7-85cac323.mp3"
         },
         {
           "icon": "img:/books/amani/page-09.webp",
-          "text": "Nala se réveilla avec un seul mot sur les lèvres : « Amani, Amani… la paix est dans mon cœur… je n'ai plus peur ! » Elle chantait de vive voix : « Amani, Amani, la paix est dans mon cœur ! Amani, Amani, la paix est dans mon cœur ! Je n'ai plus peur ! Je n'ai plus peur ! »"
+          "text": "Nala se réveilla avec un seul mot sur les lèvres : « Amani, Amani… la paix est dans mon cœur… je n'ai plus peur ! » Elle chantait de vive voix : « Amani, Amani, la paix est dans mon cœur ! Amani, Amani, la paix est dans mon cœur ! Je n'ai plus peur ! Je n'ai plus peur ! »",
+          "audio": "/audio/fr/amani/scroll-livre-8-a29e6e06.mp3"
         },
         {
           "icon": "img:/books/amani/page-10.webp",
-          "text": "Nala sortit de sa maison, remplie de joie. Elle courut vers Môté, le gardien et protecteur des habitants de la ville de ERO. À bout de souffle, le seul mot qui sortait de sa bouche était : « Amani, Amani… je l'ai vu ! »"
+          "text": "Nala sortit de sa maison, remplie de joie. Elle courut vers Môté, le gardien et protecteur des habitants de la ville de ERO. À bout de souffle, le seul mot qui sortait de sa bouche était : « Amani, Amani… je l'ai vu ! »",
+          "audio": "/audio/fr/amani/scroll-livre-9-f4fc37e9.mp3"
         },
         {
           "icon": "img:/books/amani/page-11.webp",
-          "text": "Môté, intrigué, lui demanda : « De quoi parles-tu, Nala ? Je ne te comprends pas. » Nala répondit à nouveau : « Amani ! Amani ! Je l'ai vu dans mon rêve. Il m'a dit de raconter à tous les habitants d'ERO qu'ils n'avaient plus à avoir peur du tonnerre ! C'est la peur qui nous empêche d'entendre la voix qui sourit. À chaque fois que le tonnerre grondera à nouveau, il nous suffira de penser très fort et de chanter : Amani, Amani, la paix est dans mon cœur ! Je n'ai plus peur ! »"
+          "text": "Môté, intrigué, lui demanda : « De quoi parles-tu, Nala ? Je ne te comprends pas. » Nala répondit à nouveau : « Amani ! Amani ! Je l'ai vu dans mon rêve. Il m'a dit de raconter à tous les habitants d'ERO qu'ils n'avaient plus à avoir peur du tonnerre ! C'est la peur qui nous empêche d'entendre la voix qui sourit. À chaque fois que le tonnerre grondera à nouveau, il nous suffira de penser très fort et de chanter : Amani, Amani, la paix est dans mon cœur ! Je n'ai plus peur ! »",
+          "audio": "/audio/fr/amani/scroll-livre-10-174e33bb.mp3"
         },
         {
           "icon": "img:/books/amani/page-12.webp",
-          "text": "Môté écouta Nala avec beaucoup d'attention. Il sourit et dit : « Maintenant, nous sommes deux à entendre la voix qui sourit ! » Il invita les habitants de la ville de ERO à entendre ce que la voix qui sourit avait dit à Nala."
+          "text": "Môté écouta Nala avec beaucoup d'attention. Il sourit et dit : « Maintenant, nous sommes deux à entendre la voix qui sourit ! » Il invita les habitants de la ville de ERO à entendre ce que la voix qui sourit avait dit à Nala.",
+          "audio": "/audio/fr/amani/scroll-livre-11-dc6615ab.mp3"
         },
         {
           "icon": "img:/books/amani/page-13.webp",
-          "text": "Tous étaient dans l'étonnement de ce qu'ils entendaient. Beaucoup s'exclamèrent : « Depuis tout ce temps, c'était la peur qui nous empêchait d'entendre Amani ? Ah, quelle joie ! Nous sommes libérés de la peur ! Nous pouvons répondre au tonnerre désormais ! »"
+          "text": "Tous étaient dans l'étonnement de ce qu'ils entendaient. Beaucoup s'exclamèrent : « Depuis tout ce temps, c'était la peur qui nous empêchait d'entendre Amani ? Ah, quelle joie ! Nous sommes libérés de la peur ! Nous pouvons répondre au tonnerre désormais ! »",
+          "audio": "/audio/fr/amani/scroll-livre-12-8365e131.mp3"
         },
         {
           "icon": "img:/books/amani/page-14.webp",
-          "text": "Môté, le gardien et protecteur de la ville de ERO, sourit, et Nala aussi. Ils étaient heureux et en paix et, désormais, chaque fois que le tonnerre grondera, ils sauront écouter la voix qui sourit."
+          "text": "Môté, le gardien et protecteur de la ville de ERO, sourit, et Nala aussi. Ils étaient heureux et en paix et, désormais, chaque fois que le tonnerre grondera, ils sauront écouter la voix qui sourit.",
+          "audio": "/audio/fr/amani/scroll-livre-13-b4edf9b0.mp3"
         }
       ]
     }

@@ -11,7 +11,9 @@
     "test": "vitest run",
     "check:content": "node scripts/check-content.mjs",
     "models:fetch": "node scripts/fetch-models.mjs",
-    "models:build": "node scripts/optimize-models.mjs"
+    "models:build": "node scripts/optimize-models.mjs",
+    "voices": "assets-src/kokoro/.venv/bin/python scripts/voices/generate.py",
+    "voices:setup": "bash scripts/voices/setup.sh"
   },
   "dependencies": {
     "@fontsource/atkinson-hyperlegible": "^5.3.0",

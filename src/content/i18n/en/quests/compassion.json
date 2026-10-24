@@ -28,79 +28,95 @@
     "welcome": [
       {
         "who": "gardien",
-        "text": "Welcome to Zion, the City of the Watchers! I am Ezra, Keeper of the tower."
+        "text": "Welcome to Zion, the City of the Watchers! I am Ezra, Keeper of the tower.",
+        "audio": "/audio/en/compassion/welcome-0-f05b4d7a.mp3"
       },
       {
         "who": "gardien",
-        "text": "Here, a watcher doesn't only watch the walls: they watch over people. They notice who needs help."
+        "text": "Here, a watcher doesn't only watch the walls: they watch over people. They notice who needs help.",
+        "audio": "/audio/en/compassion/welcome-1-92109289.mp3"
       },
       {
         "who": "gardien",
-        "text": "Would you like to become an apprentice watcher? Then first, listen to a story Jesus told."
+        "text": "Would you like to become an apprentice watcher? Then first, listen to a story Jesus told.",
+        "audio": "/audio/en/compassion/welcome-2-5b941888.mp3"
       }
     ],
     "alert": [
       {
         "who": "narrator",
         "text": "Suddenly, a cry comes from the market.",
-        "snd": "cry"
+        "snd": "cry",
+        "audio": "/audio/en/compassion/alert-0-b4edef74.mp3"
       },
       {
         "who": "gardien",
-        "text": "Did you hear that? Someone needs help. People are walking past… What will you do?"
+        "text": "Did you hear that? Someone needs help. People are walking past… What will you do?",
+        "audio": "/audio/en/compassion/alert-1-809baeac.mp3"
       }
     ],
     "help": [
       {
         "who": "narrator",
-        "text": "It's Naomi. She slipped and hurt her ankle. Her fruit has rolled everywhere."
+        "text": "It's Naomi. She slipped and hurt her ankle. Her fruit has rolled everywhere.",
+        "audio": "/audio/en/compassion/help-0-44764f3c.mp3"
       },
       {
         "who": "naomi_sol",
-        "text": "Ouch… People just walk past without stopping…"
+        "text": "Ouch… People just walk past without stopping…",
+        "audio": "/audio/en/compassion/help-1-d7f7a301.mp3"
       },
       {
         "who": "player",
         "text": "I'm stopping. Take my hand, I'll help you up.",
-        "fx": "heal"
+        "fx": "heal",
+        "audio": "/audio/en/compassion/help-2-e0b56cbd.mp3"
       },
       {
         "who": "naomi_sol",
-        "text": "Thank you, that's so kind. Could you walk with me to the house of care?"
+        "text": "Thank you, that's so kind. Could you walk with me to the house of care?",
+        "audio": "/audio/en/compassion/help-3-e119f76a.mp3"
       }
     ],
     "arrive": [
       {
         "who": "narrator",
-        "text": "You walked slowly, at Naomi's pace. Here she is at the house of care."
+        "text": "You walked slowly, at Naomi's pace. Here she is at the house of care.",
+        "audio": "/audio/en/compassion/arrive-0-99f6915c.mp3"
       }
     ],
     "care": [
       {
         "who": "soigneuse",
-        "text": "Naomi! Come and sit down, I'll bandage your ankle."
+        "text": "Naomi! Come and sit down, I'll bandage your ankle.",
+        "audio": "/audio/en/compassion/care-0-01665ff0.mp3"
       },
       {
         "who": "soigneuse",
-        "text": "Thank you for bringing her. Many people walked past her. You took the time to stop."
+        "text": "Thank you for bringing her. Many people walked past her. You took the time to stop.",
+        "audio": "/audio/en/compassion/care-1-ca8e278d.mp3"
       },
       {
         "who": "naomi",
-        "text": "I won't forget you. God bless you!"
+        "text": "I won't forget you. God bless you!",
+        "audio": "/audio/en/compassion/care-2-7e19d12a.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
-        "text": "I saw what you did. You were Naomi's neighbour, just like the Samaritan in the story."
+        "text": "I saw what you did. You were Naomi's neighbour, just like the Samaritan in the story.",
+        "audio": "/audio/en/compassion/debrief-0-a34c256e.mp3"
       },
       {
         "who": "gardien",
-        "text": "Jesus doesn't ask us: \"Who deserves my help?\" He asks: \"Who can I be a neighbour to today?\""
+        "text": "Jesus doesn't ask us: \"Who deserves my help?\" He asks: \"Who can I be a neighbour to today?\"",
+        "audio": "/audio/en/compassion/debrief-1-50d77776.mp3"
       },
       {
         "who": "gardien",
-        "text": "Your heart saw, and your hands helped. That is compassion."
+        "text": "Your heart saw, and your hands helped. That is compassion.",
+        "audio": "/audio/en/compassion/debrief-2-60618792.mp3"
       }
     ]
   },
@@ -111,31 +127,38 @@
       "panels": [
         {
           "icon": "ill:samaritain-question",
-          "text": "One day, a man asks Jesus: \"Who is my neighbour? Who should I love?\" To answer him, Jesus tells a story."
+          "text": "One day, a man asks Jesus: \"Who is my neighbour? Who should I love?\" To answer him, Jesus tells a story.",
+          "audio": "/audio/en/compassion/scroll-story-0-1fd026fb.mp3"
         },
         {
           "icon": "ill:samaritain-route",
-          "text": "A man is travelling down the road from Jerusalem to Jericho. Robbers attack him, take his things and leave him hurt by the roadside."
+          "text": "A man is travelling down the road from Jerusalem to Jericho. Robbers attack him, take his things and leave him hurt by the roadside.",
+          "audio": "/audio/en/compassion/scroll-story-1-919c24d0.mp3"
         },
         {
           "icon": "ill:samaritain-passent",
-          "text": "A priest comes along. He sees the man… but crosses to the other side and keeps going. A little later, a Levite who serves in the Temple does the same."
+          "text": "A priest comes along. He sees the man… but crosses to the other side and keeps going. A little later, a Levite who serves in the Temple does the same.",
+          "audio": "/audio/en/compassion/scroll-story-2-f6ca82e4.mp3"
         },
         {
           "icon": "ill:samaritain-arrive",
-          "text": "Then a Samaritan arrives. In those days, Jews and Samaritans did not get along at all. Yet when he sees the wounded man, his heart is moved."
+          "text": "Then a Samaritan arrives. In those days, Jews and Samaritans did not get along at all. Yet when he sees the wounded man, his heart is moved.",
+          "audio": "/audio/en/compassion/scroll-story-3-876b51b6.mp3"
         },
         {
           "icon": "ill:samaritain-soins",
-          "text": "He goes to him, cleans his wounds with oil and wine and bandages them. Then he puts him on his own donkey and takes him to an inn."
+          "text": "He goes to him, cleans his wounds with oil and wine and bandages them. Then he puts him on his own donkey and takes him to an inn.",
+          "audio": "/audio/en/compassion/scroll-story-4-a97f220a.mp3"
         },
         {
           "icon": "ill:samaritain-auberge",
-          "text": "The next day, he gives the innkeeper two silver coins: \"Look after him. If you spend more, I will pay you back when I return.\""
+          "text": "The next day, he gives the innkeeper two silver coins: \"Look after him. If you spend more, I will pay you back when I return.\"",
+          "audio": "/audio/en/compassion/scroll-story-5-77a13c23.mp3"
         },
         {
           "icon": "ill:samaritain-aimer",
-          "text": "Jesus asks: \"Which of the three was a neighbour to the hurt man?\" The answer: \"The one who showed him mercy.\" And Jesus says: \"Go, and do the same.\""
+          "text": "Jesus asks: \"Which of the three was a neighbour to the hurt man?\" The answer: \"The one who showed him mercy.\" And Jesus says: \"Go, and do the same.\"",
+          "audio": "/audio/en/compassion/scroll-story-6-50eac815.mp3"
         }
       ]
     }

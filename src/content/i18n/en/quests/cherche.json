@@ -25,78 +25,94 @@
     "intro": [
       {
         "who": "gardien",
-        "text": "Do you know how many people live in Zion? Lots! And yet God knows each one by name."
+        "text": "Do you know how many people live in Zion? Lots! And yet God knows each one by name.",
+        "audio": "/audio/en/cherche/intro-0-e3fff217.mp3"
       },
       {
         "who": "gardien",
-        "text": "Listen to this story Jesus told."
+        "text": "Listen to this story Jesus told.",
+        "audio": "/audio/en/cherche/intro-1-b1e3e650.mp3"
       }
     ],
     "missing": [
       {
         "who": "lea",
-        "text": "Hi! We're playing ring-a-roses, but there are only three of us…"
+        "text": "Hi! We're playing ring-a-roses, but there are only three of us…",
+        "audio": "/audio/en/cherche/missing-0-009e5a04.mp3"
       },
       {
         "who": "samy",
-        "text": "Timothy used to play with us. But we laughed at him because he runs slowly… So he left."
+        "text": "Timothy used to play with us. But we laughed at him because he runs slowly… So he left.",
+        "audio": "/audio/en/cherche/missing-1-5d5f4d76.mp3"
       },
       {
         "who": "ana",
-        "text": "Maybe he's hiding somewhere near the city walls. Nobody went to look for him."
+        "text": "Maybe he's hiding somewhere near the city walls. Nobody went to look for him.",
+        "audio": "/audio/en/cherche/missing-2-3cf52c5b.mp3"
       },
       {
         "who": "player",
-        "text": "I'll go. Everyone matters!"
+        "text": "I'll go. Everyone matters!",
+        "audio": "/audio/en/cherche/missing-3-9bf759f8.mp3"
       }
     ],
     "found": [
       {
         "who": "timothee",
-        "text": "What are you doing here? Nobody wants me…"
+        "text": "What are you doing here? Nobody wants me…",
+        "audio": "/audio/en/cherche/found-0-d6ad868a.mp3"
       },
       {
         "who": "player",
-        "text": "That's not true. I came here just for you. Without you, someone is missing!"
+        "text": "That's not true. I came here just for you. Without you, someone is missing!",
+        "audio": "/audio/en/cherche/found-1-c0cc4cc3.mp3"
       },
       {
         "who": "timothee",
-        "text": "Really? Well… OK, I'll come with you."
+        "text": "Really? Well… OK, I'll come with you.",
+        "audio": "/audio/en/cherche/found-2-cd0373c5.mp3"
       }
     ],
     "back": [
       {
         "who": "narrator",
-        "text": "Timothy is back at the fountain square."
+        "text": "Timothy is back at the fountain square.",
+        "audio": "/audio/en/cherche/back-0-f08dcae8.mp3"
       }
     ],
     "party": [
       {
         "who": "lea",
         "text": "Timothy! You're back! We're sorry we laughed at you.",
-        "fx": "celebrate"
+        "fx": "celebrate",
+        "audio": "/audio/en/cherche/party-0-1da72c3a.mp3"
       },
       {
         "who": "samy",
-        "text": "Come and join the circle! Let's play a game where everyone can win."
+        "text": "Come and join the circle! Let's play a game where everyone can win.",
+        "audio": "/audio/en/cherche/party-1-a419e86f.mp3"
       },
       {
         "who": "timothee",
-        "text": "Thank you for looking for me… I feel like I belong again."
+        "text": "Thank you for looking for me… I feel like I belong again.",
+        "audio": "/audio/en/cherche/party-2-ff3411ea.mp3"
       }
     ],
     "debrief": [
       {
         "who": "gardien",
-        "text": "There is joy in Zion today, just as there is joy in heaven when someone comes back to God."
+        "text": "There is joy in Zion today, just as there is joy in heaven when someone comes back to God.",
+        "audio": "/audio/en/cherche/debrief-0-79781056.mp3"
       },
       {
         "who": "gardien",
-        "text": "The shepherd didn't say: \"Never mind, I still have ninety-nine.\" To him, every sheep mattered."
+        "text": "The shepherd didn't say: \"Never mind, I still have ninety-nine.\" To him, every sheep mattered.",
+        "audio": "/audio/en/cherche/debrief-1-06c553d3.mp3"
       },
       {
         "who": "gardien",
-        "text": "Jesus is like that shepherd. He never forgets us. And he teaches us to go and find those who are alone."
+        "text": "Jesus is like that shepherd. He never forgets us. And he teaches us to go and find those who are alone.",
+        "audio": "/audio/en/cherche/debrief-2-61253c1f.mp3"
       }
     ]
   },
@@ -107,27 +123,33 @@
       "panels": [
         {
           "icon": "ill:brebis-cent",
-          "text": "Jesus says: \"Imagine a shepherd who has a hundred sheep. He knows them all, and he loves them all.\""
+          "text": "Jesus says: \"Imagine a shepherd who has a hundred sheep. He knows them all, and he loves them all.\"",
+          "audio": "/audio/en/cherche/scroll-story-0-de176379.mp3"
         },
         {
           "icon": "ill:brebis-compte",
-          "text": "\"One evening, he counts them: ninety-seven, ninety-eight, ninety-nine… One is missing!\""
+          "text": "\"One evening, he counts them: ninety-seven, ninety-eight, ninety-nine… One is missing!\"",
+          "audio": "/audio/en/cherche/scroll-story-1-7d44c16f.mp3"
         },
         {
           "icon": "ill:brebis-cherche",
-          "text": "\"The shepherd leaves the ninety-nine others safe. He goes off into the hills to look for the lost one, until he finds it.\""
+          "text": "\"The shepherd leaves the ninety-nine others safe. He goes off into the hills to look for the lost one, until he finds it.\"",
+          "audio": "/audio/en/cherche/scroll-story-2-ea8ff014.mp3"
         },
         {
           "icon": "ill:brebis-trouvee",
-          "text": "\"When he finds it, he is filled with joy! He puts it on his shoulders and carries it home.\""
+          "text": "\"When he finds it, he is filled with joy! He puts it on his shoulders and carries it home.\"",
+          "audio": "/audio/en/cherche/scroll-story-3-6d627ea1.mp3"
         },
         {
           "icon": "ill:brebis-fete",
-          "text": "\"He calls his friends: Rejoice with me, I have found my lost sheep!\""
+          "text": "\"He calls his friends: Rejoice with me, I have found my lost sheep!\"",
+          "audio": "/audio/en/cherche/scroll-story-4-9f8e60d8.mp3"
         },
         {
           "icon": "ill:brebis-ciel",
-          "text": "Jesus explains: \"There is great joy in heaven over one single person who comes back to God.\" To God, everyone is precious."
+          "text": "Jesus explains: \"There is great joy in heaven over one single person who comes back to God.\" To God, everyone is precious.",
+          "audio": "/audio/en/cherche/scroll-story-5-673a7035.mp3"
         }
       ]
     }
