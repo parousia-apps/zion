@@ -256,8 +256,14 @@ html.hc .toggle-card[aria-pressed='true'] { background: var(--gold); color: #000
 .story-list {
   list-style: none; padding: 0; margin: 1.5rem auto;
   max-width: 70rem;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem;
+  /* Rangées équilibrées (3 + 2 plutôt que 4 + 1) : --cols est calculé par balanceStories(). */
+  --cols: 1; --gap: 1.4rem;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: var(--gap);
 }
+.story-list > li { flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols)); min-width: 0; }
+/* Nombre impair sur deux colonnes : la première histoire prend toute la largeur, en vedette. */
+.story-list.feature-first > li:first-child { flex-basis: 100%; }
+.story-list.feature-first > li:first-child .story-band .ill { aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 30%; }
 .story-card {
   height: 100%;
   display: flex; flex-direction: column;

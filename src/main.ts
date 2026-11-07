@@ -187,6 +187,28 @@ function goSetup(): void {
   speech.speak([t('setup.heading'), t('setup.intro')]);
 }
 
+/**
+ * Répartit les histoires en rangées équilibrées : avec 5 cartes, 3 + 2 plutôt
+ * que 4 + 1. On calcule combien de cartes tiennent sur une ligne, puis le
+ * nombre de lignes nécessaires, et on répartit les cartes à parts égales.
+ */
+function balanceStories(): void {
+  const list = $('story-list');
+  const width = list.clientWidth;
+  if (!width) return; // écran caché : le ResizeObserver rappellera à l'affichage
+  const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+  const gap = 1.4 * rem;
+  const minCard = 15 * rem;
+  const n = list.children.length;
+  const fit = Math.max(1, Math.floor((width + gap) / (minCard + gap)));
+  const rows = Math.ceil(n / fit);
+  const cols = Math.ceil(n / rows);
+  list.style.setProperty('--cols', String(cols));
+  // Deux colonnes et un nombre impair : une carte resterait seule en bas.
+  list.classList.toggle('feature-first', cols === 2 && n % 2 === 1);
+}
+if ('ResizeObserver' in window) new ResizeObserver(() => balanceStories()).observe($('story-list'));
+
 function renderStories(): void {
   const list = $('story-list');
   const done = QUESTS.filter((q) => save.quests[q.id]?.done).length;
@@ -216,6 +238,7 @@ function renderStories(): void {
       </article>`;
     list.append(li);
   });
+  balanceStories();
   list.querySelectorAll<HTMLButtonElement>('button[data-quest]').forEach((b) => {
     b.addEventListener('click', () => startQuest(b.dataset.quest!));
   });

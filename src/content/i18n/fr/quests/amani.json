@@ -41,13 +41,23 @@
     "intro": [
       {
         "who": "gardien",
+        "text": "Bienvenue à Zion, la cité des veilleurs ! Je suis Ezra, le Gardien de la tour.",
+        "audio": "/audio/fr/amani/intro-0-c892d1b8.mp3"
+      },
+      {
+        "who": "gardien",
+        "text": "Ici, un veilleur ne surveille pas seulement les murs : il veille sur les gens. Il remarque celui qui a besoin d'aide.",
+        "audio": "/audio/fr/amani/intro-1-1827c42e.mp3"
+      },
+      {
+        "who": "gardien",
         "text": "Aujourd'hui, je vais te raconter un conte venu de très loin, de la ville d'ERO. Il parle de la peur… et de la paix.",
-        "audio": "/audio/fr/amani/intro-0-6f924733.mp3"
+        "audio": "/audio/fr/amani/intro-2-6f924733.mp3"
       },
       {
         "who": "gardien",
         "text": "Ferme les yeux. Dans ce conte, tu es Nala, une petite fille courageuse.",
-        "audio": "/audio/fr/amani/intro-1-a7c07abd.mp3"
+        "audio": "/audio/fr/amani/intro-3-a7c07abd.mp3"
       }
     ],
     "rain": [
