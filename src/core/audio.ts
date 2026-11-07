@@ -112,19 +112,29 @@ class AudioEngine {
   }
 
   private birdTimer = 0;
-  private water: { src: AudioBufferSourceNode; gain: GainNode } | null = null;
+  private water: { src: AudioBufferSourceNode; gain: GainNode; drops: GainNode; lfo: OscillatorNode } | null = null;
+  private waterLevel = 0;
+  private dropTimer = 0;
 
   /**
    * Ambiance de la cité : chants d'oiseaux de temps en temps (à gauche ou à
-   * droite) et murmure de l'eau de la fontaine (volume réglé par setWater).
+   * droite) et eau de la fontaine (volume réglé par setWater).
+   *
+   * Pour qu'on reconnaisse de l'eau, deux couches : un écoulement (bruit filtré
+   * dont le volume ondule doucement) et des gouttes (petits « plic » qui montent
+   * très vite, à intervalles irréguliers). Un bruit seul ressemble à du vent.
    */
   ambience(on: boolean): void {
     const ctx = this.ready();
     window.clearTimeout(this.birdTimer);
+    window.clearInterval(this.dropTimer);
     if (!on || !ctx) {
       if (this.water && this.ctx) {
-        this.water.gain.gain.setTargetAtTime(0, this.ctx.currentTime, 0.4);
-        this.water.src.stop(this.ctx.currentTime + 2);
+        const t = this.ctx.currentTime;
+        this.water.gain.gain.setTargetAtTime(0, t, 0.4);
+        this.water.drops.gain.setTargetAtTime(0, t, 0.4);
+        this.water.src.stop(t + 2);
+        this.water.lfo.stop(t + 2);
         this.water = null;
       }
       return;
@@ -137,24 +147,70 @@ class AudioEngine {
     };
     chirpLater();
     if (!this.water) {
+      // Écoulement : un murmure (pas de « chhh » aigu), dont le volume ondule.
       const src = ctx.createBufferSource();
       src.buffer = this.noise(ctx, 3);
       src.loop = true;
       const band = ctx.createBiquadFilter();
       band.type = 'bandpass';
-      band.frequency.value = 2400;
-      band.Q.value = 0.8;
+      band.frequency.value = 1100;
+      band.Q.value = 0.7;
+      const soft = ctx.createBiquadFilter();
+      soft.type = 'lowpass';
+      soft.frequency.value = 3500;
+      const wobble = ctx.createGain();
+      wobble.gain.value = 0.8;
+      const lfo = ctx.createOscillator();
+      lfo.frequency.value = 0.35;
+      const lfoDepth = ctx.createGain();
+      lfoDepth.gain.value = 0.2;
+      lfo.connect(lfoDepth).connect(wobble.gain);
       const gain = ctx.createGain();
       gain.gain.value = 0;
-      src.connect(band).connect(gain).connect(this.master!);
+      src.connect(band).connect(soft).connect(wobble).connect(gain).connect(this.master!);
+      // Gouttes : passent par leur propre volume, lui aussi réglé par la distance.
+      const drops = ctx.createGain();
+      drops.gain.value = 0;
+      drops.connect(this.master!);
       src.start();
-      this.water = { src, gain };
+      lfo.start();
+      this.water = { src, gain, drops, lfo };
     }
+    // Planificateur des gouttes : toutes les 120 ms, quelques « plic » à des moments au hasard.
+    this.dropTimer = window.setInterval(() => {
+      if (!this.water || this.waterLevel < 0.02) return;
+      const n = Math.random() < 0.6 ? 1 : 2;
+      for (let i = 0; i < n; i++) this.drop(ctx.currentTime + Math.random() * 0.12);
+    }, 120);
+  }
+
+  /** Une goutte : une note très courte qui monte vite (c'est la bulle qui éclate). */
+  private drop(t0: number): void {
+    if (!this.ctx || !this.water) return;
+    const ctx = this.ctx;
+    const f = 500 + Math.random() * 900;
+    const osc = ctx.createOscillator();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(f, t0);
+    osc.frequency.exponentialRampToValueAtTime(f * (1.8 + Math.random()), t0 + 0.06);
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0, t0);
+    g.gain.linearRampToValueAtTime(0.25 + Math.random() * 0.25, t0 + 0.005);
+    g.gain.exponentialRampToValueAtTime(0.001, t0 + 0.08);
+    const pan = ctx.createStereoPanner();
+    pan.pan.value = (Math.random() - 0.5) * 0.8;
+    osc.connect(g).connect(pan).connect(this.water.drops);
+    osc.start(t0);
+    osc.stop(t0 + 0.1);
   }
 
   /** Volume de l'eau (0 = loin de la fontaine, 1 = tout près). */
   setWater(level: number): void {
-    if (this.water && this.ctx) this.water.gain.gain.setTargetAtTime(0.09 * level, this.ctx.currentTime, 0.3);
+    this.waterLevel = level;
+    if (!this.water || !this.ctx) return;
+    const t = this.ctx.currentTime;
+    this.water.gain.gain.setTargetAtTime(0.28 * level, t, 0.3);
+    this.water.drops.gain.setTargetAtTime(0.2 * level, t, 0.3);
   }
 
   /** Un petit chant d'oiseau : deux ou trois notes aiguës qui glissent. */
