@@ -145,8 +145,9 @@ html.hc .btn-primary { background: var(--gold); color: #000; }
 
 /* ------------------------------------------------------------ écran titre */
 
-.screen-title { display: grid; place-items: center; text-align: center; overflow: hidden; }
-.title-bg { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+/* Centré quand tout tient ; sinon on peut défiler (petits téléphones, aide d'installation ouverte). */
+.screen-title { display: flex; flex-direction: column; text-align: center; overflow-x: hidden; overflow-y: auto; }
+.title-bg { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
 .stars {
   position: absolute; inset: 0;
   background-image:
@@ -182,7 +183,7 @@ html.hc .btn-primary { background: var(--gold); color: #000; }
   animation: fly 16s linear infinite;
 }
 
-.title-content { position: relative; z-index: 2; padding: 1rem 1rem 24vh; }
+.title-content { position: relative; z-index: 2; margin: auto; padding: max(1rem, env(safe-area-inset-top)) 1rem 24vh; }
 .logo {
   font-family: var(--font-title);
   font-style: italic;
@@ -425,7 +426,7 @@ html.hc .dialog-speaker #dialog-name { background: #fff; color: #000; clip-path:
 
 /* -------------------------------------------------------- overlays récits */
 
-.overlay { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; padding: 1rem; overflow-y: auto; }
+.overlay { position: fixed; inset: 0; z-index: 10; display: grid; place-items: safe center; padding: 1rem; overflow-y: auto; }
 /* Le parchemin : une page blanche entre deux rouleaux de bois */
 .scroll-paper {
   position: relative;
@@ -499,7 +500,7 @@ html.hc .trait-jesus h3 { color: var(--gold); }
 
 /* ------------------------------------------------------------ fin mission */
 
-.screen-end { display: grid; place-items: center; padding: 1rem; }
+.screen-end { display: grid; place-items: safe center; padding: 1rem; }
 .end-card { width: min(40rem, 100%); padding: 1.6rem 1.5rem 1.8rem; text-align: center; margin: 2rem 0; }
 .end-star { width: 6.5rem; height: 6.5rem; }
 .end-star path {
