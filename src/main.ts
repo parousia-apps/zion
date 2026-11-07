@@ -445,13 +445,23 @@ interface InstallPromptEvent extends Event {
 let installPrompt: InstallPromptEvent | null = null;
 const installBtn = $<HTMLButtonElement>('btn-install');
 const installed = matchMedia('(display-mode: standalone)').matches || (navigator as { standalone?: boolean }).standalone === true;
-// Sur iPhone et iPad, pas de bouton automatique : on explique comment faire (bouton Partager).
-const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-installBtn.hidden = !(ios && !installed);
+// Dans une autre page (Kutɔnu Vibes…), installer ajouterait ce site-là, pas Zion : on cache le bouton.
+const framed = window.self !== window.top;
+installBtn.hidden = installed || framed;
+
+/** Comment installer, selon l'appareil et le navigateur (quand il ne propose pas l'installation lui-même). */
+function installHelpKey(): string {
+  const ua = navigator.userAgent;
+  if (/iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) return 'title.installIos';
+  if (/firefox|fxios/i.test(ua)) return 'title.installFirefox';
+  if (/android/i.test(ua)) return 'title.installAndroid';
+  if (/macintosh/i.test(ua) && /safari/i.test(ua) && !/chrome|chromium|edg/i.test(ua)) return 'title.installMac';
+  return 'title.installDesktop';
+}
+
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   installPrompt = e as InstallPromptEvent;
-  installBtn.hidden = false;
 });
 window.addEventListener('appinstalled', () => {
   installPrompt = null;
@@ -466,9 +476,11 @@ installBtn.addEventListener('click', async () => {
     installBtn.hidden = true;
     return;
   }
+  // Pas d'installation automatique ici : on explique comment faire sur cet appareil.
   const hint = $('install-hint');
+  hint.textContent = t(installHelpKey());
   hint.hidden = false;
-  announce(hint.textContent ?? '');
+  announce(hint.textContent);
 });
 
 void boot();

@@ -9,8 +9,12 @@
     "help": "Comment jouer",
     "language": "Langue",
     "install": "Installer le jeu",
-    "installIos": "Sur iPhone ou iPad : touche le bouton Partager, puis « Sur l'écran d'accueil ».",
-    "installed": "Zion est installé ! Tu le retrouves sur ton écran d'accueil."
+    "installIos": "Sur iPhone ou iPad, dans Safari : touche le bouton Partager (le carré avec une flèche vers le haut), puis « Sur l'écran d'accueil ».",
+    "installed": "Zion est installé ! Tu le retrouves sur ton écran d'accueil.",
+    "installAndroid": "Sur Android : ouvre le menu du navigateur (les trois points ⋮), puis « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
+    "installDesktop": "Sur ordinateur, avec Chrome ou Edge : clique sur l'icône d'installation à droite de la barre d'adresse, ou ouvre le menu (⋮), puis « Installer Zion ».",
+    "installMac": "Sur Mac, dans Safari : menu Fichier, puis « Ajouter au Dock ».",
+    "installFirefox": "Firefox ne sait pas installer les jeux web. Ouvre Zion avec Chrome ou Edge pour l'installer (ou Safari sur iPhone et Mac)."
   },
   "setup": {
     "heading": "Comment veux-tu jouer ?",
