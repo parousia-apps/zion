@@ -7,7 +7,10 @@
     "start": "Commencer",
     "settings": "Réglages",
     "help": "Comment jouer",
-    "language": "Langue"
+    "language": "Langue",
+    "install": "Installer le jeu",
+    "installIos": "Sur iPhone ou iPad : touche le bouton Partager, puis « Sur l'écran d'accueil ».",
+    "installed": "Zion est installé ! Tu le retrouves sur ton écran d'accueil."
   },
   "setup": {
     "heading": "Comment veux-tu jouer ?",

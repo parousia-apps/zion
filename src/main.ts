@@ -429,4 +429,46 @@ async function boot(): Promise<void> {
 // l'équivalent du composant <Analytics /> de Next.js. N'envoie rien en développement.
 inject({ mode: import.meta.env.PROD ? 'production' : 'development', debug: false });
 
+/* ------------------------------------------------------------ application installable (PWA) */
+
+// Jeu hors ligne : le service worker (dist/sw.js, écrit au build) range le jeu dans le navigateur.
+// Pas en développement : il garderait d'anciennes versions des fichiers en cache.
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  window.addEventListener('load', () => void navigator.serviceWorker.register('/sw.js'));
+}
+
+/** Événement non standard (Chrome, Edge, Android) : le navigateur propose d'installer l'appli. */
+interface InstallPromptEvent extends Event {
+  prompt(): Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+}
+let installPrompt: InstallPromptEvent | null = null;
+const installBtn = $<HTMLButtonElement>('btn-install');
+const installed = matchMedia('(display-mode: standalone)').matches || (navigator as { standalone?: boolean }).standalone === true;
+// Sur iPhone et iPad, pas de bouton automatique : on explique comment faire (bouton Partager).
+const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+installBtn.hidden = !(ios && !installed);
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  installPrompt = e as InstallPromptEvent;
+  installBtn.hidden = false;
+});
+window.addEventListener('appinstalled', () => {
+  installPrompt = null;
+  installBtn.hidden = true;
+  announce(t('title.installed'));
+});
+installBtn.addEventListener('click', async () => {
+  if (installPrompt) {
+    await installPrompt.prompt();
+    await installPrompt.userChoice;
+    installPrompt = null;
+    installBtn.hidden = true;
+    return;
+  }
+  const hint = $('install-hint');
+  hint.hidden = false;
+  announce(hint.textContent ?? '');
+});
+
 void boot();

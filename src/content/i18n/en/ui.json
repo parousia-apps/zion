@@ -7,7 +7,10 @@
     "start": "Start",
     "settings": "Settings",
     "help": "How to play",
-    "language": "Language"
+    "language": "Language",
+    "install": "Install the game",
+    "installIos": "On iPhone or iPad: tap the Share button, then “Add to Home Screen”.",
+    "installed": "Zion is installed! You'll find it on your home screen."
   },
   "setup": {
     "heading": "How would you like to play?",

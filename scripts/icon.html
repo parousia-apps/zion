@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- Icône de l'application (PWA). Rendue en PNG par scripts/make-icons.mjs.
+     Tout le dessin tient dans le cercle central (80 %) : Android peut découper l'icône en rond. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: 'Fraunces'; font-style: italic; font-weight: 900; src: url(../node_modules/@fontsource/fraunces/files/fraunces-latin-900-italic.woff2) format('woff2'); }
+  * { margin: 0; }
+  html, body { width: 512px; height: 512px; overflow: hidden; }
+  .icon { position: relative; width: 512px; height: 512px; overflow: hidden;
+    background: radial-gradient(90% 80% at 50% 25%, #2a2f8a 0%, #161a52 55%, #0c0e33 100%); }
+  .z { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 34px;
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 900; font-size: 270px; line-height: 1; color: #ffd54a;
+    text-shadow: 0 8px 0 #b8860b, 0 15px 0 rgba(0, 0, 0, 0.35), 0 0 50px rgba(255, 200, 60, 0.5); }
+  .moon { position: absolute; top: 74px; right: 96px; width: 46px; height: 46px; border-radius: 50%; box-shadow: -13px 9px 0 0 #ffd54a; transform: rotate(-12deg); }
+  .star { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #fff; }
+  .city { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: #0a0c2c;
+    clip-path: polygon(0 55%, 14% 55%, 14% 38%, 24% 38%, 24% 58%, 40% 58%, 40% 18%, 44% 18%, 44% 0, 56% 0, 56% 18%, 60% 18%, 60% 58%, 74% 58%, 74% 34%, 86% 34%, 86% 52%, 100% 52%, 100% 100%, 0 100%); }
+  .light { position: absolute; bottom: 92px; left: 50%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: #ffd54a; box-shadow: 0 0 16px 4px rgba(255, 213, 74, 0.7); }
+</style>
+</head>
+<body>
+  <div class="icon">
+    <i class="star" style="top:120px;left:110px"></i>
+    <i class="star" style="top:84px;left:200px;width:4px;height:4px"></i>
+    <i class="star" style="top:160px;left:380px;width:4px;height:4px"></i>
+    <i class="star" style="top:70px;left:300px;width:5px;height:5px"></i>
+    <div class="moon"></div>
+    <div class="z">Z</div>
+    <div class="city"></div>
+    <div class="light"></div>
+  </div>
+</body>
+</html>
