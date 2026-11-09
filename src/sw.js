@@ -27,6 +27,9 @@ self.addEventListener('activate', (event) => {
     caches
       .keys()
       .then((keys) => Promise.all(keys.filter((k) => k.startsWith('zion-core-') && k !== CORE).map((k) => caches.delete(k))))
+      .then(() => caches.open(MEDIA))
+      // Une ancienne version rangeait aussi phrases.json ici : on ne garde que les sons.
+      .then((cache) => cache.keys().then((reqs) => Promise.all(reqs.filter((r) => !/\.(mp3|m4a|mp4|ogg|wav|aac)$/i.test(new URL(r.url).pathname)).map((r) => cache.delete(r)))))
       .then(() => self.clients.claim()),
   );
 });
@@ -51,7 +54,8 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  const media = url.pathname.startsWith('/audio/') || /\.(mp3|m4a|mp4|ogg|wav|aac)$/i.test(url.pathname);
+  // Fichiers son seulement (pas phrases.json, qui doit suivre les mises à jour).
+  const media = /\.(mp3|m4a|mp4|ogg|wav|aac)$/i.test(url.pathname);
 
   // Les voix et les chants se lisent par morceaux (requêtes « Range »).
   if (req.headers.has('range')) {
@@ -90,14 +94,27 @@ async function saveMedia(path) {
   if (res.ok) await cache.put(path, res);
 }
 
-/** Répond à une requête « Range » avec le bon morceau d'un fichier rangé en entier. */
+/**
+ * Répond à une requête « Range » avec le bon morceau d'un fichier rangé en entier.
+ * Le lecteur demande parfois un morceau au-delà de la fin (pour connaître la durée
+ * d'un MP3) : il faut alors répondre 416 (« rien à cet endroit »), sinon il abandonne.
+ */
 async function slice(res, range) {
-  const buf = await res.arrayBuffer();
-  const size = buf.byteLength;
+  const blob = await res.blob(); // découpe sans recopier le fichier en mémoire
+  const size = blob.size;
   const m = /bytes=(\d*)-(\d*)/.exec(range || '');
-  const start = m && m[1] ? Number(m[1]) : 0;
-  const end = Math.min(m && m[2] ? Number(m[2]) : size - 1, size - 1);
-  return new Response(buf.slice(start, end + 1), {
+  let start = m && m[1] ? Number(m[1]) : 0;
+  let end = m && m[2] ? Number(m[2]) : size - 1;
+  if (m && !m[1] && m[2]) {
+    // « bytes=-500 » : les 500 derniers octets.
+    start = Math.max(0, size - Number(m[2]));
+    end = size - 1;
+  }
+  end = Math.min(end, size - 1);
+  if (start >= size || start > end) {
+    return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${size}` } });
+  }
+  return new Response(blob.slice(start, end + 1), {
     status: 206,
     headers: {
       'Content-Type': res.headers.get('Content-Type') || 'audio/mpeg',
